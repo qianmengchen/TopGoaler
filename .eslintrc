@@ -3,14 +3,19 @@
         "react"
       ],
     "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "env": {
+        "browser": true
+    },
     "parserOptions": {
         "sourceType": "module",
+        "ecmaVersion": 9,
         "ecmaFeatures": {
             "jsx": true,
             "modules": true
         }
     },
     "rules": {
-        "semi":"warn"
+        "semi":"off",
+        "no-console":"off"
     }
 }

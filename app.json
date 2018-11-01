@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "TopGoaler",
+    "name": "TopGoaler2",
     "description": "This project is really great.",
-    "slug": "TopGoaler",
+    "slug": "TopGoaler2",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],

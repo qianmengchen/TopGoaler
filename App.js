@@ -1,2 +1,2 @@
-import App from "./app/app";
-export default App;
+import AppEntry from "./app/index";
+export default AppEntry;

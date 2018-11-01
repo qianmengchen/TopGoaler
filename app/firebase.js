@@ -1,0 +1,3 @@
+/* This module should implement all functions used to 
+   communicate with the DB and perform basic CRUD operations. 
+*/

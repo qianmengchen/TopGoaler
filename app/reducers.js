@@ -1,12 +1,15 @@
 import {
-    ADD_TASK
+    ADD_TASK,
+    REQUEST_TASKS,
+    RECEIVE_TASKS
 } from './actions'
 
 const initialState = {
-    tasks: []
+    tasks: ["do frontend", "do backend", "do MVP ftw"],
+    isFetching: false
 }
 
-function app(state = initialState, action) {
+function doTasks(state = initialState, action) {
     switch (action.type) {
         case ADD_TASK:
             return { ...state, 
@@ -17,9 +20,15 @@ function app(state = initialState, action) {
                     }
                 ]
             }
+        case REQUEST_TASKS:
+            return { ...state, isFetching: true }
+        case RECEIVE_TASKS:
+            return { ...state, isFetching: false, 
+                tasks: action.tasks}
         default:
             return state
     }
 }
 
-export default app
+
+export default doTasks

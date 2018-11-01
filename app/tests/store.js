@@ -1,8 +1,8 @@
 import { createStore } from 'redux'
-import app from './reducers'
+import app from '../reducers'
 import {
     addTask
-} from './actions'
+} from '../actions'
 
 export function storeTest() {
     const store = createStore(app)

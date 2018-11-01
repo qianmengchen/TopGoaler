@@ -10,8 +10,13 @@
   },
   "dependencies": {
     "expo": "^30.0.1",
+    "express": "^4.16.4",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "redux": "^4.0.1"
+    "react-navigation": "^2.18.2",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   }
 }

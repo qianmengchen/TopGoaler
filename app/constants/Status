@@ -1,5 +1,0 @@
-export class Status {
-  static get NOT_REGISTERED() { return 'not_registered'; }
-  static get IN_PROGRESS() { return 'in_progress'; }
-  static get DONE() { return 'done'; }
-}

@@ -1,9 +1,0 @@
-export class Point {
-  static get ONE() { return 'one'; }
-  static get TWO() { return 'two'; }
-  static get THREE() { return 'three'; }
-  static get FIVE() { return 'five'; }
-  static get EIGHT() { return 'eight'; }
-  static get THIRTEEN() { return 'thirteen'; }
-  static get TWENTYONE() { return 'twentyone'; }
-}

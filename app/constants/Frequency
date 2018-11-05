@@ -1,6 +1,0 @@
-export class Frequency {
-  static get ONCE() { return 'once'; }
-  static get DAILY() { return 'daily'; }
-  static get WEEKLY() { return 'weekly'; }
-  static get MONTHLY() { return 'monthly'; }
-}

@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "jest",
-    "watch": "jest --watch --verbose=false"
+    "watch": "jest --watch --verbose=false",
+    "coverage": "jest --coverage --coverageDirectory=coverage"
   },
   "dependencies": {
     "expo": "^30.0.1",

@@ -57,7 +57,7 @@ For example:
 
 For js file /app/components/App/App.js, the corresponding test file should be /app/tests/App/App.test.js.
 
-Out unit tests are performed using jest and enzyme. Please find their documentations at:
+Our unit tests are performed using jest and enzyme. Please find their documentations at:
 
 https://jestjs.io/docs/en/getting-started
 

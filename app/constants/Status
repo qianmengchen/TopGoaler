@@ -3,9 +3,3 @@ export class Status {
   static get IN_PROGRESS() { return 'in_progress'; }
   static get DONE() { return 'done'; }
 }
-
-export const allTypesOfStatus = [
-  Status.NOT_RGISTERED,
-  Status.IN_PROGRESS,
-  Status.DONE
-];

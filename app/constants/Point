@@ -7,13 +7,3 @@ export class Point {
   static get THIRTEEN() { return 'thirteen'; }
   static get TWENTYONE() { return 'twentyone'; }
 }
-
-export const allTypesOfPoint = [
-  Point.ONE,
-  Point.TWO,
-  Point.THREE,
-  Point.FIVE,
-  Point.EIGHT,
-  Point.THIRTEEN,
-  Point.TWENTYONE
-];

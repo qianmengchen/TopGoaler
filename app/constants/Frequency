@@ -4,10 +4,3 @@ export class Frequency {
   static get WEEKLY() { return 'weekly'; }
   static get MONTHLY() { return 'monthly'; }
 }
-
-export const allTypesOfFrequency = [
-  Frequency.ONCE,
-  Frequency.DAILY,
-  Frequency.WEEKLY,
-  Frequency.MONTHLY
-];

@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest",
+    "watch": "jest --watch --verbose=false"
   },
   "dependencies": {
     "expo": "^30.0.1",
@@ -18,5 +20,17 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "jest": "^23.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "verbose": true,
+    "setupTestFrameworkScriptFile": "./app/tests/setupTests.js"
   }
 }

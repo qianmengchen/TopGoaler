@@ -12,5 +12,5 @@ export function storeTest() {
     unsub()
 }
 
-
+//It looks this file should be removed some time.
 

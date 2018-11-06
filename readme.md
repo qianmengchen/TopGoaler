@@ -49,7 +49,7 @@ When the work is complete and already pushed up, create a pull request on Github
 
 ## Unit Test
 
-###write unit tests
+### write unit tests
 
 Please write unit tests in /app/tests. Each test file should be at the exact same relative path in /app/tests as the path of js file being tested in /app/components, and it should have the same file name except the suffix should be .test.js.
 

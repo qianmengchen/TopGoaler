@@ -9,7 +9,9 @@
     "eject": "expo eject",
     "test": "jest",
     "watch": "jest --watch --verbose=false",
-    "coverage": "jest --coverage --coverageDirectory=coverage"
+    "coverage": "jest --coverage --coverageDirectory=coverage",
+    "pretty": "prettier --write 'app/**/*.js'",
+    "lint": "eslint 'app/**/*.js'"
   },
   "dependencies": {
     "expo": "^30.0.1",
@@ -23,15 +25,29 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.3",
     "jest": "^23.6.0",
+    "prettier": "1.15.1",
     "react-dom": "^16.6.0"
   },
   "jest": {
     "preset": "react-native",
     "verbose": true,
     "setupTestFrameworkScriptFile": "./app/tests/setupTests.js"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty && cd ../ && git add .",
+      "pre-push": "npm run lint"
+    }
   }
 }

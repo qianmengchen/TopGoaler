@@ -4,8 +4,10 @@
       ],
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "env": {
-        "browser": true
+        "browser": true,
+        "jest": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 9,
@@ -15,8 +17,7 @@
         }
     },
     "rules": {
-        "semi":"off",
-        "no-console":"off",
-        "react/prop-types":"off"
+        "no-console": 1,
+        "react/prop-types": 0
     }
 }

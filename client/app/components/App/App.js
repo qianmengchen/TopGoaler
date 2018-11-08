@@ -1,11 +1,12 @@
-import React from 'react';
-import { TaskList } from '../TaskList/index';
-import { View } from 'react-native';
+import React, { Component } from 'react';
+import { TabNav } from '../Navigators/index';
 
-const App = () => (
-    <View>
-        <TaskList></TaskList>
-    </View>
-);
+class App extends Component {
+    render() {
+        return (
+            <TabNav />
+        )
+    }
+}
 
 export default App;

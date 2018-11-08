@@ -6,7 +6,7 @@ export const ADD_TASK = 'ADD_TASK'
 
 export const REQUEST_TASKS = 'REQUEST_TASKS'
 export const RECEIVE_TASKS = 'RECEIVE_TASKS'
-
+export const NAVIGATE_TO = 'NAVIGATE_TO'
 /* 
  * action creators
  */
@@ -21,6 +21,10 @@ export function requestTasks() {
 
 export function receiveTasks(content) {
     return { type: RECEIVE_TASKS, tasks: content }
+}
+
+export function navigateTo(dest) {
+    return { type: NAVIGATE_TO, dest: dest }
 }
 
 export function fetchTasks() {

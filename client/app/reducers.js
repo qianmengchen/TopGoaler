@@ -20,8 +20,11 @@ function doTasks(state = initialState, action) {
     case REQUEST_TASKS:
       return { ...state, isFetching: true };
     case RECEIVE_TASKS:
-      const newTasks = action.tasks || state.tasks;
-      return { ...state, isFetching: false, tasks: newTasks };
+      return {
+        ...state,
+        isFetching: false,
+        tasks: action.tasks || state.tasks
+      };
     default:
       return state;
   }

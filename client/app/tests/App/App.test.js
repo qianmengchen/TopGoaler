@@ -5,6 +5,6 @@ import { App } from '../../components/App/index';
 describe('Testing App component', () => {
   it('renders as expected', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find("Connect(TaskList)").exists()).toBe(true);
+    expect(wrapper.find('Connect(TaskList)').exists()).toBe(true);
   });
 });

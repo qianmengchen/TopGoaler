@@ -15,8 +15,7 @@
         }
     },
     "rules": {
-        "semi":"off",
-        "no-console":"off",
-        "react/prop-types":"off"
+        "no-console": 2,
+        "react/prop-types": 0
     }
 }

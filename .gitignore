@@ -2,3 +2,4 @@ client/node_modules/**/*
 client/.expo/*
 client/npm-debug.*
 client/coverage/*
+*.DS_Store

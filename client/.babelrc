@@ -1,8 +1,11 @@
 {
-  "presets": ["babel-preset-expo", "react-native"],
+  "presets": ["babel-preset-expo", "react-native"], 
   "env": {
     "development": {
-      "plugins": ["transform-react-jsx-source"]
+      "plugins": ["transform-es2015-modules-commonjs", "transform-react-jsx-source"]
+    }, 
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs", "transform-react-jsx-source"]
     }
   }
 }

@@ -1,26 +1,7 @@
 // Load the MySQL pool connection
 const pool = require('../data/config');
 
-const router = app => {
-    // Display all users
-    app.get('/users', (request, response) => {
-        pool.query('SELECT * FROM users', (error, result) => {
-            if (error) throw error;
-    
-            response.send(result);
-        });
-    });
-    // Display all users
-    app.get('/channel_creator/display', (request, response) => {
-        pool.query('SELECT * FROM channel_creator', (error, result) => {
-            if (error) throw error;
-    
-            response.send(result);
-        });
-    });
-}
-
-const query = app => {  
+const read = app => {  
     // query for channel_creator 
     app.get('/channel_creator/:channel', (request, response) => {
         const channel = request.params.channel;
@@ -78,9 +59,5 @@ const query = app => {
     });
 
 }
-
-
-// Export the router
-module.exports = router;
-module.exports = query;
+module.exports = read;
 

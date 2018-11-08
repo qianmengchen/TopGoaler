@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 //import PropTypes from 'prop-types'
 import { View, FlatList } from 'react-native'
 import { Button, ThemeProvider, ListItem } from 'react-native-elements';
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   item: {
     padding: 10,
     fontSize: 18,
-    height: 44,
+    height: 44
   }
 });
 */
@@ -57,4 +57,4 @@ TaskList.propTypes = {
 }
 */
 
-export default TaskList
+export default TaskList;

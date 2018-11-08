@@ -5,7 +5,8 @@
 
 Run `node server.js` under server file to run your server
 
-Then in webbrowser, (I choose safari), use curl call to connect with server.
+Then in webbrowser, (I choose safari), use http call to connect with server.
+or, you can use curl call in terminal.
 
 For example ,
 curl http:/localhost:8001/channel_creator/bxzhu_channel will helpe you to get channel=bxzhu_channel in table channel_creator

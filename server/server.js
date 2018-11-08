@@ -1,8 +1,21 @@
-const express = require('express')
-const app = express()
-const port = 8001
+const express = require('express');
+const port = 8001;
+const bodyParser = require('body-parser');
+const app = express();
+const routes = require('./routes/routes');
+const query = require('./routes/routes');
+ 
+// Use Node.js body parsing middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true,
+}));
+//routes(app); 
+query(app);
 
-app.get('/tasks', (req, res) => res.json(
-    ['1', '2', "three"]));
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Start the server
+const server = app.listen(port, (error) => {
+    if (error) return console.log(`Error: ${error}`);
+ 
+    console.log(`Server listening on port ${server.address().port}`);
+});

@@ -1,3 +1,3 @@
 import Profile from './container';
 
-export {Profile};
+export { Profile };

@@ -33,6 +33,12 @@ jobs:
             - client/node_modules
           key: v1-dependencies-{{ checksum "client/package.json" }}
         
+      # check prettier
+      - run: cd client && npm run check-pretty
+
+      # check linting
+      - run: cd client && npm run lint
+
       # run tests!
       - run: cd client && npm test
 

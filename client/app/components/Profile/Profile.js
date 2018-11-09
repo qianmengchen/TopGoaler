@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
-import { Card, Button } from 'react-native-elements';
+import { View, Text } from 'react-native';
+import { Card } from 'react-native-elements';
 
 class Profile extends Component {
   render() {

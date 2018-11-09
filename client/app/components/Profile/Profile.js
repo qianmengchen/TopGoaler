@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Avatar, Button } from 'react-native-elements';
+import { Avatar, Button, Icon } from 'react-native-elements';
+import { ChannelIconList } from '../ChannelIconList/index';
+import { TaskChecklist } from '../TaskChecklist/index';
 import {
   board,
   personalInfo,
@@ -41,13 +43,17 @@ class Profile extends Component {
               <Button title="My Summary" buttonStyle={buttons.summary} />
             </View>
             <View style={actions.buttons}>
-              <Button title="A" buttonStyle={buttons.A} />
-              <Button title="B" buttonStyle={buttons.B} />
+              <Icon name="favorite" size={32} color="white" />
+              <Icon name="share" size={32} color="white" />
             </View>
           </View>
         </View>
-        <View style={board.channels} />
-        <View style={board.tasks} />
+        <View style={board.channels}>
+          <ChannelIconList />
+        </View>
+        <View style={board.tasks}>
+          <TaskChecklist />
+        </View>
       </View>
     );
   }

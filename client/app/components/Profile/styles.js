@@ -55,7 +55,7 @@ const actions = StyleSheet.create({
   buttons: {
     flex: 0.4,
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     alignItems: 'center'
   }
 });
@@ -69,14 +69,6 @@ const buttons = StyleSheet.create({
     borderWidth: 3,
     borderStyle: 'solid',
     marginLeft: 30
-  },
-  A: {
-    width: 32,
-    backgroundColor: 'white'
-  },
-  B: {
-    width: 32,
-    backgroundColor: 'white'
   }
 });
 

@@ -4,3 +4,4 @@ client/npm-debug.*
 client/coverage/*
 *.DS_Store
 server/node_modules/**/*
+.env

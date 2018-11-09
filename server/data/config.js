@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const config = {
-    key: 'AIzaSyCUzcWuZNEavyYFlvBJ8DoX8WjnGa3ysoc',
+    key: process.env.REACT_APP_MYSQL_API_KEY,
     host: '35.184.195.161',
     user: 'bxzhu',
     password: '',

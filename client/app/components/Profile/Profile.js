@@ -6,7 +6,6 @@ import {
   personalInfo,
   descriptions,
   actions,
-  intro,
   buttons,
   introText
 } from './styles';

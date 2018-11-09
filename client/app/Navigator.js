@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { TaskList } from '../TaskList';
+import { ChannelListPage } from '../ChannelListPage';
 import { StackNavigator } from 'react-navigation';
 
 export const Navigator = new StackNavigator(
   {
-    TaskList: { screen: TaskList }
+    ChannelListPage: { screen: ChannelListPage }
   },
   {
-    initialRouteName: 'TaskList'
+    initialRouteName: 'ChannelListPage'
   }
 );
 

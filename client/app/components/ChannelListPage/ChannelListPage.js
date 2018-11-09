@@ -9,7 +9,7 @@ const theme = {
   }
 };
 
-class TaskList extends Component {
+class ChannelListPage extends Component {
   render() {
     let { tasks, refreshTasks, reportNav } = this.props;
     const { navigate } = this.props.navigation;
@@ -51,11 +51,5 @@ const styles = StyleSheet.create({
   }
 });
 */
-/*
-TaskList.propTypes = {
-  tasks: PropTypes.arrayOf(PropTypes.string),
-  refreshTasks: PropTypes.func(PropTypes.any)
-}
-*/
 
-export default TaskList;
+export default ChannelListPage;

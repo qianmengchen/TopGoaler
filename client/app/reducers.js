@@ -3,7 +3,7 @@ import { ADD_TASK, REQUEST_TASKS, RECEIVE_TASKS, NAVIGATE_TO } from './actions';
 const initialTaskState = {
   tasks: ['do frontend', 'do backend', 'do MVP ftw'],
   isFetching: false,
-  currentTaskPage: 'TaskList'
+  currentTaskPage: 'ChannelListPage'
 };
 
 function tasks(state = initialTaskState, action) {

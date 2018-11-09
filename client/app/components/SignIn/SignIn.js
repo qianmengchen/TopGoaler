@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableHighlight } from 'react-native';
-import { Button, Card, Input, Icon } from 'react-native-elements';
+import { Card, Input, Icon } from 'react-native-elements';
 
 class SignIn extends Component {
   render() {

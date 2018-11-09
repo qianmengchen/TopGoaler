@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({
     extended: true,
 }));
 
-//read(app);
-//create(app);
-//remove(app);
+read(app);
+create(app);
+remove(app);
 update(app);
 
 // Start the server

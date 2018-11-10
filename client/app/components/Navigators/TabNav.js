@@ -4,14 +4,17 @@ import { TabBarBottom } from 'react-native';
 import { Profile } from '../Profile/index';
 import { Ionicons } from '@expo/vector-icons';
 import ChannelNav from './ChannelNav';
+import { SignIn } from '../SignIn/index';
 
 const TabNav = createBottomTabNavigator(
   {
     Channel: { screen: ChannelNav },
-    Profile: { screen: Profile }
+    Profile: { screen: Profile },
+    SignIn: { screen: SignIn }
   },
   {
-    initialRouteName: 'Channel',
+    // initialRouteName: 'Channel',
+    initialRouteName: 'SignIn',
     navigationOptions: ({ navigation }) => ({
       // eslint-disable-next-line react/display-name
       tabBarIcon: ({ /*focused*/ horizontal, tintColor }) => {

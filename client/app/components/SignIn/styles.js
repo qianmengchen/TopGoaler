@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ddd',
-    // alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 22,
     flex: 1,
@@ -43,6 +42,18 @@ const styles = StyleSheet.create({
   title: {
     alignSelf: 'center',
     fontSize: 40
+  },
+  signUpButton: {
+    marginHorizontal: 100,
+    marginTop: 150,
+    paddingVertical: 10,
+    backgroundColor: 'grey',
+    borderRadius: 20
+  },
+  signUpText: {
+    alignSelf: 'center',
+    color: 'white',
+    fontSize: 15
   }
 });
 

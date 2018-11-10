@@ -16,7 +16,7 @@ const TabNav = createBottomTabNavigator(
   },
   {
     // initialRouteName: 'Channel',
-    initialRouteName: 'SignUp',
+    initialRouteName: 'SignIn',
     navigationOptions: ({ navigation }) => ({
       // eslint-disable-next-line react/display-name
       tabBarIcon: ({ /*focused*/ horizontal, tintColor }) => {

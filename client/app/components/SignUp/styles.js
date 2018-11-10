@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const card = StyleSheet.create({
   container: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#bbb',
     justifyContent: 'center',
     paddingTop: 22,
     flex: 1,

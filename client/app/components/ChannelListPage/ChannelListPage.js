@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types'
 import { View, FlatList } from 'react-native';
-import { Button, ThemeProvider, ListItem } from 'react-native-elements';
+import {
+  Button,
+  ThemeProvider,
+  ListItem,
+  SearchBar
+} from 'react-native-elements';
 
 const theme = {
   Button: {
@@ -9,6 +14,7 @@ const theme = {
   }
 };
 
+/*
 class ChannelListPage extends Component {
   render() {
     let { tasks, refreshTasks, reportNav } = this.props;
@@ -33,6 +39,19 @@ class ChannelListPage extends Component {
           <Button onPress={() => goToDetail()} title="Go to Detail" />
         </View>
       </ThemeProvider>
+    );
+  }
+}
+*/
+
+class ChannelListPage extends Component {
+  render() {
+    return (
+      <SearchBar
+        onChangeText={() => {}}
+        onClear={() => {}}
+        placeholder="Type Here..."
+      />
     );
   }
 }

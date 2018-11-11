@@ -2,14 +2,13 @@ import { StyleSheet } from 'react-native';
 
 const board = StyleSheet.create({
   container: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    marginHorizontal: 10
   },
   channels: {
     flexDirection: 'row',
     borderWidth: 2,
-    borderColor: 'black',
-    marginHorizontal: 10,
-    paddingLeft: 10
+    borderColor: 'black'
   }
 });
 
@@ -21,7 +20,7 @@ const icon = StyleSheet.create({
 
 const avatar = StyleSheet.create({
   summary: {
-    marginHorizontal: 52
+    marginLeft: 62
   }
 });
 

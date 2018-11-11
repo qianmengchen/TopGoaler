@@ -1,5 +1,13 @@
 import { StyleSheet } from 'react-native';
 
+const board = StyleSheet.create({
+  container: {
+    backgroundColor: 'grey',
+    flex: 1,
+    alignItems: 'stretch'
+  }
+});
+
 const searchBars = StyleSheet.create({
   summary: {
     backgroundColor: 'transparent',
@@ -17,4 +25,4 @@ const buttons = StyleSheet.create({
   }
 });
 
-export { searchBars, buttons };
+export { board, searchBars, buttons };

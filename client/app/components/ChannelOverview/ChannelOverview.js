@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { Avatar, Text } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { icon, avatar, board, text } from './styles';
+import { Avatar, Text, Icon } from 'react-native-elements';
+import { avatar, board, text } from './styles';
 
 class ChannelOverview extends Component {
   constructor(props) {
@@ -23,7 +22,9 @@ class ChannelOverview extends Component {
             <Text style={text.subtitle}>{this.fakeProps.subtitle}</Text>
             <View style={{ flexDirection: 'row' }}>
               <Text style={text.desc}>{this.fakeProps.desc}</Text>
-              <Icon style={icon.summary} name="plus" size={30} color="black" />
+              <View style={{ paddingLeft: 50 }}>
+                <Icon name="add" size={26} color="black" />
+              </View>
             </View>
           </View>
           <View>

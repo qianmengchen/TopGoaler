@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, View } from 'react-native';
-import { Button, SearchBar } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button, SearchBar, Icon } from 'react-native-elements';
 import { buttons, searchBars } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
 
@@ -19,12 +18,12 @@ class ChannelListPage extends Component {
           />
           <Button
             buttonStyle={buttons.summary}
-            icon={<Icon name="plus" size={30} color="black" />}
+            icon={<Icon name="add" size={26} color="black" />}
             title=" "
             onPress={() => {}}
           />
         </View>
-        <View style={{ marginTop: 50 }}>
+        <View style={{ marginTop: 30, marginBottom: 10 }}>
           <ChannelOverview />
         </View>
         <View style={{ marginVertical: 10 }}>

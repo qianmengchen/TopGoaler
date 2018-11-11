@@ -12,29 +12,26 @@ const board = StyleSheet.create({
   }
 });
 
-const icon = StyleSheet.create({
-  summary: {
-    marginLeft: 40
-  }
-});
-
 const avatar = StyleSheet.create({
   summary: {
-    marginLeft: 62
+    marginLeft: 40
   }
 });
 
 const text = StyleSheet.create({
   title: {
     fontSize: 30,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingLeft: 10
   },
   subtitle: {
-    fontSize: 20
+    fontSize: 20,
+    paddingLeft: 10
   },
   desc: {
-    fontSize: 20
+    fontSize: 20,
+    paddingLeft: 10
   }
 });
 
-export { icon, avatar, board, text };
+export { avatar, board, text };

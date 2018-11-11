@@ -14,6 +14,10 @@ class SignIn extends Component {
       navigate('TaskList');
     };
 
+    const goToSignUp = () => {
+      navigate('SignUp');
+    };
+
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Top Goaler</Text>
@@ -50,10 +54,12 @@ class SignIn extends Component {
           </View>
 
           <Input
+            containerStyle={{ marginBottom: 10 }}
             placeholder="Username"
             leftIcon={<Icon name="person" size={24} color="grey" />}
           />
           <Input
+            containerStyle={{ marginVertical: 10 }}
             placeholder="Password"
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />
@@ -66,6 +72,13 @@ class SignIn extends Component {
             <Text style={styles.buttonText}> Sign In </Text>
           </TouchableHighlight>
         </Card>
+        <TouchableHighlight
+          style={styles.signUpButton}
+          underlayColor="#aaa"
+          onPress={() => goToSignUp()}
+        >
+          <Text style={styles.signUpText}> Sign Up for Top Goaler </Text>
+        </TouchableHighlight>
       </View>
     );
   }

@@ -5,12 +5,14 @@ import { Profile } from '../Profile/index';
 import { Ionicons } from '@expo/vector-icons';
 import ChannelNav from './ChannelNav';
 import { SignIn } from '../SignIn/index';
+import { SignUp } from '../SignUp/index';
 
 const TabNav = createBottomTabNavigator(
   {
     Channel: { screen: ChannelNav },
     Profile: { screen: Profile },
-    SignIn: { screen: SignIn }
+    SignIn: { screen: SignIn },
+    SignUp: { screen: SignUp }
   },
   {
     // initialRouteName: 'Channel',

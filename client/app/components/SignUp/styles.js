@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const card = StyleSheet.create({
   container: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#bbb',
     justifyContent: 'center',
     paddingTop: 22,
     flex: 1,
@@ -42,19 +42,40 @@ const styles = StyleSheet.create({
   title: {
     alignSelf: 'center',
     fontSize: 40
-  },
-  signUpButton: {
-    marginHorizontal: 100,
-    marginTop: 150,
-    paddingVertical: 10,
-    backgroundColor: 'grey',
-    borderRadius: 20
-  },
-  signUpText: {
-    alignSelf: 'center',
-    color: 'white',
-    fontSize: 15
   }
 });
 
-export { styles };
+const alt = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignSelf: 'center'
+  },
+  text: {
+    alignSelf: 'center',
+    paddingTop: 20,
+    color: 'grey'
+  },
+  button: {
+    marginHorizontal: 40,
+    marginTop: 10,
+    paddingVertical: 10,
+    borderRadius: 10
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 20,
+    paddingLeft: 10
+  },
+  facebook: {
+    backgroundColor: '#3b5998'
+  },
+  google: {
+    backgroundColor: '#dd4b39'
+  },
+  twitter: {
+    backgroundColor: '#00aced'
+  }
+});
+
+export { card, alt };

@@ -1,74 +1,30 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types'
-import { View, FlatList } from 'react-native';
-import {
-  Button,
-  ThemeProvider,
-  ListItem,
-  SearchBar
-} from 'react-native-elements';
-
-const theme = {
-  Button: {
-    raised: true
-  }
-};
-
-/*
-class ChannelListPage extends Component {
-  render() {
-    let { tasks, refreshTasks, reportNav } = this.props;
-    const { navigate } = this.props.navigation;
-    tasks = tasks.map(x => ({ key: x, value: x }));
-    let renderItem = ({ item }) => <ListItem title={item.value} />;
-
-    const goToDetail = () => {
-      reportNav(); // this is an example of how you can listen to navigation
-      // but you can also subscribe to actual navigation events
-      navigate('TaskDetail', { time: new Date().toISOString() });
-    };
-
-    return (
-      <ThemeProvider theme={theme}>
-        <View>
-          <FlatList data={tasks} renderItem={renderItem} />
-          <Button
-            onPress={() => refreshTasks()}
-            title="refresh (open server first)"
-          />
-          <Button onPress={() => goToDetail()} title="Go to Detail" />
-        </View>
-      </ThemeProvider>
-    );
-  }
-}
-*/
+import { View } from 'react-native';
+import { Button, SearchBar } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { buttons, searchBars } from './styles';
 
 class ChannelListPage extends Component {
   render() {
     return (
-      <SearchBar
-        onChangeText={() => {}}
-        onClear={() => {}}
-        placeholder="Type Here..."
-      />
+      <View style={{ flexDirection: 'row' }}>
+        <SearchBar
+          onChangeText={() => {}}
+          onClear={() => {}}
+          placeholder="Search for channels"
+          containerStyle={searchBars.summary}
+          icon={{ type: 'font-awesome', name: 'search' }}
+        />
+        ,
+        <Button
+          buttonStyle={buttons.summary}
+          icon={<Icon name="plus" size={30} color="black" />}
+          title=" "
+          onPress={() => {}}
+        />
+      </View>
     );
   }
 }
-/*
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#ddd',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 22
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44
-  }
-});
-*/
 
 export default ChannelListPage;

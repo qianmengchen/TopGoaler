@@ -1,55 +1,46 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types'
-import { View, FlatList } from 'react-native';
-import { Button, ThemeProvider, ListItem } from 'react-native-elements';
-
-const theme = {
-  Button: {
-    raised: true
-  }
-};
+import { ScrollView, View } from 'react-native';
+import { Button, SearchBar, Icon } from 'react-native-elements';
+import { buttons, searchBars } from './styles';
+import { ChannelOverview } from '../ChannelOverview/index';
 
 class ChannelListPage extends Component {
   render() {
-    let { tasks, refreshTasks, reportNav } = this.props;
-    const { navigate } = this.props.navigation;
-    tasks = tasks.map(x => ({ key: x, value: x }));
-    let renderItem = ({ item }) => <ListItem title={item.value} />;
-
-    const goToDetail = () => {
-      reportNav(); // this is an example of how you can listen to navigation
-      // but you can also subscribe to actual navigation events
-      navigate('TaskDetail', { time: new Date().toISOString() });
-    };
-
     return (
-      <ThemeProvider theme={theme}>
-        <View>
-          <FlatList data={tasks} renderItem={renderItem} />
-          <Button
-            onPress={() => refreshTasks()}
-            title="refresh (open server first)"
+      <ScrollView>
+        <View style={{ flexDirection: 'row' }}>
+          <SearchBar
+            onChangeText={() => {}}
+            onClear={() => {}}
+            placeholder="Search for channels"
+            containerStyle={searchBars.summary}
+            icon={{ type: 'font-awesome', name: 'search' }}
           />
-          <Button onPress={() => goToDetail()} title="Go to Detail" />
+          <Button
+            buttonStyle={buttons.summary}
+            icon={<Icon name="add" size={26} color="black" />}
+            title=" "
+            onPress={() => {}}
+          />
         </View>
-      </ThemeProvider>
+        <View style={{ marginTop: 30, marginBottom: 10 }}>
+          <ChannelOverview />
+        </View>
+        <View style={{ marginVertical: 10 }}>
+          <ChannelOverview />
+        </View>
+        <View style={{ marginVertical: 10 }}>
+          <ChannelOverview />
+        </View>
+        <View style={{ marginVertical: 10 }}>
+          <ChannelOverview />
+        </View>
+        <View style={{ marginVertical: 10 }}>
+          <ChannelOverview />
+        </View>
+      </ScrollView>
     );
   }
 }
-/*
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#ddd',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 22
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44
-  }
-});
-*/
 
 export default ChannelListPage;

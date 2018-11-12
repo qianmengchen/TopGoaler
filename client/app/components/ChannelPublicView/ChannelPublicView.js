@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableHighlight, Image } from 'react-native';
-import { Card, Input, Icon, Avatar, Header } from 'react-native-elements';
+import { Card, Avatar } from 'react-native-elements';
 import { header, description, memberList, follow } from './styles';
 
 class ChannelPublicView extends Component {

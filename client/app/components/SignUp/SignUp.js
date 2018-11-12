@@ -6,17 +6,17 @@ import { card, alt } from './styles';
 class SignUp extends Component {
   _submit = () => {
     this.props.submit(this.state.username, this.state.password);
-  }
+  };
   _signIn = () => {
     this.props.navigation.navigate('signIn');
-  }
+  };
   constructor(props) {
     super(props);
     this.state = {
       username: '',
       email: '',
       password: ''
-    }
+    };
   }
   render() {
     return (
@@ -27,7 +27,7 @@ class SignUp extends Component {
             containerStyle={{ marginBottom: 10 }}
             placeholder="Username"
             autoCapitalize="none"
-            onChangeText={(text) => this.setState({username: text})}
+            onChangeText={text => this.setState({ username: text })}
             leftIcon={<Icon name="person" size={24} color="grey" />}
           />
           <Input
@@ -35,14 +35,14 @@ class SignUp extends Component {
             placeholder="Password"
             autoCapitalize="none"
             textContentType="password"
-            onChangeText={(text) => this.setState({password: text})}
+            onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />
           <Input
             containerStyle={{ marginVertical: 10 }}
             autoCapitalize="none"
             placeholder="Email"
-            onChangeText={(text) => this.setState({email: text})}
+            onChangeText={text => this.setState({ email: text })}
             leftIcon={<Icon name="email" size={24} color="grey" />}
           />
           <TouchableHighlight
@@ -60,11 +60,7 @@ class SignUp extends Component {
           underlayColor="#aaa"
         >
           <View style={alt.container}>
-            <Icon
-              name="facebook-square"
-              type="font-awesome"
-              color="white"
-            />
+            <Icon name="facebook-square" type="font-awesome" color="white" />
             <Text style={alt.buttonText}> Log in with Facebook </Text>
           </View>
         </TouchableHighlight>
@@ -73,11 +69,7 @@ class SignUp extends Component {
           underlayColor="#aaa"
         >
           <View style={alt.container}>
-            <Icon
-              name="google-plus"
-              type="font-awesome"
-              color="white"
-            />
+            <Icon name="google-plus" type="font-awesome" color="white" />
             <Text style={alt.buttonText}> Log in with Google </Text>
           </View>
         </TouchableHighlight>
@@ -86,11 +78,7 @@ class SignUp extends Component {
           underlayColor="#aaa"
         >
           <View style={alt.container}>
-            <Icon
-              name="twitter"
-              type="font-awesome"
-              color="white"
-            />
+            <Icon name="twitter" type="font-awesome" color="white" />
             <Text style={alt.buttonText}> Log in with Twitter </Text>
           </View>
         </TouchableHighlight>

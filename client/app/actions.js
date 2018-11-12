@@ -54,55 +54,63 @@ export const SIGNUP_FAILURE = 'SIGNIN_FAIL';
 export const SERVER_ERR = 'SERVER_ERR';
 
 export function loginSuccess(username) {
-  return { type: LOGIN_SUCCESS, username: username }
+  return { type: LOGIN_SUCCESS, username: username };
 }
 
 export function loginFailure(username) {
-  return { type: LOGIN_FAILURE, username: username }
+  return { type: LOGIN_FAILURE, username: username };
 }
 
-const _post = (url, body) => fetch("http://localhost:8001" + url, {
-  method: "POST",
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  },
-  body
-}).then(res => res.json())
+const _post = (url, body) =>
+  fetch('http://localhost:8001' + url, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body
+  }).then(res => res.json());
 
 export function login(username, password) {
   return dispatch => {
     const body = JSON.stringify({ username, password });
-    return _post("/login", body)
-      .then(json => {
-        dispatch((json.status == 'success' ? loginSuccess : loginFailure)(username));
-      }, (e) => dispatch(serverError(e))
+    return _post('/login', body).then(
+      json => {
+        dispatch(
+          (json.status == 'success' ? loginSuccess : loginFailure)(username)
+        );
+      },
+      e => dispatch(serverError(e))
     );
-  }
+  };
 }
 
 export function logout() {
-  return { type: LOGOUT }
+  return { type: LOGOUT };
 }
 
 export function signUpSuccess(username) {
-  return { type: SIGNUP_SUCCESS, username }
+  return { type: SIGNUP_SUCCESS, username };
 }
 
 export function signUpFailure() {
-  return { type: SIGNUP_FAILURE }
+  return { type: SIGNUP_FAILURE };
 }
 
 export function serverError(detail) {
-  return { type: SERVER_ERR, detail }
+  return { type: SERVER_ERR, detail };
 }
 
 export function signUp(username, password) {
   return dispatch => {
     const body = JSON.stringify({ username, password });
-    return _post("/signup", body)
-      .then(json => {
-        dispatch((json.status == 'success' ? signUpSuccess : signUpFailure)(username));
-      }, e => dispatch(serverError(e)));
-  }
+    return _post('/signup', body).then(
+      json => {
+        dispatch(
+          (json.status == 'success' ? signUpSuccess : signUpFailure)(username)
+        );
+      },
+      e => dispatch(serverError(e))
+    );
+  };
 }

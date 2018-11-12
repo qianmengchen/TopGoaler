@@ -10,16 +10,16 @@ class SignIn extends Component {
     // (e.g. if we set a button's onpress to {regularfunc}, then regularfunc's 'this' will be the button object.
     // But here we want 'this' to point to the enclosing object, so we will HAVE to define our function in arrow notation. )
     this.props.submit(this.state.username, this.state.password);
-  }
+  };
   _signUp = () => {
     this.props.navigation.navigate('signUp');
-  }
+  };
   constructor(props) {
     super(props);
     this.state = {
       username: 'admin',
-      password: 'admin',
-    }
+      password: 'admin'
+    };
   }
   render() {
     return (
@@ -40,12 +40,7 @@ class SignIn extends Component {
               type="font-awesome"
               color="#3b5998"
             />
-            <Icon
-              raised
-              name="twitter"
-              type="font-awesome"
-              color="#00aced"
-            />
+            <Icon raised name="twitter" type="font-awesome" color="#00aced" />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
@@ -59,7 +54,7 @@ class SignIn extends Component {
             placeholder="Username"
             autoCapitalize="none"
             defaultValue={this.state.username}
-            onChangeText={(text) => this.setState({username: text})}
+            onChangeText={text => this.setState({ username: text })}
             leftIcon={<Icon name="person" size={24} color="grey" />}
           />
           <Input
@@ -68,7 +63,7 @@ class SignIn extends Component {
             textContentType="password"
             autoCapitalize="none"
             defaultValue={this.state.password}
-            onChangeText={(text) => this.setState({password: text})}
+            onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />
 

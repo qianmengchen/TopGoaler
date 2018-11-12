@@ -1,4 +1,15 @@
-import { ADD_TASK, REQUEST_TASKS, RECEIVE_TASKS, NAVIGATE_TO, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SIGNUP_SUCCESS, SIGNUP_FAILURE, SERVER_ERR } from './actions';
+import {
+  ADD_TASK,
+  REQUEST_TASKS,
+  RECEIVE_TASKS,
+  NAVIGATE_TO,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGOUT,
+  SIGNUP_SUCCESS,
+  SIGNUP_FAILURE,
+  SERVER_ERR
+} from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
 
@@ -46,26 +57,21 @@ function _alertLogin(method) {
   Alert.alert(
     method + ' Failure',
     'Invalid username or password',
-    [
-      {text: 'OK'}
-    ],
+    [{ text: 'OK' }],
     { cancelable: false }
-  )
+  );
 }
 
 function _alertServer() {
-  Alert.alert(
-    'Please turn on dev server at localhost:8001', '',
-    [
-      {text: 'OK'}
-    ],
-  )
+  Alert.alert('Please turn on dev server at localhost:8001', '', [
+    { text: 'OK' }
+  ]);
 }
 
 function auth(state = initAuthState, action) {
   switch (action.type) {
     case LOGIN_SUCCESS:
-      return { ...state, isLoggedIn: true, username: action.username } ;
+      return { ...state, isLoggedIn: true, username: action.username };
     case LOGIN_FAILURE:
       _alertLogin('Login');
       return { ...state, ...initAuthState };
@@ -75,13 +81,13 @@ function auth(state = initAuthState, action) {
       return { ...state, isLoggedIn: true, username: action.username };
     case SIGNUP_FAILURE:
       _alertLogin('Signup');
-      return { ...state, ...initAuthState }
+      return { ...state, ...initAuthState };
     case SERVER_ERR:
       _alertServer();
       return state;
     default:
-      return state
+      return state;
   }
 }
 
-export default combineReducers({tasks, auth})
+export default combineReducers({ tasks, auth });

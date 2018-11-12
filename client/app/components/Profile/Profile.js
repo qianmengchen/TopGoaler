@@ -55,7 +55,11 @@ class Profile extends Component {
           <TaskChecklist />
         </View>
         <View>
-          <Button title="Logout" buttonStyle={buttons.summary} onPress={() => this.props.logout()} />
+          <Button
+            title="Logout"
+            buttonStyle={buttons.summary}
+            onPress={() => this.props.logout()}
+          />
         </View>
       </View>
     );

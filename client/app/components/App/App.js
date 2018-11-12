@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TabNav } from '../Navigators/index';
+import { AuthNav } from '../Navigators/index';
 
 class App extends Component {
   constructor() {
@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   render() {
-    return <TabNav />;
+    return <AuthNav />;
   }
 }
 

@@ -27,7 +27,7 @@ class Profile extends Component {
         <View style={board.personalInfo}>
           <View style={personalInfo.descriptions}>
             <View style={descriptions.intro}>
-              <Text style={introText.name}>{this.fakeProps.name}</Text>
+              <Text style={introText.name}>{this.props.username}</Text>
               <Text style={introText.bio}>{this.fakeProps.bio}</Text>
             </View>
             <View style={descriptions.avatar}>
@@ -53,6 +53,9 @@ class Profile extends Component {
         </View>
         <View style={board.tasks}>
           <TaskChecklist />
+        </View>
+        <View>
+          <Button title="Logout" buttonStyle={buttons.summary} onPress={() => this.props.logout()} />
         </View>
       </View>
     );

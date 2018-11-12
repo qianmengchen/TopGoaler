@@ -18,6 +18,30 @@ create(app);
 remove(app);
 update(app);
 
+// login mock-ups
+const userDB = {
+    'admin': 'admin'
+}
+app.post('/login/', (req, res) => {
+    const {username, password} = req.body;
+    console.log(req.body)
+    const status = (username && password && userDB[username] == password) ? 'success' : 'failure';
+    res.send({status});
+})
+
+app.post('/signup/', (req, res) => {
+    const {username, password} = req.body;
+    console.log(req.body)
+    let status = 'failure';
+    if (typeof username == "string" && typeof password == "string" && username.length > 0 && password.length > 0) {
+        if (!userDB[username]) {
+            userDB[username] = password;
+            status = 'success';
+        }
+    }
+    res.send({status});
+})
+
 // Start the server
 const server = app.listen(port, (error) => {
     if (error) return console.log(`Error: ${error}`);

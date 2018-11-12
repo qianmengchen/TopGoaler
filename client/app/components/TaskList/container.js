@@ -3,7 +3,7 @@ import TaskList from './TaskList';
 import { fetchTasks, navigateTo } from '../../actions';
 
 const mapStateToProps = state => ({
-  tasks: state.tasks
+  tasks: state.tasks.tasks
 });
 
 const mapDispatchToProps = dispatch => ({

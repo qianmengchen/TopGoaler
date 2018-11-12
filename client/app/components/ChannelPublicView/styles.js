@@ -51,7 +51,7 @@ const description = StyleSheet.create({
 
 const memberList = StyleSheet.create({
   container: {
-    borderLeftWidth: 1,
+    borderLeftWidth: 2,
     borderLeftColor: 'grey',
     marginHorizontal: 15,
     marginVertical: 20

@@ -89,11 +89,41 @@ class ChannelMemberView extends Component {
         />
 
         <ScrollView>
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
+          <Feed
+            name="QM"
+            taskTitle="LeetCode Daily"
+            comment="solved problem 251!"
+            timestamp="3 hours ago"
+            points="+30"
+          />
+          <Feed
+            name="BB"
+            taskTitle="LeetCode Daily 2x"
+            comment="yay makin progress"
+            timestamp="5 hours ago"
+            points="+60"
+          />
+          <Feed
+            name="SY"
+            taskTitle="Learn Data Struct"
+            comment=""
+            timestamp="8 hours ago"
+            points="+100"
+          />
+          <Feed
+            name="BZ"
+            taskTitle="Solve 100 Problems"
+            comment="wow this group is so fun"
+            timestamp="1 day ago"
+            points="+30"
+          />
+          <Feed
+            name="JS"
+            taskTitle="LeetCode Daily"
+            comment="xxx xxxx xxxxx"
+            timestamp="2 days ago"
+            points="+30"
+          />
         </ScrollView>
       </View>
     );

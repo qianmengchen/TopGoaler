@@ -1,5 +1,19 @@
 import { StyleSheet } from 'react-native';
 
+const iconColors = [
+  'dodgerblue',
+  'red',
+  'greenyellow',
+  'orange',
+  'lightgreen',
+  'magenta',
+  'lightgrey',
+  'purple',
+  'pink',
+  'tan',
+  'yellowgreen'
+];
+
 const task = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -18,4 +32,4 @@ const task = StyleSheet.create({
   }
 });
 
-export { task };
+export { iconColors, task };

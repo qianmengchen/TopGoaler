@@ -87,21 +87,4 @@ const memberList = StyleSheet.create({
   }
 });
 
-const follow = StyleSheet.create({
-  button: {
-    marginHorizontal: 80,
-    marginTop: 10,
-    paddingVertical: 10,
-    backgroundColor: '#ddd',
-    borderRadius: 30,
-    borderWidth: 3,
-    borderColor: 'black'
-  },
-  buttonText: {
-    color: 'black',
-    textAlign: 'center',
-    fontSize: 24
-  }
-});
-
-export { header, cardLeft, cardRight, memberList, follow };
+export { header, cardLeft, cardRight };

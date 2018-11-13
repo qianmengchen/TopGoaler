@@ -49,28 +49,6 @@ const description = StyleSheet.create({
   }
 });
 
-const memberList = StyleSheet.create({
-  container: {
-    borderLeftWidth: 2,
-    borderLeftColor: 'grey',
-    marginHorizontal: 15,
-    marginVertical: 20
-  },
-  text: {
-    color: 'grey',
-    fontSize: 22,
-    paddingLeft: 5
-  },
-  iconList: {
-    flexDirection: 'row',
-    marginHorizontal: 5,
-    marginVertical: 10
-  },
-  icon: {
-    marginHorizontal: 5
-  }
-});
-
 const follow = StyleSheet.create({
   button: {
     marginHorizontal: 80,
@@ -88,4 +66,4 @@ const follow = StyleSheet.create({
   }
 });
 
-export { header, description, memberList, follow };
+export { header, description, follow };

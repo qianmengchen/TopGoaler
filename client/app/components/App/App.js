@@ -15,7 +15,12 @@ class App extends Component {
     /*eslint-enable no-undef*/
   }
 
+  componentDidMount() {
+    this.props.loadData();
+  }
+
   render() {
+    console.log(this.props.data);
     return <AuthNav />;
   }
 }

@@ -8,7 +8,8 @@ import {
   LOGOUT,
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE,
-  SERVER_ERR
+  SERVER_ERR,
+  LOAD_DATA
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
@@ -90,4 +91,13 @@ function auth(state = initAuthState, action) {
   }
 }
 
-export default combineReducers({ tasks, auth });
+function database(state = {}, action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return { ...state, ...action.data };
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({ tasks, auth, database });

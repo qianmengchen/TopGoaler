@@ -6,6 +6,7 @@ const read = require('./routes/read');
 const create = require('./routes/create');
 const remove = require('./routes/remove');
 const update = require('./routes/update'); 
+const dataStore = require('./datastore/datastore');
  
 // Use Node.js body parsing middleware
 app.use(bodyParser.json());
@@ -24,3 +25,6 @@ const server = app.listen(port, (error) => {
  
     console.log(`Server listening on port ${server.address().port}`);
 });
+
+//Load data store
+dataStore.loadData();

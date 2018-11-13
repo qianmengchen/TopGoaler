@@ -5,3 +5,4 @@ client/coverage/*
 *.DS_Store
 server/node_modules/**/*
 .env
+.vscode

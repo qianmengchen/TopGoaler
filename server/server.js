@@ -6,7 +6,7 @@ const read = require('./routes/read');
 const create = require('./routes/create');
 const remove = require('./routes/remove');
 const update = require('./routes/update'); 
-const request = require('request');
+const request = require('request-promise');
  
 // Use Node.js body parsing middleware
 app.use(bodyParser.json());
@@ -19,66 +19,29 @@ create(app);
 remove(app);
 update(app);
 
-var daa = {};
-function loadData() {
-request('http://localhost:8001/channel_creator/', function(err, res, body){  
-    var objA = JSON.parse(body);
-    request('http://localhost:8001/channel_task/', function(err, res, body) {  
-        var objB = JSON.parse(body);  
-        request('http://localhost:8001/channel_user_subscribe/', function(err, res, body) {  
-            var objC = JSON.parse(body);  
-            request('http://localhost:8001/task_info/', function(err, res, body) {  
-                var objD = JSON.parse(body);   
-                request('http://localhost:8001/user_channel_point/', function(err, res, body) {  
-                    var objE = JSON.parse(body);   
-                    request('http://localhost:8001/user_task_info/', function(err, res, body) {  
-                        var objF = JSON.parse(body);   
-                        daa = objA.concat(objB).concat(objC).concat(objD).concat(objE).concat(objF);
-
-                        console.log(objA)
-                        console.log(objB)
-                        console.log(objC)
-                        console.log(objC)
-                        console.log(objD)
-                        console.log(objE)
-                        console.log(objF)
-                        console.log(daa)
-                        return daa;
-                    });
-                });
-            });
-        });
-    });
-});
+async function loadData() {
+    var channel_creator = await request('http://localhost:8001/channel_creator/');
+    channel_creator = JSON.parse(channel_creator);
+    var channel_task = await request('http://localhost:8001/channel_task/');
+    channel_task = JSON.parse(channel_task);
+    var channel_user_subscribe = await request('http://localhost:8001/channel_user_subscribe/');
+    channel_user_subscribe = JSON.parse(channel_user_subscribe);
+    var task_info = await request('http://localhost:8001/task_info/');
+    task_info = JSON.parse(task_info);
+    var user_channel_point = await request('http://localhost:8001/user_channel_point/');
+    user_channel_point = JSON.parse(user_channel_point);
+    var user_task_info = await request('http://localhost:8001/user_task_info/');
+    user_task_info = JSON.parse(user_task_info);
+    data = {
+        channel_creator,
+        channel_task,
+        channel_user_subscribe,
+        task_info,
+        user_channel_point,
+        user_task_info
+    };
+    return data;
 }
-loadData();
-console.log(daa)
-console.log("daa")
-//database mock-ups
-//please update this part to load real data from DB
-// const allData = {
-//     users: [
-//         {
-//             name: '123'
-//         },
-//         {
-//             name: '234'
-//         }
-//     ],
-//     channels: [
-//         {
-//             name: 'sad'
-//         },
-//         {
-//             name: 'qwe'
-//         }
-//     ],
-//     tasks: [
-//         {
-//             name: 'zxc'
-//         }
-//     ]
-// };
 
 // login mock-ups
 const userDB = {
@@ -105,11 +68,11 @@ app.post('/signup/', (req, res) => {
 });
 
 app.get('/loaddata', (req, res) => {
-    allData = loadData(); 
-    console.log(`allData`);
-    console.log(allData);
-   //res.json(allData);
-   res.send(allData)
+    loadData().then((data) => {
+        res.json(data)
+    }).catch((err) => {
+        console.log(err);
+    });
 });
 
 // Start the server

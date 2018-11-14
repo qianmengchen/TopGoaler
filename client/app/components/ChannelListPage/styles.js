@@ -2,27 +2,36 @@ import { StyleSheet } from 'react-native';
 
 const board = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
+    backgroundColor: 'white',
     flex: 1,
     alignItems: 'stretch'
+  },
+  actions: {
+    flex: 0.1,
+    flexDirection: 'row'
+  },
+  channelList: {
+    marginHorizontal: 8,
+    flex: 0.9,
+    flexDirection: 'column'
   }
 });
 
-const searchBars = StyleSheet.create({
-  summary: {
-    backgroundColor: 'transparent',
-    borderWidth: 0,
+const actions = StyleSheet.create({
+  searchBar: {
     borderTopWidth: 0,
     borderBottomWidth: 0,
-    width: '90%'
+    flex: 0.9,
+    backgroundColor: 'transparent',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingBottom: 20
+  },
+  button: {
+    flex: 0.1,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
 
-const buttons = StyleSheet.create({
-  summary: {
-    paddingVertical: 5,
-    backgroundColor: 'transparent'
-  }
-});
-
-export { board, searchBars, buttons };
+export { board, actions };

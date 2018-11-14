@@ -29,11 +29,11 @@ class ChannelMemberView extends Component {
 
         <View style={{ flexDirection: 'row', alignItems: 'stretch' }}>
           <Card containerStyle={cardLeft.container}>
-            <View>
+            <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rank</Text>
               <Text style={[cardLeft.stats, cardLeft.number]}>Top 10%</Text>
             </View>
-            <View>
+            <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rating</Text>
               <Text style={[cardLeft.stats, cardLeft.number]}>1830</Text>
             </View>
@@ -57,10 +57,14 @@ class ChannelMemberView extends Component {
               <Text style={cardRight.task}>500</Text>
             </View>
 
-            <Divider style={{ backgroundColor: '#bbb' }} />
+            <Divider style={{ backgroundColor: '#bbb', height: 1 }} />
 
             <View
-              style={{ flexDirection: 'row', justifyContent: 'space-between' }}
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-evenly',
+                alignItems: 'center'
+              }}
             >
               <TouchableHighlight
                 style={cardRight.taskButton}

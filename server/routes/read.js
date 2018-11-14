@@ -69,6 +69,54 @@ const read = app => {
             response.send(result);
         });
     });
+ 
+    // query to get all channels
+    app.get('/channel_creator/', (request, response) => {
+        pool.query('SELECT * FROM channel_creator', (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+
+    // query to get all tasks
+    app.get('/channel_task/', (request, response) => {
+        pool.query('SELECT * FROM channel_task', (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+
+    // query to get all users
+    app.get('/channel_user_subscribe/', (request, response) => {
+        pool.query('SELECT * FROM channel_user_subscribe', (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+    
+    // query to get all channels
+    app.get('/task_info/', (request, response) => {
+        pool.query('SELECT * FROM task_info', (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+
+    // query to get all tasks
+    app.get('/user_channel_point/', (request, response) => {
+        pool.query('SELECT * FROM user_channel_point', (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+
+    // query to get all users
+    app.get('/user_task_info/', (request, response) => {
+        pool.query('SELECT * FROM user_task_info', (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
 
 }
 module.exports = read;

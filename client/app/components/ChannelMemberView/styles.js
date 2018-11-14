@@ -3,15 +3,14 @@ import { StyleSheet } from 'react-native';
 const header = StyleSheet.create({
   container: {
     marginTop: 10,
-    justifyContent: 'center',
-    flexDirection: 'row'
+    justifyContent: 'space-evenly',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   title: {
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: 40,
-    paddingTop: 20,
-    paddingRight: 30,
+    fontSize: 30,
     fontWeight: 'bold'
   },
   avatar: {
@@ -23,17 +22,21 @@ const cardLeft = StyleSheet.create({
   container: {
     backgroundColor: '#555',
     borderRadius: 10,
-    borderColor: 'grey',
-    marginRight: 5
+    borderColor: '#555',
+    marginRight: 2,
+    flex: 1,
+    alignItems: 'center'
+  },
+  statsContainer: {
+    paddingVertical: 10
   },
   stats: {
-    fontSize: 20,
+    fontSize: 15,
     color: 'white',
-    marginBottom: 8
+    paddingVertical: 2
   },
   number: {
-    fontSize: 25,
-    marginBottom: 20,
+    fontSize: 18,
     fontWeight: 'bold'
   }
 });
@@ -42,7 +45,9 @@ const cardRight = StyleSheet.create({
   container: {
     backgroundColor: '#555',
     borderRadius: 10,
-    marginLeft: 5
+    borderColor: '#555',
+    marginLeft: 2,
+    flex: 2.5
   },
   taskContainer: {
     flexDirection: 'row',
@@ -50,18 +55,16 @@ const cardRight = StyleSheet.create({
     justifyContent: 'space-between'
   },
   task: {
-    fontSize: 20,
+    fontSize: 15,
     color: 'white',
-    marginLeft: 10,
     fontWeight: 'bold'
   },
   taskButton: {
-    marginTop: 10,
-    marginHorizontal: 30
+    marginTop: 5
   },
   taskButtonText: {
     color: 'white',
-    fontSize: 20
+    fontSize: 16
   }
 });
 

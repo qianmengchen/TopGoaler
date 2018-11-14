@@ -1,14 +1,14 @@
 import { createStackNavigator } from 'react-navigation';
-import { TaskList } from '../TaskList/index';
+import { ChannelListPage } from '../ChannelListPage/index';
 import { TaskDetail } from '../TaskDetail/index';
 
 const ChannelNav = createStackNavigator(
   {
-    TaskList: { screen: TaskList },
+    ChannelListPage: { screen: ChannelListPage },
     TaskDetail: { screen: TaskDetail }
   },
   {
-    initialRouteName: 'TaskList'
+    initialRouteName: 'ChannelListPage'
   }
 );
 

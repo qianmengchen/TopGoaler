@@ -6,6 +6,7 @@ const read = require('./routes/read');
 const create = require('./routes/create');
 const remove = require('./routes/remove');
 const update = require('./routes/update'); 
+const request = require('request');
  
 // Use Node.js body parsing middleware
 app.use(bodyParser.json());
@@ -18,31 +19,66 @@ create(app);
 remove(app);
 update(app);
 
+var daa = {};
+function loadData() {
+request('http://localhost:8001/channel_creator/', function(err, res, body){  
+    var objA = JSON.parse(body);
+    request('http://localhost:8001/channel_task/', function(err, res, body) {  
+        var objB = JSON.parse(body);  
+        request('http://localhost:8001/channel_user_subscribe/', function(err, res, body) {  
+            var objC = JSON.parse(body);  
+            request('http://localhost:8001/task_info/', function(err, res, body) {  
+                var objD = JSON.parse(body);   
+                request('http://localhost:8001/user_channel_point/', function(err, res, body) {  
+                    var objE = JSON.parse(body);   
+                    request('http://localhost:8001/user_task_info/', function(err, res, body) {  
+                        var objF = JSON.parse(body);   
+                        daa = objA.concat(objB).concat(objC).concat(objD).concat(objE).concat(objF);
+
+                        console.log(objA)
+                        console.log(objB)
+                        console.log(objC)
+                        console.log(objC)
+                        console.log(objD)
+                        console.log(objE)
+                        console.log(objF)
+                        console.log(daa)
+                        return daa;
+                    });
+                });
+            });
+        });
+    });
+});
+}
+loadData();
+console.log(daa)
+console.log("daa")
 //database mock-ups
 //please update this part to load real data from DB
-const allData = {
-    users: [
-        {
-            name: '123'
-        },
-        {
-            name: '234'
-        }
-    ],
-    channels: [
-        {
-            name: 'sad'
-        },
-        {
-            name: 'qwe'
-        }
-    ],
-    tasks: [
-        {
-            name: 'zxc'
-        }
-    ]
-};
+// const allData = {
+//     users: [
+//         {
+//             name: '123'
+//         },
+//         {
+//             name: '234'
+//         }
+//     ],
+//     channels: [
+//         {
+//             name: 'sad'
+//         },
+//         {
+//             name: 'qwe'
+//         }
+//     ],
+//     tasks: [
+//         {
+//             name: 'zxc'
+//         }
+//     ]
+// };
 
 // login mock-ups
 const userDB = {
@@ -69,7 +105,11 @@ app.post('/signup/', (req, res) => {
 });
 
 app.get('/loaddata', (req, res) => {
-    res.json(allData);
+    allData = loadData(); 
+    console.log(`allData`);
+    console.log(allData);
+   //res.json(allData);
+   res.send(allData)
 });
 
 // Start the server

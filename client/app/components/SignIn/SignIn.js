@@ -4,20 +4,24 @@ import { Card, Input, Icon } from 'react-native-elements';
 import { styles } from './styles';
 
 class SignIn extends Component {
+  _submit = () => {
+    // arrow notation () => {...} creates a function that binds this to the context (i.e the enclosing object)
+    // regular notation function () {} doesn't bind this but rather defers binding to its caller's discretion
+    // (e.g. if we set a button's onpress to {regularfunc}, then regularfunc's 'this' will be the button object.
+    // But here we want 'this' to point to the enclosing object, so we will HAVE to define our function in arrow notation. )
+    this.props.submit(this.state.username, this.state.password);
+  };
+  _signUp = () => {
+    this.props.navigation.navigate('signUp');
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: 'admin',
+      password: 'admin'
+    };
+  }
   render() {
-    let { reportNav } = this.props;
-    const { navigate } = this.props.navigation;
-
-    const goToHomepage = () => {
-      reportNav(); // this is an example of how you can listen to navigation
-      // but you can also subscribe to actual navigation events
-      navigate('TaskList');
-    };
-
-    const goToSignUp = () => {
-      navigate('SignUp');
-    };
-
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Top Goaler</Text>
@@ -29,22 +33,14 @@ class SignIn extends Component {
               name="google-plus"
               type="font-awesome"
               color="#dd4b39"
-              onPress={() => goToHomepage()}
             />
             <Icon
               raised
               name="facebook-square"
               type="font-awesome"
               color="#3b5998"
-              onPress={() => goToHomepage()}
             />
-            <Icon
-              raised
-              name="twitter"
-              type="font-awesome"
-              color="#00aced"
-              onPress={() => goToHomepage()}
-            />
+            <Icon raised name="twitter" type="font-awesome" color="#00aced" />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
@@ -56,18 +52,25 @@ class SignIn extends Component {
           <Input
             containerStyle={{ marginBottom: 10 }}
             placeholder="Username"
+            autoCapitalize="none"
+            defaultValue={this.state.username}
+            onChangeText={text => this.setState({ username: text })}
             leftIcon={<Icon name="person" size={24} color="grey" />}
           />
           <Input
             containerStyle={{ marginVertical: 10 }}
             placeholder="Password"
+            textContentType="password"
+            autoCapitalize="none"
+            defaultValue={this.state.password}
+            onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />
 
           <TouchableHighlight
             style={styles.button}
             underlayColor="#aaa"
-            onPress={() => goToHomepage()}
+            onPress={this._submit}
           >
             <Text style={styles.buttonText}> Sign In </Text>
           </TouchableHighlight>
@@ -75,7 +78,7 @@ class SignIn extends Component {
         <TouchableHighlight
           style={styles.signUpButton}
           underlayColor="#aaa"
-          onPress={() => goToSignUp()}
+          onPress={this._signUp}
         >
           <Text style={styles.signUpText}> Sign Up for Top Goaler </Text>
         </TouchableHighlight>

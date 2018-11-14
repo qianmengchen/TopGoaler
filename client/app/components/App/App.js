@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TabNav } from '../Navigators/index';
+import { AuthNav } from '../Navigators/index';
 
 class App extends Component {
   constructor() {
@@ -15,8 +15,13 @@ class App extends Component {
     /*eslint-enable no-undef*/
   }
 
+  componentDidMount() {
+    this.props.loadData();
+  }
+
   render() {
-    return <TabNav />;
+    console.log(this.props.data);
+    return <AuthNav />;
   }
 }
 

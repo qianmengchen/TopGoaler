@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import SignUp from './SignUp';
-import { navigateTo } from '../../actions';
+import { signUp } from '../../actions';
 
 const mapDispatchToProps = dispatch => ({
-  reportNav: () => dispatch(navigateTo('TaskList'))
+  submit: (username, password) => dispatch(signUp(username, password))
 });
 
 export default connect(
-  () => ({}),
+  null,
   mapDispatchToProps
 )(SignUp);

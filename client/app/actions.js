@@ -33,7 +33,6 @@ export function fetchTasks() {
     return fetch(`http://localhost:8001/tasks`)
       .then(res => res.json(), err => console.log('An error occurred', err))
       .then(json => {
-        console.log('get ' + json);
         return dispatch(receiveTasks(json));
       });
   };
@@ -112,5 +111,24 @@ export function signUp(username, password) {
       },
       e => dispatch(serverError(e))
     );
+  };
+}
+
+/*
+ * load data
+ */
+export const LOAD_DATA = 'LOAD_DATA';
+
+export function receiveData(data) {
+  return { type: LOAD_DATA, data };
+}
+
+export function loadData() {
+  return dispatch => {
+    return fetch(`http://localhost:8001/loaddata`)
+      .then(res => res.json(), err => console.log('An error occurred', err))
+      .then(json => {
+        return dispatch(receiveData(json));
+      });
   };
 }

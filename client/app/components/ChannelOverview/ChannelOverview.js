@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { Avatar, Text, Icon, Button } from 'react-native-elements';
+import { Avatar, Text, Icon } from 'react-native-elements';
 import { board, contents, desc } from './styles';
 
 class ChannelOverview extends Component {

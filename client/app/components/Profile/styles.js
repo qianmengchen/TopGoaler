@@ -14,7 +14,8 @@ const board = StyleSheet.create({
     backgroundColor: 'white'
   },
   tasks: {
-    flex: 0.45
+    flex: 0.45,
+    alignItems: 'stretch'
   }
 });
 

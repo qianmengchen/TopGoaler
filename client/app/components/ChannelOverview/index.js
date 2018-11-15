@@ -1,3 +1,3 @@
-import ChannelOverview from './container';
+import ChannelOverview from './ChannelOverview';
 
 export { ChannelOverview };

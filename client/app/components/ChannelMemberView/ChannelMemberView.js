@@ -6,19 +6,16 @@ import { Feed } from '../Feed/index';
 
 class ChannelMemberView extends Component {
   render() {
-    let { reportNav } = this.props;
     const { navigate } = this.props.navigation;
 
     const goToHomepage = () => {
-      reportNav(); // this is an example of how you can listen to navigation
-      // but you can also subscribe to actual navigation events
-      navigate('TaskList');
+      navigate('ChannelListPage');
     };
 
     return (
       <View>
         <View style={header.container}>
-          <Text style={header.title}>#Leetcoders</Text>
+          <Text style={header.title}>{this.props.channelName}</Text>
           <Avatar
             size={100}
             rounded

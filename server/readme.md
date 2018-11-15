@@ -2,7 +2,8 @@
 
 
 ## Run
-
+npm install body-parser express mysql request
+npm install --save request-promise
 Run `node server.js` under server file to run your server
 
 Then in webbrowser, (I choose safari), use http call to connect with server.

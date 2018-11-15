@@ -7,6 +7,7 @@ const create = require('./routes/create');
 const remove = require('./routes/remove');
 const update = require('./routes/update'); 
 const request = require('request-promise');
+const axios = require('axios');
  
 // Use Node.js body parsing middleware
 app.use(bodyParser.json());
@@ -43,29 +44,46 @@ async function loadData() {
     return data;
 }
 
-// login mock-ups
-const userDB = {
-    'admin': 'admin'
-};
+async function login(username, password) {
+    var URL = 'http://localhost:8001/user_password/' + username + '&' + password;
+    var userDB = await request(URL);
+    userDB = JSON.parse(userDB);
+    return userDB;
+}
 
 app.post('/login/', (req, res) => {
     const {username, password} = req.body;
-    console.log(req.body)
-    const status = (username && password && userDB[username] == password) ? 'success' : 'failure';
+    console.log(req.body);
+
+    const userDB = login(username, password);
+    const passwordDB = userDB[0].password;
+
+    const status = (username && password && passwordDB == password) ? 'success' : 'failure';
     res.send({status});
 });
+
+function signUp(username, password) {
+    axios.post('http://localhost:8001/user_password/', {
+    user: username,
+    password: password
+}).then((res) => {
+    return 1;
+}).catch((error) => {
+    return -1;
+});
+}
 
 app.post('/signup/', (req, res) => {
     const {username, password} = req.body;
     let status = 'failure';
     if (typeof username == "string" && typeof password == "string" && username.length > 0 && password.length > 0) {
-        if (!userDB[username]) {
-            userDB[username] = password;
-            status = 'success';
+        if (!login(username, password)) {
+            if(signUp(username, password)) { status = 'success'; }
         }
     }
     res.send({status});
 });
+
 
 app.get('/loaddata', (req, res) => {
     loadData().then((data) => {
@@ -81,3 +99,4 @@ const server = app.listen(port, (error) => {
  
     console.log(`Server listening on port ${server.address().port}`);
 });
+

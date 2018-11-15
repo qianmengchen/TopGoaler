@@ -54,6 +54,14 @@ const create = app => {
         });
     });
 
+    // post for user_password
+    app.post('/user_password', (request, response) => {
+        pool.query('INSERT INTO user_password SET ?', request.body, (error, result) => {
+            if (error) throw error; 
+            response.status(201).send(`user added with password: ${result.insertId}`);
+        });
+    });
+
 }
 module.exports = create;
 

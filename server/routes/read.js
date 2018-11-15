@@ -118,6 +118,16 @@ const read = app => {
         });
     });
 
+    // query to get user and password
+    app.get('/user_password/:user&:password', (request, response) => {
+        const user = request.params.user;
+        const password = request.params.password; 
+        pool.query('SELECT * FROM user_password WHERE user = ? AND password = ?', [user, password], (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+
 }
 module.exports = read;
 

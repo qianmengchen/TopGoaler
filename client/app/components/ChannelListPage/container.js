@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TaskList from './TaskList';
+import ChannelListPage from './ChannelListPage';
 import { fetchTasks, navigateTo } from '../../actions';
 
 const mapStateToProps = state => ({
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TaskList);
+)(ChannelListPage);

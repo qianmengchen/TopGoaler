@@ -1,7 +1,7 @@
+import { serverAddr } from '../config';
 /*
  * action types
  */
-
 export const ADD_TASK = 'ADD_TASK';
 
 export const REQUEST_TASKS = 'REQUEST_TASKS';
@@ -30,7 +30,7 @@ export function navigateTo(dest) {
 export function fetchTasks() {
   return dispatch => {
     dispatch(requestTasks());
-    return fetch(`http://localhost:8001/tasks`)
+    return fetch(`${serverAddr}/tasks`)
       .then(res => res.json(), err => console.log('An error occurred', err))
       .then(json => {
         return dispatch(receiveTasks(json));
@@ -61,7 +61,7 @@ export function loginFailure(username) {
 }
 
 const _post = (url, body) =>
-  fetch('http://localhost:8001' + url, {
+  fetch(serverAddr + url, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -125,7 +125,7 @@ export function receiveData(data) {
 
 export function loadData() {
   return dispatch => {
-    return fetch(`http://localhost:8001/loaddata`)
+    return fetch(`${serverAddr}/loaddata`)
       .then(res => res.json(), err => console.log('An error occurred', err))
       .then(json => {
         return dispatch(receiveData(json));

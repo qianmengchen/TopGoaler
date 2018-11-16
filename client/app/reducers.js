@@ -9,7 +9,8 @@ import {
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE,
   SERVER_ERR,
-  LOAD_DATA
+  LOAD_DATA,
+  ADD_CHANNEL_LOCAL
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
@@ -100,4 +101,23 @@ function database(state = {}, action) {
   }
 }
 
-export default combineReducers({ tasks, auth, database });
+const initialChannelState = [
+  { channel: 'ChannelA', user: 'A' },
+  { channel: 'ChannelB', user: 'B' },
+  { channel: 'Channel Orange', user: 'Frank Ocean' }
+];
+
+function channels(state = initialChannelState, action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return action.data.channel_creator;
+    case ADD_CHANNEL_LOCAL: {
+      const { channel, user } = action;
+      return [{ channel, user }, ...state];
+    }
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({ tasks, auth, database, channels });

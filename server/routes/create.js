@@ -1,8 +1,8 @@
 // Load the MySQL pool connection
 const pool = require('../data/config');
 
-const create = app => {  
-    // post for channel_creator   
+const create = app => {
+    // post for channel_creator
     // curl -d "channel=bxzhu_channel&user=bxzhu" http://localhost:8001/channel_creator
     app.post('/channel_creator', (request, response) => {
         pool.query('INSERT INTO channel_creator SET ?', request.body, (error, result) => {

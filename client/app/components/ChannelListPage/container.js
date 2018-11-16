@@ -1,14 +1,21 @@
 import { connect } from 'react-redux';
 import ChannelListPage from './ChannelListPage';
-import { fetchTasks, navigateTo } from '../../actions';
+import {
+  fetchTasks,
+  navigateTo,
+  addChannel,
+  addChannelLocal
+} from '../../actions';
 
 const mapStateToProps = state => ({
-  tasks: state.tasks.tasks
+  channels: state.channels
 });
 
 const mapDispatchToProps = dispatch => ({
   refreshTasks: () => dispatch(fetchTasks()),
-  reportNav: () => dispatch(navigateTo('TaskDetail'))
+  reportNav: () => dispatch(navigateTo('TaskDetail')),
+  addChannel: (channel, user) => dispatch(addChannel(channel, user)),
+  addChannelLocal: (channel, user) => dispatch(addChannelLocal(channel, user))
 });
 
 export default connect(

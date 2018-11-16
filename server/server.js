@@ -1,13 +1,13 @@
 const express = require('express');
 const port = 8001;
 const bodyParser = require('body-parser');
-const app = express(); 
+const app = express();
 const read = require('./routes/read');
 const create = require('./routes/create');
 const remove = require('./routes/remove');
-const update = require('./routes/update'); 
+const update = require('./routes/update');
 const request = require('request-promise');
- 
+
 // Use Node.js body parsing middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

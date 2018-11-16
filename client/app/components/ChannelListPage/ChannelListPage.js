@@ -5,6 +5,15 @@ import { board, actions } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
 
 class ChannelListPage extends Component {
+  _goToChannel = name => {
+    this.props.navigation.navigate('ChannelMemberView', { name });
+  };
+  _addChannel = () => {
+    this.props.addChannelLocal('Test' + new Date().getSeconds(), 'admin');
+    // addChannelLocal is for unit testing.
+    // In production, we always fetch the entire database and never make local, incremental state updates.
+    // use this.props.addChannel to actually add to server
+  };
   render() {
     return (
       <View style={board.container}>
@@ -22,18 +31,18 @@ class ChannelListPage extends Component {
               buttonStyle={{ backgroundColor: 'transparent' }}
               icon={<Icon name="add" size={30} color="black" />}
               title=""
-              onPress={() => {}}
+              onPress={this._addChannel}
             />
           </View>
           <View style={board.channelList}>
-            <ChannelOverview />
-            <ChannelOverview />
-            <ChannelOverview />
-            <ChannelOverview />
-            <ChannelOverview />
-            <ChannelOverview />
-            <ChannelOverview />
-            <ChannelOverview />
+            {this.props.channels.map(ch => (
+              <ChannelOverview
+                key={ch.channel}
+                title={ch.channel}
+                subtitle={`Created by ${ch.user}`}
+                goToChannel={this._goToChannel}
+              />
+            ))}
           </View>
         </ScrollView>
       </View>

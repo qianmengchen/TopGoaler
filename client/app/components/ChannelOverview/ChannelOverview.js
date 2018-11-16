@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { View, TouchableHighlight } from 'react-native';
+import {
+  View,
+  TouchableHighlight,
+  TouchableWithoutFeedback
+} from 'react-native';
 import { Avatar, Text, Icon } from 'react-native-elements';
 import { board, contents, desc } from './styles';
 
@@ -25,7 +29,9 @@ class ChannelOverview extends Component {
           <Text style={contents.subtitle}>{this.props.subtitle}</Text>
           <View style={contents.desc}>
             <Text style={desc.numbers}>{this.fakeProps.desc}</Text>
-            <Icon style={desc.icon} name="add" size={30} color="black" />
+            <TouchableWithoutFeedback onPress={this.props.subscribe}>
+              <Icon style={desc.icon} name="add" size={30} color="black" />
+            </TouchableWithoutFeedback>
           </View>
         </View>
         <TouchableHighlight

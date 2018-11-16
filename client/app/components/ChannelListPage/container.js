@@ -4,7 +4,8 @@ import {
   fetchTasks,
   navigateTo,
   addChannel,
-  addChannelLocal
+  addChannelLocal,
+  subscribeChannel
 } from '../../actions';
 
 const mapStateToProps = state => ({
@@ -15,7 +16,8 @@ const mapDispatchToProps = dispatch => ({
   refreshTasks: () => dispatch(fetchTasks()),
   reportNav: () => dispatch(navigateTo('TaskDetail')),
   addChannel: (channel, user) => dispatch(addChannel(channel, user)),
-  addChannelLocal: (channel, user) => dispatch(addChannelLocal(channel, user))
+  addChannelLocal: (channel, user) => dispatch(addChannelLocal(channel, user)),
+  subscribe: channel => dispatch(subscribeChannel(channel))
 });
 
 export default connect(

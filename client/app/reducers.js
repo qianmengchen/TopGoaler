@@ -10,7 +10,8 @@ import {
   SIGNUP_FAILURE,
   SERVER_ERR,
   LOAD_DATA,
-  ADD_CHANNEL_LOCAL
+  ADD_CHANNEL_LOCAL,
+  SUBSCRIBE_CHANNEL
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
@@ -102,19 +103,32 @@ function database(state = {}, action) {
 }
 
 const initialChannelState = [
-  { channel: 'ChannelA', user: 'A' },
-  { channel: 'ChannelB', user: 'B' },
-  { channel: 'Channel Orange', user: 'Frank Ocean' }
+  { channel: 'ChannelA', creator: 'A', subscribed: false },
+  { channel: 'ChannelB', creator: 'B', subscribed: false },
+  { channel: 'Channel Orange', creator: 'Frank Ocean', subscribed: false }
 ];
 
 function channels(state = initialChannelState, action) {
   switch (action.type) {
     case LOAD_DATA:
-      return action.data.channel_creator;
+      return action.data.channel_creator
+        .map(({ channel, user }) => ({
+          channel,
+          creator: user,
+          subscribed: false
+        }))
+        .sort((x, y) => x.creator < y.creator);
     case ADD_CHANNEL_LOCAL: {
       const { channel, user } = action;
-      return [{ channel, user }, ...state];
+      if (state.find(ch => ch.channel == channel)) {
+        return state;
+      }
+      return [{ channel, creator: user, subscribed: true }, ...state];
     }
+    case SUBSCRIBE_CHANNEL:
+      return state.map(ch =>
+        ch.channel == action.channel ? { ...ch, subscribed: true } : ch
+      );
     default:
       return state;
   }

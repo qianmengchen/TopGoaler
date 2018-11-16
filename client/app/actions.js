@@ -169,3 +169,12 @@ export function addChannel(channel, user) {
 export function addChannelLocal(channel, user) {
   return { type: ADD_CHANNEL_LOCAL, channel, user };
 }
+
+/*
+ * subscription
+ */
+
+export const SUBSCRIBE_CHANNEL = 'SUBSCRIBE_CHANNEL';
+export function subscribeChannel(channel) {
+  return { type: SUBSCRIBE_CHANNEL, channel };
+}

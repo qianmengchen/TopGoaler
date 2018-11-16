@@ -5,14 +5,19 @@ import { board, actions } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
 
 class ChannelListPage extends Component {
-  _goToChannel = name => {
-    this.props.navigation.navigate('ChannelMemberView', { name });
+  _goToChannel = subscribed => name => {
+    if (subscribed)
+      this.props.navigation.navigate('ChannelMemberView', { name });
+    else this.props.navigation.navigate('ChannelPublicView', { name });
   };
   _addChannel = () => {
     this.props.addChannelLocal('Test' + new Date().getSeconds(), 'admin');
     // addChannelLocal is for unit testing.
     // In production, we always fetch the entire database and never make local, incremental state updates.
     // use this.props.addChannel to actually add to server
+  };
+  _subscribe = ch => () => {
+    this.props.subscribe(ch.channel);
   };
   render() {
     return (
@@ -35,12 +40,13 @@ class ChannelListPage extends Component {
             />
           </View>
           <View style={board.channelList}>
-            {this.props.channels.map(ch => (
+            {this.props.channels.map((ch, idx) => (
               <ChannelOverview
-                key={ch.channel}
+                key={idx}
                 title={ch.channel}
-                subtitle={`Created by ${ch.user}`}
-                goToChannel={this._goToChannel}
+                subtitle={`Created by ${ch.creator}`}
+                goToChannel={this._goToChannel(ch.subscribed)}
+                subscribe={this._subscribe(ch)}
               />
             ))}
           </View>

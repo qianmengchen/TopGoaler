@@ -3,22 +3,31 @@ import { Text, View, TouchableHighlight } from 'react-native';
 import { Card, Avatar } from 'react-native-elements';
 import { header, description, follow } from './styles';
 import { MemberList } from '../MemberList/index';
+import { NavigationActions, StackActions } from 'react-navigation';
 
 class ChannelPublicView extends Component {
+  _goToMemberPage = () => {
+    this.props.subscribe(this.props.channelName);
+    const { dispatch } = this.props.navigation;
+    // the idiom to change the route
+    const resetAction = StackActions.reset({
+      index: 1,
+      actions: [
+        NavigationActions.navigate({ routeName: 'ChannelListPage' }),
+        NavigationActions.navigate({
+          routeName: 'ChannelMemberView',
+          params: { name: this.props.channelName }
+        })
+      ]
+    });
+    dispatch(resetAction);
+  };
+
   render() {
-    let { reportNav } = this.props;
-    const { navigate } = this.props.navigation;
-
-    const goToHomepage = () => {
-      reportNav(); // this is an example of how you can listen to navigation
-      // but you can also subscribe to actual navigation events
-      navigate('TaskList');
-    };
-
     return (
       <View>
         <View style={header.container}>
-          <Text style={header.title}>#Leetcoders</Text>
+          <Text style={header.title}>{this.props.channelName}</Text>
           <Avatar
             size={100}
             rounded
@@ -29,7 +38,7 @@ class ChannelPublicView extends Component {
 
         <Card containerStyle={description.card}>
           <Text style={description.description}>
-            Learn yourself some algorithms thru competition with friends!
+            Learn yourself some {this.props.channelName} with friends!
           </Text>
 
           <View style={description.statsContainer}>
@@ -54,7 +63,7 @@ class ChannelPublicView extends Component {
         <TouchableHighlight
           style={follow.button}
           underlayColor="#aaa"
-          onPress={() => goToHomepage()}
+          onPress={this._goToMemberPage}
         >
           <Text style={follow.buttonText}> Follow </Text>
         </TouchableHighlight>

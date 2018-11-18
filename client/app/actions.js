@@ -137,18 +137,21 @@ export function loadData() {
  * add channel
  */
 
-function _query(params) {
+const _query = params => {
   var esc = encodeURIComponent;
   var query = Object.keys(params)
     .map(k => esc(k) + '=' + esc(params[k]))
     .join('&');
   return query;
-}
+};
 
 export const ADD_CHANNEL = 'ADD_CHANNEL';
-export const ADD_CHANNEL_LOCAL = 'ADD_CHANNEL_LOCAL';
-export function addChannel(channel, user) {
-  // channel=bxzhu_channel&user=bxzhu
+
+const _createChannelLocal = (channel, user) => {
+  return { type: ADD_CHANNEL, channel, user };
+};
+
+export function createChannelAsUser(channel, user) {
   return dispatch => {
     let body = _query({ channel, user });
     let url = `${serverAddr}/channel_creator`;
@@ -159,15 +162,10 @@ export function addChannel(channel, user) {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       }
-    }).then(res => {
-      console.log('Channel create : ' + res);
-      dispatch(loadData());
+    }).then(() => {
+      dispatch(_createChannelLocal(channel, user));
     });
   };
-}
-
-export function addChannelLocal(channel, user) {
-  return { type: ADD_CHANNEL_LOCAL, channel, user };
 }
 
 /*

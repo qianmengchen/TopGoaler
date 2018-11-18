@@ -10,9 +10,10 @@ import {
   SIGNUP_FAILURE,
   SERVER_ERR,
   LOAD_DATA,
-  ADD_CHANNEL_LOCAL,
+  ADD_CHANNEL,
   SUBSCRIBE_CHANNEL
 } from './actions';
+import { constructChannel } from './constructors';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
 
@@ -97,18 +98,17 @@ function database(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
       return { ...state, ...action.data };
+    case ADD_CHANNEL:
+      const { channel, user } = action;
+      const oldChannels = state.channel_creator;
+      const newChannel = constructChannel(channel, user);
+      return { ...state, channel_creator: [newChannel, ...oldChannels] };
     default:
       return state;
   }
 }
 
-const initialChannelState = [
-  { channel: 'ChannelA', creator: 'A', subscribed: false },
-  { channel: 'ChannelB', creator: 'B', subscribed: false },
-  { channel: 'Channel Orange', creator: 'Frank Ocean', subscribed: false }
-];
-
-function channels(state = initialChannelState, action) {
+function channels(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.channel_creator
@@ -134,4 +134,4 @@ function channels(state = initialChannelState, action) {
   }
 }
 
-export default combineReducers({ tasks, auth, database, channels });
+export default combineReducers({ tasks, auth, database });

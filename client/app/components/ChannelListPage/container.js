@@ -3,20 +3,18 @@ import ChannelListPage from './ChannelListPage';
 import {
   fetchTasks,
   navigateTo,
-  addChannel,
-  addChannelLocal,
+  createChannelAsUser,
   subscribeChannel
 } from '../../actions';
 
 const mapStateToProps = state => ({
-  channels: state.channels
+  channels: state.database.channel_creator
 });
 
 const mapDispatchToProps = dispatch => ({
   refreshTasks: () => dispatch(fetchTasks()),
   reportNav: () => dispatch(navigateTo('TaskDetail')),
-  addChannel: (channel, user) => dispatch(addChannel(channel, user)),
-  addChannelLocal: (channel, user) => dispatch(addChannelLocal(channel, user)),
+  addChannel: (channel, user) => dispatch(createChannelAsUser(channel, user)),
   subscribe: channel => dispatch(subscribeChannel(channel))
 });
 

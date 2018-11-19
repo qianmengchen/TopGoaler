@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Channel List Page renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "white",
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollViewMock>
+      <Component
+        style={
+          Object {
+            "flex": 0.1,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <ForwardRef(Themed.SearchBar)
+          containerStyle={
+            Object {
+              "alignItems": "flex-start",
+              "backgroundColor": "transparent",
+              "borderBottomWidth": 0,
+              "borderTopWidth": 0,
+              "flex": 0.9,
+              "justifyContent": "center",
+              "paddingBottom": 20,
+            }
+          }
+          icon={
+            Object {
+              "name": "search",
+              "type": "font-awesome",
+            }
+          }
+          onChangeText={[Function]}
+          onClear={[Function]}
+          placeholder="Search for channels"
+        />
+        <ForwardRef(Themed.Button)
+          buttonStyle={
+            Object {
+              "backgroundColor": "transparent",
+            }
+          }
+          containerStyle={
+            Object {
+              "alignItems": "center",
+              "flex": 0.1,
+              "justifyContent": "center",
+            }
+          }
+          icon={
+            <Themed.Icon
+              color="black"
+              name="add"
+              size={30}
+            />
+          }
+          onPress={[Function]}
+          title=""
+        />
+      </Component>
+      <Component
+        style={
+          Object {
+            "flex": 0.9,
+            "flexDirection": "column",
+            "marginHorizontal": 8,
+          }
+        }
+      />
+    </ScrollViewMock>
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <ScrollViewMock>
+        <Component
+          style={
+            Object {
+              "flex": 0.1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <ForwardRef(Themed.SearchBar)
+            containerStyle={
+              Object {
+                "alignItems": "flex-start",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0,
+                "borderTopWidth": 0,
+                "flex": 0.9,
+                "justifyContent": "center",
+                "paddingBottom": 20,
+              }
+            }
+            icon={
+              Object {
+                "name": "search",
+                "type": "font-awesome",
+              }
+            }
+            onChangeText={[Function]}
+            onClear={[Function]}
+            placeholder="Search for channels"
+          />
+          <ForwardRef(Themed.Button)
+            buttonStyle={
+              Object {
+                "backgroundColor": "transparent",
+              }
+            }
+            containerStyle={
+              Object {
+                "alignItems": "center",
+                "flex": 0.1,
+                "justifyContent": "center",
+              }
+            }
+            icon={
+              <Themed.Icon
+                color="black"
+                name="add"
+                size={30}
+              />
+            }
+            onPress={[Function]}
+            title=""
+          />
+        </Component>
+        <Component
+          style={
+            Object {
+              "flex": 0.9,
+              "flexDirection": "column",
+              "marginHorizontal": 8,
+            }
+          }
+        />
+      </ScrollViewMock>,
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "white",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "flex": 0.1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <ForwardRef(Themed.SearchBar)
+              containerStyle={
+                Object {
+                  "alignItems": "flex-start",
+                  "backgroundColor": "transparent",
+                  "borderBottomWidth": 0,
+                  "borderTopWidth": 0,
+                  "flex": 0.9,
+                  "justifyContent": "center",
+                  "paddingBottom": 20,
+                }
+              }
+              icon={
+                Object {
+                  "name": "search",
+                  "type": "font-awesome",
+                }
+              }
+              onChangeText={[Function]}
+              onClear={[Function]}
+              placeholder="Search for channels"
+            />
+            <ForwardRef(Themed.Button)
+              buttonStyle={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+              containerStyle={
+                Object {
+                  "alignItems": "center",
+                  "flex": 0.1,
+                  "justifyContent": "center",
+                }
+              }
+              icon={
+                <Themed.Icon
+                  color="black"
+                  name="add"
+                  size={30}
+                />
+              }
+              onPress={[Function]}
+              title=""
+            />
+          </Component>,
+          <Component
+            style={
+              Object {
+                "flex": 0.9,
+                "flexDirection": "column",
+                "marginHorizontal": 8,
+              }
+            }
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <ForwardRef(Themed.SearchBar)
+                containerStyle={
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "borderBottomWidth": 0,
+                    "borderTopWidth": 0,
+                    "flex": 0.9,
+                    "justifyContent": "center",
+                    "paddingBottom": 20,
+                  }
+                }
+                icon={
+                  Object {
+                    "name": "search",
+                    "type": "font-awesome",
+                  }
+                }
+                onChangeText={[Function]}
+                onClear={[Function]}
+                placeholder="Search for channels"
+              />,
+              <ForwardRef(Themed.Button)
+                buttonStyle={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+                containerStyle={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 0.1,
+                    "justifyContent": "center",
+                  }
+                }
+                icon={
+                  <Themed.Icon
+                    color="black"
+                    name="add"
+                    size={30}
+                  />
+                }
+                onPress={[Function]}
+                title=""
+              />,
+            ],
+            "style": Object {
+              "flex": 0.1,
+              "flexDirection": "row",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "containerStyle": Object {
+                  "alignItems": "flex-start",
+                  "backgroundColor": "transparent",
+                  "borderBottomWidth": 0,
+                  "borderTopWidth": 0,
+                  "flex": 0.9,
+                  "justifyContent": "center",
+                  "paddingBottom": 20,
+                },
+                "icon": Object {
+                  "name": "search",
+                  "type": "font-awesome",
+                },
+                "onChangeText": [Function],
+                "onClear": [Function],
+                "placeholder": "Search for channels",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "buttonStyle": Object {
+                  "backgroundColor": "transparent",
+                },
+                "containerStyle": Object {
+                  "alignItems": "center",
+                  "flex": 0.1,
+                  "justifyContent": "center",
+                },
+                "icon": <Themed.Icon
+                  color="black"
+                  name="add"
+                  size={30}
+                />,
+                "onPress": [Function],
+                "title": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+            "style": Object {
+              "flex": 0.9,
+              "flexDirection": "column",
+              "marginHorizontal": 8,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [MockFunction],
+    },
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <ScrollViewMock>
+          <Component
+            style={
+              Object {
+                "flex": 0.1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <ForwardRef(Themed.SearchBar)
+              containerStyle={
+                Object {
+                  "alignItems": "flex-start",
+                  "backgroundColor": "transparent",
+                  "borderBottomWidth": 0,
+                  "borderTopWidth": 0,
+                  "flex": 0.9,
+                  "justifyContent": "center",
+                  "paddingBottom": 20,
+                }
+              }
+              icon={
+                Object {
+                  "name": "search",
+                  "type": "font-awesome",
+                }
+              }
+              onChangeText={[Function]}
+              onClear={[Function]}
+              placeholder="Search for channels"
+            />
+            <ForwardRef(Themed.Button)
+              buttonStyle={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+              containerStyle={
+                Object {
+                  "alignItems": "center",
+                  "flex": 0.1,
+                  "justifyContent": "center",
+                }
+              }
+              icon={
+                <Themed.Icon
+                  color="black"
+                  name="add"
+                  size={30}
+                />
+              }
+              onPress={[Function]}
+              title=""
+            />
+          </Component>
+          <Component
+            style={
+              Object {
+                "flex": 0.9,
+                "flexDirection": "column",
+                "marginHorizontal": 8,
+              }
+            }
+          />
+        </ScrollViewMock>,
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "white",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "flex": 0.1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <ForwardRef(Themed.SearchBar)
+                containerStyle={
+                  Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "borderBottomWidth": 0,
+                    "borderTopWidth": 0,
+                    "flex": 0.9,
+                    "justifyContent": "center",
+                    "paddingBottom": 20,
+                  }
+                }
+                icon={
+                  Object {
+                    "name": "search",
+                    "type": "font-awesome",
+                  }
+                }
+                onChangeText={[Function]}
+                onClear={[Function]}
+                placeholder="Search for channels"
+              />
+              <ForwardRef(Themed.Button)
+                buttonStyle={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+                containerStyle={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 0.1,
+                    "justifyContent": "center",
+                  }
+                }
+                icon={
+                  <Themed.Icon
+                    color="black"
+                    name="add"
+                    size={30}
+                  />
+                }
+                onPress={[Function]}
+                title=""
+              />
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "flex": 0.9,
+                  "flexDirection": "column",
+                  "marginHorizontal": 8,
+                }
+              }
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <ForwardRef(Themed.SearchBar)
+                  containerStyle={
+                    Object {
+                      "alignItems": "flex-start",
+                      "backgroundColor": "transparent",
+                      "borderBottomWidth": 0,
+                      "borderTopWidth": 0,
+                      "flex": 0.9,
+                      "justifyContent": "center",
+                      "paddingBottom": 20,
+                    }
+                  }
+                  icon={
+                    Object {
+                      "name": "search",
+                      "type": "font-awesome",
+                    }
+                  }
+                  onChangeText={[Function]}
+                  onClear={[Function]}
+                  placeholder="Search for channels"
+                />,
+                <ForwardRef(Themed.Button)
+                  buttonStyle={
+                    Object {
+                      "backgroundColor": "transparent",
+                    }
+                  }
+                  containerStyle={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 0.1,
+                      "justifyContent": "center",
+                    }
+                  }
+                  icon={
+                    <Themed.Icon
+                      color="black"
+                      name="add"
+                      size={30}
+                    />
+                  }
+                  onPress={[Function]}
+                  title=""
+                />,
+              ],
+              "style": Object {
+                "flex": 0.1,
+                "flexDirection": "row",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "containerStyle": Object {
+                    "alignItems": "flex-start",
+                    "backgroundColor": "transparent",
+                    "borderBottomWidth": 0,
+                    "borderTopWidth": 0,
+                    "flex": 0.9,
+                    "justifyContent": "center",
+                    "paddingBottom": 20,
+                  },
+                  "icon": Object {
+                    "name": "search",
+                    "type": "font-awesome",
+                  },
+                  "onChangeText": [Function],
+                  "onClear": [Function],
+                  "placeholder": "Search for channels",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "buttonStyle": Object {
+                    "backgroundColor": "transparent",
+                  },
+                  "containerStyle": Object {
+                    "alignItems": "center",
+                    "flex": 0.1,
+                    "justifyContent": "center",
+                  },
+                  "icon": <Themed.Icon
+                    color="black"
+                    name="add"
+                    size={30}
+                  />,
+                  "onPress": [Function],
+                  "title": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": undefined,
+              "style": Object {
+                "flex": 0.9,
+                "flexDirection": "column",
+                "marginHorizontal": 8,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [MockFunction],
+      },
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

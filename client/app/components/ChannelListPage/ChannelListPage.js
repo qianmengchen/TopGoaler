@@ -10,12 +10,12 @@ class ChannelListPage extends Component {
       this.props.navigation.navigate('ChannelMemberView', { name });
     else this.props.navigation.navigate('ChannelPublicView', { name });
   };
-  _addChannel = () => {
+  _addChannel() {
     this.props.addChannelLocal('Test' + new Date().getSeconds(), 'admin');
     // addChannelLocal is for unit testing.
     // In production, we always fetch the entire database and never make local, incremental state updates.
     // use this.props.addChannel to actually add to server
-  };
+  }
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };
@@ -36,7 +36,7 @@ class ChannelListPage extends Component {
               buttonStyle={{ backgroundColor: 'transparent' }}
               icon={<Icon name="add" size={30} color="black" />}
               title=""
-              onPress={this._addChannel}
+              onPress={this._addChannel.bind(this)}
             />
           </View>
           <View style={board.channelList}>

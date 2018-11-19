@@ -5,11 +5,7 @@ import { iconColors, task } from './styles';
 
 class Feed extends Component {
   render() {
-    const name = this.props.name;
-    const taskTitle = this.props.taskTitle;
-    const comment = this.props.comment;
-    const timestamp = this.props.timestamp;
-    const points = this.props.points;
+    let { name, taskTitle, comment, timestamp, points } = this.props;
 
     const getRandomIconColor = () => {
       return iconColors[Math.floor(Math.random() * iconColors.length)];

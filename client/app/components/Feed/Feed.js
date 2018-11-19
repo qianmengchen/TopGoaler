@@ -24,7 +24,6 @@ class Feed extends Component {
                 size="medium"
                 rounded
                 title={name}
-                onPress={() => console.log("Goes to member's profile page")}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: getRandomIconColor() }}
               />

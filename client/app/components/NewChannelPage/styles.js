@@ -2,21 +2,46 @@ import { StyleSheet } from 'react-native';
 
 const board = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
+    backgroundColor: 'white',
     flex: 1,
     alignItems: 'stretch'
   },
-  personalInfo: {
-    flex: 0.35
+  title: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 20
   },
-  channels: {
-    flex: 0.2,
-    backgroundColor: 'white'
+  input: {
+    paddingLeft: 10,
+    marginBottom: 10
   },
-  tasks: {
-    flex: 0.45,
-    alignItems: 'stretch'
+  button: {
+    marginVertical: 10,
+    alignItems: 'center'
   }
 });
 
-export { board };
+const text = StyleSheet.create({
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold'
+  },
+  label: {
+    fontSize: 15,
+    fontWeight: '300',
+    color: 'grey'
+  }
+});
+
+const button = StyleSheet.create({
+  create: {
+    backgroundColor: 'rgba(40, 160, 147, 1)',
+    width: 120,
+    height: 40,
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 20
+  }
+});
+
+export { board, text, button };

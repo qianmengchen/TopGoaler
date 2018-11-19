@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import { Input } from 'react-native-elements';
 require('isomorphic-fetch');
 
-import SignIn from '../components/SignIn/SignIn';
+import SignUp from '../components/SignUp/SignUp';
 
 const middlewares = [thunkMiddleware]; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
@@ -16,13 +16,13 @@ const initAuthState = {
   username: ''
 };
 
-describe('Testing Sign In Page', () => {
+describe('Testing Sign Up Page', () => {
   const _submit = jest.fn();
   const navigation = { navigate: jest.fn() };
-  const submit = sinon.spy(SignIn.prototype, '_submit');
-  const signup = sinon.spy(SignIn.prototype, '_signUp');
+  const submit = sinon.spy(SignUp.prototype, '_submit');
+  const signin = sinon.spy(SignUp.prototype, '_signIn');
 
-  const wrapper = shallow(<SignIn navigation={navigation} submit={_submit} />, {
+  const wrapper = shallow(<SignUp navigation={navigation} submit={_submit} />, {
     context: { store: mockStore(initAuthState) }
   });
   const render = wrapper.dive();
@@ -31,8 +31,8 @@ describe('Testing Sign In Page', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render 2 TouchableHighlight buttons', () => {
-    expect(render.find('TouchableHighlight')).toHaveLength(2);
+  it('should render 5 TouchableHighlight buttons (signin, submit, fb, google, twitter)', () => {
+    expect(render.find('TouchableHighlight')).toHaveLength(5);
   });
 
   it('should invoke corresponding methods when signin and signup buttons are pressed', () => {
@@ -41,10 +41,10 @@ describe('Testing Sign In Page', () => {
     });
 
     expect(submit.calledOnce).toBe(true);
-    expect(signup.calledOnce).toBe(true);
+    expect(signin.calledOnce).toBe(true);
   });
 
-  it('should have 2 Input text fields for username and password', () => {
-    expect(render.find(Input)).toHaveLength(2);
+  it('should have 3 Input text fields for username, password, and email', () => {
+    expect(render.find(Input)).toHaveLength(3);
   });
 });

@@ -4,12 +4,12 @@ import { Card, Input, Icon } from 'react-native-elements';
 import { card, alt } from './styles';
 
 class SignUp extends Component {
-  _submit = () => {
+  _submit() {
     this.props.submit(this.state.username, this.state.password);
-  };
-  _signIn = () => {
+  }
+  _signIn() {
     this.props.navigation.navigate('signIn');
-  };
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +48,7 @@ class SignUp extends Component {
           <TouchableHighlight
             style={card.button}
             underlayColor="#aaa"
-            onPress={this._submit}
+            onPress={this._submit.bind(this)}
           >
             <Text style={card.buttonText}> Create Account </Text>
           </TouchableHighlight>
@@ -86,7 +86,7 @@ class SignUp extends Component {
         <TouchableHighlight
           style={alt.button}
           underlayColor="#aaa"
-          onPress={this._signIn}
+          onPress={this._signIn.bind(this)}
         >
           <Text style={alt.buttonText}> I have an account </Text>
         </TouchableHighlight>

@@ -49,6 +49,20 @@ When the work is complete and already pushed up, create a pull request on Github
 
 ## Unit Test
 
+### jest
+
+Frontend test directory: [client/app/tests](client/app/tests)
+Backend test directory: 
+
+Frontend tests should check rendering with snapshots. Snapshots are saved renders that are the most recently accepted. It is used to make sure that the UI does not change unexpectedly. If changes are made, the test will fail and the snapshot must be updated by either pressing 'u' in the interactive watch or with the command:
+
+```bash
+jest -u
+```
+
+Frontend tests should also check for core components, such as the number of buttons and icons. For further coverage, tests should also check that button presses invoke the correct corresponding methods and input text are dependent on state.
+
+
 ### write unit tests
 
 Please write unit tests in /app/tests. Each test file should be at the exact same relative path in /app/tests as the path of js file being tested in /app/components, and it should have the same file name except the suffix should be .test.js.

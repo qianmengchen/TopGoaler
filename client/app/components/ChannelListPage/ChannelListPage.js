@@ -11,10 +11,7 @@ class ChannelListPage extends Component {
     else this.props.navigation.navigate('ChannelPublicView', { name });
   };
   _addChannel = () => {
-    this.props.addChannelLocal('Test' + new Date().getSeconds(), 'admin');
-    // addChannelLocal is for unit testing.
-    // In production, we always fetch the entire database and never make local, incremental state updates.
-    // use this.props.addChannel to actually add to server
+    this.props.navigation.navigate('NewChannelPage');
   };
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);

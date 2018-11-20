@@ -56,16 +56,19 @@ For Report B, please find our tests here:
 - Backend test directory: [server/tests](server/tests)
 
 
-### Frontend testing guideline
+### How frontend testing works
 
-Frontend tests should check rendering with snapshots. Snapshots are saved renders that are the most recently accepted. It is used to make sure that the UI does not change unexpectedly. If changes are made, the test will fail and the snapshot must be updated by either pressing 'u' in the interactive watch or with the command:
+Frontend tests check rendering with snapshots. Snapshots are saved renders that are the most recently accepted. It is used to make sure that the UI does not change unexpectedly. If changes are made, the test will fail and the snapshot must be updated by either pressing 'u' in the interactive watch or with the command:
 
 ```bash
 jest -u
 ```
 
-Frontend tests should also check for core components, such as the number of buttons and icons. For further coverage, tests should also check that button presses invoke the correct corresponding methods and input text are dependent on state.
+Frontend tests also check for core components, such as the number of buttons and icons. We also check for interaction behavior, such as whether button presses invoke the correct methods and whether input text is dependent on state, etc. 
 
+### How backend testing works
+
+For backend, we use Supertest on top of Jest for sending mock API calls to our mock server instance. We currently cover the three scenarios as mentioned in the project spec: database CRUD flow, login flow, and access control flow. 
 
 ### Write unit tests
 

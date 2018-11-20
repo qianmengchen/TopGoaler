@@ -1,0 +1,4553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Channel Memberview Page renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component>
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignItems": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <Themed.Avatar
+        containerStyle={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        rounded={true}
+        size={100}
+        source={
+          Object {
+            "testUri": "../../../app/images/leetcodeIcon.png",
+          }
+        }
+      />
+    </Component>
+    <Component
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Themed.Card
+        containerStyle={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#555",
+            "borderColor": "#555",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginRight": 2,
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "paddingVertical": 2,
+              }
+            }
+          >
+            Rank
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 15,
+                  "paddingVertical": 2,
+                },
+                Object {
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                },
+              ]
+            }
+          >
+            Top 10%
+          </Text>
+        </Component>
+        <Component
+          style={
+            Object {
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "paddingVertical": 2,
+              }
+            }
+          >
+            Rating
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 15,
+                  "paddingVertical": 2,
+                },
+                Object {
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                },
+              ]
+            }
+          >
+            1830
+          </Text>
+        </Component>
+      </Themed.Card>
+      <Themed.Card
+        containerStyle={
+          Object {
+            "backgroundColor": "#555",
+            "borderColor": "#555",
+            "borderRadius": 10,
+            "flex": 2.5,
+            "marginLeft": 2,
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            LeetCode Daily
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            30
+          </Text>
+        </Component>
+        <Component
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            LeetCode Daily 2x
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            60
+          </Text>
+        </Component>
+        <Component
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Learn Data Struct
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            100
+          </Text>
+        </Component>
+        <Component
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Solve 100 Probs
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 15,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            500
+          </Text>
+        </Component>
+        <Themed.Divider
+          style={
+            Object {
+              "backgroundColor": "#bbb",
+              "height": 1,
+            }
+          }
+        />
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+            }
+          }
+        >
+          <TouchableHighlight
+            activeOpacity={0.85}
+            delayPressOut={100}
+            onPress={[Function]}
+            style={
+              Object {
+                "marginTop": 5,
+              }
+            }
+            underlayColor="#aaa"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 16,
+                }
+              }
+            >
+              More
+            </Text>
+          </TouchableHighlight>
+          <TouchableHighlight
+            activeOpacity={0.85}
+            delayPressOut={100}
+            style={
+              Object {
+                "marginTop": 5,
+              }
+            }
+            underlayColor="#aaa"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 16,
+                }
+              }
+            >
+              Add
+            </Text>
+          </TouchableHighlight>
+        </Component>
+      </Themed.Card>
+    </Component>
+    <Themed.Divider
+      style={
+        Object {
+          "backgroundColor": "#999",
+          "marginHorizontal": 20,
+          "marginTop": 20,
+        }
+      }
+    />
+    <ScrollViewMock>
+      <Connect(Feed)
+        comment="solved problem 251!"
+        name="QM"
+        points="+30"
+        taskTitle="LeetCode Daily"
+        timestamp="3 hours ago"
+      />
+      <Connect(Feed)
+        comment="yay makin progress"
+        name="BB"
+        points="+60"
+        taskTitle="LeetCode Daily 2x"
+        timestamp="5 hours ago"
+      />
+      <Connect(Feed)
+        comment=""
+        name="SY"
+        points="+100"
+        taskTitle="Learn Data Struct"
+        timestamp="8 hours ago"
+      />
+      <Connect(Feed)
+        comment="wow this group is so fun"
+        name="BZ"
+        points="+30"
+        taskTitle="Solve 100 Problems"
+        timestamp="1 day ago"
+      />
+      <Connect(Feed)
+        comment="xxx xxxx xxxxx"
+        name="JS"
+        points="+30"
+        taskTitle="LeetCode Daily"
+        timestamp="2 days ago"
+      />
+    </ScrollViewMock>
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+              "marginTop": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignItems": "center",
+                "fontSize": 30,
+                "fontWeight": "bold",
+                "justifyContent": "center",
+              }
+            }
+          />
+          <Themed.Avatar
+            containerStyle={
+              Object {
+                "backgroundColor": "white",
+              }
+            }
+            rounded={true}
+            size={100}
+            source={
+              Object {
+                "testUri": "../../../app/images/leetcodeIcon.png",
+              }
+            }
+          />
+        </Component>,
+        <Component
+          style={
+            Object {
+              "alignItems": "stretch",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Themed.Card
+            containerStyle={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#555",
+                "borderColor": "#555",
+                "borderRadius": 10,
+                "flex": 1,
+                "marginRight": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "paddingVertical": 2,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "paddingVertical": 2,
+                    },
+                    Object {
+                      "fontSize": 18,
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                Top 10%
+              </Text>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "paddingVertical": 2,
+                  }
+                }
+              >
+                Rating
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "paddingVertical": 2,
+                    },
+                    Object {
+                      "fontSize": 18,
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                1830
+              </Text>
+            </Component>
+          </Themed.Card>
+          <Themed.Card
+            containerStyle={
+              Object {
+                "backgroundColor": "#555",
+                "borderColor": "#555",
+                "borderRadius": 10,
+                "flex": 2.5,
+                "marginLeft": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                LeetCode Daily
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                30
+              </Text>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                LeetCode Daily 2x
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                60
+              </Text>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Learn Data Struct
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                100
+              </Text>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Solve 100 Probs
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                500
+              </Text>
+            </Component>
+            <Themed.Divider
+              style={
+                Object {
+                  "backgroundColor": "#bbb",
+                  "height": 1,
+                }
+              }
+            />
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "space-evenly",
+                }
+              }
+            >
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "marginTop": 5,
+                  }
+                }
+                underlayColor="#aaa"
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  More
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                style={
+                  Object {
+                    "marginTop": 5,
+                  }
+                }
+                underlayColor="#aaa"
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  Add
+                </Text>
+              </TouchableHighlight>
+            </Component>
+          </Themed.Card>
+        </Component>,
+        <Themed.Divider
+          style={
+            Object {
+              "backgroundColor": "#999",
+              "marginHorizontal": 20,
+              "marginTop": 20,
+            }
+          }
+        />,
+        <ScrollViewMock>
+          <Connect(Feed)
+            comment="solved problem 251!"
+            name="QM"
+            points="+30"
+            taskTitle="LeetCode Daily"
+            timestamp="3 hours ago"
+          />
+          <Connect(Feed)
+            comment="yay makin progress"
+            name="BB"
+            points="+60"
+            taskTitle="LeetCode Daily 2x"
+            timestamp="5 hours ago"
+          />
+          <Connect(Feed)
+            comment=""
+            name="SY"
+            points="+100"
+            taskTitle="Learn Data Struct"
+            timestamp="8 hours ago"
+          />
+          <Connect(Feed)
+            comment="wow this group is so fun"
+            name="BZ"
+            points="+30"
+            taskTitle="Solve 100 Problems"
+            timestamp="1 day ago"
+          />
+          <Connect(Feed)
+            comment="xxx xxxx xxxxx"
+            name="JS"
+            points="+30"
+            taskTitle="LeetCode Daily"
+            timestamp="2 days ago"
+          />
+        </ScrollViewMock>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "justifyContent": "center",
+                }
+              }
+            />,
+            <Themed.Avatar
+              containerStyle={
+                Object {
+                  "backgroundColor": "white",
+                }
+              }
+              rounded={true}
+              size={100}
+              source={
+                Object {
+                  "testUri": "../../../app/images/leetcodeIcon.png",
+                }
+              }
+            />,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "marginTop": 10,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": undefined,
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "alignItems": "center",
+                "fontSize": 30,
+                "fontWeight": "bold",
+                "justifyContent": "center",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "containerStyle": Object {
+                "backgroundColor": "white",
+              },
+              "rounded": true,
+              "size": 100,
+              "source": Object {
+                "testUri": "../../../app/images/leetcodeIcon.png",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Themed.Card
+              containerStyle={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#555",
+                  "borderColor": "#555",
+                  "borderRadius": 10,
+                  "flex": 1,
+                  "marginRight": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  Rank
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      },
+                      Object {
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                      },
+                    ]
+                  }
+                >
+                  Top 10%
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  Rating
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      },
+                      Object {
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                      },
+                    ]
+                  }
+                >
+                  1830
+                </Text>
+              </Component>
+            </Themed.Card>,
+            <Themed.Card
+              containerStyle={
+                Object {
+                  "backgroundColor": "#555",
+                  "borderColor": "#555",
+                  "borderRadius": 10,
+                  "flex": 2.5,
+                  "marginLeft": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  LeetCode Daily
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  30
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  LeetCode Daily 2x
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  60
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Learn Data Struct
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  100
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Solve 100 Probs
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  500
+                </Text>
+              </Component>
+              <Themed.Divider
+                style={
+                  Object {
+                    "backgroundColor": "#bbb",
+                    "height": 1,
+                  }
+                }
+              />
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-evenly",
+                  }
+                }
+              >
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "marginTop": 5,
+                    }
+                  }
+                  underlayColor="#aaa"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    More
+                  </Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  style={
+                    Object {
+                      "marginTop": 5,
+                    }
+                  }
+                  underlayColor="#aaa"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    Add
+                  </Text>
+                </TouchableHighlight>
+              </Component>
+            </Themed.Card>,
+          ],
+          "style": Object {
+            "alignItems": "stretch",
+            "flexDirection": "row",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      }
+                    }
+                  >
+                    Rank
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                        Object {
+                          "fontSize": 18,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    Top 10%
+                  </Text>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      }
+                    }
+                  >
+                    Rating
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                        Object {
+                          "fontSize": 18,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    1830
+                  </Text>
+                </Component>,
+              ],
+              "containerStyle": Object {
+                "alignItems": "center",
+                "backgroundColor": "#555",
+                "borderColor": "#555",
+                "borderRadius": 10,
+                "flex": 1,
+                "marginRight": 2,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        }
+                      }
+                    >
+                      Rank
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          },
+                          Object {
+                            "fontSize": 18,
+                            "fontWeight": "bold",
+                          },
+                        ]
+                      }
+                    >
+                      Top 10%
+                    </Text>,
+                  ],
+                  "style": Object {
+                    "paddingVertical": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Rank",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Rank",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Top 10%",
+                      "ellipsizeMode": "tail",
+                      "style": Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                        Object {
+                          "fontSize": 18,
+                          "fontWeight": "bold",
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": "Top 10%",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        }
+                      }
+                    >
+                      Rating
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          },
+                          Object {
+                            "fontSize": 18,
+                            "fontWeight": "bold",
+                          },
+                        ]
+                      }
+                    >
+                      1830
+                    </Text>,
+                  ],
+                  "style": Object {
+                    "paddingVertical": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Rating",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Rating",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "1830",
+                      "ellipsizeMode": "tail",
+                      "style": Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                        Object {
+                          "fontSize": 18,
+                          "fontWeight": "bold",
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": "1830",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    LeetCode Daily
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    30
+                  </Text>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    LeetCode Daily 2x
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    60
+                  </Text>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Learn Data Struct
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    100
+                  </Text>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Solve 100 Probs
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    500
+                  </Text>
+                </Component>,
+                <Themed.Divider
+                  style={
+                    Object {
+                      "backgroundColor": "#bbb",
+                      "height": 1,
+                    }
+                  }
+                />,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "space-evenly",
+                    }
+                  }
+                >
+                  <TouchableHighlight
+                    activeOpacity={0.85}
+                    delayPressOut={100}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "marginTop": 5,
+                      }
+                    }
+                    underlayColor="#aaa"
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        }
+                      }
+                    >
+                      More
+                    </Text>
+                  </TouchableHighlight>
+                  <TouchableHighlight
+                    activeOpacity={0.85}
+                    delayPressOut={100}
+                    style={
+                      Object {
+                        "marginTop": 5,
+                      }
+                    }
+                    underlayColor="#aaa"
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        }
+                      }
+                    >
+                      Add
+                    </Text>
+                  </TouchableHighlight>
+                </Component>,
+              ],
+              "containerStyle": Object {
+                "backgroundColor": "#555",
+                "borderColor": "#555",
+                "borderRadius": 10,
+                "flex": 2.5,
+                "marginLeft": 2,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      LeetCode Daily
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      30
+                    </Text>,
+                  ],
+                  "style": Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "LeetCode Daily",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "LeetCode Daily",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "30",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "30",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      LeetCode Daily 2x
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      60
+                    </Text>,
+                  ],
+                  "style": Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "LeetCode Daily 2x",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "LeetCode Daily 2x",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "60",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "60",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      Learn Data Struct
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      100
+                    </Text>,
+                  ],
+                  "style": Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Learn Data Struct",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Learn Data Struct",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "100",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "100",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      Solve 100 Probs
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      500
+                    </Text>,
+                  ],
+                  "style": Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Solve 100 Probs",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Solve 100 Probs",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "500",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "500",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "style": Object {
+                    "backgroundColor": "#bbb",
+                    "height": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <TouchableHighlight
+                      activeOpacity={0.85}
+                      delayPressOut={100}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "marginTop": 5,
+                        }
+                      }
+                      underlayColor="#aaa"
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                        More
+                      </Text>
+                    </TouchableHighlight>,
+                    <TouchableHighlight
+                      activeOpacity={0.85}
+                      delayPressOut={100}
+                      style={
+                        Object {
+                          "marginTop": 5,
+                        }
+                      }
+                      underlayColor="#aaa"
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                        Add
+                      </Text>
+                    </TouchableHighlight>,
+                  ],
+                  "style": Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-evenly",
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.85,
+                      "children": <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                        More
+                      </Text>,
+                      "delayPressOut": 100,
+                      "onPress": [Function],
+                      "style": Object {
+                        "marginTop": 5,
+                      },
+                      "underlayColor": "#aaa",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "More",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "More",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.85,
+                      "children": <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                        Add
+                      </Text>,
+                      "delayPressOut": 100,
+                      "style": Object {
+                        "marginTop": 5,
+                      },
+                      "underlayColor": "#aaa",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Add",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Add",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "style": Object {
+            "backgroundColor": "#999",
+            "marginHorizontal": 20,
+            "marginTop": 20,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Connect(Feed)
+              comment="solved problem 251!"
+              name="QM"
+              points="+30"
+              taskTitle="LeetCode Daily"
+              timestamp="3 hours ago"
+            />,
+            <Connect(Feed)
+              comment="yay makin progress"
+              name="BB"
+              points="+60"
+              taskTitle="LeetCode Daily 2x"
+              timestamp="5 hours ago"
+            />,
+            <Connect(Feed)
+              comment=""
+              name="SY"
+              points="+100"
+              taskTitle="Learn Data Struct"
+              timestamp="8 hours ago"
+            />,
+            <Connect(Feed)
+              comment="wow this group is so fun"
+              name="BZ"
+              points="+30"
+              taskTitle="Solve 100 Problems"
+              timestamp="1 day ago"
+            />,
+            <Connect(Feed)
+              comment="xxx xxxx xxxxx"
+              name="JS"
+              points="+30"
+              taskTitle="LeetCode Daily"
+              timestamp="2 days ago"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "comment": "solved problem 251!",
+              "name": "QM",
+              "points": "+30",
+              "taskTitle": "LeetCode Daily",
+              "timestamp": "3 hours ago",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "comment": "yay makin progress",
+              "name": "BB",
+              "points": "+60",
+              "taskTitle": "LeetCode Daily 2x",
+              "timestamp": "5 hours ago",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "comment": "",
+              "name": "SY",
+              "points": "+100",
+              "taskTitle": "Learn Data Struct",
+              "timestamp": "8 hours ago",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "comment": "wow this group is so fun",
+              "name": "BZ",
+              "points": "+30",
+              "taskTitle": "Solve 100 Problems",
+              "timestamp": "1 day ago",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "comment": "xxx xxxx xxxxx",
+              "name": "JS",
+              "points": "+30",
+              "taskTitle": "LeetCode Daily",
+              "timestamp": "2 days ago",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [MockFunction],
+      },
+    ],
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-evenly",
+                "marginTop": 10,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "alignItems": "center",
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "justifyContent": "center",
+                }
+              }
+            />
+            <Themed.Avatar
+              containerStyle={
+                Object {
+                  "backgroundColor": "white",
+                }
+              }
+              rounded={true}
+              size={100}
+              source={
+                Object {
+                  "testUri": "../../../app/images/leetcodeIcon.png",
+                }
+              }
+            />
+          </Component>,
+          <Component
+            style={
+              Object {
+                "alignItems": "stretch",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Themed.Card
+              containerStyle={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#555",
+                  "borderColor": "#555",
+                  "borderRadius": 10,
+                  "flex": 1,
+                  "marginRight": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  Rank
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      },
+                      Object {
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                      },
+                    ]
+                  }
+                >
+                  Top 10%
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  Rating
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      },
+                      Object {
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                      },
+                    ]
+                  }
+                >
+                  1830
+                </Text>
+              </Component>
+            </Themed.Card>
+            <Themed.Card
+              containerStyle={
+                Object {
+                  "backgroundColor": "#555",
+                  "borderColor": "#555",
+                  "borderRadius": 10,
+                  "flex": 2.5,
+                  "marginLeft": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  LeetCode Daily
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  30
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  LeetCode Daily 2x
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  60
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Learn Data Struct
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  100
+                </Text>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Solve 100 Probs
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  500
+                </Text>
+              </Component>
+              <Themed.Divider
+                style={
+                  Object {
+                    "backgroundColor": "#bbb",
+                    "height": 1,
+                  }
+                }
+              />
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-evenly",
+                  }
+                }
+              >
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "marginTop": 5,
+                    }
+                  }
+                  underlayColor="#aaa"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    More
+                  </Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  style={
+                    Object {
+                      "marginTop": 5,
+                    }
+                  }
+                  underlayColor="#aaa"
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    Add
+                  </Text>
+                </TouchableHighlight>
+              </Component>
+            </Themed.Card>
+          </Component>,
+          <Themed.Divider
+            style={
+              Object {
+                "backgroundColor": "#999",
+                "marginHorizontal": 20,
+                "marginTop": 20,
+              }
+            }
+          />,
+          <ScrollViewMock>
+            <Connect(Feed)
+              comment="solved problem 251!"
+              name="QM"
+              points="+30"
+              taskTitle="LeetCode Daily"
+              timestamp="3 hours ago"
+            />
+            <Connect(Feed)
+              comment="yay makin progress"
+              name="BB"
+              points="+60"
+              taskTitle="LeetCode Daily 2x"
+              timestamp="5 hours ago"
+            />
+            <Connect(Feed)
+              comment=""
+              name="SY"
+              points="+100"
+              taskTitle="Learn Data Struct"
+              timestamp="8 hours ago"
+            />
+            <Connect(Feed)
+              comment="wow this group is so fun"
+              name="BZ"
+              points="+30"
+              taskTitle="Solve 100 Problems"
+              timestamp="1 day ago"
+            />
+            <Connect(Feed)
+              comment="xxx xxxx xxxxx"
+              name="JS"
+              points="+30"
+              taskTitle="LeetCode Daily"
+              timestamp="2 days ago"
+            />
+          </ScrollViewMock>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "fontSize": 30,
+                    "fontWeight": "bold",
+                    "justifyContent": "center",
+                  }
+                }
+              />,
+              <Themed.Avatar
+                containerStyle={
+                  Object {
+                    "backgroundColor": "white",
+                  }
+                }
+                rounded={true}
+                size={100}
+                source={
+                  Object {
+                    "testUri": "../../../app/images/leetcodeIcon.png",
+                  }
+                }
+              />,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+              "marginTop": 10,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": undefined,
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "alignItems": "center",
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "justifyContent": "center",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "containerStyle": Object {
+                  "backgroundColor": "white",
+                },
+                "rounded": true,
+                "size": 100,
+                "source": Object {
+                  "testUri": "../../../app/images/leetcodeIcon.png",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Themed.Card
+                containerStyle={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#555",
+                    "borderColor": "#555",
+                    "borderRadius": 10,
+                    "flex": 1,
+                    "marginRight": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      }
+                    }
+                  >
+                    Rank
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                        Object {
+                          "fontSize": 18,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    Top 10%
+                  </Text>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "paddingVertical": 2,
+                      }
+                    }
+                  >
+                    Rating
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                        Object {
+                          "fontSize": 18,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    1830
+                  </Text>
+                </Component>
+              </Themed.Card>,
+              <Themed.Card
+                containerStyle={
+                  Object {
+                    "backgroundColor": "#555",
+                    "borderColor": "#555",
+                    "borderRadius": 10,
+                    "flex": 2.5,
+                    "marginLeft": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    LeetCode Daily
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    30
+                  </Text>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    LeetCode Daily 2x
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    60
+                  </Text>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Learn Data Struct
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    100
+                  </Text>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Solve 100 Probs
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    500
+                  </Text>
+                </Component>
+                <Themed.Divider
+                  style={
+                    Object {
+                      "backgroundColor": "#bbb",
+                      "height": 1,
+                    }
+                  }
+                />
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "space-evenly",
+                    }
+                  }
+                >
+                  <TouchableHighlight
+                    activeOpacity={0.85}
+                    delayPressOut={100}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "marginTop": 5,
+                      }
+                    }
+                    underlayColor="#aaa"
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        }
+                      }
+                    >
+                      More
+                    </Text>
+                  </TouchableHighlight>
+                  <TouchableHighlight
+                    activeOpacity={0.85}
+                    delayPressOut={100}
+                    style={
+                      Object {
+                        "marginTop": 5,
+                      }
+                    }
+                    underlayColor="#aaa"
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        }
+                      }
+                    >
+                      Add
+                    </Text>
+                  </TouchableHighlight>
+                </Component>
+              </Themed.Card>,
+            ],
+            "style": Object {
+              "alignItems": "stretch",
+              "flexDirection": "row",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Component
+                    style={
+                      Object {
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        }
+                      }
+                    >
+                      Rank
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          },
+                          Object {
+                            "fontSize": 18,
+                            "fontWeight": "bold",
+                          },
+                        ]
+                      }
+                    >
+                      Top 10%
+                    </Text>
+                  </Component>,
+                  <Component
+                    style={
+                      Object {
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        }
+                      }
+                    >
+                      Rating
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          },
+                          Object {
+                            "fontSize": 18,
+                            "fontWeight": "bold",
+                          },
+                        ]
+                      }
+                    >
+                      1830
+                    </Text>
+                  </Component>,
+                ],
+                "containerStyle": Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#555",
+                  "borderColor": "#555",
+                  "borderRadius": 10,
+                  "flex": 1,
+                  "marginRight": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          }
+                        }
+                      >
+                        Rank
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 15,
+                              "paddingVertical": 2,
+                            },
+                            Object {
+                              "fontSize": 18,
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                      >
+                        Top 10%
+                      </Text>,
+                    ],
+                    "style": Object {
+                      "paddingVertical": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Rank",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Rank",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Top 10%",
+                        "ellipsizeMode": "tail",
+                        "style": Array [
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          },
+                          Object {
+                            "fontSize": 18,
+                            "fontWeight": "bold",
+                          },
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": "Top 10%",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          }
+                        }
+                      >
+                        Rating
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 15,
+                              "paddingVertical": 2,
+                            },
+                            Object {
+                              "fontSize": 18,
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                      >
+                        1830
+                      </Text>,
+                    ],
+                    "style": Object {
+                      "paddingVertical": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Rating",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "paddingVertical": 2,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Rating",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "1830",
+                        "ellipsizeMode": "tail",
+                        "style": Array [
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "paddingVertical": 2,
+                          },
+                          Object {
+                            "fontSize": 18,
+                            "fontWeight": "bold",
+                          },
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": "1830",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Component
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "marginBottom": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      LeetCode Daily
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      30
+                    </Text>
+                  </Component>,
+                  <Component
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "marginBottom": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      LeetCode Daily 2x
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      60
+                    </Text>
+                  </Component>,
+                  <Component
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "marginBottom": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      Learn Data Struct
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      100
+                    </Text>
+                  </Component>,
+                  <Component
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "marginBottom": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      Solve 100 Probs
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      500
+                    </Text>
+                  </Component>,
+                  <Themed.Divider
+                    style={
+                      Object {
+                        "backgroundColor": "#bbb",
+                        "height": 1,
+                      }
+                    }
+                  />,
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "justifyContent": "space-evenly",
+                      }
+                    }
+                  >
+                    <TouchableHighlight
+                      activeOpacity={0.85}
+                      delayPressOut={100}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "marginTop": 5,
+                        }
+                      }
+                      underlayColor="#aaa"
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                        More
+                      </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      activeOpacity={0.85}
+                      delayPressOut={100}
+                      style={
+                        Object {
+                          "marginTop": 5,
+                        }
+                      }
+                      underlayColor="#aaa"
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                        Add
+                      </Text>
+                    </TouchableHighlight>
+                  </Component>,
+                ],
+                "containerStyle": Object {
+                  "backgroundColor": "#555",
+                  "borderColor": "#555",
+                  "borderRadius": 10,
+                  "flex": 2.5,
+                  "marginLeft": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        LeetCode Daily
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        30
+                      </Text>,
+                    ],
+                    "style": Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "LeetCode Daily",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "LeetCode Daily",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "30",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "30",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        LeetCode Daily 2x
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        60
+                      </Text>,
+                    ],
+                    "style": Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "LeetCode Daily 2x",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "LeetCode Daily 2x",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "60",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "60",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        Learn Data Struct
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        100
+                      </Text>,
+                    ],
+                    "style": Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Learn Data Struct",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Learn Data Struct",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "100",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "100",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        Solve 100 Probs
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 15,
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        500
+                      </Text>,
+                    ],
+                    "style": Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "marginBottom": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Solve 100 Probs",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Solve 100 Probs",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "500",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "500",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "style": Object {
+                      "backgroundColor": "#bbb",
+                      "height": 1,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <TouchableHighlight
+                        activeOpacity={0.85}
+                        delayPressOut={100}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "marginTop": 5,
+                          }
+                        }
+                        underlayColor="#aaa"
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                          More
+                        </Text>
+                      </TouchableHighlight>,
+                      <TouchableHighlight
+                        activeOpacity={0.85}
+                        delayPressOut={100}
+                        style={
+                          Object {
+                            "marginTop": 5,
+                          }
+                        }
+                        underlayColor="#aaa"
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                          Add
+                        </Text>
+                      </TouchableHighlight>,
+                    ],
+                    "style": Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "space-evenly",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeOpacity": 0.85,
+                        "children": <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                          More
+                        </Text>,
+                        "delayPressOut": 100,
+                        "onPress": [Function],
+                        "style": Object {
+                          "marginTop": 5,
+                        },
+                        "underlayColor": "#aaa",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "accessible": true,
+                          "allowFontScaling": true,
+                          "children": "More",
+                          "ellipsizeMode": "tail",
+                          "style": Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "More",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeOpacity": 0.85,
+                        "children": <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                          Add
+                        </Text>,
+                        "delayPressOut": 100,
+                        "style": Object {
+                          "marginTop": 5,
+                        },
+                        "underlayColor": "#aaa",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "accessible": true,
+                          "allowFontScaling": true,
+                          "children": "Add",
+                          "ellipsizeMode": "tail",
+                          "style": Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "Add",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "style": Object {
+              "backgroundColor": "#999",
+              "marginHorizontal": 20,
+              "marginTop": 20,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Connect(Feed)
+                comment="solved problem 251!"
+                name="QM"
+                points="+30"
+                taskTitle="LeetCode Daily"
+                timestamp="3 hours ago"
+              />,
+              <Connect(Feed)
+                comment="yay makin progress"
+                name="BB"
+                points="+60"
+                taskTitle="LeetCode Daily 2x"
+                timestamp="5 hours ago"
+              />,
+              <Connect(Feed)
+                comment=""
+                name="SY"
+                points="+100"
+                taskTitle="Learn Data Struct"
+                timestamp="8 hours ago"
+              />,
+              <Connect(Feed)
+                comment="wow this group is so fun"
+                name="BZ"
+                points="+30"
+                taskTitle="Solve 100 Problems"
+                timestamp="1 day ago"
+              />,
+              <Connect(Feed)
+                comment="xxx xxxx xxxxx"
+                name="JS"
+                points="+30"
+                taskTitle="LeetCode Daily"
+                timestamp="2 days ago"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "comment": "solved problem 251!",
+                "name": "QM",
+                "points": "+30",
+                "taskTitle": "LeetCode Daily",
+                "timestamp": "3 hours ago",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "comment": "yay makin progress",
+                "name": "BB",
+                "points": "+60",
+                "taskTitle": "LeetCode Daily 2x",
+                "timestamp": "5 hours ago",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "comment": "",
+                "name": "SY",
+                "points": "+100",
+                "taskTitle": "Learn Data Struct",
+                "timestamp": "8 hours ago",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "comment": "wow this group is so fun",
+                "name": "BZ",
+                "points": "+30",
+                "taskTitle": "Solve 100 Problems",
+                "timestamp": "1 day ago",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "comment": "xxx xxxx xxxxx",
+                "name": "JS",
+                "points": "+30",
+                "taskTitle": "LeetCode Daily",
+                "timestamp": "2 days ago",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [MockFunction],
+        },
+      ],
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

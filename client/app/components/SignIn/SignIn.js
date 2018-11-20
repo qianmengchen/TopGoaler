@@ -4,16 +4,16 @@ import { Card, Input, Icon } from 'react-native-elements';
 import { styles } from './styles';
 
 class SignIn extends Component {
-  _submit = () => {
+  _submit() {
     // arrow notation () => {...} creates a function that binds this to the context (i.e the enclosing object)
     // regular notation function () {} doesn't bind this but rather defers binding to its caller's discretion
     // (e.g. if we set a button's onpress to {regularfunc}, then regularfunc's 'this' will be the button object.
     // But here we want 'this' to point to the enclosing object, so we will HAVE to define our function in arrow notation. )
     this.props.submit(this.state.username, this.state.password);
-  };
-  _signUp = () => {
+  }
+  _signUp() {
     this.props.navigation.navigate('signUp');
-  };
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -70,7 +70,7 @@ class SignIn extends Component {
           <TouchableHighlight
             style={styles.button}
             underlayColor="#aaa"
-            onPress={this._submit}
+            onPress={this._submit.bind(this)}
           >
             <Text style={styles.buttonText}> Sign In </Text>
           </TouchableHighlight>
@@ -78,7 +78,7 @@ class SignIn extends Component {
         <TouchableHighlight
           style={styles.signUpButton}
           underlayColor="#aaa"
-          onPress={this._signUp}
+          onPress={this._signUp.bind(this)}
         >
           <Text style={styles.signUpText}> Sign Up for Top Goaler </Text>
         </TouchableHighlight>

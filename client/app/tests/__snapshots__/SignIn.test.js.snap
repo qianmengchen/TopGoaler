@@ -1,0 +1,1683 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Sign In Page renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "backgroundColor": "#ddd",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingTop": 22,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "alignSelf": "center",
+          "fontSize": 40,
+        }
+      }
+    >
+      Top Goaler
+    </Text>
+    <Themed.Card
+      title="Sign-in Using"
+    >
+      <Component
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Themed.Icon
+          color="#dd4b39"
+          name="google-plus"
+          raised={true}
+          type="font-awesome"
+        />
+        <Themed.Icon
+          color="#3b5998"
+          name="facebook-square"
+          raised={true}
+          type="font-awesome"
+        />
+        <Themed.Icon
+          color="#00aced"
+          name="twitter"
+          raised={true}
+          type="font-awesome"
+        />
+      </Component>
+      <Component
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "alignSelf": "center",
+              "backgroundColor": "grey",
+              "flex": 1,
+              "height": 1,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "grey",
+              "fontSize": 20,
+              "paddingHorizontal": 5,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          OR
+        </Text>
+        <Component
+          style={
+            Object {
+              "alignSelf": "center",
+              "backgroundColor": "grey",
+              "flex": 1,
+              "height": 1,
+            }
+          }
+        />
+      </Component>
+      <ForwardRef(Themed.Input)
+        autoCapitalize="none"
+        containerStyle={
+          Object {
+            "marginBottom": 10,
+          }
+        }
+        defaultValue="admin"
+        leftIcon={
+          <Themed.Icon
+            color="grey"
+            name="person"
+            size={24}
+          />
+        }
+        onChangeText={[Function]}
+        placeholder="Username"
+      />
+      <ForwardRef(Themed.Input)
+        autoCapitalize="none"
+        containerStyle={
+          Object {
+            "marginVertical": 10,
+          }
+        }
+        defaultValue="admin"
+        leftIcon={
+          <Themed.Icon
+            color="grey"
+            name="lock"
+            size={24}
+          />
+        }
+        onChangeText={[Function]}
+        placeholder="Password"
+        textContentType="password"
+      />
+      <TouchableHighlight
+        activeOpacity={0.85}
+        delayPressOut={100}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "grey",
+            "borderColor": "#fff",
+            "borderRadius": 20,
+            "borderWidth": 1,
+            "marginHorizontal": 40,
+            "marginTop": 10,
+            "paddingVertical": 10,
+          }
+        }
+        underlayColor="#aaa"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+           Sign In 
+        </Text>
+      </TouchableHighlight>
+    </Themed.Card>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "borderRadius": 20,
+          "marginHorizontal": 100,
+          "marginTop": 150,
+          "paddingVertical": 10,
+        }
+      }
+      underlayColor="#aaa"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontSize": 15,
+          }
+        }
+      >
+         Sign Up for Top Goaler 
+      </Text>
+    </TouchableHighlight>
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "fontSize": 40,
+            }
+          }
+        >
+          Top Goaler
+        </Text>,
+        <Themed.Card
+          title="Sign-in Using"
+        >
+          <Component
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Themed.Icon
+              color="#dd4b39"
+              name="google-plus"
+              raised={true}
+              type="font-awesome"
+            />
+            <Themed.Icon
+              color="#3b5998"
+              name="facebook-square"
+              raised={true}
+              type="font-awesome"
+            />
+            <Themed.Icon
+              color="#00aced"
+              name="twitter"
+              raised={true}
+              type="font-awesome"
+            />
+          </Component>
+          <Component
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "backgroundColor": "grey",
+                  "flex": 1,
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "color": "grey",
+                  "fontSize": 20,
+                  "paddingHorizontal": 5,
+                  "paddingVertical": 10,
+                }
+              }
+            >
+              OR
+            </Text>
+            <Component
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "backgroundColor": "grey",
+                  "flex": 1,
+                  "height": 1,
+                }
+              }
+            />
+          </Component>
+          <ForwardRef(Themed.Input)
+            autoCapitalize="none"
+            containerStyle={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+            defaultValue="admin"
+            leftIcon={
+              <Themed.Icon
+                color="grey"
+                name="person"
+                size={24}
+              />
+            }
+            onChangeText={[Function]}
+            placeholder="Username"
+          />
+          <ForwardRef(Themed.Input)
+            autoCapitalize="none"
+            containerStyle={
+              Object {
+                "marginVertical": 10,
+              }
+            }
+            defaultValue="admin"
+            leftIcon={
+              <Themed.Icon
+                color="grey"
+                name="lock"
+                size={24}
+              />
+            }
+            onChangeText={[Function]}
+            placeholder="Password"
+            textContentType="password"
+          />
+          <TouchableHighlight
+            activeOpacity={0.85}
+            delayPressOut={100}
+            onPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "borderColor": "#fff",
+                "borderRadius": 20,
+                "borderWidth": 1,
+                "marginHorizontal": 40,
+                "marginTop": 10,
+                "paddingVertical": 10,
+              }
+            }
+            underlayColor="#aaa"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                }
+              }
+            >
+               Sign In 
+            </Text>
+          </TouchableHighlight>
+        </Themed.Card>,
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          onPress={[Function]}
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "borderRadius": 20,
+              "marginHorizontal": 100,
+              "marginTop": 150,
+              "paddingVertical": 10,
+            }
+          }
+          underlayColor="#aaa"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "white",
+                "fontSize": 15,
+              }
+            }
+          >
+             Sign Up for Top Goaler 
+          </Text>
+        </TouchableHighlight>,
+      ],
+      "style": Object {
+        "backgroundColor": "#ddd",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingTop": 22,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "Top Goaler",
+          "ellipsizeMode": "tail",
+          "style": Object {
+            "alignSelf": "center",
+            "fontSize": 40,
+          },
+        },
+        "ref": null,
+        "rendered": "Top Goaler",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Themed.Icon
+                color="#dd4b39"
+                name="google-plus"
+                raised={true}
+                type="font-awesome"
+              />
+              <Themed.Icon
+                color="#3b5998"
+                name="facebook-square"
+                raised={true}
+                type="font-awesome"
+              />
+              <Themed.Icon
+                color="#00aced"
+                name="twitter"
+                raised={true}
+                type="font-awesome"
+              />
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "grey",
+                    "flex": 1,
+                    "height": 1,
+                  }
+                }
+              />
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "color": "grey",
+                    "fontSize": 20,
+                    "paddingHorizontal": 5,
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                OR
+              </Text>
+              <Component
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "grey",
+                    "flex": 1,
+                    "height": 1,
+                  }
+                }
+              />
+            </Component>,
+            <ForwardRef(Themed.Input)
+              autoCapitalize="none"
+              containerStyle={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+              defaultValue="admin"
+              leftIcon={
+                <Themed.Icon
+                  color="grey"
+                  name="person"
+                  size={24}
+                />
+              }
+              onChangeText={[Function]}
+              placeholder="Username"
+            />,
+            <ForwardRef(Themed.Input)
+              autoCapitalize="none"
+              containerStyle={
+                Object {
+                  "marginVertical": 10,
+                }
+              }
+              defaultValue="admin"
+              leftIcon={
+                <Themed.Icon
+                  color="grey"
+                  name="lock"
+                  size={24}
+                />
+              }
+              onChangeText={[Function]}
+              placeholder="Password"
+              textContentType="password"
+            />,
+            <TouchableHighlight
+              activeOpacity={0.85}
+              delayPressOut={100}
+              onPress={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "grey",
+                  "borderColor": "#fff",
+                  "borderRadius": 20,
+                  "borderWidth": 1,
+                  "marginHorizontal": 40,
+                  "marginTop": 10,
+                  "paddingVertical": 10,
+                }
+              }
+              underlayColor="#aaa"
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                 Sign In 
+              </Text>
+            </TouchableHighlight>,
+          ],
+          "title": "Sign-in Using",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Themed.Icon
+                  color="#dd4b39"
+                  name="google-plus"
+                  raised={true}
+                  type="font-awesome"
+                />,
+                <Themed.Icon
+                  color="#3b5998"
+                  name="facebook-square"
+                  raised={true}
+                  type="font-awesome"
+                />,
+                <Themed.Icon
+                  color="#00aced"
+                  name="twitter"
+                  raised={true}
+                  type="font-awesome"
+                />,
+              ],
+              "style": Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "color": "#dd4b39",
+                  "name": "google-plus",
+                  "raised": true,
+                  "type": "font-awesome",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "color": "#3b5998",
+                  "name": "facebook-square",
+                  "raised": true,
+                  "type": "font-awesome",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "color": "#00aced",
+                  "name": "twitter",
+                  "raised": true,
+                  "type": "font-awesome",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "alignSelf": "center",
+                      "backgroundColor": "grey",
+                      "flex": 1,
+                      "height": 1,
+                    }
+                  }
+                />,
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "alignSelf": "center",
+                      "color": "grey",
+                      "fontSize": 20,
+                      "paddingHorizontal": 5,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  OR
+                </Text>,
+                <Component
+                  style={
+                    Object {
+                      "alignSelf": "center",
+                      "backgroundColor": "grey",
+                      "flex": 1,
+                      "height": 1,
+                    }
+                  }
+                />,
+              ],
+              "style": Object {
+                "flexDirection": "row",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "style": Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "grey",
+                    "flex": 1,
+                    "height": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "accessible": true,
+                  "allowFontScaling": true,
+                  "children": "OR",
+                  "ellipsizeMode": "tail",
+                  "style": Object {
+                    "alignSelf": "center",
+                    "color": "grey",
+                    "fontSize": 20,
+                    "paddingHorizontal": 5,
+                    "paddingVertical": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": "OR",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "style": Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "grey",
+                    "flex": 1,
+                    "height": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "autoCapitalize": "none",
+              "containerStyle": Object {
+                "marginBottom": 10,
+              },
+              "defaultValue": "admin",
+              "leftIcon": <Themed.Icon
+                color="grey"
+                name="person"
+                size={24}
+              />,
+              "onChangeText": [Function],
+              "placeholder": "Username",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "autoCapitalize": "none",
+              "containerStyle": Object {
+                "marginVertical": 10,
+              },
+              "defaultValue": "admin",
+              "leftIcon": <Themed.Icon
+                color="grey"
+                name="lock"
+                size={24}
+              />,
+              "onChangeText": [Function],
+              "placeholder": "Password",
+              "textContentType": "password",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activeOpacity": 0.85,
+              "children": <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                 Sign In 
+              </Text>,
+              "delayPressOut": 100,
+              "onPress": [Function],
+              "style": Object {
+                "backgroundColor": "grey",
+                "borderColor": "#fff",
+                "borderRadius": 20,
+                "borderWidth": 1,
+                "marginHorizontal": 40,
+                "marginTop": 10,
+                "paddingVertical": 10,
+              },
+              "underlayColor": "#aaa",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": " Sign In ",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "color": "#fff",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": " Sign In ",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.85,
+          "children": <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "white",
+                "fontSize": 15,
+              }
+            }
+          >
+             Sign Up for Top Goaler 
+          </Text>,
+          "delayPressOut": 100,
+          "onPress": [Function],
+          "style": Object {
+            "backgroundColor": "grey",
+            "borderRadius": 20,
+            "marginHorizontal": 100,
+            "marginTop": 150,
+            "paddingVertical": 10,
+          },
+          "underlayColor": "#aaa",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": " Sign Up for Top Goaler ",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontSize": 15,
+            },
+          },
+          "ref": null,
+          "rendered": " Sign Up for Top Goaler ",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "fontSize": 40,
+              }
+            }
+          >
+            Top Goaler
+          </Text>,
+          <Themed.Card
+            title="Sign-in Using"
+          >
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Themed.Icon
+                color="#dd4b39"
+                name="google-plus"
+                raised={true}
+                type="font-awesome"
+              />
+              <Themed.Icon
+                color="#3b5998"
+                name="facebook-square"
+                raised={true}
+                type="font-awesome"
+              />
+              <Themed.Icon
+                color="#00aced"
+                name="twitter"
+                raised={true}
+                type="font-awesome"
+              />
+            </Component>
+            <Component
+              style={
+                Object {
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "grey",
+                    "flex": 1,
+                    "height": 1,
+                  }
+                }
+              />
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "color": "grey",
+                    "fontSize": 20,
+                    "paddingHorizontal": 5,
+                    "paddingVertical": 10,
+                  }
+                }
+              >
+                OR
+              </Text>
+              <Component
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "backgroundColor": "grey",
+                    "flex": 1,
+                    "height": 1,
+                  }
+                }
+              />
+            </Component>
+            <ForwardRef(Themed.Input)
+              autoCapitalize="none"
+              containerStyle={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+              defaultValue="admin"
+              leftIcon={
+                <Themed.Icon
+                  color="grey"
+                  name="person"
+                  size={24}
+                />
+              }
+              onChangeText={[Function]}
+              placeholder="Username"
+            />
+            <ForwardRef(Themed.Input)
+              autoCapitalize="none"
+              containerStyle={
+                Object {
+                  "marginVertical": 10,
+                }
+              }
+              defaultValue="admin"
+              leftIcon={
+                <Themed.Icon
+                  color="grey"
+                  name="lock"
+                  size={24}
+                />
+              }
+              onChangeText={[Function]}
+              placeholder="Password"
+              textContentType="password"
+            />
+            <TouchableHighlight
+              activeOpacity={0.85}
+              delayPressOut={100}
+              onPress={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "grey",
+                  "borderColor": "#fff",
+                  "borderRadius": 20,
+                  "borderWidth": 1,
+                  "marginHorizontal": 40,
+                  "marginTop": 10,
+                  "paddingVertical": 10,
+                }
+              }
+              underlayColor="#aaa"
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                 Sign In 
+              </Text>
+            </TouchableHighlight>
+          </Themed.Card>,
+          <TouchableHighlight
+            activeOpacity={0.85}
+            delayPressOut={100}
+            onPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "grey",
+                "borderRadius": 20,
+                "marginHorizontal": 100,
+                "marginTop": 150,
+                "paddingVertical": 10,
+              }
+            }
+            underlayColor="#aaa"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "color": "white",
+                  "fontSize": 15,
+                }
+              }
+            >
+               Sign Up for Top Goaler 
+            </Text>
+          </TouchableHighlight>,
+        ],
+        "style": Object {
+          "backgroundColor": "#ddd",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "paddingTop": 22,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Top Goaler",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "alignSelf": "center",
+              "fontSize": 40,
+            },
+          },
+          "ref": null,
+          "rendered": "Top Goaler",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Themed.Icon
+                  color="#dd4b39"
+                  name="google-plus"
+                  raised={true}
+                  type="font-awesome"
+                />
+                <Themed.Icon
+                  color="#3b5998"
+                  name="facebook-square"
+                  raised={true}
+                  type="font-awesome"
+                />
+                <Themed.Icon
+                  color="#00aced"
+                  name="twitter"
+                  raised={true}
+                  type="font-awesome"
+                />
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "alignSelf": "center",
+                      "backgroundColor": "grey",
+                      "flex": 1,
+                      "height": 1,
+                    }
+                  }
+                />
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "alignSelf": "center",
+                      "color": "grey",
+                      "fontSize": 20,
+                      "paddingHorizontal": 5,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  OR
+                </Text>
+                <Component
+                  style={
+                    Object {
+                      "alignSelf": "center",
+                      "backgroundColor": "grey",
+                      "flex": 1,
+                      "height": 1,
+                    }
+                  }
+                />
+              </Component>,
+              <ForwardRef(Themed.Input)
+                autoCapitalize="none"
+                containerStyle={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+                defaultValue="admin"
+                leftIcon={
+                  <Themed.Icon
+                    color="grey"
+                    name="person"
+                    size={24}
+                  />
+                }
+                onChangeText={[Function]}
+                placeholder="Username"
+              />,
+              <ForwardRef(Themed.Input)
+                autoCapitalize="none"
+                containerStyle={
+                  Object {
+                    "marginVertical": 10,
+                  }
+                }
+                defaultValue="admin"
+                leftIcon={
+                  <Themed.Icon
+                    color="grey"
+                    name="lock"
+                    size={24}
+                  />
+                }
+                onChangeText={[Function]}
+                placeholder="Password"
+                textContentType="password"
+              />,
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "grey",
+                    "borderColor": "#fff",
+                    "borderRadius": 20,
+                    "borderWidth": 1,
+                    "marginHorizontal": 40,
+                    "marginTop": 10,
+                    "paddingVertical": 10,
+                  }
+                }
+                underlayColor="#aaa"
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontSize": 20,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                   Sign In 
+                </Text>
+              </TouchableHighlight>,
+            ],
+            "title": "Sign-in Using",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Themed.Icon
+                    color="#dd4b39"
+                    name="google-plus"
+                    raised={true}
+                    type="font-awesome"
+                  />,
+                  <Themed.Icon
+                    color="#3b5998"
+                    name="facebook-square"
+                    raised={true}
+                    type="font-awesome"
+                  />,
+                  <Themed.Icon
+                    color="#00aced"
+                    name="twitter"
+                    raised={true}
+                    type="font-awesome"
+                  />,
+                ],
+                "style": Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "color": "#dd4b39",
+                    "name": "google-plus",
+                    "raised": true,
+                    "type": "font-awesome",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "color": "#3b5998",
+                    "name": "facebook-square",
+                    "raised": true,
+                    "type": "font-awesome",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "color": "#00aced",
+                    "name": "twitter",
+                    "raised": true,
+                    "type": "font-awesome",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Component
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "backgroundColor": "grey",
+                        "flex": 1,
+                        "height": 1,
+                      }
+                    }
+                  />,
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "color": "grey",
+                        "fontSize": 20,
+                        "paddingHorizontal": 5,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    OR
+                  </Text>,
+                  <Component
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "backgroundColor": "grey",
+                        "flex": 1,
+                        "height": 1,
+                      }
+                    }
+                  />,
+                ],
+                "style": Object {
+                  "flexDirection": "row",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "style": Object {
+                      "alignSelf": "center",
+                      "backgroundColor": "grey",
+                      "flex": 1,
+                      "height": 1,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "accessible": true,
+                    "allowFontScaling": true,
+                    "children": "OR",
+                    "ellipsizeMode": "tail",
+                    "style": Object {
+                      "alignSelf": "center",
+                      "color": "grey",
+                      "fontSize": 20,
+                      "paddingHorizontal": 5,
+                      "paddingVertical": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "OR",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "style": Object {
+                      "alignSelf": "center",
+                      "backgroundColor": "grey",
+                      "flex": 1,
+                      "height": 1,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "autoCapitalize": "none",
+                "containerStyle": Object {
+                  "marginBottom": 10,
+                },
+                "defaultValue": "admin",
+                "leftIcon": <Themed.Icon
+                  color="grey"
+                  name="person"
+                  size={24}
+                />,
+                "onChangeText": [Function],
+                "placeholder": "Username",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "autoCapitalize": "none",
+                "containerStyle": Object {
+                  "marginVertical": 10,
+                },
+                "defaultValue": "admin",
+                "leftIcon": <Themed.Icon
+                  color="grey"
+                  name="lock"
+                  size={24}
+                />,
+                "onChangeText": [Function],
+                "placeholder": "Password",
+                "textContentType": "password",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.85,
+                "children": <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontSize": 20,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                   Sign In 
+                </Text>,
+                "delayPressOut": 100,
+                "onPress": [Function],
+                "style": Object {
+                  "backgroundColor": "grey",
+                  "borderColor": "#fff",
+                  "borderRadius": 20,
+                  "borderWidth": 1,
+                  "marginHorizontal": 40,
+                  "marginTop": 10,
+                  "paddingVertical": 10,
+                },
+                "underlayColor": "#aaa",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "accessible": true,
+                  "allowFontScaling": true,
+                  "children": " Sign In ",
+                  "ellipsizeMode": "tail",
+                  "style": Object {
+                    "color": "#fff",
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  },
+                },
+                "ref": null,
+                "rendered": " Sign In ",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.85,
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "color": "white",
+                  "fontSize": 15,
+                }
+              }
+            >
+               Sign Up for Top Goaler 
+            </Text>,
+            "delayPressOut": 100,
+            "onPress": [Function],
+            "style": Object {
+              "backgroundColor": "grey",
+              "borderRadius": 20,
+              "marginHorizontal": 100,
+              "marginTop": 150,
+              "paddingVertical": 10,
+            },
+            "underlayColor": "#aaa",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": " Sign Up for Top Goaler ",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "alignSelf": "center",
+                "color": "white",
+                "fontSize": 15,
+              },
+            },
+            "ref": null,
+            "rendered": " Sign Up for Top Goaler ",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

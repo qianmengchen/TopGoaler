@@ -10,9 +10,9 @@ class ChannelListPage extends Component {
       this.props.navigation.navigate('ChannelMemberView', { name });
     else this.props.navigation.navigate('ChannelPublicView', { name });
   };
-  _addChannel = () => {
+  _addChannel() {
     this.props.navigation.navigate('NewChannelPage');
-  };
+  }
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };
@@ -33,7 +33,7 @@ class ChannelListPage extends Component {
               buttonStyle={{ backgroundColor: 'transparent' }}
               icon={<Icon name="add" size={30} color="black" />}
               title=""
-              onPress={this._addChannel}
+              onPress={this._addChannel.bind(this)}
             />
           </View>
           <View style={board.channelList}>

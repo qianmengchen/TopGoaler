@@ -1,8 +1,4 @@
 import {
-  ADD_TASK,
-  REQUEST_TASKS,
-  RECEIVE_TASKS,
-  NAVIGATE_TO,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   LOGOUT,
@@ -15,41 +11,6 @@ import {
 import { constructChannel } from './constructors';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
-
-const initialTaskState = {
-  tasks: ['do frontend', 'do backend', 'do MVP ftw'],
-  isFetching: false,
-  currentTaskPage: 'ChannelListPage'
-};
-
-function tasks(state = initialTaskState, action) {
-  switch (action.type) {
-    case ADD_TASK:
-      return {
-        ...state,
-        tasks: [
-          ...state.tasks,
-          {
-            content: action.content
-          }
-        ]
-      };
-
-    case REQUEST_TASKS:
-      return { ...state, isFetching: true };
-
-    case RECEIVE_TASKS: {
-      let newTasks = action.tasks || state.tasks;
-      return { ...state, isFetching: false, tasks: newTasks };
-    }
-
-    case NAVIGATE_TO:
-      return { ...state, currentTaskPage: action.dest };
-
-    default:
-      return state;
-  }
-}
 
 const initAuthState = {
   isLoggedIn: false,
@@ -93,21 +54,15 @@ function auth(state = initAuthState, action) {
   }
 }
 
-function database(state = {}, action) {
+function channels(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
-      return { ...state, ...action.data };
+      return [...action.data.channel_creator];
     case ADD_CHANNEL:
-      return {
-        ...state,
-        channel_creator: [
-          constructChannel(action.channel, action.user),
-          ...state.channel_creator
-        ]
-      };
+      return [constructChannel(action.channel, action.user), ...state];
     default:
       return state;
   }
 }
 
-export default combineReducers({ tasks, auth, database });
+export default combineReducers({ auth, channels });

@@ -10,9 +10,9 @@ class ChannelListPage extends Component {
       this.props.navigation.navigate('ChannelMemberView', { name });
     else this.props.navigation.navigate('ChannelPublicView', { name });
   };
-  _addChannel = () => {
+  _addChannel() {
     this.props.navigation.navigate('NewChannelPage');
-  };
+  }
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };

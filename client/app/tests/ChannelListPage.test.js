@@ -19,11 +19,11 @@ const initialTaskState = {
 
 describe('Testing Channel List Page', () => {
   const channels = { map: jest.fn() };
-  const addChannelLocal = jest.fn();
+  const navigation = { navigate: jest.fn() };
   const addChannel = sinon.spy(ChannelListPage.prototype, '_addChannel');
 
   const wrapper = shallow(
-    <ChannelListPage channels={channels} addChannelLocal={addChannelLocal} />,
+    <ChannelListPage channels={channels} navigation={navigation} />,
     {
       context: { store: mockStore(initialTaskState) }
     }

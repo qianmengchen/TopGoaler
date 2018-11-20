@@ -21,10 +21,20 @@ app.use('/', auth)
 
 const jwt = passport.authenticate('jwt', {session: false})
 app.use('/', read);
-app.use('/', jwt, loadAll);
-// Use access control on all POST events
-app.use('/', jwt, create);
-app.use('/', jwt, remove);
-app.use('/', jwt, update);
+app.use('/', loadAll);
+
+// For frontend polyfill, set this to FALSE
+const enable_auth = true
+
+if (enable_auth) {
+    // Use access control on all POST events
+    app.use('/', jwt, create);
+    app.use('/', jwt, remove);
+    app.use('/', jwt, update);
+} else {
+    app.use('/', create);
+    app.use('/', remove);
+    app.use('/', update);
+}
 
 module.exports = app

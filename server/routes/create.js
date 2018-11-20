@@ -26,7 +26,8 @@ router.post('/channel_task', (request, response) => {
 router.post('/channel_user_subscribe', (request, response) => {
     // Example of how we should do access control
     if (request.user != request.body.user) {
-        return response.status(401).send()
+        console.log("Request.user = ", request.user, " Req.body.user = ", request.body.user)
+        return response.status(401).send('no access')
     }
     pool.query('INSERT INTO channel_user_subscribe SET ?', request.body, (error, result) => {
         if (error) throw error; 

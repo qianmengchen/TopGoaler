@@ -73,12 +73,16 @@ describe('User Login / Signup', () => {
 
 describe('Access Control', async () => {
     let token = ''
+    let _wrap = (f) => (err) => {
+        if (err) throw err;
+        f();
+    }
     it('should reject setting other users\' subscription and only allow self', (done) => {
         const badRequest = () => {
             request(app)
             .post('/channel_user_subscribe')
             .set('Authorization', `Bearer ${token}`)
-            .send(_query({ user: username + "not_me", channel: 'Leetcode' }))
+            .send(_query({ user: "not_me", channel: 'Leetcode' }))
             .expect(401)
             .end(done)
         }
@@ -88,7 +92,7 @@ describe('Access Control', async () => {
             .set('Authorization', `Bearer ${token}`)
             .send(_query({ user: username, channel: 'Leetcode' }))
             .expect(201)
-            .end(badRequest)
+            .end(_wrap(badRequest))
         }
         request(app)
             .post('/login')
@@ -98,6 +102,6 @@ describe('Access Control', async () => {
             .expect(res => {
                 token = res.body.token
             })
-            .end(goodRequest)
+            .end(_wrap(goodRequest))
     })
 })

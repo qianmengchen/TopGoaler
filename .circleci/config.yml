@@ -52,12 +52,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: cd client && npm ci
+      - run: cd server && npm ci
 
       - save_cache:
           paths:
-            - client/node_modules
+            - server/node_modules
           key: v1-dependencies-{{ checksum "server/package.json" }}
         
       # run tests
-      - run: cd client && npm test
+      - run: cd server && npm test

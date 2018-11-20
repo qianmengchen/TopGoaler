@@ -16,6 +16,9 @@ class ChannelListPage extends Component {
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };
+  _subscribe = ch => () => {
+    this.props.subscribe(ch.channel);
+  };
   render() {
     return (
       <View style={board.container}>

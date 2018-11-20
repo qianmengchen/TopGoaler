@@ -1,0 +1,1 @@
+module.exports = process.env.REACT_APP_MYSQL_API_KEY || 'not_really_secret'

@@ -73,7 +73,6 @@ class ChannelMemberView extends Component {
               <TouchableHighlight
                 style={cardRight.taskButton}
                 underlayColor="#aaa"
-                onPress={() => console.log('Go to create task page')}
               >
                 <Text style={cardRight.taskButtonText}>Add</Text>
               </TouchableHighlight>

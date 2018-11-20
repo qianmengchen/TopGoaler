@@ -5,11 +5,11 @@ TopGoaler is an awesome 'competitive' task app that helps you achieve goals toge
 
 ## Setup
 
-Run `npm install` to get all the dependencies. 
+Run `cd client; npm install` to get all the dependencies for client. Then do the same for `server`. 
 
-Then run `expo start` to get your app running. 
+Then in `client`, run `expo start` to get your app running. 
 
-To run the test server, use `node test_server/server.js`.
+To run the server, use `cd server; node server.js`.
 
 Download 'Expo' client on your iOS/Android device to run it natively (over the cloud too). 
 
@@ -47,12 +47,16 @@ When the work is complete and already pushed up, create a pull request on Github
 
 
 
-## Unit Test
+## Testing
 
-### jest
+### Test Directories
+For Report B, please find our tests here:
 
-Frontend test directory: [client/app/tests](client/app/tests)
-Backend test directory: 
+- Frontend test directory: [client/app/tests](client/app/tests)
+- Backend test directory: [server/tests](server/tests)
+
+
+### Frontend testing guideline
 
 Frontend tests should check rendering with snapshots. Snapshots are saved renders that are the most recently accepted. It is used to make sure that the UI does not change unexpectedly. If changes are made, the test will fail and the snapshot must be updated by either pressing 'u' in the interactive watch or with the command:
 
@@ -63,7 +67,7 @@ jest -u
 Frontend tests should also check for core components, such as the number of buttons and icons. For further coverage, tests should also check that button presses invoke the correct corresponding methods and input text are dependent on state.
 
 
-### write unit tests
+### Write unit tests
 
 Please write unit tests in /app/tests. Each test file should be at the exact same relative path in /app/tests as the path of js file being tested in /app/components, and it should have the same file name except the suffix should be .test.js.
 
@@ -79,11 +83,12 @@ https://airbnb.io/enzyme/docs/api/
 
 
 
-### run unit tests
+### Run unit tests
 
 Please use the following command to run unit tests. This is the same command in our Continuous Integration. So please ensure that you pass this command before creating a pull request:
 
 ```bash
+# Run this in both /client and /server
 npm test
 ```
 
@@ -95,7 +100,7 @@ npm run test
 
 
 
-### debug unit tests
+### Debug unit tests
 
 When writing / debugging unit tests, please run the following command in terminal (perferably in the terminal inside VS Code so that you can see our code and the unit tests output at the same time):
 
@@ -107,7 +112,7 @@ With this command, the unit tests will rerun every time you change something and
 
 
 
-### check unit tests coverage
+### Check unit tests coverage
 
 Though currently we do not enforce a 100% code coverage, it is still a good idea to cover as much as possible, at least for the part you are currently testing. To generate a coverage report, use the following command:
 

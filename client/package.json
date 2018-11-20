@@ -55,7 +55,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pretty && cd ../ && git add .",
+      "pre-commit": "npm run check-pretty",
       "pre-push": "npm run lint"
     }
   }

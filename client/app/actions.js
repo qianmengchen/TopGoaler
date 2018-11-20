@@ -1,45 +1,7 @@
 import { serverAddr } from '../config';
-/*
- * action types
- */
-export const ADD_TASK = 'ADD_TASK';
-
-export const REQUEST_TASKS = 'REQUEST_TASKS';
-export const RECEIVE_TASKS = 'RECEIVE_TASKS';
-export const NAVIGATE_TO = 'NAVIGATE_TO';
-/*
- * action creators
- */
-
-export function addTask(content) {
-  return { type: ADD_TASK, content };
-}
-
-export function requestTasks() {
-  return { type: REQUEST_TASKS };
-}
-
-export function receiveTasks(content) {
-  return { type: RECEIVE_TASKS, tasks: content };
-}
-
-export function navigateTo(dest) {
-  return { type: NAVIGATE_TO, dest: dest };
-}
-
-export function fetchTasks() {
-  return dispatch => {
-    dispatch(requestTasks());
-    return fetch(`${serverAddr}/tasks`)
-      .then(res => res.json(), err => console.log('An error occurred', err))
-      .then(json => {
-        return dispatch(receiveTasks(json));
-      });
-  };
-}
 
 /*
- * Auth functions
+ * Auth actions
  */
 export const LOGIN_BEGIN = 'LOGIN_BEGIN';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -115,7 +77,7 @@ export function signUp(username, password) {
 }
 
 /*
- * load data
+ * Data actions
  */
 export const LOAD_DATA = 'LOAD_DATA';
 
@@ -134,8 +96,9 @@ export function loadData() {
 }
 
 /*
- * add channel
+ * Channel actions
  */
+export const ADD_CHANNEL = 'ADD_CHANNEL';
 
 const _query = params => {
   var esc = encodeURIComponent;
@@ -144,8 +107,6 @@ const _query = params => {
     .join('&');
   return query;
 };
-
-export const ADD_CHANNEL = 'ADD_CHANNEL';
 
 const _createChannelLocal = (channel, user) => {
   return { type: ADD_CHANNEL, channel, user };

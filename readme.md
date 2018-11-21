@@ -66,6 +66,8 @@ jest -u
 
 Frontend tests also check for core components, such as the number of buttons and icons. We also check for interaction behavior, such as whether button presses invoke the correct methods and whether input text is dependent on state, etc. 
 
+_Note to TA: As mentioned on the report, not all tests listed in the chart were fully implemented. The frontend tests currently only check rendering of the correct amount of components (i.e. buttons, icons, input text fields, etc...). For part C, we aim to have full test coverage to make sure buttons invoke the correct methods/navigation and input text values correctly reflect the associated states._ 
+
 ### How backend testing works
 
 For backend, we use Supertest on top of Jest for sending mock API calls to our mock server instance. We currently cover the three scenarios as mentioned in the project spec: database CRUD flow, login flow, and access control flow. 

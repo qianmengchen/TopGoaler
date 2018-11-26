@@ -20,6 +20,8 @@ const _query = params => {
 const username = 'admin_' + new Date().toISOString()
 const password = 'admin1'
 
+it('', () => {});
+
 // describe('User Login / Signup', () => {
 //     it('should create new user', (done) => {
 //         request(app)

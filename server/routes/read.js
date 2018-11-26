@@ -36,7 +36,7 @@ router.get('/user_task/', (request, response) => {
         if (error) throw error;
         response.send(result);
     });
-});
+}); 
 
 
 // query to get all user

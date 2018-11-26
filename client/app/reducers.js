@@ -65,4 +65,13 @@ function channels(state = [], action) {
   }
 }
 
-export default combineReducers({ auth, channels });
+function user_channel(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return [...action.data.channel_user];
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({ auth, channels, user_channel });

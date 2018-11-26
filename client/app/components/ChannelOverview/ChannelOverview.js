@@ -8,18 +8,26 @@ import { Avatar, Text, Icon } from 'react-native-elements';
 import { board, contents, desc } from './styles';
 
 class ChannelOverview extends Component {
-  constructor(props) {
-    super(props);
-    this.fakeProps = {
-      title: 'top coder',
-      subtitle: 'a really intesting group',
-      desc: '8 members, 5 tasks'
-    };
-  }
   _submit = () => {
     let { goToChannel, title } = this.props;
     goToChannel(title);
   };
+
+  _subscribe = () => {
+    let { subscribe, title } = this.props;
+    subscribe(title);
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      key: '',
+      title: '',
+      subtitle: '',
+      goToChannel: () => {},
+      subscribe: () => {}
+    };
+  }
 
   render() {
     return (
@@ -28,8 +36,8 @@ class ChannelOverview extends Component {
           <Text style={contents.title}>{this.props.title}</Text>
           <Text style={contents.subtitle}>{this.props.subtitle}</Text>
           <View style={contents.desc}>
-            <Text style={desc.numbers}>{this.fakeProps.desc}</Text>
-            <TouchableWithoutFeedback onPress={this.props.subscribe}>
+            <Text style={desc.numbers}>{this.props.user_channel}</Text>
+            <TouchableWithoutFeedback onPress={this._subscribe}>
               <Icon style={desc.icon} name="add" size={30} color="black" />
             </TouchableWithoutFeedback>
           </View>
@@ -43,8 +51,7 @@ class ChannelOverview extends Component {
             <Avatar
               size={120}
               source={{
-                uri:
-                  'https://pbs.twimg.com/profile_images/910592237695676416/7xInX10u_400x400.jpg'
+                uri: this.props.user_channel //need more backend support here
               }}
             />
           </View>

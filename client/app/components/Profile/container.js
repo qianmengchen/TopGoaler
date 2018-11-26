@@ -3,7 +3,6 @@ import Profile from './Profile';
 import { logout } from '../../actions';
 
 const mapStateToProps = state => ({
-  currentTaskPage: state.tasks.currentTaskPage,
   username: state.auth.username
 });
 

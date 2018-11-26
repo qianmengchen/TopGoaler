@@ -18,12 +18,38 @@ class ChannelOverview extends Component {
     subscribe(title);
   };
 
+  //utils function
+  _count_users_reducer = (acc, val) => {
+    if (val.channel_id === this.props.channel_id) {
+      return acc + 1;
+    } else {
+      return acc;
+    }
+  };
+
+  _number_of_users = () => {
+    return this.props.user_channel.reduce(this._count_users_reducer, 0);
+  };
+
+  _count_tasks_reducer = (acc, val) => {
+    if (val.channel_id === this.props.channel_id) {
+      return acc + 1;
+    } else {
+      return acc;
+    }
+  };
+
+  _number_of_tasks = () => {
+    return this.props.task.reduce(this._count_tasks_reducer, 0);
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       key: '',
       title: '',
       subtitle: '',
+      channel_id: null,
       goToChannel: () => {},
       subscribe: () => {}
     };
@@ -36,7 +62,9 @@ class ChannelOverview extends Component {
           <Text style={contents.title}>{this.props.title}</Text>
           <Text style={contents.subtitle}>{this.props.subtitle}</Text>
           <View style={contents.desc}>
-            <Text style={desc.numbers}>{this.props.user_channel}</Text>
+            <Text
+              style={desc.numbers}
+            >{`${this._number_of_users()} users, ${this._number_of_tasks()} tasks`}</Text>
             <TouchableWithoutFeedback onPress={this._subscribe}>
               <Icon style={desc.icon} name="add" size={30} color="black" />
             </TouchableWithoutFeedback>
@@ -51,7 +79,7 @@ class ChannelOverview extends Component {
             <Avatar
               size={120}
               source={{
-                uri: this.props.user_channel //need more backend support here
+                uri: this.props.channel.image_url
               }}
             />
           </View>

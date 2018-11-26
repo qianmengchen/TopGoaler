@@ -1,12 +1,10 @@
 import { connect } from 'react-redux';
 import ChannelOverview from './ChannelOverview';
-import { createChannelAsUser, subscribeChannel } from '../../actions';
 
 const mapStateToProps = state => ({
-  user_channel: state.user_channel
+  user_channel: state.user_channel,
+  task: state.task,
+  channel: state.channel
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ChannelOverview);
+export default connect(mapStateToProps)(ChannelOverview);

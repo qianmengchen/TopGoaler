@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import sinon from 'sinon';
-import { Button, Avatar, Icon } from 'react-native-elements';
+import { Avatar } from 'react-native-elements';
 require('isomorphic-fetch');
 
 import MemberList from '../components/MemberList/MemberList';

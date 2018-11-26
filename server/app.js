@@ -24,7 +24,7 @@ app.use('/', read);
 app.use('/', loadAll);
 
 // For frontend polyfill, set this to FALSE
-const enable_auth = true
+const enable_auth = false
 
 if (enable_auth) {
     // Use access control on all POST events

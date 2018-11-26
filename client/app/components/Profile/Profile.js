@@ -13,6 +13,10 @@ import {
 } from './styles';
 
 class Profile extends Component {
+  _handleLogout() {
+    this.props.logout();
+  }
+
   constructor(props) {
     super(props);
     this.fakeProps = {
@@ -58,7 +62,7 @@ class Profile extends Component {
           <Button
             title="Logout"
             buttonStyle={buttons.summary}
-            onPress={() => this.props.logout()}
+            onPress={this._handleLogout.bind(this)}
           />
         </View>
       </View>

@@ -4,6 +4,10 @@ import { Avatar } from 'react-native-elements';
 import { memberList } from './styles';
 
 class MemberList extends Component {
+  _navigateToProfile() {
+    console.log("Goes to member's profile page");
+  }
+
   render() {
     return (
       <View>
@@ -16,7 +20,7 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="QM"
-                onPress={() => console.log("Goes to member's profile page")}
+                onPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'greenyellow' }}
                 containerStyle={memberList.icon}
@@ -25,7 +29,7 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="BB"
-                onPress={() => console.log("Goes to member's profile page")}
+                onPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'dodgerblue' }}
                 containerStyle={memberList.icon}
@@ -34,7 +38,7 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="AS"
-                onPress={() => console.log("Goes to member's profile page")}
+                onPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'orange' }}
                 containerStyle={memberList.icon}
@@ -43,7 +47,7 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="SY"
-                onPress={() => console.log("Goes to member's profile page")}
+                onPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'lightgreen' }}
                 containerStyle={memberList.icon}
@@ -52,7 +56,7 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="JS"
-                onPress={() => console.log("Goes to member's profile page")}
+                oonPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'magenta' }}
                 containerStyle={memberList.icon}
@@ -61,7 +65,7 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="BX"
-                onPress={() => console.log("Goes to member's profile page")}
+                onPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'red' }}
                 containerStyle={memberList.icon}

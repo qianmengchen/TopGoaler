@@ -14,6 +14,8 @@ import {
 
 class Profile extends Component {
   _handleLogout() {
+    // need these functions as prototypes for testing
+    // cannot use arrow notation, does not work with jest/enzyme
     this.props.logout();
   }
 

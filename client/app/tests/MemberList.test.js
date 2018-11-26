@@ -29,7 +29,7 @@ describe('Testing Member List Component', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should invoke correct methods when pressing logout', () => {
+  it('should invoke correct methods when pressing profile pic', () => {
     const navBtn = render.find(Avatar).at(1);
     navBtn.simulate('press');
     expect(nav.callCount).toBe(1);

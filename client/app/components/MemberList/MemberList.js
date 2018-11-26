@@ -5,7 +5,7 @@ import { memberList } from './styles';
 
 class MemberList extends Component {
   _navigateToProfile() {
-    console.log("Goes to member's profile page");
+    // console.log("Goes to member's profile page");
   }
 
   render() {

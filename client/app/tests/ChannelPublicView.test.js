@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import { Avatar } from 'react-native-elements';
+import sinon from 'sinon';
 require('isomorphic-fetch');
 
 import ChannelPublicView from '../components/ChannelPublicView/ChannelPublicView';
@@ -18,9 +19,16 @@ const initialTaskState = {
 };
 
 describe('Testing Channel List Page', () => {
-  const wrapper = shallow(<ChannelPublicView />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const mockSubscribe = jest.fn();
+  const mockNav = { dispatch: jest.fn() };
+  const nav = sinon.spy(ChannelPublicView.prototype, '_goToMemberPage');
+
+  const wrapper = shallow(
+    <ChannelPublicView navigation={mockNav} subscribe={mockSubscribe} />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {
@@ -41,5 +49,11 @@ describe('Testing Channel List Page', () => {
 
   it('should have 1 Member List', () => {
     expect(render.find(MemberList)).toHaveLength(1);
+  });
+
+  it('should invoke correct methods when pressing follow button', () => {
+    const followBtn = render.find('TouchableHighlight');
+    followBtn.simulate('press');
+    expect(nav.callCount).toBe(1);
   });
 });

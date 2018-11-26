@@ -15,7 +15,7 @@ passport.use(new LocalStrategy({
     (username, password, done) => {
         console.log("Local strategy received " + username + " " + password)
         return pool.query(
-            'SELECT * FROM user_password WHERE user = ? AND password = ?',
+            'SELECT * FROM user WHERE user = ? AND password = ?',
             [username, password],
             (err, results) => {
                 if (err) return done(err);
@@ -46,9 +46,9 @@ router.post('/login/', (req, res) => {
 router.post('/signup/', (req, res) => {
     const { username, password } = req.body;
     const user = username;
-    pool.query('SELECT * FROM user_password WHERE user = ?', [user], (err, results) => {
+    pool.query('SELECT * FROM user WHERE user = ?', [user], (err, results) => {
         if (err || results.length > 0) return res.status(401).json({msg: 'cannot signup: duplicate user'})
-        pool.query('INSERT INTO user_password SET ?', { user, password }, (err) => {
+        pool.query('INSERT INTO user SET ?', { user, password }, (err) => {
             if (err) return res.status(401).json({msg: err})
             const token = jwt.sign(user, JWT_SECRET)
             res.json({ user, token })

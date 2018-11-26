@@ -16,10 +16,10 @@ class ChannelOverview extends Component {
       desc: '8 members, 5 tasks'
     };
   }
-  _submit = () => {
+  _submit() {
     let { goToChannel, title } = this.props;
     goToChannel(title);
-  };
+  }
 
   render() {
     return (
@@ -36,7 +36,7 @@ class ChannelOverview extends Component {
         </View>
         <TouchableHighlight
           underlayColor="#aaa"
-          onPress={this._submit}
+          onPress={this._submit.bind(this)}
           style={board.avatar}
         >
           <View>

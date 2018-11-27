@@ -1,4 +1,5 @@
-const app = require('./app')
+const createApp = require('./app')
+const app = createApp({ enable_auth: false })
 const port = 8001
 // Start the server
 const server = app.listen(port, (error) => {

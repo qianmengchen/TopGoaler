@@ -41,7 +41,7 @@ router.get('/user_task/', (request, response) => {
 
 // query to get all user
 router.get('/user/', (request, response) => {
-    pool.query('SELECT * FROM user', (error, result) => {
+    pool.query('SELECT id, name, email, avatar_url, description FROM user', (error, result) => {
         if (error) throw error;
         response.send(result);
     });

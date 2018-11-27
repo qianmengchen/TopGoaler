@@ -44,15 +44,14 @@ class ChannelOverview extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <View style={board.container}>
         <View style={board.contents}>
           <Text style={contents.title}>{this.props.title}</Text>
           <Text style={contents.subtitle}>{this.props.subtitle}</Text>
           <View style={contents.desc}>
-            <Text
-              style={desc.numbers}
-            >{`${this._number_of_users()} users, ${this._number_of_tasks()} tasks`}</Text>
+            <Text style={desc.numbers}>hey</Text>
             <TouchableWithoutFeedback onPress={this._subscribe}>
               <Icon style={desc.icon} name="add" size={30} color="black" />
             </TouchableWithoutFeedback>

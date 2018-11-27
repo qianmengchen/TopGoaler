@@ -54,12 +54,18 @@ function auth(state = initAuthState, action) {
   }
 }
 
-function channels(state = [], action) {
+const _channelReducer = (res, obj) => {
+  res[obj.id] = obj;
+  return res;
+};
+
+function channels(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
-      return [...action.data.channel_creator];
+      //console.log(action.data.channel);
+      return action.data.channel.reduce(_channelReducer, {});
     case ADD_CHANNEL:
-      return [constructChannel(action.channel, action.user), ...state];
+      return { [action.newchannel.id]: action.newchannel, ...state };
     default:
       return state;
   }
@@ -68,7 +74,7 @@ function channels(state = [], action) {
 function user_channel(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
-      return [...action.data.channel_user];
+      return [...action.data.user_channel];
     default:
       return state;
   }

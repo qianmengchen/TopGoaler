@@ -40,14 +40,17 @@ class ChannelListPage extends Component {
             />
           </View>
           <View style={board.channelList}>
-            {this.props.channels.map((ch, idx) => (
-              <ChannelOverview
-                key={idx}
-                channel={ch}
-                goToChannel={this._goToChannel(ch.subscribed)}
-                subscribe={this._subscribe(ch)}
-              />
-            ))}
+            {Object.keys(this.props.channels).map(id => {
+              const ch = this.props.channels[id];
+              return (
+                <ChannelOverview
+                  key={id}
+                  channel={ch}
+                  goToChannel={this._goToChannel(ch.subscribed)}
+                  subscribe={this._subscribe(ch)}
+                />
+              );
+            })}
           </View>
         </ScrollView>
       </View>

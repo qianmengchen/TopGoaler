@@ -19,6 +19,7 @@ const _query = params => {
 
 const username = 'admin_' + new Date().toISOString()
 const password = 'admin1'
+const channelID = 42
 
 describe('User Login / Signup', () => {
     it('should create new user', (done) => {
@@ -92,7 +93,7 @@ describe('Access Control', async () => {
             request(app)
             .post('/subscribe')
             .set('Authorization', `Bearer ${token}`)
-            .send(_query({ user_id: user_id + 100, channel_id: 1 }))
+            .send(_query({ user_id: user_id + 100, channel_id: channelID }))
             .expect(401)
             .expect(/access/)
             .end(done)
@@ -101,7 +102,7 @@ describe('Access Control', async () => {
             request(app)
             .post('/subscribe')
             .set('Authorization', `Bearer ${token}`)
-            .send(_query({ user_id, channel_id: 1 }))
+            .send(_query({ user_id, channel_id: channelID }))
             .expect(201)
             .end(_wrap(badRequest))
         }

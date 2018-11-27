@@ -10,7 +10,7 @@ const pool = require('../data/config');
 // curl -d "task_id=1&user_id=2" http://localhost:8001/activity_log
 router.post('/activity_log', (request, response) => {
     pool.query('INSERT INTO activity_log SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`); 
         response.status(201).send(`activity_log added with activity_log: ${result.insertId}`);
     });
 });
@@ -22,7 +22,7 @@ router.post('/activity_log', (request, response) => {
 // curl -d "title=2&creator=1" http://localhost:8001/channel
 router.post('/channel', (request, response) => {
     pool.query('INSERT INTO channel SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`);  
         response.status(201).send(`channel added with channel: ${result.insertId}`);
     });
 });
@@ -33,7 +33,7 @@ router.post('/channel', (request, response) => {
 // curl -d "title=2&channel_id=1" http://localhost:8001/proposal
 router.post('/proposal', (request, response) => {
     pool.query('INSERT INTO proposal SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`);  
         response.status(201).send(`proposal added with proposal: ${result.insertId}`);
     });
 });
@@ -45,7 +45,7 @@ router.post('/proposal', (request, response) => {
 // curl -d "channel_id=1&title=bxzhu_task" http://localhost:8001/task
 router.post('/task', (request, response) => {
     pool.query('INSERT INTO task SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`); 
         response.status(201).send(`task added with task: ${result.insertId}`);
     });
 });
@@ -56,7 +56,7 @@ router.post('/task', (request, response) => {
 // curl -d "name=bzhu&password=bzhu" http://localhost:8001/user
 router.post('/user', (request, response) => {
     pool.query('INSERT INTO user SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`);  
         response.status(201).send(`user added with user: ${result.insertId}`);
     });
 });
@@ -69,7 +69,7 @@ router.post('/user', (request, response) => {
 // curl -d "user_id=1&channel_id=1" http://localhost:8001/user_channel
 router.post('/user_channel', (request, response) => {
     pool.query('INSERT INTO user_channel SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`); 
         response.status(201).send(`user_channel added with user_channel: ${result.insertId}`);
     });
 });
@@ -80,7 +80,7 @@ router.post('/user_channel', (request, response) => {
 // curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
 router.post('/user_task', (request, response) => {
     pool.query('INSERT INTO user_task SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`);  
         response.status(201).send(`user_task added with user_task: ${result.insertId}`);
     });
 });
@@ -91,7 +91,7 @@ router.post('/user_task', (request, response) => {
 // curl -d "user_id=1&proposal_id=1" http://localhost:8001/vote
 router.post('/vote', (request, response) => {
     pool.query('INSERT INTO vote SET ?', request.body, (error, result) => {
-        if (error) throw error; 
+        if (error) response.status(401).send(`error create: ${error}`); 
         response.status(201).send(`vote added with vote: ${result.insertId}`);
     });
 });

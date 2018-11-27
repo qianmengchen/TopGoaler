@@ -4,7 +4,8 @@ import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 require('isomorphic-fetch');
 
-import TaskChecklist from '../components/TaskChecklist/TaskChecklist';
+import ChannelIcon from '../components/ChannelIconList/ChannelIcon';
+
 const middlewares = [thunkMiddleware]; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
 
@@ -14,8 +15,10 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
-describe('Testing Task Checklist component', () => {
-  const wrapper = shallow(<TaskChecklist />, {
+describe('Testing Channel Icon component', () => {
+  const item = { icon: null };
+
+  const wrapper = shallow(<ChannelIcon item={item} />, {
     context: { store: mockStore(initialTaskState) }
   });
   const render = wrapper.dive();
@@ -24,7 +27,7 @@ describe('Testing Task Checklist component', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should contain a FlatList', () => {
-    expect(render.find('FlatList')).toHaveLength(1);
+  it('should have 1 Image for icons', () => {
+    expect(render.find('Image')).toHaveLength(1);
   });
 });

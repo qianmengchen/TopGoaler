@@ -20,7 +20,7 @@ class ChannelOverview extends Component {
 
   //utils function
   _count_users_reducer = (acc, val) => {
-    if (val.channel_id === this.props.channel_id) {
+    if (val.channel_id === this.props.channel.id) {
       return acc + 1;
     } else {
       return acc;
@@ -32,7 +32,7 @@ class ChannelOverview extends Component {
   };
 
   _count_tasks_reducer = (acc, val) => {
-    if (val.channel_id === this.props.channel_id) {
+    if (val.channel_id === this.props.channel.id) {
       return acc + 1;
     } else {
       return acc;
@@ -42,18 +42,6 @@ class ChannelOverview extends Component {
   _number_of_tasks = () => {
     return this.props.task.reduce(this._count_tasks_reducer, 0);
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      key: '',
-      title: '',
-      subtitle: '',
-      channel_id: null,
-      goToChannel: () => {},
-      subscribe: () => {}
-    };
-  }
 
   render() {
     return (

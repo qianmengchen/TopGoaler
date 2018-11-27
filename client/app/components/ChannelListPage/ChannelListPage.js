@@ -43,8 +43,7 @@ class ChannelListPage extends Component {
             {this.props.channels.map((ch, idx) => (
               <ChannelOverview
                 key={idx}
-                title={ch.channel}
-                subtitle={`Created by ${ch.creator}`}
+                channel={ch}
                 goToChannel={this._goToChannel(ch.subscribed)}
                 subscribe={this._subscribe(ch)}
               />

@@ -10,6 +10,20 @@ import ChannelOverview from '../components/ChannelOverview/ChannelOverview';
 const middlewares = [thunkMiddleware]; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
 
+const _goToChannel = jest.fn();
+const _subscribe = jest.fn();
+
+const ch = {
+  id: 42,
+  title: 'bxzhu_channel',
+  creator: 1,
+  subtitle: 'bxzhu',
+  image_url: 'http://shortlink.in/themes/v3/styles/img/url-link.png'
+};
+
+const user_channel = [];
+const task = [];
+
 const initialTaskState = {
   tasks: ['do frontend', 'do backend', 'do MVP ftw'],
   isFetching: false,
@@ -17,9 +31,19 @@ const initialTaskState = {
 };
 
 describe('Testing Channel Overview Page', () => {
-  const wrapper = shallow(<ChannelOverview />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const wrapper = shallow(
+    <ChannelOverview
+      key={0}
+      channel={ch}
+      goToChannel={_goToChannel()}
+      subscribe={_subscribe()}
+      user_channel={user_channel}
+      task={task}
+    />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {

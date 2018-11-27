@@ -3,15 +3,23 @@ const passportJWT = require("passport-jwt");
 const JWTStrategy   = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 const JWT_SECRET = require('../data/jwt');
+const pool = require('../data/config');
 
 passport.use(new JWTStrategy({
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: JWT_SECRET
     },
     (payload, done) => {
-        const user = payload
-        console.log("middleware got payload " + user)
+        const { name, id } = payload
+        console.log("middleware got payload ", payload)
         // todo: verify user exists
-        return done(null, user)
+        pool.query(
+            'SELECT * FROM user WHERE name = ? AND id = ?',
+            [name, id],
+            (err, results) => {
+                if (err) return done(err);
+                if (results.length == 0) return done('No such user');
+                done(null, payload);
+            })
     }
 ));

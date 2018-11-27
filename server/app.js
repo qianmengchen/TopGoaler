@@ -4,10 +4,8 @@ const read = require('./routes/read');
 const create = require('./routes/create');
 const remove = require('./routes/remove');
 const update = require('./routes/update');
-const loadAll = require('./routes/loadAll');
 const temp = require('./routes/temp');
 const auth = require('./routes/auth');
-const request = require('request-promise');
 const passport = require('passport');
 require('./routes/passport');
 
@@ -27,7 +25,6 @@ const createApp = (config = defaultConfig) => {
 
     const jwt = passport.authenticate('jwt', { session: false })
     app.use('/', read);
-    app.use('/', loadAll);
 
     // For frontend polyfill, set this to FALSE
     if (config.enable_auth) {

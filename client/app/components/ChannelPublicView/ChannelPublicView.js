@@ -6,7 +6,7 @@ import { MemberList } from '../MemberList/index';
 import { NavigationActions, StackActions } from 'react-navigation';
 
 class ChannelPublicView extends Component {
-  _goToMemberPage = () => {
+  _goToMemberPage() {
     this.props.subscribe(this.props.channelName);
     const { dispatch } = this.props.navigation;
     // the idiom to change the route
@@ -21,7 +21,7 @@ class ChannelPublicView extends Component {
       ]
     });
     dispatch(resetAction);
-  };
+  }
 
   render() {
     return (
@@ -63,7 +63,7 @@ class ChannelPublicView extends Component {
         <TouchableHighlight
           style={follow.button}
           underlayColor="#aaa"
-          onPress={this._goToMemberPage}
+          onPress={this._goToMemberPage.bind(this)}
         >
           <Text style={follow.buttonText}> Follow </Text>
         </TouchableHighlight>

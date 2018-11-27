@@ -4,17 +4,20 @@ import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
 
 class NewChannelPage extends Component {
-  _updateName = text => {
+  _updateName(text) {
     this.setState({ name: text });
-  };
-  _updateDescription = text => {
+  }
+
+  _updateDescription(text) {
     this.setState({ description: text });
-  };
+  }
+
   _errorCheck = () => false;
-  _submit = () => {
+
+  _submit() {
     this.props.addChannel(this.state.name, this.props.username);
     this.props.navigation.navigate('ChannelListPage');
-  };
+  }
 
   constructor(props) {
     super(props);
@@ -40,7 +43,8 @@ class NewChannelPage extends Component {
               : null
           }
           containerStyle={board.input}
-          onChangeText={this._updateName}
+          value={this.state.name}
+          onChangeText={this._updateName.bind(this)}
         />
         <Input
           label="Description"
@@ -52,13 +56,14 @@ class NewChannelPage extends Component {
               : null
           }
           containerStyle={board.input}
-          onChangeText={this._updateDescription}
+          value={this.state.description}
+          onChangeText={this._updateDescription.bind(this)}
         />
         <View style={board.button}>
           <Button
             title="Create"
             buttonStyle={button.create}
-            onPress={this._submit}
+            onPress={this._submit.bind(this)}
           />
         </View>
       </View>

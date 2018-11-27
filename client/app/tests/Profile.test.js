@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
+import sinon from 'sinon';
 import { Button, Avatar, Icon } from 'react-native-elements';
 require('isomorphic-fetch');
 
@@ -17,9 +18,10 @@ const initialTaskState = {
 };
 
 describe('Testing Channel List Page', () => {
-  const logout = jest.fn();
+  const _logout = jest.fn();
+  const logout = sinon.spy(Profile.prototype, '_handleLogout');
 
-  const wrapper = shallow(<Profile logout={logout} />, {
+  const wrapper = shallow(<Profile logout={_logout} />, {
     context: { store: mockStore(initialTaskState) }
   });
   const render = wrapper.dive();
@@ -38,5 +40,12 @@ describe('Testing Channel List Page', () => {
 
   it('should have 2 Buttons: summary and logout', () => {
     expect(render.find(Button)).toHaveLength(2);
+  });
+
+  it('should invoke correct methods when pressing logout', () => {
+    const logoutBtn = render.find(Button).at(1);
+    logoutBtn.simulate('press');
+    expect(logout.calledOnce).toBe(true);
+    expect(_logout).toHaveBeenCalledTimes(1);
   });
 });

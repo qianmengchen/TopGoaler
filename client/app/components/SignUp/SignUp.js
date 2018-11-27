@@ -27,6 +27,7 @@ class SignUp extends Component {
             containerStyle={{ marginBottom: 10 }}
             placeholder="Username"
             autoCapitalize="none"
+            value={this.state.username}
             onChangeText={text => this.setState({ username: text })}
             leftIcon={<Icon name="person" size={24} color="grey" />}
           />
@@ -35,6 +36,7 @@ class SignUp extends Component {
             placeholder="Password"
             autoCapitalize="none"
             textContentType="password"
+            value={this.state.password}
             onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />
@@ -42,6 +44,7 @@ class SignUp extends Component {
             containerStyle={{ marginVertical: 10 }}
             autoCapitalize="none"
             placeholder="Email"
+            value={this.state.email}
             onChangeText={text => this.setState({ email: text })}
             leftIcon={<Icon name="email" size={24} color="grey" />}
           />

@@ -57,9 +57,12 @@ function auth(state = initAuthState, action) {
 function channels(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
-      return [...action.data.channel_creator];
+      return [...action.data.channel];
     case ADD_CHANNEL:
-      return [constructChannel(action.channel, action.user), ...state];
+      return [
+        constructChannel(action.channel, action.channel, action.user),
+        ...state
+      ];
     default:
       return state;
   }

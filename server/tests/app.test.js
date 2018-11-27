@@ -25,7 +25,7 @@ describe('User Login / Signup', () => {
     it('should create new user', (done) => {
         request(app)
             .post('/signup')
-            .send(_query({ username , password }))
+            .send({ username , password })
             .set('Accept', 'application/json')
             .expect(200)
             .then(res => {
@@ -40,7 +40,7 @@ describe('User Login / Signup', () => {
     it('should log that user in successfully with token', (done) => {
         request(app)
             .post('/login')
-            .send(_query({ username, password }))
+            .send({ username, password })
             .set('Accept', 'application/json')
             .expect(200)
             .then(res => {

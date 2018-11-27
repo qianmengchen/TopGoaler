@@ -25,24 +25,26 @@ export function loginFailure(username) {
 const _post = (url, body) =>
   fetch(serverAddr + url, {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     },
-    body
-  }).then(res => res.json());
+    body: JSON.stringify(body)
+  });
 
 export function login(username, password) {
-  return dispatch => {
-    const body = JSON.stringify({ username, password });
-    return _post('/login', body).then(
-      json => {
-        dispatch(
-          (json.status == 'success' ? loginSuccess : loginFailure)(username)
-        );
-      },
-      e => dispatch(serverError(e))
-    );
+  return async dispatch => {
+    const body = { username, password };
+    try {
+      const res = await _post('/login', body);
+      if (!res.ok) return dispatch(loginFailure(username));
+      //const json = await res.json()
+      dispatch(loginSuccess(username));
+    } catch (e) {
+      console.log(e);
+      dispatch(serverError(e));
+    }
   };
 }
 
@@ -63,16 +65,16 @@ export function serverError(detail) {
 }
 
 export function signUp(username, password) {
-  return dispatch => {
-    const body = JSON.stringify({ username, password });
-    return _post('/signup', body).then(
-      json => {
-        dispatch(
-          (json.status == 'success' ? signUpSuccess : signUpFailure)(username)
-        );
-      },
-      e => dispatch(serverError(e))
-    );
+  return async dispatch => {
+    const body = { username, password };
+    try {
+      const res = await _post('/login', body);
+      if (!res.ok) return dispatch(loginFailure(username));
+      //const json = await res.json()
+      dispatch(loginSuccess(username));
+    } catch (e) {
+      dispatch(serverError(e));
+    }
   };
 }
 

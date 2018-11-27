@@ -36,7 +36,7 @@ export function login(username, password) {
   return dispatch => {
     const body = JSON.stringify({ username, password });
     return _post('/login', body).then(
-      json => {
+      () => {
         dispatch(loginSuccess(username));
       },
       e => dispatch(serverError(e))

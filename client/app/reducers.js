@@ -8,7 +8,7 @@ import {
   LOAD_DATA,
   ADD_CHANNEL
 } from './actions';
-import { constructChannel } from './constructors';
+//import { constructChannel } from './constructors';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
 
@@ -62,7 +62,6 @@ const _channelReducer = (res, obj) => {
 function channels(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
-      //console.log(action.data.channel);
       return action.data.channel.reduce(_channelReducer, {});
     case ADD_CHANNEL:
       return { [action.newchannel.id]: action.newchannel, ...state };

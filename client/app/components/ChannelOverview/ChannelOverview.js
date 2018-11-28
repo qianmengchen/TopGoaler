@@ -60,7 +60,7 @@ class ChannelOverview extends Component {
         </View>
         <TouchableHighlight
           underlayColor="#aaa"
-          onPress={this._submit}
+          onPress={this._submit.bind(this)}
           style={board.avatar}
         >
           <View>

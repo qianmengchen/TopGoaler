@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import { Avatar, Text } from 'react-native-elements';
+import sinon from 'sinon';
 require('isomorphic-fetch');
 
 import ChannelOverview from '../components/ChannelOverview/ChannelOverview';
@@ -60,5 +61,11 @@ describe('Testing Channel Overview Page', () => {
 
   it('should have 1 TouchableWithoutFeedback for channel logo', () => {
     expect(render.find('TouchableWithoutFeedback')).toHaveLength(1);
+  });
+
+  it('should invoke correct methods when pressing submit button', () => {
+    const submitBtn = render.find('TouchableHighlight');
+    submitBtn.simulate('press');
+    expect(submit.callCount).toBe(1);
   });
 });

@@ -1,6 +1,7 @@
-export const constructChannel = (channel, user) => {
+export const constructChannel = (title, subtitle, user) => {
   return {
-    channel,
+    title,
+    subtitle,
     creator: user,
     subscribed: true
   };

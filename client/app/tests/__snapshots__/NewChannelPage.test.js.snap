@@ -1,0 +1,678 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing New Channel Page renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "white",
+        "flex": 1,
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 20,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        New Channel
+      </Text>
+    </Component>
+    <ForwardRef(Themed.Input)
+      containerStyle={
+        Object {
+          "marginBottom": 10,
+          "paddingLeft": 10,
+        }
+      }
+      errorMessage={null}
+      errorStyle={
+        Object {
+          "color": "red",
+        }
+      }
+      label="Name"
+      labelStyle={
+        Object {
+          "color": "grey",
+          "fontSize": 15,
+          "fontWeight": "300",
+        }
+      }
+      onChangeText={[Function]}
+      value=""
+    />
+    <ForwardRef(Themed.Input)
+      containerStyle={
+        Object {
+          "marginBottom": 10,
+          "paddingLeft": 10,
+        }
+      }
+      errorMessage={null}
+      errorStyle={
+        Object {
+          "color": "red",
+        }
+      }
+      label="Description"
+      labelStyle={
+        Object {
+          "color": "grey",
+          "fontSize": 15,
+          "fontWeight": "300",
+        }
+      }
+      onChangeText={[Function]}
+      value=""
+    />
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "marginVertical": 10,
+        }
+      }
+    >
+      <ForwardRef(Themed.Button)
+        buttonStyle={
+          Object {
+            "backgroundColor": "rgba(40, 160, 147, 1)",
+            "borderColor": "transparent",
+            "borderRadius": 20,
+            "borderWidth": 0,
+            "height": 40,
+            "width": 120,
+          }
+        }
+        onPress={[Function]}
+        title="Create"
+      />
+    </Component>
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginVertical": 20,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 30,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            New Channel
+          </Text>
+        </Component>,
+        <ForwardRef(Themed.Input)
+          containerStyle={
+            Object {
+              "marginBottom": 10,
+              "paddingLeft": 10,
+            }
+          }
+          errorMessage={null}
+          errorStyle={
+            Object {
+              "color": "red",
+            }
+          }
+          label="Name"
+          labelStyle={
+            Object {
+              "color": "grey",
+              "fontSize": 15,
+              "fontWeight": "300",
+            }
+          }
+          onChangeText={[Function]}
+          value=""
+        />,
+        <ForwardRef(Themed.Input)
+          containerStyle={
+            Object {
+              "marginBottom": 10,
+              "paddingLeft": 10,
+            }
+          }
+          errorMessage={null}
+          errorStyle={
+            Object {
+              "color": "red",
+            }
+          }
+          label="Description"
+          labelStyle={
+            Object {
+              "color": "grey",
+              "fontSize": 15,
+              "fontWeight": "300",
+            }
+          }
+          onChangeText={[Function]}
+          value=""
+        />,
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "marginVertical": 10,
+            }
+          }
+        >
+          <ForwardRef(Themed.Button)
+            buttonStyle={
+              Object {
+                "backgroundColor": "rgba(40, 160, 147, 1)",
+                "borderColor": "transparent",
+                "borderRadius": 20,
+                "borderWidth": 0,
+                "height": 40,
+                "width": 120,
+              }
+            }
+            onPress={[Function]}
+            title="Create"
+          />
+        </Component>,
+      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "white",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 30,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            New Channel
+          </Text>,
+          "style": Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginVertical": 20,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "New Channel",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "fontSize": 30,
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": "New Channel",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "containerStyle": Object {
+            "marginBottom": 10,
+            "paddingLeft": 10,
+          },
+          "errorMessage": null,
+          "errorStyle": Object {
+            "color": "red",
+          },
+          "label": "Name",
+          "labelStyle": Object {
+            "color": "grey",
+            "fontSize": 15,
+            "fontWeight": "300",
+          },
+          "onChangeText": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "containerStyle": Object {
+            "marginBottom": 10,
+            "paddingLeft": 10,
+          },
+          "errorMessage": null,
+          "errorStyle": Object {
+            "color": "red",
+          },
+          "label": "Description",
+          "labelStyle": Object {
+            "color": "grey",
+            "fontSize": 15,
+            "fontWeight": "300",
+          },
+          "onChangeText": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <ForwardRef(Themed.Button)
+            buttonStyle={
+              Object {
+                "backgroundColor": "rgba(40, 160, 147, 1)",
+                "borderColor": "transparent",
+                "borderRadius": 20,
+                "borderWidth": 0,
+                "height": 40,
+                "width": 120,
+              }
+            }
+            onPress={[Function]}
+            title="Create"
+          />,
+          "style": Object {
+            "alignItems": "center",
+            "marginVertical": 10,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "buttonStyle": Object {
+              "backgroundColor": "rgba(40, 160, 147, 1)",
+              "borderColor": "transparent",
+              "borderRadius": 20,
+              "borderWidth": 0,
+              "height": 40,
+              "width": 120,
+            },
+            "onPress": [Function],
+            "title": "Create",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginVertical": 20,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              New Channel
+            </Text>
+          </Component>,
+          <ForwardRef(Themed.Input)
+            containerStyle={
+              Object {
+                "marginBottom": 10,
+                "paddingLeft": 10,
+              }
+            }
+            errorMessage={null}
+            errorStyle={
+              Object {
+                "color": "red",
+              }
+            }
+            label="Name"
+            labelStyle={
+              Object {
+                "color": "grey",
+                "fontSize": 15,
+                "fontWeight": "300",
+              }
+            }
+            onChangeText={[Function]}
+            value=""
+          />,
+          <ForwardRef(Themed.Input)
+            containerStyle={
+              Object {
+                "marginBottom": 10,
+                "paddingLeft": 10,
+              }
+            }
+            errorMessage={null}
+            errorStyle={
+              Object {
+                "color": "red",
+              }
+            }
+            label="Description"
+            labelStyle={
+              Object {
+                "color": "grey",
+                "fontSize": 15,
+                "fontWeight": "300",
+              }
+            }
+            onChangeText={[Function]}
+            value=""
+          />,
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "marginVertical": 10,
+              }
+            }
+          >
+            <ForwardRef(Themed.Button)
+              buttonStyle={
+                Object {
+                  "backgroundColor": "rgba(40, 160, 147, 1)",
+                  "borderColor": "transparent",
+                  "borderRadius": 20,
+                  "borderWidth": 0,
+                  "height": 40,
+                  "width": 120,
+                }
+              }
+              onPress={[Function]}
+              title="Create"
+            />
+          </Component>,
+        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "white",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              New Channel
+            </Text>,
+            "style": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginVertical": 20,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "New Channel",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 30,
+                "fontWeight": "bold",
+              },
+            },
+            "ref": null,
+            "rendered": "New Channel",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "containerStyle": Object {
+              "marginBottom": 10,
+              "paddingLeft": 10,
+            },
+            "errorMessage": null,
+            "errorStyle": Object {
+              "color": "red",
+            },
+            "label": "Name",
+            "labelStyle": Object {
+              "color": "grey",
+              "fontSize": 15,
+              "fontWeight": "300",
+            },
+            "onChangeText": [Function],
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "containerStyle": Object {
+              "marginBottom": 10,
+              "paddingLeft": 10,
+            },
+            "errorMessage": null,
+            "errorStyle": Object {
+              "color": "red",
+            },
+            "label": "Description",
+            "labelStyle": Object {
+              "color": "grey",
+              "fontSize": 15,
+              "fontWeight": "300",
+            },
+            "onChangeText": [Function],
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <ForwardRef(Themed.Button)
+              buttonStyle={
+                Object {
+                  "backgroundColor": "rgba(40, 160, 147, 1)",
+                  "borderColor": "transparent",
+                  "borderRadius": 20,
+                  "borderWidth": 0,
+                  "height": 40,
+                  "width": 120,
+                }
+              }
+              onPress={[Function]}
+              title="Create"
+            />,
+            "style": Object {
+              "alignItems": "center",
+              "marginVertical": 10,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "buttonStyle": Object {
+                "backgroundColor": "rgba(40, 160, 147, 1)",
+                "borderColor": "transparent",
+                "borderRadius": 20,
+                "borderWidth": 0,
+                "height": 40,
+                "width": 120,
+              },
+              "onPress": [Function],
+              "title": "Create",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

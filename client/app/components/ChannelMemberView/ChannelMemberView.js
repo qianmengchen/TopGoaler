@@ -5,13 +5,12 @@ import { header, cardLeft, cardRight } from './styles';
 import { Feed } from '../Feed/index';
 
 class ChannelMemberView extends Component {
-  render() {
+  _goToHomepage() {
     const { navigate } = this.props.navigation;
+    navigate('ChannelListPage');
+  }
 
-    const goToHomepage = () => {
-      navigate('ChannelListPage');
-    };
-
+  render() {
     return (
       <View>
         <View style={header.container}>
@@ -66,7 +65,7 @@ class ChannelMemberView extends Component {
               <TouchableHighlight
                 style={cardRight.taskButton}
                 underlayColor="#aaa"
-                onPress={() => goToHomepage()}
+                onPress={this._goToHomepage.bind(this)}
               >
                 <Text style={cardRight.taskButtonText}>More</Text>
               </TouchableHighlight>

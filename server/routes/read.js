@@ -10,7 +10,7 @@ let routes =
         ['task'],
         ['user_channel'],
         ['user_task'],
-        ['user', 'SELECT id, name, email, avatar_url, description FROM user'],
+        ['user'], //, 'SELECT id, name, email, avatar_url, description FROM user'],
         ['activity_log'],
         ['vote'],
         ['proposal']

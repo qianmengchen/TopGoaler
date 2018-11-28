@@ -118,6 +118,7 @@ ShallowWrapper {
         }
         onChangeText={[Function]}
         placeholder="Username"
+        value="admin"
       />
       <ForwardRef(Themed.Input)
         autoCapitalize="none"
@@ -137,6 +138,7 @@ ShallowWrapper {
         onChangeText={[Function]}
         placeholder="Password"
         textContentType="password"
+        value="admin"
       />
       <TouchableHighlight
         activeOpacity={0.85}
@@ -320,6 +322,7 @@ ShallowWrapper {
             }
             onChangeText={[Function]}
             placeholder="Username"
+            value="admin"
           />
           <ForwardRef(Themed.Input)
             autoCapitalize="none"
@@ -339,6 +342,7 @@ ShallowWrapper {
             onChangeText={[Function]}
             placeholder="Password"
             textContentType="password"
+            value="admin"
           />
           <TouchableHighlight
             activeOpacity={0.85}
@@ -526,6 +530,7 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Username"
+              value="admin"
             />,
             <ForwardRef(Themed.Input)
               autoCapitalize="none"
@@ -545,6 +550,7 @@ ShallowWrapper {
               onChangeText={[Function]}
               placeholder="Password"
               textContentType="password"
+              value="admin"
             />,
             <TouchableHighlight
               activeOpacity={0.85}
@@ -782,6 +788,7 @@ ShallowWrapper {
               />,
               "onChangeText": [Function],
               "placeholder": "Username",
+              "value": "admin",
             },
             "ref": null,
             "rendered": null,
@@ -808,6 +815,7 @@ ShallowWrapper {
               "onChangeText": [Function],
               "placeholder": "Password",
               "textContentType": "password",
+              "value": "admin",
             },
             "ref": null,
             "rendered": null,
@@ -1041,6 +1049,7 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Username"
+              value="admin"
             />
             <ForwardRef(Themed.Input)
               autoCapitalize="none"
@@ -1060,6 +1069,7 @@ ShallowWrapper {
               onChangeText={[Function]}
               placeholder="Password"
               textContentType="password"
+              value="admin"
             />
             <TouchableHighlight
               activeOpacity={0.85}
@@ -1247,6 +1257,7 @@ ShallowWrapper {
                 }
                 onChangeText={[Function]}
                 placeholder="Username"
+                value="admin"
               />,
               <ForwardRef(Themed.Input)
                 autoCapitalize="none"
@@ -1266,6 +1277,7 @@ ShallowWrapper {
                 onChangeText={[Function]}
                 placeholder="Password"
                 textContentType="password"
+                value="admin"
               />,
               <TouchableHighlight
                 activeOpacity={0.85}
@@ -1503,6 +1515,7 @@ ShallowWrapper {
                 />,
                 "onChangeText": [Function],
                 "placeholder": "Username",
+                "value": "admin",
               },
               "ref": null,
               "rendered": null,
@@ -1529,6 +1542,7 @@ ShallowWrapper {
                 "onChangeText": [Function],
                 "placeholder": "Password",
                 "textContentType": "password",
+                "value": "admin",
               },
               "ref": null,
               "rendered": null,

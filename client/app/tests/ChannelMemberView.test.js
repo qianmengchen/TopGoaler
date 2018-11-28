@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import { Avatar, Card } from 'react-native-elements';
+import sinon from 'sinon';
 require('isomorphic-fetch');
 
 import ChannelMemberView from '../components/ChannelMemberView/ChannelMemberView';
@@ -18,6 +19,7 @@ const initialTaskState = {
 
 describe('Testing Channel Memberview Page', () => {
   const navigation = { navigate: jest.fn() };
+  const nav = sinon.spy(ChannelMemberView.prototype, '_goToHomepage');
 
   const wrapper = shallow(<ChannelMemberView navigation={navigation} />, {
     context: { store: mockStore(initialTaskState) }
@@ -43,5 +45,11 @@ describe('Testing Channel Memberview Page', () => {
 
   it('should have 2 TouchableHighlight for more and add task button text', () => {
     expect(render.find('TouchableHighlight')).toHaveLength(2);
+  });
+
+  it('should invoke correct methods when pressing more button', () => {
+    const moreBtn = render.find('TouchableHighlight').at(0);
+    moreBtn.simulate('press');
+    expect(nav.callCount).toBe(1);
   });
 });

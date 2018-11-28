@@ -54,6 +54,7 @@ class SignIn extends Component {
             placeholder="Username"
             autoCapitalize="none"
             defaultValue={this.state.username}
+            value={this.state.username}
             onChangeText={text => this.setState({ username: text })}
             leftIcon={<Icon name="person" size={24} color="grey" />}
           />
@@ -63,6 +64,7 @@ class SignIn extends Component {
             textContentType="password"
             autoCapitalize="none"
             defaultValue={this.state.password}
+            value={this.state.password}
             onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />

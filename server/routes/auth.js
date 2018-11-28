@@ -48,6 +48,7 @@ const authenticate = (req, res) => passport.authenticate('local', {session: fals
 })(req, res)
 
 router.post('/login/', (req, res) => {
+    console.log('Received /login ', req.body)
     authenticate(req, res);
 })
 

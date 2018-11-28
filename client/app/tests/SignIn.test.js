@@ -4,6 +4,7 @@ import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import sinon from 'sinon';
 import { Input } from 'react-native-elements';
+import renderer from 'react-test-renderer';
 require('isomorphic-fetch');
 
 import SignIn from '../components/SignIn/SignIn';
@@ -13,7 +14,8 @@ const mockStore = configureStore(middlewares);
 
 const initAuthState = {
   isLoggedIn: false,
-  username: ''
+  username: 'admin',
+  password: 'admin'
 };
 
 describe('Testing Sign In Page', () => {
@@ -46,5 +48,61 @@ describe('Testing Sign In Page', () => {
 
   it('should have 2 Input text fields for username and password', () => {
     expect(render.find(Input)).toHaveLength(2);
+  });
+
+  it('should have initial username and password be admin', () => {
+    let instance = renderer.create(<SignIn />).getInstance();
+    expect(instance.state.username).toBe('admin');
+    expect(instance.state.password).toBe('admin');
+  });
+
+  it('should have username dependent on state', () => {
+    const userfield = wrapper.find(Input).at(0);
+    expect(userfield.props().value).toBe('admin');
+
+    wrapper.setState({ username: 'notadmin' });
+
+    const userfield2 = wrapper.find(Input).at(0);
+    expect(userfield2.props().value).toBe('notadmin');
+
+    // reset
+    wrapper.setState({ username: 'admin' });
+  });
+
+  it('should correctly update username state when text is changed', () => {
+    const userfield = wrapper.find(Input).at(0);
+    expect(userfield.props().value).toBe('admin');
+
+    userfield.simulate('changeText', 'notadmin');
+    expect(wrapper.state('username')).toBe('notadmin');
+
+    // re-render for updated state
+    const userfield2 = wrapper.find(Input).at(0);
+    expect(userfield2.props().value).toBe('notadmin');
+  });
+
+  it('should have password dependent on state', () => {
+    const pwfield = wrapper.find(Input).at(1);
+    expect(pwfield.props().value).toBe('admin');
+
+    wrapper.setState({ password: 'notadmin' });
+
+    const pwfield2 = wrapper.find(Input).at(1);
+    expect(pwfield2.props().value).toBe('notadmin');
+
+    // reset
+    wrapper.setState({ password: 'admin' });
+  });
+
+  it('should correctly update password state when text is changed', () => {
+    const pwfield = wrapper.find(Input).at(1);
+    expect(pwfield.props().value).toBe('admin');
+
+    pwfield.simulate('changeText', 'notadmin');
+    expect(wrapper.state('password')).toBe('notadmin');
+
+    // re-render for updated state
+    const pwfield2 = wrapper.find(Input).at(1);
+    expect(pwfield2.props().value).toBe('notadmin');
   });
 });

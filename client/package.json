@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "eslint": "^5.8.0",
-    "expo": "^30.0.2",
+    "expo": "^30.0.1",
     "express": "^4.16.4",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",

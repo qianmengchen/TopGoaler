@@ -14,12 +14,12 @@ export const SIGNUP_FAILURE = 'SIGNIN_FAIL';
 
 export const SERVER_ERR = 'SERVER_ERR';
 
-export function loginSuccess(username) {
-  return { type: LOGIN_SUCCESS, username: username };
+export function loginSuccess(username, id) {
+  return { type: LOGIN_SUCCESS, username, id };
 }
 
 export function loginFailure(username) {
-  return { type: LOGIN_FAILURE, username: username };
+  return { type: LOGIN_FAILURE, username };
 }
 
 const _post = (url, body) =>
@@ -39,8 +39,8 @@ export function login(username, password) {
     try {
       const res = await _post('/login', body);
       if (!res.ok) return dispatch(loginFailure(username));
-      //const json = await res.json()
-      dispatch(loginSuccess(username));
+      const { id } = await res.json();
+      dispatch(loginSuccess(username, id));
     } catch (e) {
       console.log(e);
       dispatch(serverError(e));

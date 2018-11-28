@@ -8,13 +8,13 @@ import {
   LOAD_DATA,
   ADD_CHANNEL
 } from './actions';
-//import { constructChannel } from './constructors';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
 
 const initAuthState = {
   isLoggedIn: false,
-  username: ''
+  username: '',
+  id: null
 };
 
 function _alertLogin(method) {
@@ -35,7 +35,12 @@ function _alertServer() {
 function auth(state = initAuthState, action) {
   switch (action.type) {
     case LOGIN_SUCCESS:
-      return { ...state, isLoggedIn: true, username: action.username };
+      return {
+        ...state,
+        isLoggedIn: true,
+        username: action.username,
+        id: action.id
+      };
     case LOGIN_FAILURE:
       _alertLogin('Login');
       return { ...state, ...initAuthState };
@@ -54,7 +59,7 @@ function auth(state = initAuthState, action) {
   }
 }
 
-const _channelReducer = (res, obj) => {
+const _arrayToDictReducer = (res, obj) => {
   res[obj.id] = obj;
   return res;
 };
@@ -62,7 +67,7 @@ const _channelReducer = (res, obj) => {
 function channels(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
-      return action.data.channel.reduce(_channelReducer, {});
+      return action.data.channel.reduce(_arrayToDictReducer, {});
     case ADD_CHANNEL:
       return { [action.newchannel.id]: action.newchannel, ...state };
     default:
@@ -79,4 +84,38 @@ function user_channel(state = [], action) {
   }
 }
 
-export default combineReducers({ auth, channels, user_channel });
+function users(state = {}, action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return action.data.user.reduce(_arrayToDictReducer, {});
+    default:
+      return state;
+  }
+}
+
+function user_task(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return [...action.data.user_task];
+    default:
+      return state;
+  }
+}
+
+function tasks(state = {}, action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return action.data.task.reduce(_arrayToDictReducer, {});
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({
+  auth,
+  channels,
+  user_channel,
+  users,
+  user_task,
+  tasks
+});

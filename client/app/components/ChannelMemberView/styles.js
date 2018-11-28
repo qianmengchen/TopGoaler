@@ -68,4 +68,22 @@ const cardRight = StyleSheet.create({
   }
 });
 
-export { header, cardLeft, cardRight };
+const vote = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red',
+    borderRadius: 5,
+    marginTop: 10,
+    marginHorizontal: 80
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 20,
+    paddingVertical: 10
+  }
+});
+
+export { header, cardLeft, cardRight, vote };

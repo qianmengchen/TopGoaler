@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import { Avatar, Text } from 'react-native-elements';
-import sinon from 'sinon';
 require('isomorphic-fetch');
 
 import ChannelOverview from '../components/ChannelOverview/ChannelOverview';
@@ -36,8 +35,8 @@ describe('Testing Channel Overview Page', () => {
     <ChannelOverview
       key={0}
       channel={ch}
-      goToChannel={_goToChannel()}
-      subscribe={_subscribe()}
+      goToChannel={() => _goToChannel()}
+      subscribe={() => _subscribe()}
       user_channel={user_channel}
       task={task}
     />,
@@ -66,6 +65,6 @@ describe('Testing Channel Overview Page', () => {
   it('should invoke correct methods when pressing submit button', () => {
     const submitBtn = render.find('TouchableHighlight');
     submitBtn.simulate('press');
-    expect(submit.callCount).toBe(1);
+    expect(_goToChannel).toHaveBeenCalledTimes(1);
   });
 });

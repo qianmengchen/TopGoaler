@@ -10,6 +10,11 @@ class ChannelMemberView extends Component {
     navigate('ChannelListPage');
   }
 
+  _goToNewTaskPage() {
+    const { navigate } = this.props.navigation;
+    navigate('NewTaskPage');
+  }
+
   render() {
     return (
       <View>
@@ -72,6 +77,7 @@ class ChannelMemberView extends Component {
               <TouchableHighlight
                 style={cardRight.taskButton}
                 underlayColor="#aaa"
+                onPress={this._goToNewTaskPage.bind(this)}
               >
                 <Text style={cardRight.taskButtonText}>Add</Text>
               </TouchableHighlight>

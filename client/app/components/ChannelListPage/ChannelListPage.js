@@ -48,7 +48,7 @@ class ChannelListPage extends Component {
                   key={id}
                   channel={ch}
                   is_subscribed={check_subscribed}
-                  goToChannel={this._goToChannel({ check_subscribed })}
+                  goToChannel={this._goToChannel(check_subscribed)}
                   subscribe={this._subscribe(ch)}
                 />
               );

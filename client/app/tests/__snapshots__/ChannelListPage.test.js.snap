@@ -51,9 +51,10 @@ ShallowWrapper {
           }
           containerStyle={
             Object {
-              "alignItems": "center",
+              "alignItems": "flex-start",
               "flex": 0.1,
               "justifyContent": "center",
+              "paddingBottom": 10,
             }
           }
           icon={
@@ -137,9 +138,10 @@ ShallowWrapper {
             }
             containerStyle={
               Object {
-                "alignItems": "center",
+                "alignItems": "flex-start",
                 "flex": 0.1,
                 "justifyContent": "center",
+                "paddingBottom": 10,
               }
             }
             icon={
@@ -221,9 +223,10 @@ ShallowWrapper {
               }
               containerStyle={
                 Object {
-                  "alignItems": "center",
+                  "alignItems": "flex-start",
                   "flex": 0.1,
                   "justifyContent": "center",
+                  "paddingBottom": 10,
                 }
               }
               icon={
@@ -293,9 +296,10 @@ ShallowWrapper {
                 }
                 containerStyle={
                   Object {
-                    "alignItems": "center",
+                    "alignItems": "flex-start",
                     "flex": 0.1,
                     "justifyContent": "center",
+                    "paddingBottom": 10,
                   }
                 }
                 icon={
@@ -354,9 +358,10 @@ ShallowWrapper {
                   "backgroundColor": "transparent",
                 },
                 "containerStyle": Object {
-                  "alignItems": "center",
+                  "alignItems": "flex-start",
                   "flex": 0.1,
                   "justifyContent": "center",
+                  "paddingBottom": 10,
                 },
                 "icon": <Themed.Icon
                   color="black"
@@ -464,9 +469,10 @@ ShallowWrapper {
               }
               containerStyle={
                 Object {
-                  "alignItems": "center",
+                  "alignItems": "flex-start",
                   "flex": 0.1,
                   "justifyContent": "center",
+                  "paddingBottom": 10,
                 }
               }
               icon={
@@ -548,9 +554,10 @@ ShallowWrapper {
                 }
                 containerStyle={
                   Object {
-                    "alignItems": "center",
+                    "alignItems": "flex-start",
                     "flex": 0.1,
                     "justifyContent": "center",
+                    "paddingBottom": 10,
                   }
                 }
                 icon={
@@ -620,9 +627,10 @@ ShallowWrapper {
                   }
                   containerStyle={
                     Object {
-                      "alignItems": "center",
+                      "alignItems": "flex-start",
                       "flex": 0.1,
                       "justifyContent": "center",
+                      "paddingBottom": 10,
                     }
                   }
                   icon={
@@ -681,9 +689,10 @@ ShallowWrapper {
                     "backgroundColor": "transparent",
                   },
                   "containerStyle": Object {
-                    "alignItems": "center",
+                    "alignItems": "flex-start",
                     "flex": 0.1,
                     "justifyContent": "center",
+                    "paddingBottom": 10,
                   },
                   "icon": <Themed.Icon
                     color="black"

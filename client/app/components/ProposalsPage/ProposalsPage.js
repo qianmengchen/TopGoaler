@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
-// import { Card, Avatar } from 'react-native-elements';
 import { list } from './styles';
 import Proposal from './Proposal';
 

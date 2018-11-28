@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Slider, TouchableHighlight } from 'react-native';
 import { Card } from 'react-native-elements';
-import { frequency } from './styles';
+import { frequency, vote } from './styles';
 
 class Proposal extends Component {
+  _handleVote() {
+    console.log('Remove proposal card for user and update database');
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      points: 200
+    };
+  }
+
   render() {
     let { title, subtitle, period, pattern } = this.props;
 
@@ -15,6 +26,29 @@ class Proposal extends Component {
           <Text>Period: {period}</Text>
           <Text>Pattern: {pattern}</Text>
         </View>
+
+        <Slider
+          step={50}
+          minimumValue={50}
+          maximumValue={350}
+          value={this.state.points}
+          onValueChange={value => this.setState({ points: value })}
+        />
+
+        {/* <Text>{this.state.points}</Text> */}
+
+        <TouchableHighlight
+          style={vote.container}
+          underlayColor="#aaa"
+          onPress={this._handleVote.bind(this)}
+        >
+          <View>
+            <Text style={vote.buttonText}>
+              {' '}
+              Vote for {this.state.points} points!{' '}
+            </Text>
+          </View>
+        </TouchableHighlight>
       </Card>
     );
   }

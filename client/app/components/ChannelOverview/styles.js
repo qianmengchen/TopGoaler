@@ -36,7 +36,7 @@ const contents = StyleSheet.create({
     paddingBottom: 15,
     alignItems: 'center',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 20,
     flex: 0.3
   },
   subtitle: {

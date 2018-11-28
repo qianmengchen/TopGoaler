@@ -16,9 +16,7 @@ class ChannelListPage extends Component {
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };
-  _subscribe = ch => () => {
-    this.props.subscribe(ch.channel);
-  };
+
   render() {
     return (
       <View style={board.container}>
@@ -42,11 +40,15 @@ class ChannelListPage extends Component {
           <View style={board.channelList}>
             {Object.keys(this.props.channels).map(id => {
               const ch = this.props.channels[id];
+              const check_subscribed = this.props.subscribed_channels
+                ? this.props.subscribed_channels.has(parseInt(id))
+                : false;
               return (
                 <ChannelOverview
                   key={id}
                   channel={ch}
-                  goToChannel={this._goToChannel(ch.subscribed)}
+                  is_subscribed={check_subscribed}
+                  goToChannel={this._goToChannel({ check_subscribed })}
                   subscribe={this._subscribe(ch)}
                 />
               );

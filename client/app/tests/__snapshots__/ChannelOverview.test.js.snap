@@ -40,13 +40,15 @@ ShallowWrapper {
           Object {
             "alignItems": "center",
             "flex": 0.3,
-            "fontSize": 30,
+            "fontSize": 20,
             "fontWeight": "bold",
             "paddingBottom": 15,
             "paddingTop": 20,
           }
         }
-      />
+      >
+        bxzhu_channel
+      </Themed.Text>
       <Themed.Text
         style={
           Object {
@@ -54,7 +56,9 @@ ShallowWrapper {
             "flex": 0.35,
           }
         }
-      />
+      >
+        bxzhu
+      </Themed.Text>
       <Component
         style={
           Object {
@@ -149,13 +153,15 @@ ShallowWrapper {
               Object {
                 "alignItems": "center",
                 "flex": 0.3,
-                "fontSize": 30,
+                "fontSize": 20,
                 "fontWeight": "bold",
                 "paddingBottom": 15,
                 "paddingTop": 20,
               }
             }
-          />
+          >
+            bxzhu_channel
+          </Themed.Text>
           <Themed.Text
             style={
               Object {
@@ -163,7 +169,9 @@ ShallowWrapper {
                 "flex": 0.35,
               }
             }
-          />
+          >
+            bxzhu
+          </Themed.Text>
           <Component
             style={
               Object {
@@ -259,13 +267,15 @@ ShallowWrapper {
                 Object {
                   "alignItems": "center",
                   "flex": 0.3,
-                  "fontSize": 30,
+                  "fontSize": 20,
                   "fontWeight": "bold",
                   "paddingBottom": 15,
                   "paddingTop": 20,
                 }
               }
-            />,
+            >
+              bxzhu_channel
+            </Themed.Text>,
             <Themed.Text
               style={
                 Object {
@@ -273,7 +283,9 @@ ShallowWrapper {
                   "flex": 0.35,
                 }
               }
-            />,
+            >
+              bxzhu
+            </Themed.Text>,
             <Component
               style={
                 Object {
@@ -327,18 +339,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": undefined,
+              "children": "bxzhu_channel",
               "style": Object {
                 "alignItems": "center",
                 "flex": 0.3,
-                "fontSize": 30,
+                "fontSize": 20,
                 "fontWeight": "bold",
                 "paddingBottom": 15,
                 "paddingTop": 20,
               },
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "bxzhu_channel",
             "type": [Function],
           },
           Object {
@@ -346,14 +358,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": undefined,
+              "children": "bxzhu",
               "style": Object {
                 "alignItems": "center",
                 "flex": 0.35,
               },
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "bxzhu",
             "type": [Function],
           },
           Object {
@@ -546,13 +558,15 @@ ShallowWrapper {
                 Object {
                   "alignItems": "center",
                   "flex": 0.3,
-                  "fontSize": 30,
+                  "fontSize": 20,
                   "fontWeight": "bold",
                   "paddingBottom": 15,
                   "paddingTop": 20,
                 }
               }
-            />
+            >
+              bxzhu_channel
+            </Themed.Text>
             <Themed.Text
               style={
                 Object {
@@ -560,7 +574,9 @@ ShallowWrapper {
                   "flex": 0.35,
                 }
               }
-            />
+            >
+              bxzhu
+            </Themed.Text>
             <Component
               style={
                 Object {
@@ -656,13 +672,15 @@ ShallowWrapper {
                   Object {
                     "alignItems": "center",
                     "flex": 0.3,
-                    "fontSize": 30,
+                    "fontSize": 20,
                     "fontWeight": "bold",
                     "paddingBottom": 15,
                     "paddingTop": 20,
                   }
                 }
-              />,
+              >
+                bxzhu_channel
+              </Themed.Text>,
               <Themed.Text
                 style={
                   Object {
@@ -670,7 +688,9 @@ ShallowWrapper {
                     "flex": 0.35,
                   }
                 }
-              />,
+              >
+                bxzhu
+              </Themed.Text>,
               <Component
                 style={
                   Object {
@@ -724,18 +744,18 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": undefined,
+                "children": "bxzhu_channel",
                 "style": Object {
                   "alignItems": "center",
                   "flex": 0.3,
-                  "fontSize": 30,
+                  "fontSize": 20,
                   "fontWeight": "bold",
                   "paddingBottom": 15,
                   "paddingTop": 20,
                 },
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "bxzhu_channel",
               "type": [Function],
             },
             Object {
@@ -743,14 +763,14 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": undefined,
+                "children": "bxzhu",
                 "style": Object {
                   "alignItems": "center",
                   "flex": 0.35,
                 },
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "bxzhu",
               "type": [Function],
             },
             Object {

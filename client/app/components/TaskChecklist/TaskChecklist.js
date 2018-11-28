@@ -5,12 +5,23 @@ import * as styles from './styles';
 
 class TaskChecklist extends Component {
   render() {
+    const { onGoingTasks, finishedTasks, completeTask } = this.props;
+    const allTasks = onGoingTasks
+      .map(task => ({ task, finished: false }))
+      .concat(finishedTasks.map(task => ({ task, finished: true })));
+
     return (
       <View style={styles.checklist.container}>
         <FlatList
-          data={this.props.tasks}
-          renderItem={TaskEntry}
-          keyExtractor={item => item.id.toString()}
+          data={allTasks}
+          renderItem={props => (
+            <TaskEntry
+              item={props.item.task}
+              finished={props.item.finished}
+              completeTask={completeTask}
+            />
+          )}
+          keyExtractor={item => item.task.id.toString()}
         />
       </View>
     );

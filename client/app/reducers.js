@@ -111,11 +111,21 @@ function tasks(state = {}, action) {
   }
 }
 
+function activity_log(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return [...action.data.activity_log];
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   auth,
   channels,
   user_channel,
   users,
   user_task,
-  tasks
+  tasks,
+  activity_log
 });

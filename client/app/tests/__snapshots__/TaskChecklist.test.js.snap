@@ -11,6 +11,7 @@ ShallowWrapper {
     }
   >
     <FlatList
+      data={Array []}
       disableVirtualization={false}
       horizontal={false}
       initialNumToRender={10}
@@ -38,6 +39,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <FlatList
+        data={Array []}
         disableVirtualization={false}
         horizontal={false}
         initialNumToRender={10}
@@ -60,7 +62,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "data": undefined,
+        "data": Array [],
         "disableVirtualization": false,
         "horizontal": false,
         "initialNumToRender": 10,
@@ -86,6 +88,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <FlatList
+          data={Array []}
           disableVirtualization={false}
           horizontal={false}
           initialNumToRender={10}
@@ -108,7 +111,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "data": undefined,
+          "data": Array [],
           "disableVirtualization": false,
           "horizontal": false,
           "initialNumToRender": 10,

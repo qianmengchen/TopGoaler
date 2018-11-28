@@ -7,6 +7,11 @@ const checklist = StyleSheet.create({
   text: {
     fontSize: 20,
     color: 'white'
+  },
+  deleteText: {
+    fontSize: 20,
+    color: 'white',
+    textDecorationLine: 'line-through'
   }
 });
 
@@ -38,6 +43,14 @@ const checkbox = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
+    borderColor: 'white',
+    borderWidth: 2
+  },
+  dot: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: 'white',
     borderColor: 'white',
     borderWidth: 2
   }

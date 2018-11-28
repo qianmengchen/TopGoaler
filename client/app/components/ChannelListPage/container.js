@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import ChannelListPage from './ChannelListPage';
 import { createChannelAsUser, subscribeChannel } from '../../actions';
 
-_getSubscribedChannels = (user_channels, uid) => {
+const _getSubscribedChannels = (user_channels, uid) => {
   return new Set(
     user_channels
       .filter(user_channel => user_channel.user_id === uid)

@@ -75,7 +75,13 @@ ShallowWrapper {
             "marginHorizontal": 8,
           }
         }
-      />
+      >
+        <Connect(ChannelOverview)
+          channel={[MockFunction]}
+          goToChannel={[Function]}
+          subscribe={[Function]}
+        />
+      </Component>
     </ScrollViewMock>
   </Component>,
   Symbol(enzyme.__renderer__): Object {
@@ -154,7 +160,13 @@ ShallowWrapper {
               "marginHorizontal": 8,
             }
           }
-        />
+        >
+          <Connect(ChannelOverview)
+            channel={[MockFunction]}
+            goToChannel={[Function]}
+            subscribe={[Function]}
+          />
+        </Component>
       </ScrollViewMock>,
       "style": Object {
         "alignItems": "stretch",
@@ -231,7 +243,13 @@ ShallowWrapper {
                 "marginHorizontal": 8,
               }
             }
-          />,
+          >
+            <Connect(ChannelOverview)
+              channel={[MockFunction]}
+              goToChannel={[Function]}
+              subscribe={[Function]}
+            />
+          </Component>,
         ],
       },
       "ref": null,
@@ -360,7 +378,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              <Connect(ChannelOverview)
+                channel={[MockFunction]}
+                goToChannel={[Function]}
+                subscribe={[Function]}
+              />,
+            ],
             "style": Object {
               "flex": 0.9,
               "flexDirection": "column",
@@ -368,7 +392,21 @@ ShallowWrapper {
             },
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "map",
+              "nodeType": "class",
+              "props": Object {
+                "channel": [MockFunction],
+                "goToChannel": [Function],
+                "subscribe": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
@@ -445,7 +483,13 @@ ShallowWrapper {
                 "marginHorizontal": 8,
               }
             }
-          />
+          >
+            <Connect(ChannelOverview)
+              channel={[MockFunction]}
+              goToChannel={[Function]}
+              subscribe={[Function]}
+            />
+          </Component>
         </ScrollViewMock>,
         "style": Object {
           "alignItems": "stretch",
@@ -522,7 +566,13 @@ ShallowWrapper {
                   "marginHorizontal": 8,
                 }
               }
-            />,
+            >
+              <Connect(ChannelOverview)
+                channel={[MockFunction]}
+                goToChannel={[Function]}
+                subscribe={[Function]}
+              />
+            </Component>,
           ],
         },
         "ref": null,
@@ -651,7 +701,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": undefined,
+              "children": Array [
+                <Connect(ChannelOverview)
+                  channel={[MockFunction]}
+                  goToChannel={[Function]}
+                  subscribe={[Function]}
+                />,
+              ],
               "style": Object {
                 "flex": 0.9,
                 "flexDirection": "column",
@@ -659,7 +715,21 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "map",
+                "nodeType": "class",
+                "props": Object {
+                  "channel": [MockFunction],
+                  "goToChannel": [Function],
+                  "subscribe": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
         ],

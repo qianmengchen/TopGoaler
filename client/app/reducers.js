@@ -8,7 +8,7 @@ import {
   LOAD_DATA,
   ADD_CHANNEL
 } from './actions';
-import { constructChannel } from './constructors';
+//import { constructChannel } from './constructors';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
 
@@ -54,18 +54,29 @@ function auth(state = initAuthState, action) {
   }
 }
 
-function channels(state = [], action) {
+const _channelReducer = (res, obj) => {
+  res[obj.id] = obj;
+  return res;
+};
+
+function channels(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
-      return [...action.data.channel];
+      return action.data.channel.reduce(_channelReducer, {});
     case ADD_CHANNEL:
-      return [
-        constructChannel(action.channel, action.channel, action.user),
-        ...state
-      ];
+      return { [action.newchannel.id]: action.newchannel, ...state };
     default:
       return state;
   }
 }
 
-export default combineReducers({ auth, channels });
+function user_channel(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return [...action.data.user_channel];
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({ auth, channels, user_channel });

@@ -12,46 +12,6 @@ ShallowWrapper {
     }
   >
     <FlatList
-      data={
-        Array [
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/leetcode.jpg",
-            },
-            "name": "leetcoder",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/run.jpg",
-            },
-            "name": "runner",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE1",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE2",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE3",
-          },
-        ]
-      }
       disableVirtualization={false}
       horizontal={true}
       initialNumToRender={10}
@@ -79,46 +39,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <FlatList
-        data={
-          Array [
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/leetcode.jpg",
-              },
-              "name": "leetcoder",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/run.jpg",
-              },
-              "name": "runner",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE1",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE2",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE3",
-            },
-          ]
-        }
         disableVirtualization={false}
         horizontal={true}
         initialNumToRender={10}
@@ -142,44 +62,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "data": Array [
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/leetcode.jpg",
-            },
-            "name": "leetcoder",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/run.jpg",
-            },
-            "name": "runner",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE1",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE2",
-          },
-          Object {
-            "icon": Object {
-              "testUri": "../../../app/images/GRE.jpg",
-            },
-            "name": "GRE3",
-          },
-        ],
+        "data": undefined,
         "disableVirtualization": false,
         "horizontal": true,
         "initialNumToRender": 10,
@@ -205,46 +88,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <FlatList
-          data={
-            Array [
-              Object {
-                "icon": Object {
-                  "testUri": "../../../app/images/leetcode.jpg",
-                },
-                "name": "leetcoder",
-              },
-              Object {
-                "icon": Object {
-                  "testUri": "../../../app/images/run.jpg",
-                },
-                "name": "runner",
-              },
-              Object {
-                "icon": Object {
-                  "testUri": "../../../app/images/GRE.jpg",
-                },
-                "name": "GRE",
-              },
-              Object {
-                "icon": Object {
-                  "testUri": "../../../app/images/GRE.jpg",
-                },
-                "name": "GRE1",
-              },
-              Object {
-                "icon": Object {
-                  "testUri": "../../../app/images/GRE.jpg",
-                },
-                "name": "GRE2",
-              },
-              Object {
-                "icon": Object {
-                  "testUri": "../../../app/images/GRE.jpg",
-                },
-                "name": "GRE3",
-              },
-            ]
-          }
           disableVirtualization={false}
           horizontal={true}
           initialNumToRender={10}
@@ -268,44 +111,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "data": Array [
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/leetcode.jpg",
-              },
-              "name": "leetcoder",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/run.jpg",
-              },
-              "name": "runner",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE1",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE2",
-            },
-            Object {
-              "icon": Object {
-                "testUri": "../../../app/images/GRE.jpg",
-              },
-              "name": "GRE3",
-            },
-          ],
+          "data": undefined,
           "disableVirtualization": false,
           "horizontal": true,
           "initialNumToRender": 10,

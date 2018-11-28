@@ -12,7 +12,11 @@ ShallowWrapper {
     }
   >
     <Image
-      source={null}
+      source={
+        Object {
+          "uri": undefined,
+        }
+      }
       style={
         Object {
           "borderRadius": 40,
@@ -43,7 +47,11 @@ ShallowWrapper {
       "accessible": true,
       "children": Array [
         <Image
-          source={null}
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
           style={
             Object {
               "borderRadius": 40,
@@ -85,7 +93,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "source": null,
+          "source": Object {
+            "uri": undefined,
+          },
           "style": Object {
             "borderRadius": 40,
             "borderWidth": 1,
@@ -114,7 +124,11 @@ ShallowWrapper {
         "accessible": true,
         "children": Array [
           <Image
-            source={null}
+            source={
+              Object {
+                "uri": undefined,
+              }
+            }
             style={
               Object {
                 "borderRadius": 40,
@@ -156,7 +170,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "source": null,
+            "source": Object {
+              "uri": undefined,
+            },
             "style": Object {
               "borderRadius": 40,
               "borderWidth": 1,

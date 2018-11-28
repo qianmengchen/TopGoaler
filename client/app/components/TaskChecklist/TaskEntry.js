@@ -11,7 +11,7 @@ const CheckEntry = props => {
         <View style={styles.checkbox.circle} />
       </View>
       <View style={styles.taskComponent.desc}>
-        <Text style={styles.checklist.text}>{item.name}</Text>
+        <Text style={styles.checklist.text}>{item.title}</Text>
       </View>
       <View style={styles.taskComponent.point}>
         <Text style={styles.checklist.text}>{item.point}</Text>

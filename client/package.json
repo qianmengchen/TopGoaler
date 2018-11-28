@@ -9,6 +9,7 @@
     "eject": "expo eject",
     "test": "jest",
     "watch": "jest --watch --verbose=false",
+    "update": "jest -u",
     "coverage": "jest --coverage --coverageDirectory=coverage",
     "pretty": "prettier --write 'app/**/*.js'",
     "check-pretty": "prettier --list-different 'app/**/*.js'",

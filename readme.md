@@ -127,6 +127,14 @@ npm run coverage
 
 This command will generate an html report at /coverage/Icov-report/index.html. This html report enables you to check what coverage cases you are missing.
 
+### Update unit test snapshots
+
+```
+npm run update
+```
+
+
+
 ## Contributors
 
 Qianmeng Chen

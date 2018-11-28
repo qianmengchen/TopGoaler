@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Avatar, Button, Icon } from 'react-native-elements';
+import { Avatar, Button } from 'react-native-elements';
 import { ChannelIconList } from '../ChannelIconList/index';
 import { TaskChecklist } from '../TaskChecklist/index';
 import {
@@ -14,17 +14,7 @@ import {
 
 class Profile extends Component {
   _handleLogout() {
-    // need these functions as prototypes for testing
-    // cannot use arrow notation, does not work with jest/enzyme
     this.props.logout();
-  }
-
-  constructor(props) {
-    super(props);
-    this.fakeProps = {
-      name: 'Joseph Bruin',
-      bio: 'A passionate todo artist'
-    };
   }
 
   render() {
@@ -33,14 +23,16 @@ class Profile extends Component {
         <View style={board.personalInfo}>
           <View style={personalInfo.descriptions}>
             <View style={descriptions.intro}>
-              <Text style={introText.name}>{this.props.username}</Text>
-              <Text style={introText.bio}>{this.fakeProps.bio}</Text>
+              <Text style={introText.name}>{this.props.userInfo.name}</Text>
+              <Text style={introText.bio}>
+                {this.props.userInfo.description}
+              </Text>
             </View>
             <View style={descriptions.avatar}>
               <Avatar
                 height={128}
                 width={128}
-                source={require('../../images/boy.png')}
+                source={{ uri: this.props.userInfo.avatar_url }}
               />
             </View>
           </View>
@@ -49,23 +41,19 @@ class Profile extends Component {
               <Button title="My Summary" buttonStyle={buttons.summary} />
             </View>
             <View style={actions.buttons}>
-              <Icon name="favorite" size={32} color="white" />
-              <Icon name="share" size={32} color="white" />
+              <Button
+                title="Log Out"
+                buttonStyle={buttons.logout}
+                onPress={this._handleLogout.bind(this)}
+              />
             </View>
           </View>
         </View>
         <View style={board.channels}>
-          <ChannelIconList />
+          <ChannelIconList channels={this.props.userChannels} />
         </View>
         <View style={board.tasks}>
-          <TaskChecklist />
-        </View>
-        <View>
-          <Button
-            title="Logout"
-            buttonStyle={buttons.summary}
-            onPress={this._handleLogout.bind(this)}
-          />
+          <TaskChecklist tasks={this.props.userTasks} />
         </View>
       </View>
     );

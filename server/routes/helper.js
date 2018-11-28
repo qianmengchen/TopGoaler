@@ -5,8 +5,11 @@ const doQuery =  util.promisify(pool.query).bind(pool)
 
 exports.doQuery = doQuery
 
-exports.routeFactory = (...args) => (req, res) => {
-    doQuery(...args).then(result => res.send(result))
+exports.routeFactory = (...args) => (req, res, filter) => {
+    console.log(`From routeFactory: executing query ${args}`)
+    doQuery(...args).then(result =>
+        res.status(201).send(filter ? filter(result) : result))
+        .catch(err => res.status(401).send(`Error :${err}`))
 }
 
 exports.check = (...args) => {

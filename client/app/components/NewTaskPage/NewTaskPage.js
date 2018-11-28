@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Picker } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
 
@@ -23,7 +23,9 @@ class NewTaskPage extends Component {
     super(props);
     this.state = {
       name: '',
-      description: ''
+      description: '',
+      period: 'Daily',
+      pattern: 'Once'
     };
   }
 
@@ -66,6 +68,16 @@ class NewTaskPage extends Component {
             onPress={this._submit.bind(this)}
           />
         </View>
+
+        <Picker
+          selectedValue={this.state.period}
+          style={{ height: 50, width: 100 }}
+          onValueChange={itemValue => this.setState({ period: itemValue })}
+          enabled={false}
+        >
+          <Picker.Item label="Daily" value="daily" />
+          <Picker.Item label="Weekly" value="weekly" />
+        </Picker>
       </View>
     );
   }

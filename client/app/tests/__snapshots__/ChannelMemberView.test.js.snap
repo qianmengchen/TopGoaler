@@ -355,6 +355,7 @@ ShallowWrapper {
           <TouchableHighlight
             activeOpacity={0.85}
             delayPressOut={100}
+            onPress={[Function]}
             style={
               Object {
                 "marginTop": 5,
@@ -791,6 +792,7 @@ ShallowWrapper {
               <TouchableHighlight
                 activeOpacity={0.85}
                 delayPressOut={100}
+                onPress={[Function]}
                 style={
                   Object {
                     "marginTop": 5,
@@ -1260,6 +1262,7 @@ ShallowWrapper {
                 <TouchableHighlight
                   activeOpacity={0.85}
                   delayPressOut={100}
+                  onPress={[Function]}
                   style={
                     Object {
                       "marginTop": 5,
@@ -1787,6 +1790,7 @@ ShallowWrapper {
                   <TouchableHighlight
                     activeOpacity={0.85}
                     delayPressOut={100}
+                    onPress={[Function]}
                     style={
                       Object {
                         "marginTop": 5,
@@ -2204,6 +2208,7 @@ ShallowWrapper {
                     <TouchableHighlight
                       activeOpacity={0.85}
                       delayPressOut={100}
+                      onPress={[Function]}
                       style={
                         Object {
                           "marginTop": 5,
@@ -2301,6 +2306,7 @@ ShallowWrapper {
                         Add
                       </Text>,
                       "delayPressOut": 100,
+                      "onPress": [Function],
                       "style": Object {
                         "marginTop": 5,
                       },
@@ -2835,6 +2841,7 @@ ShallowWrapper {
                 <TouchableHighlight
                   activeOpacity={0.85}
                   delayPressOut={100}
+                  onPress={[Function]}
                   style={
                     Object {
                       "marginTop": 5,
@@ -3304,6 +3311,7 @@ ShallowWrapper {
                   <TouchableHighlight
                     activeOpacity={0.85}
                     delayPressOut={100}
+                    onPress={[Function]}
                     style={
                       Object {
                         "marginTop": 5,
@@ -3831,6 +3839,7 @@ ShallowWrapper {
                     <TouchableHighlight
                       activeOpacity={0.85}
                       delayPressOut={100}
+                      onPress={[Function]}
                       style={
                         Object {
                           "marginTop": 5,
@@ -4248,6 +4257,7 @@ ShallowWrapper {
                       <TouchableHighlight
                         activeOpacity={0.85}
                         delayPressOut={100}
+                        onPress={[Function]}
                         style={
                           Object {
                             "marginTop": 5,
@@ -4345,6 +4355,7 @@ ShallowWrapper {
                           Add
                         </Text>,
                         "delayPressOut": 100,
+                        "onPress": [Function],
                         "style": Object {
                           "marginTop": 5,
                         },

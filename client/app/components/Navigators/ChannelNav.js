@@ -14,7 +14,8 @@ const ChannelNav = createStackNavigator(
     NewTaskPage: { screen: NewTaskPage }
   },
   {
-    initialRouteName: 'ChannelListPage'
+    // initialRouteName: 'ChannelListPage'
+    initialRouteName: 'NewTaskPage'
   }
 );
 

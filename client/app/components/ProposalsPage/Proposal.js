@@ -23,8 +23,9 @@ class Proposal extends Component {
         <Text>{subtitle}</Text>
 
         <View style={frequency.container}>
-          <Text>Period: {period}</Text>
-          <Text>Pattern: {pattern}</Text>
+          <Text>
+            Frequency: {pattern} {period}{' '}
+          </Text>
         </View>
 
         <Slider

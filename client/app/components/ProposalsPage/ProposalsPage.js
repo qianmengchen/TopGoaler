@@ -4,6 +4,14 @@ import { list } from './styles';
 import Proposal from './Proposal';
 
 class ProposalsPage extends Component {
+  static navigationOptions = () => ({
+    title: 'Task Proposals',
+    headerTitleStyle: { textAlign: 'center', alignSelf: 'center' },
+    headerStyle: {
+      backgroundColor: 'white'
+    }
+  });
+
   render() {
     return (
       <ScrollView contentContainerStyle={list.container}>

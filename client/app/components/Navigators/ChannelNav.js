@@ -14,8 +14,8 @@ const ChannelNav = createStackNavigator(
     ProposalsPage: { screen: ProposalsPage }
   },
   {
-    // initialRouteName: 'ChannelListPage'
-    initialRouteName: 'ProposalsPage'
+    initialRouteName: 'ChannelListPage'
+    // initialRouteName: 'ProposalsPage'
   }
 );
 

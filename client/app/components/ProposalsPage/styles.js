@@ -10,7 +10,12 @@ const list = StyleSheet.create({
 const frequency = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-between',
+    marginTop: 10
+  },
+  textgroup: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 });
 
@@ -22,12 +27,12 @@ const vote = StyleSheet.create({
     backgroundColor: 'red',
     borderRadius: 5,
     marginTop: 10,
-    marginHorizontal: 60
+    marginHorizontal: 80
   },
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 17,
     paddingVertical: 10
   }
 });

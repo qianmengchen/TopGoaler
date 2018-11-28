@@ -5,10 +5,10 @@ import { board, actions } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
 
 class ChannelListPage extends Component {
-  _goToChannel = subscribed => name => {
+  _goToChannel = subscribed => cid => {
     if (subscribed)
-      this.props.navigation.navigate('ChannelMemberView', { name });
-    else this.props.navigation.navigate('ChannelPublicView', { name });
+      this.props.navigation.navigate('ChannelMemberView', { cid });
+    else this.props.navigation.navigate('ChannelPublicView', { cid });
   };
   _addChannel() {
     this.props.navigation.navigate('NewChannelPage');
@@ -16,10 +16,9 @@ class ChannelListPage extends Component {
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };
-  _subscribe = ch => () => {
-    this.props.subscribe(ch.channel);
-  };
+  //_checkSubscribed = ()
   render() {
+    console.log(this.props.subscribed_channels);
     return (
       <View style={board.container}>
         <ScrollView>

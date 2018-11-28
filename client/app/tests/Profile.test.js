@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import sinon from 'sinon';
-import { Button, Avatar, Icon } from 'react-native-elements';
+import { Button, Avatar } from 'react-native-elements';
 require('isomorphic-fetch');
 
 import Profile from '../components/Profile/Profile';
@@ -17,11 +17,15 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
+const userInfo = {
+  name: 'mock'
+};
+
 describe('Testing Channel List Page', () => {
   const _logout = jest.fn();
   const logout = sinon.spy(Profile.prototype, '_handleLogout');
 
-  const wrapper = shallow(<Profile logout={_logout} />, {
+  const wrapper = shallow(<Profile logout={_logout} userInfo={userInfo} />, {
     context: { store: mockStore(initialTaskState) }
   });
   const render = wrapper.dive();
@@ -32,10 +36,6 @@ describe('Testing Channel List Page', () => {
 
   it('should have 1 Avatar for profile pic', () => {
     expect(render.find(Avatar)).toHaveLength(1);
-  });
-
-  it('should have 2 Icons: favorite and share', () => {
-    expect(render.find(Icon)).toHaveLength(2);
   });
 
   it('should have 2 Buttons: summary and logout', () => {

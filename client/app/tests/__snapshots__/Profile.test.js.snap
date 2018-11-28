@@ -50,7 +50,9 @@ ShallowWrapper {
                 "margin": 5,
               }
             }
-          />
+          >
+            mock
+          </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -62,9 +64,7 @@ ShallowWrapper {
                 "margin": 5,
               }
             }
-          >
-            A passionate todo artist
-          </Text>
+          />
         </Component>
         <Component
           style={
@@ -79,7 +79,7 @@ ShallowWrapper {
             height={128}
             source={
               Object {
-                "testUri": "../../../app/images/boy.png",
+                "uri": undefined,
               }
             }
             width={128}
@@ -92,14 +92,14 @@ ShallowWrapper {
             "alignItems": "center",
             "flex": 0.3,
             "flexDirection": "row",
-            "justifyContent": "center",
+            "justifyContent": "space-around",
           }
         }
       >
         <Component
           style={
             Object {
-              "alignItems": "flex-start",
+              "alignItems": "center",
               "flex": 0.6,
               "justifyContent": "center",
             }
@@ -113,7 +113,6 @@ ShallowWrapper {
                 "borderRadius": 20,
                 "borderStyle": "solid",
                 "borderWidth": 3,
-                "marginLeft": 30,
                 "width": 160,
               }
             }
@@ -126,19 +125,23 @@ ShallowWrapper {
               "alignItems": "center",
               "flex": 0.4,
               "flexDirection": "row",
-              "justifyContent": "space-around",
+              "justifyContent": "center",
             }
           }
         >
-          <Themed.Icon
-            color="white"
-            name="favorite"
-            size={32}
-          />
-          <Themed.Icon
-            color="white"
-            name="share"
-            size={32}
+          <ForwardRef(Themed.Button)
+            buttonStyle={
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "white",
+                "borderRadius": 20,
+                "borderStyle": "solid",
+                "borderWidth": 3,
+                "width": 100,
+              }
+            }
+            onPress={[Function]}
+            title="Log Out"
           />
         </Component>
       </Component>
@@ -162,23 +165,6 @@ ShallowWrapper {
       }
     >
       <Connect(TaskChecklist) />
-    </Component>
-    <Component>
-      <ForwardRef(Themed.Button)
-        buttonStyle={
-          Object {
-            "backgroundColor": "transparent",
-            "borderColor": "white",
-            "borderRadius": 20,
-            "borderStyle": "solid",
-            "borderWidth": 3,
-            "marginLeft": 30,
-            "width": 160,
-          }
-        }
-        onPress={[Function]}
-        title="Logout"
-      />
     </Component>
   </Component>,
   Symbol(enzyme.__renderer__): Object {
@@ -233,7 +219,9 @@ ShallowWrapper {
                     "margin": 5,
                   }
                 }
-              />
+              >
+                mock
+              </Text>
               <Text
                 accessible={true}
                 allowFontScaling={true}
@@ -245,9 +233,7 @@ ShallowWrapper {
                     "margin": 5,
                   }
                 }
-              >
-                A passionate todo artist
-              </Text>
+              />
             </Component>
             <Component
               style={
@@ -262,7 +248,7 @@ ShallowWrapper {
                 height={128}
                 source={
                   Object {
-                    "testUri": "../../../app/images/boy.png",
+                    "uri": undefined,
                   }
                 }
                 width={128}
@@ -275,14 +261,14 @@ ShallowWrapper {
                 "alignItems": "center",
                 "flex": 0.3,
                 "flexDirection": "row",
-                "justifyContent": "center",
+                "justifyContent": "space-around",
               }
             }
           >
             <Component
               style={
                 Object {
-                  "alignItems": "flex-start",
+                  "alignItems": "center",
                   "flex": 0.6,
                   "justifyContent": "center",
                 }
@@ -296,7 +282,6 @@ ShallowWrapper {
                     "borderRadius": 20,
                     "borderStyle": "solid",
                     "borderWidth": 3,
-                    "marginLeft": 30,
                     "width": 160,
                   }
                 }
@@ -309,19 +294,23 @@ ShallowWrapper {
                   "alignItems": "center",
                   "flex": 0.4,
                   "flexDirection": "row",
-                  "justifyContent": "space-around",
+                  "justifyContent": "center",
                 }
               }
             >
-              <Themed.Icon
-                color="white"
-                name="favorite"
-                size={32}
-              />
-              <Themed.Icon
-                color="white"
-                name="share"
-                size={32}
+              <ForwardRef(Themed.Button)
+                buttonStyle={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderColor": "white",
+                    "borderRadius": 20,
+                    "borderStyle": "solid",
+                    "borderWidth": 3,
+                    "width": 100,
+                  }
+                }
+                onPress={[Function]}
+                title="Log Out"
               />
             </Component>
           </Component>
@@ -345,23 +334,6 @@ ShallowWrapper {
           }
         >
           <Connect(TaskChecklist) />
-        </Component>,
-        <Component>
-          <ForwardRef(Themed.Button)
-            buttonStyle={
-              Object {
-                "backgroundColor": "transparent",
-                "borderColor": "white",
-                "borderRadius": 20,
-                "borderStyle": "solid",
-                "borderWidth": 3,
-                "marginLeft": 30,
-                "width": 160,
-              }
-            }
-            onPress={[Function]}
-            title="Logout"
-          />
         </Component>,
       ],
       "style": Object {
@@ -409,7 +381,9 @@ ShallowWrapper {
                       "margin": 5,
                     }
                   }
-                />
+                >
+                  mock
+                </Text>
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -421,9 +395,7 @@ ShallowWrapper {
                       "margin": 5,
                     }
                   }
-                >
-                  A passionate todo artist
-                </Text>
+                />
               </Component>
               <Component
                 style={
@@ -438,7 +410,7 @@ ShallowWrapper {
                   height={128}
                   source={
                     Object {
-                      "testUri": "../../../app/images/boy.png",
+                      "uri": undefined,
                     }
                   }
                   width={128}
@@ -451,14 +423,14 @@ ShallowWrapper {
                   "alignItems": "center",
                   "flex": 0.3,
                   "flexDirection": "row",
-                  "justifyContent": "center",
+                  "justifyContent": "space-around",
                 }
               }
             >
               <Component
                 style={
                   Object {
-                    "alignItems": "flex-start",
+                    "alignItems": "center",
                     "flex": 0.6,
                     "justifyContent": "center",
                   }
@@ -472,7 +444,6 @@ ShallowWrapper {
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
-                      "marginLeft": 30,
                       "width": 160,
                     }
                   }
@@ -485,19 +456,23 @@ ShallowWrapper {
                     "alignItems": "center",
                     "flex": 0.4,
                     "flexDirection": "row",
-                    "justifyContent": "space-around",
+                    "justifyContent": "center",
                   }
                 }
               >
-                <Themed.Icon
-                  color="white"
-                  name="favorite"
-                  size={32}
-                />
-                <Themed.Icon
-                  color="white"
-                  name="share"
-                  size={32}
+                <ForwardRef(Themed.Button)
+                  buttonStyle={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderColor": "white",
+                      "borderRadius": 20,
+                      "borderStyle": "solid",
+                      "borderWidth": 3,
+                      "width": 100,
+                    }
+                  }
+                  onPress={[Function]}
+                  title="Log Out"
                 />
               </Component>
             </Component>,
@@ -537,7 +512,9 @@ ShallowWrapper {
                         "margin": 5,
                       }
                     }
-                  />
+                  >
+                    mock
+                  </Text>
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -549,9 +526,7 @@ ShallowWrapper {
                         "margin": 5,
                       }
                     }
-                  >
-                    A passionate todo artist
-                  </Text>
+                  />
                 </Component>,
                 <Component
                   style={
@@ -566,7 +541,7 @@ ShallowWrapper {
                     height={128}
                     source={
                       Object {
-                        "testUri": "../../../app/images/boy.png",
+                        "uri": undefined,
                       }
                     }
                     width={128}
@@ -598,7 +573,9 @@ ShallowWrapper {
                           "margin": 5,
                         }
                       }
-                    />,
+                    >
+                      mock
+                    </Text>,
                     <Text
                       accessible={true}
                       allowFontScaling={true}
@@ -610,9 +587,7 @@ ShallowWrapper {
                           "margin": 5,
                         }
                       }
-                    >
-                      A passionate todo artist
-                    </Text>,
+                    />,
                   ],
                   "style": Object {
                     "alignItems": "flex-start",
@@ -631,7 +606,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": undefined,
+                      "children": "mock",
                       "ellipsizeMode": "tail",
                       "style": Object {
                         "color": "white",
@@ -641,7 +616,7 @@ ShallowWrapper {
                       },
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": "mock",
                     "type": [Function],
                   },
                   Object {
@@ -651,7 +626,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "A passionate todo artist",
+                      "children": undefined,
                       "ellipsizeMode": "tail",
                       "style": Object {
                         "color": "white",
@@ -660,7 +635,7 @@ ShallowWrapper {
                       },
                     },
                     "ref": null,
-                    "rendered": "A passionate todo artist",
+                    "rendered": null,
                     "type": [Function],
                   },
                 ],
@@ -675,7 +650,7 @@ ShallowWrapper {
                     height={128}
                     source={
                       Object {
-                        "testUri": "../../../app/images/boy.png",
+                        "uri": undefined,
                       }
                     }
                     width={128}
@@ -694,7 +669,7 @@ ShallowWrapper {
                   "props": Object {
                     "height": 128,
                     "source": Object {
-                      "testUri": "../../../app/images/boy.png",
+                      "uri": undefined,
                     },
                     "width": 128,
                   },
@@ -716,7 +691,7 @@ ShallowWrapper {
                 <Component
                   style={
                     Object {
-                      "alignItems": "flex-start",
+                      "alignItems": "center",
                       "flex": 0.6,
                       "justifyContent": "center",
                     }
@@ -730,7 +705,6 @@ ShallowWrapper {
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
-                        "marginLeft": 30,
                         "width": 160,
                       }
                     }
@@ -743,19 +717,23 @@ ShallowWrapper {
                       "alignItems": "center",
                       "flex": 0.4,
                       "flexDirection": "row",
-                      "justifyContent": "space-around",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <Themed.Icon
-                    color="white"
-                    name="favorite"
-                    size={32}
-                  />
-                  <Themed.Icon
-                    color="white"
-                    name="share"
-                    size={32}
+                  <ForwardRef(Themed.Button)
+                    buttonStyle={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "white",
+                        "borderRadius": 20,
+                        "borderStyle": "solid",
+                        "borderWidth": 3,
+                        "width": 100,
+                      }
+                    }
+                    onPress={[Function]}
+                    title="Log Out"
                   />
                 </Component>,
               ],
@@ -763,7 +741,7 @@ ShallowWrapper {
                 "alignItems": "center",
                 "flex": 0.3,
                 "flexDirection": "row",
-                "justifyContent": "center",
+                "justifyContent": "space-around",
               },
             },
             "ref": null,
@@ -781,14 +759,13 @@ ShallowWrapper {
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
-                        "marginLeft": 30,
                         "width": 160,
                       }
                     }
                     title="My Summary"
                   />,
                   "style": Object {
-                    "alignItems": "flex-start",
+                    "alignItems": "center",
                     "flex": 0.6,
                     "justifyContent": "center",
                   },
@@ -805,7 +782,6 @@ ShallowWrapper {
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
-                      "marginLeft": 30,
                       "width": 160,
                     },
                     "title": "My Summary",
@@ -824,54 +800,51 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": Array [
-                    <Themed.Icon
-                      color="white"
-                      name="favorite"
-                      size={32}
-                    />,
-                    <Themed.Icon
-                      color="white"
-                      name="share"
-                      size={32}
-                    />,
-                  ],
+                  "children": <ForwardRef(Themed.Button)
+                    buttonStyle={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "white",
+                        "borderRadius": 20,
+                        "borderStyle": "solid",
+                        "borderWidth": 3,
+                        "width": 100,
+                      }
+                    }
+                    onPress={[Function]}
+                    title="Log Out"
+                  />,
                   "style": Object {
                     "alignItems": "center",
                     "flex": 0.4,
                     "flexDirection": "row",
-                    "justifyContent": "space-around",
+                    "justifyContent": "center",
                   },
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "color": "white",
-                      "name": "favorite",
-                      "size": 32,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "buttonStyle": Object {
+                      "backgroundColor": "transparent",
+                      "borderColor": "white",
+                      "borderRadius": 20,
+                      "borderStyle": "solid",
+                      "borderWidth": 3,
+                      "width": 100,
                     },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                    "onPress": [Function],
+                    "title": "Log Out",
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "color": "white",
-                      "name": "share",
-                      "size": 32,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                  "ref": null,
+                  "rendered": null,
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
                   },
-                ],
+                },
                 "type": [Function],
               },
             ],
@@ -896,7 +869,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "channels": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -919,58 +894,12 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "tasks": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <ForwardRef(Themed.Button)
-            buttonStyle={
-              Object {
-                "backgroundColor": "transparent",
-                "borderColor": "white",
-                "borderRadius": 20,
-                "borderStyle": "solid",
-                "borderWidth": 3,
-                "marginLeft": 30,
-                "width": 160,
-              }
-            }
-            onPress={[Function]}
-            title="Logout"
-          />,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "buttonStyle": Object {
-              "backgroundColor": "transparent",
-              "borderColor": "white",
-              "borderRadius": 20,
-              "borderStyle": "solid",
-              "borderWidth": 3,
-              "marginLeft": 30,
-              "width": 160,
-            },
-            "onPress": [Function],
-            "title": "Logout",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          },
         },
         "type": [Function],
       },
@@ -1022,7 +951,9 @@ ShallowWrapper {
                       "margin": 5,
                     }
                   }
-                />
+                >
+                  mock
+                </Text>
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -1034,9 +965,7 @@ ShallowWrapper {
                       "margin": 5,
                     }
                   }
-                >
-                  A passionate todo artist
-                </Text>
+                />
               </Component>
               <Component
                 style={
@@ -1051,7 +980,7 @@ ShallowWrapper {
                   height={128}
                   source={
                     Object {
-                      "testUri": "../../../app/images/boy.png",
+                      "uri": undefined,
                     }
                   }
                   width={128}
@@ -1064,14 +993,14 @@ ShallowWrapper {
                   "alignItems": "center",
                   "flex": 0.3,
                   "flexDirection": "row",
-                  "justifyContent": "center",
+                  "justifyContent": "space-around",
                 }
               }
             >
               <Component
                 style={
                   Object {
-                    "alignItems": "flex-start",
+                    "alignItems": "center",
                     "flex": 0.6,
                     "justifyContent": "center",
                   }
@@ -1085,7 +1014,6 @@ ShallowWrapper {
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
-                      "marginLeft": 30,
                       "width": 160,
                     }
                   }
@@ -1098,19 +1026,23 @@ ShallowWrapper {
                     "alignItems": "center",
                     "flex": 0.4,
                     "flexDirection": "row",
-                    "justifyContent": "space-around",
+                    "justifyContent": "center",
                   }
                 }
               >
-                <Themed.Icon
-                  color="white"
-                  name="favorite"
-                  size={32}
-                />
-                <Themed.Icon
-                  color="white"
-                  name="share"
-                  size={32}
+                <ForwardRef(Themed.Button)
+                  buttonStyle={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderColor": "white",
+                      "borderRadius": 20,
+                      "borderStyle": "solid",
+                      "borderWidth": 3,
+                      "width": 100,
+                    }
+                  }
+                  onPress={[Function]}
+                  title="Log Out"
                 />
               </Component>
             </Component>
@@ -1134,23 +1066,6 @@ ShallowWrapper {
             }
           >
             <Connect(TaskChecklist) />
-          </Component>,
-          <Component>
-            <ForwardRef(Themed.Button)
-              buttonStyle={
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderColor": "white",
-                  "borderRadius": 20,
-                  "borderStyle": "solid",
-                  "borderWidth": 3,
-                  "marginLeft": 30,
-                  "width": 160,
-                }
-              }
-              onPress={[Function]}
-              title="Logout"
-            />
           </Component>,
         ],
         "style": Object {
@@ -1198,7 +1113,9 @@ ShallowWrapper {
                         "margin": 5,
                       }
                     }
-                  />
+                  >
+                    mock
+                  </Text>
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1210,9 +1127,7 @@ ShallowWrapper {
                         "margin": 5,
                       }
                     }
-                  >
-                    A passionate todo artist
-                  </Text>
+                  />
                 </Component>
                 <Component
                   style={
@@ -1227,7 +1142,7 @@ ShallowWrapper {
                     height={128}
                     source={
                       Object {
-                        "testUri": "../../../app/images/boy.png",
+                        "uri": undefined,
                       }
                     }
                     width={128}
@@ -1240,14 +1155,14 @@ ShallowWrapper {
                     "alignItems": "center",
                     "flex": 0.3,
                     "flexDirection": "row",
-                    "justifyContent": "center",
+                    "justifyContent": "space-around",
                   }
                 }
               >
                 <Component
                   style={
                     Object {
-                      "alignItems": "flex-start",
+                      "alignItems": "center",
                       "flex": 0.6,
                       "justifyContent": "center",
                     }
@@ -1261,7 +1176,6 @@ ShallowWrapper {
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
-                        "marginLeft": 30,
                         "width": 160,
                       }
                     }
@@ -1274,19 +1188,23 @@ ShallowWrapper {
                       "alignItems": "center",
                       "flex": 0.4,
                       "flexDirection": "row",
-                      "justifyContent": "space-around",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <Themed.Icon
-                    color="white"
-                    name="favorite"
-                    size={32}
-                  />
-                  <Themed.Icon
-                    color="white"
-                    name="share"
-                    size={32}
+                  <ForwardRef(Themed.Button)
+                    buttonStyle={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "white",
+                        "borderRadius": 20,
+                        "borderStyle": "solid",
+                        "borderWidth": 3,
+                        "width": 100,
+                      }
+                    }
+                    onPress={[Function]}
+                    title="Log Out"
                   />
                 </Component>
               </Component>,
@@ -1326,7 +1244,9 @@ ShallowWrapper {
                           "margin": 5,
                         }
                       }
-                    />
+                    >
+                      mock
+                    </Text>
                     <Text
                       accessible={true}
                       allowFontScaling={true}
@@ -1338,9 +1258,7 @@ ShallowWrapper {
                           "margin": 5,
                         }
                       }
-                    >
-                      A passionate todo artist
-                    </Text>
+                    />
                   </Component>,
                   <Component
                     style={
@@ -1355,7 +1273,7 @@ ShallowWrapper {
                       height={128}
                       source={
                         Object {
-                          "testUri": "../../../app/images/boy.png",
+                          "uri": undefined,
                         }
                       }
                       width={128}
@@ -1387,7 +1305,9 @@ ShallowWrapper {
                             "margin": 5,
                           }
                         }
-                      />,
+                      >
+                        mock
+                      </Text>,
                       <Text
                         accessible={true}
                         allowFontScaling={true}
@@ -1399,9 +1319,7 @@ ShallowWrapper {
                             "margin": 5,
                           }
                         }
-                      >
-                        A passionate todo artist
-                      </Text>,
+                      />,
                     ],
                     "style": Object {
                       "alignItems": "flex-start",
@@ -1420,7 +1338,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": undefined,
+                        "children": "mock",
                         "ellipsizeMode": "tail",
                         "style": Object {
                           "color": "white",
@@ -1430,7 +1348,7 @@ ShallowWrapper {
                         },
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": "mock",
                       "type": [Function],
                     },
                     Object {
@@ -1440,7 +1358,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "A passionate todo artist",
+                        "children": undefined,
                         "ellipsizeMode": "tail",
                         "style": Object {
                           "color": "white",
@@ -1449,7 +1367,7 @@ ShallowWrapper {
                         },
                       },
                       "ref": null,
-                      "rendered": "A passionate todo artist",
+                      "rendered": null,
                       "type": [Function],
                     },
                   ],
@@ -1464,7 +1382,7 @@ ShallowWrapper {
                       height={128}
                       source={
                         Object {
-                          "testUri": "../../../app/images/boy.png",
+                          "uri": undefined,
                         }
                       }
                       width={128}
@@ -1483,7 +1401,7 @@ ShallowWrapper {
                     "props": Object {
                       "height": 128,
                       "source": Object {
-                        "testUri": "../../../app/images/boy.png",
+                        "uri": undefined,
                       },
                       "width": 128,
                     },
@@ -1505,7 +1423,7 @@ ShallowWrapper {
                   <Component
                     style={
                       Object {
-                        "alignItems": "flex-start",
+                        "alignItems": "center",
                         "flex": 0.6,
                         "justifyContent": "center",
                       }
@@ -1519,7 +1437,6 @@ ShallowWrapper {
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
-                          "marginLeft": 30,
                           "width": 160,
                         }
                       }
@@ -1532,19 +1449,23 @@ ShallowWrapper {
                         "alignItems": "center",
                         "flex": 0.4,
                         "flexDirection": "row",
-                        "justifyContent": "space-around",
+                        "justifyContent": "center",
                       }
                     }
                   >
-                    <Themed.Icon
-                      color="white"
-                      name="favorite"
-                      size={32}
-                    />
-                    <Themed.Icon
-                      color="white"
-                      name="share"
-                      size={32}
+                    <ForwardRef(Themed.Button)
+                      buttonStyle={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "white",
+                          "borderRadius": 20,
+                          "borderStyle": "solid",
+                          "borderWidth": 3,
+                          "width": 100,
+                        }
+                      }
+                      onPress={[Function]}
+                      title="Log Out"
                     />
                   </Component>,
                 ],
@@ -1552,7 +1473,7 @@ ShallowWrapper {
                   "alignItems": "center",
                   "flex": 0.3,
                   "flexDirection": "row",
-                  "justifyContent": "center",
+                  "justifyContent": "space-around",
                 },
               },
               "ref": null,
@@ -1570,14 +1491,13 @@ ShallowWrapper {
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
-                          "marginLeft": 30,
                           "width": 160,
                         }
                       }
                       title="My Summary"
                     />,
                     "style": Object {
-                      "alignItems": "flex-start",
+                      "alignItems": "center",
                       "flex": 0.6,
                       "justifyContent": "center",
                     },
@@ -1594,7 +1514,6 @@ ShallowWrapper {
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
-                        "marginLeft": 30,
                         "width": 160,
                       },
                       "title": "My Summary",
@@ -1613,54 +1532,51 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": Array [
-                      <Themed.Icon
-                        color="white"
-                        name="favorite"
-                        size={32}
-                      />,
-                      <Themed.Icon
-                        color="white"
-                        name="share"
-                        size={32}
-                      />,
-                    ],
+                    "children": <ForwardRef(Themed.Button)
+                      buttonStyle={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "white",
+                          "borderRadius": 20,
+                          "borderStyle": "solid",
+                          "borderWidth": 3,
+                          "width": 100,
+                        }
+                      }
+                      onPress={[Function]}
+                      title="Log Out"
+                    />,
                     "style": Object {
                       "alignItems": "center",
                       "flex": 0.4,
                       "flexDirection": "row",
-                      "justifyContent": "space-around",
+                      "justifyContent": "center",
                     },
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "color": "white",
-                        "name": "favorite",
-                        "size": 32,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "buttonStyle": Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "white",
+                        "borderRadius": 20,
+                        "borderStyle": "solid",
+                        "borderWidth": 3,
+                        "width": 100,
                       },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                      "onPress": [Function],
+                      "title": "Log Out",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "color": "white",
-                        "name": "share",
-                        "size": 32,
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                    "ref": null,
+                    "rendered": null,
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
                     },
-                  ],
+                  },
                   "type": [Function],
                 },
               ],
@@ -1685,7 +1601,9 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "channels": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -1708,58 +1626,12 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
-            "props": Object {},
+            "props": Object {
+              "tasks": undefined,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <ForwardRef(Themed.Button)
-              buttonStyle={
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderColor": "white",
-                  "borderRadius": 20,
-                  "borderStyle": "solid",
-                  "borderWidth": 3,
-                  "marginLeft": 30,
-                  "width": 160,
-                }
-              }
-              onPress={[Function]}
-              title="Logout"
-            />,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "buttonStyle": Object {
-                "backgroundColor": "transparent",
-                "borderColor": "white",
-                "borderRadius": 20,
-                "borderStyle": "solid",
-                "borderWidth": 3,
-                "marginLeft": 30,
-                "width": 160,
-              },
-              "onPress": [Function],
-              "title": "Logout",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "render": [Function],
-            },
           },
           "type": [Function],
         },

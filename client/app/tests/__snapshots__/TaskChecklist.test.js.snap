@@ -11,40 +11,6 @@ ShallowWrapper {
     }
   >
     <FlatList
-      data={
-        Array [
-          Object {
-            "key": "1",
-            "name": "Leetcode Daily",
-            "point": 30,
-          },
-          Object {
-            "key": "2",
-            "name": "Leetcode Daily",
-            "point": 40,
-          },
-          Object {
-            "key": "3",
-            "name": "Leetcode Daily",
-            "point": 50,
-          },
-          Object {
-            "key": "4",
-            "name": "Leetcode Daily",
-            "point": 60,
-          },
-          Object {
-            "key": "5",
-            "name": "Leetcode Daily",
-            "point": 70,
-          },
-          Object {
-            "key": "6",
-            "name": "Leetcode Daily",
-            "point": 80,
-          },
-        ]
-      }
       disableVirtualization={false}
       horizontal={false}
       initialNumToRender={10}
@@ -72,40 +38,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <FlatList
-        data={
-          Array [
-            Object {
-              "key": "1",
-              "name": "Leetcode Daily",
-              "point": 30,
-            },
-            Object {
-              "key": "2",
-              "name": "Leetcode Daily",
-              "point": 40,
-            },
-            Object {
-              "key": "3",
-              "name": "Leetcode Daily",
-              "point": 50,
-            },
-            Object {
-              "key": "4",
-              "name": "Leetcode Daily",
-              "point": 60,
-            },
-            Object {
-              "key": "5",
-              "name": "Leetcode Daily",
-              "point": 70,
-            },
-            Object {
-              "key": "6",
-              "name": "Leetcode Daily",
-              "point": 80,
-            },
-          ]
-        }
         disableVirtualization={false}
         horizontal={false}
         initialNumToRender={10}
@@ -128,38 +60,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "data": Array [
-          Object {
-            "key": "1",
-            "name": "Leetcode Daily",
-            "point": 30,
-          },
-          Object {
-            "key": "2",
-            "name": "Leetcode Daily",
-            "point": 40,
-          },
-          Object {
-            "key": "3",
-            "name": "Leetcode Daily",
-            "point": 50,
-          },
-          Object {
-            "key": "4",
-            "name": "Leetcode Daily",
-            "point": 60,
-          },
-          Object {
-            "key": "5",
-            "name": "Leetcode Daily",
-            "point": 70,
-          },
-          Object {
-            "key": "6",
-            "name": "Leetcode Daily",
-            "point": 80,
-          },
-        ],
+        "data": undefined,
         "disableVirtualization": false,
         "horizontal": false,
         "initialNumToRender": 10,
@@ -185,40 +86,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <FlatList
-          data={
-            Array [
-              Object {
-                "key": "1",
-                "name": "Leetcode Daily",
-                "point": 30,
-              },
-              Object {
-                "key": "2",
-                "name": "Leetcode Daily",
-                "point": 40,
-              },
-              Object {
-                "key": "3",
-                "name": "Leetcode Daily",
-                "point": 50,
-              },
-              Object {
-                "key": "4",
-                "name": "Leetcode Daily",
-                "point": 60,
-              },
-              Object {
-                "key": "5",
-                "name": "Leetcode Daily",
-                "point": 70,
-              },
-              Object {
-                "key": "6",
-                "name": "Leetcode Daily",
-                "point": 80,
-              },
-            ]
-          }
           disableVirtualization={false}
           horizontal={false}
           initialNumToRender={10}
@@ -241,38 +108,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "data": Array [
-            Object {
-              "key": "1",
-              "name": "Leetcode Daily",
-              "point": 30,
-            },
-            Object {
-              "key": "2",
-              "name": "Leetcode Daily",
-              "point": 40,
-            },
-            Object {
-              "key": "3",
-              "name": "Leetcode Daily",
-              "point": 50,
-            },
-            Object {
-              "key": "4",
-              "name": "Leetcode Daily",
-              "point": 60,
-            },
-            Object {
-              "key": "5",
-              "name": "Leetcode Daily",
-              "point": 70,
-            },
-            Object {
-              "key": "6",
-              "name": "Leetcode Daily",
-              "point": 80,
-            },
-          ],
+          "data": undefined,
           "disableVirtualization": false,
           "horizontal": false,
           "initialNumToRender": 10,

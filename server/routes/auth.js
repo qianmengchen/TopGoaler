@@ -43,6 +43,7 @@ const authenticate = (req, res) => passport.authenticate('local', {session: fals
         })
         // generate JWT token with contents of the user object, and return it
         const token = jwt.sign(user, JWT_SECRET)
+        console.log(user);
         return res.json({...user, token})
     });
 })(req, res)

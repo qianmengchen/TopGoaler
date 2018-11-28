@@ -7,7 +7,7 @@ const ChannelIcon = props => {
 
   return (
     <TouchableOpacity style={styles.list.iconContainer}>
-      <Image style={styles.list.icon} source={item.icon} />
+      <Image style={styles.list.icon} source={{ uri: item.image_url }} />
     </TouchableOpacity>
   );
 };

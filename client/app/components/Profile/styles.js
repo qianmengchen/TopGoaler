@@ -27,7 +27,7 @@ const personalInfo = StyleSheet.create({
   actions: {
     flex: 0.3,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center'
   }
 });
@@ -51,12 +51,12 @@ const actions = StyleSheet.create({
   summary: {
     flex: 0.6,
     justifyContent: 'center',
-    alignItems: 'flex-start'
+    alignItems: 'center'
   },
   buttons: {
     flex: 0.4,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center'
   }
 });
@@ -68,8 +68,15 @@ const buttons = StyleSheet.create({
     borderRadius: 20,
     borderColor: 'white',
     borderWidth: 3,
-    borderStyle: 'solid',
-    marginLeft: 30
+    borderStyle: 'solid'
+  },
+  logout: {
+    width: 100,
+    backgroundColor: 'transparent',
+    borderRadius: 20,
+    borderColor: 'white',
+    borderWidth: 3,
+    borderStyle: 'solid'
   }
 });
 

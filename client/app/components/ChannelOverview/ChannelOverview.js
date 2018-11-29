@@ -9,8 +9,8 @@ import { board, contents, desc } from './styles';
 
 class ChannelOverview extends Component {
   _submit = () => {
-    let { goToChannel, title } = this.props;
-    goToChannel(title);
+    let { goToChannel, channel } = this.props;
+    goToChannel(channel.id);
   };
 
   _subscribe = () => {

@@ -21,6 +21,10 @@ const userInfo = {
   name: 'mock'
 };
 
+const navigation = {
+  navigate: jest.fn()
+};
+
 describe('Testing Channel List Page', () => {
   const _logout = jest.fn();
   const logout = sinon.spy(Profile.prototype, '_handleLogout');
@@ -31,6 +35,7 @@ describe('Testing Channel List Page', () => {
       userInfo={userInfo}
       userActivities={[]}
       userTasks={[]}
+      navigation={navigation}
     />,
     {
       context: { store: mockStore(initialTaskState) }

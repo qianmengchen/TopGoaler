@@ -19,7 +19,7 @@ class ChannelMemberView extends Component {
     return (
       <View>
         <View style={header.container}>
-          <Text style={header.title}>{this.props.channelName}</Text>
+          <Text style={header.title}>{this.props.channelId}</Text>
           <Avatar
             size={100}
             rounded

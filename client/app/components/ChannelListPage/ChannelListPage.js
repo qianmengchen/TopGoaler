@@ -3,13 +3,9 @@ import { ScrollView, View } from 'react-native';
 import { Button, SearchBar, Icon } from 'react-native-elements';
 import { board, actions } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
+import { goToChannel } from './utils';
 
 class ChannelListPage extends Component {
-  _goToChannel = subscribed => name => {
-    if (subscribed)
-      this.props.navigation.navigate('ChannelMemberView', { name });
-    else this.props.navigation.navigate('ChannelPublicView', { name });
-  };
   _addChannel() {
     this.props.navigation.navigate('NewChannelPage');
   }
@@ -35,6 +31,8 @@ class ChannelListPage extends Component {
   }
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <View style={board.container}>
         <ScrollView>
@@ -68,7 +66,10 @@ class ChannelListPage extends Component {
                     key={id}
                     channel={ch}
                     is_subscribed={check_subscribed}
-                    goToChannel={this._goToChannel(check_subscribed)}
+                    goToChannel={goToChannel(
+                      check_subscribed,
+                      navigation.navigate
+                    )}
                     subscribe={this._subscribe(ch)}
                   />
                 );

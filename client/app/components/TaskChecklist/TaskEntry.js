@@ -1,10 +1,15 @@
 import React from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
 import * as styles from './styles';
+import { Alert } from 'react-native';
+
+function _cannotComplete() {
+  Alert.alert('Cannot complete this task anymore', '', [{ text: 'OK' }]);
+}
 
 const CheckEntry = props => {
   const { item, finished, completeTask } = props;
-  const onCompleteTask = completeTask;
+  const onCompleteTask = finished ? _cannotComplete : completeTask;
 
   return (
     <TouchableOpacity

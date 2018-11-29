@@ -16,8 +16,8 @@ class NewTaskPage extends Component {
   _errorCheck = () => false;
 
   _submit() {
-    this.props.addChannel(this.state.name, this.props.username);
     this.props.navigation.navigate('ChannelListPage');
+    console.log('Should go back to task list and update database');
   }
 
   constructor(props) {
@@ -25,21 +25,42 @@ class NewTaskPage extends Component {
     this.state = {
       name: '',
       description: '',
-      period: 'Daily',
-      pattern: 'Once',
-      favColor: '',
-      items: [
+      period: '',
+      pattern: '',
+      periodItems: [
         {
-          label: 'Red',
-          value: 'red'
+          label: 'Daily',
+          value: 'Daily'
         },
         {
-          label: 'Orange',
-          value: 'orange'
+          label: 'Weekly',
+          value: 'Weekly'
         },
         {
-          label: 'Blue',
-          value: 'blue'
+          label: 'Monthly',
+          value: 'Monthly'
+        },
+        {
+          label: 'One Time Only',
+          value: 'One Time Only'
+        }
+      ],
+      patternItems: [
+        {
+          label: 'Once',
+          value: 'Once'
+        },
+        {
+          label: 'Twice',
+          value: 'Twice'
+        },
+        {
+          label: 'Three times',
+          value: 'Three times'
+        },
+        {
+          label: 'Unlimited',
+          value: 'Unlimited'
         }
       ]
     };
@@ -77,6 +98,42 @@ class NewTaskPage extends Component {
           value={this.state.description}
           onChangeText={this._updateDescription.bind(this)}
         />
+
+        <RNPickerSelect
+          items={this.state.periodItems}
+          placeholder={{ label: 'Select something', value: null }}
+          onValueChange={value => {
+            this.setState({ period: value });
+          }}
+          value={this.state.period}
+        >
+          <Input
+            label="Period"
+            labelStyle={text.label}
+            containerStyle={board.input}
+            placeholder="Select a period..."
+            placeholderTextColor="gray"
+            value={this.state.period}
+          />
+        </RNPickerSelect>
+
+        <RNPickerSelect
+          items={this.state.patternItems}
+          placeholder={{}}
+          onValueChange={value => {
+            this.setState({ pattern: value });
+          }}
+        >
+          <Input
+            label="Pattern"
+            labelStyle={text.label}
+            containerStyle={board.input}
+            placeholder="Select a pattern..."
+            placeholderTextColor="gray"
+            value={this.state.pattern}
+          />
+        </RNPickerSelect>
+
         <View style={board.button}>
           <Button
             title="Create"
@@ -84,18 +141,6 @@ class NewTaskPage extends Component {
             onPress={this._submit.bind(this)}
           />
         </View>
-
-        <RNPickerSelect
-          items={this.state.items}
-          placeholder={{}}
-          onValueChange={value => {
-            this.setState({
-              favColor: value
-            });
-          }}
-        >
-          <Text>Select your favorite color</Text>
-        </RNPickerSelect>
       </View>
     );
   }

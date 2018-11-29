@@ -25,9 +25,17 @@ describe('Testing Channel List Page', () => {
   const _logout = jest.fn();
   const logout = sinon.spy(Profile.prototype, '_handleLogout');
 
-  const wrapper = shallow(<Profile logout={_logout} userInfo={userInfo} />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const wrapper = shallow(
+    <Profile
+      logout={_logout}
+      userInfo={userInfo}
+      userActivities={[]}
+      userTasks={[]}
+    />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {

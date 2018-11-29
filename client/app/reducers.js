@@ -6,7 +6,9 @@ import {
   SIGNUP_FAILURE,
   SERVER_ERR,
   LOAD_DATA,
-  ADD_CHANNEL
+  ADD_CHANNEL,
+  ADD_ACTIVITY,
+  ADD_FAILURE
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
@@ -27,9 +29,7 @@ function _alertLogin(method) {
 }
 
 function _alertServer() {
-  Alert.alert('Please turn on dev server at localhost:8001', '', [
-    { text: 'OK' }
-  ]);
+  Alert.alert('Server error', '', [{ text: 'OK' }]);
 }
 
 function auth(state = initAuthState, action) {
@@ -111,11 +111,38 @@ function tasks(state = {}, action) {
   }
 }
 
+function _alertOperationFailure() {
+  Alert.alert('Operation failed', '', [{ text: 'OK' }]);
+}
+
+function activity_log(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return [...action.data.activity_log];
+    case ADD_ACTIVITY:
+      return [
+        {
+          task_id: action.task_id,
+          user_id: action.user_id,
+          timestamp: new Date().toISOString(),
+          event: action.event
+        },
+        ...state
+      ];
+    case ADD_FAILURE:
+      _alertOperationFailure();
+      return state;
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   auth,
   channels,
   user_channel,
   users,
   user_task,
-  tasks
+  tasks,
+  activity_log
 });

@@ -88,12 +88,22 @@ router.post('/user_task', (request, response) => {
 // post for vote
 // arguments are:proposal_id, user_id, score
 // must have: user_id, proposal_id
-// curl -d "user_id=1&proposal_id=1" http://localhost:8001/vote
+// curl -d "user_id=1&proposal_id=1&score=1 http://localhost:8001/vote
+// return 1 means this proposal is able to change to a task, return 0 means not yet
 router.post('/vote', (request, response) => {
-    pool.query('INSERT INTO vote SET ?', request.body, (error, result) => {
+    const proposal_id = request.body.proposal_id;  
+    pool.query('INSERT INTO vote SET ?',  request.body, (error, result) => {
         if (error) response.status(401).send(`error create: ${error}`); 
-        response.status(201).send(`vote added with vote: ${result.insertId}`);
+        //response.status(201).send(`vote added with vote: ${result.insertId}`);
     });
+    pool.query(` SELECT 
+            (SELECT
+            (SELECT COUNT(*) FROM user_channel WHERE channel_id = (SELECT channel_id FROM proposal WHERE id = ? )) /
+            (SELECT COUNT(*) FROM vote WHERE proposal_id = ? ) 
+            ) <= 2`, [proposal_id, proposal_id], (error, result) => { 
+            if (error) response.status(401).send(`error create: ${error}`);  
+            response.json(result[0]);  
+        }); 
 });
 
 module.exports = router;

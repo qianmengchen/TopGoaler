@@ -7,6 +7,7 @@ import {
   userTaskFilter,
   taskGetter
 } from './utils';
+import { Event } from '../../constants';
 
 const mapStateToProps = state => ({
   userInfo: state.users[state.auth.id],
@@ -17,7 +18,16 @@ const mapStateToProps = state => ({
   userTasks: taskGetter(
     state.user_task.filter(userTaskFilter(state.auth.id)),
     state.tasks
-  )
+  ),
+  userActivities: state.activity_log
+    .filter(
+      log =>
+        log.user_id === state.auth.id && log.event.toString() === Event.FINISH
+    )
+    .map(log => ({
+      task_id: log.task_id,
+      create_time: new Date(log.create_time)
+    }))
 });
 
 const mapDispatchToProps = dispatch => ({

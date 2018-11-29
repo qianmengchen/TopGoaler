@@ -14,10 +14,19 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
+const mockCompleteTask = jest.fn();
+
 describe('Testing Task Checklist component', () => {
-  const wrapper = shallow(<TaskChecklist />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const wrapper = shallow(
+    <TaskChecklist
+      onGoingTasks={[]}
+      finishedTasks={[]}
+      completeTask={mockCompleteTask}
+    />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {

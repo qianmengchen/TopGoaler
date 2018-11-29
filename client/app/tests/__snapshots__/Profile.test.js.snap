@@ -164,7 +164,10 @@ ShallowWrapper {
         }
       }
     >
-      <Connect(TaskChecklist) />
+      <Connect(TaskChecklist)
+        finishedTasks={Array []}
+        onGoingTasks={Array []}
+      />
     </Component>
   </Component>,
   Symbol(enzyme.__renderer__): Object {
@@ -333,7 +336,10 @@ ShallowWrapper {
             }
           }
         >
-          <Connect(TaskChecklist) />
+          <Connect(TaskChecklist)
+            finishedTasks={Array []}
+            onGoingTasks={Array []}
+          />
         </Component>,
       ],
       "style": Object {
@@ -883,7 +889,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Connect(TaskChecklist) />,
+          "children": <Connect(TaskChecklist)
+            finishedTasks={Array []}
+            onGoingTasks={Array []}
+          />,
           "style": Object {
             "alignItems": "stretch",
             "flex": 0.45,
@@ -895,7 +904,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "tasks": undefined,
+            "finishedTasks": Array [],
+            "onGoingTasks": Array [],
           },
           "ref": null,
           "rendered": null,
@@ -1065,7 +1075,10 @@ ShallowWrapper {
               }
             }
           >
-            <Connect(TaskChecklist) />
+            <Connect(TaskChecklist)
+              finishedTasks={Array []}
+              onGoingTasks={Array []}
+            />
           </Component>,
         ],
         "style": Object {
@@ -1615,7 +1628,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Connect(TaskChecklist) />,
+            "children": <Connect(TaskChecklist)
+              finishedTasks={Array []}
+              onGoingTasks={Array []}
+            />,
             "style": Object {
               "alignItems": "stretch",
               "flex": 0.45,
@@ -1627,7 +1643,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "tasks": undefined,
+              "finishedTasks": Array [],
+              "onGoingTasks": Array [],
             },
             "ref": null,
             "rendered": null,

@@ -38,13 +38,13 @@ describe('Testing Channel Memberview Page', () => {
     expect(render.find(Avatar)).toHaveLength(1);
   });
 
-  it('should have 15 Text: title, card info, more and add task button text', () => {
-    expect(render.find('Text')).toHaveLength(15);
+  it('should have 16 Text: title, card info, more, add, and vote task button text', () => {
+    expect(render.find('Text')).toHaveLength(16);
   });
   ``;
 
-  it('should have 2 TouchableHighlight for more and add task button text', () => {
-    expect(render.find('TouchableHighlight')).toHaveLength(2);
+  it('should have 3 TouchableHighlight for more, add, and vote task buttons', () => {
+    expect(render.find('TouchableHighlight')).toHaveLength(3);
   });
 
   it('should invoke correct methods when pressing more button', () => {

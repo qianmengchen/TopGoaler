@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import { Card, Avatar, Divider } from 'react-native-elements';
-import { header, cardLeft, cardRight } from './styles';
+import { header, cardLeft, cardRight, vote } from './styles';
 import { Feed } from '../Feed/index';
 
 class ChannelMemberView extends Component {
   _goToHomepage() {
     const { navigate } = this.props.navigation;
     navigate('ChannelListPage');
+  }
+
+  _goToProposalsPage() {
+    const { navigate } = this.props.navigation;
+    navigate('ProposalsPage');
   }
 
   render() {
@@ -78,6 +83,16 @@ class ChannelMemberView extends Component {
             </View>
           </Card>
         </View>
+
+        <TouchableHighlight
+          style={vote.container}
+          underlayColor="#aaa"
+          onPress={this._goToProposalsPage.bind(this)}
+        >
+          <View>
+            <Text style={vote.buttonText}> Vote on Task Proposals </Text>
+          </View>
+        </TouchableHighlight>
 
         <Divider
           style={{

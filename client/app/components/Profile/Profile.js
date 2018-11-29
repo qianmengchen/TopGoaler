@@ -45,7 +45,7 @@ class Profile extends Component {
     const onGoingTasks = [],
       finishedTasks = [];
     for (const task of userTasks) {
-      if (numActivities[task.id] < task.pattern) {
+      if (!task.pattern || numActivities[task.id] < task.pattern) {
         onGoingTasks.push(task);
       } else {
         finishedTasks.push(task);
@@ -88,7 +88,6 @@ class Profile extends Component {
           <TaskChecklist
             onGoingTasks={onGoingTasks}
             finishedTasks={finishedTasks}
-            completeTask={() => {}}
           />
         </View>
       </View>

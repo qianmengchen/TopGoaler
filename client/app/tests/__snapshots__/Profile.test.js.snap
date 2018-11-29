@@ -165,7 +165,6 @@ ShallowWrapper {
       }
     >
       <Connect(TaskChecklist)
-        completeTask={[Function]}
         finishedTasks={Array []}
         onGoingTasks={Array []}
       />
@@ -338,7 +337,6 @@ ShallowWrapper {
           }
         >
           <Connect(TaskChecklist)
-            completeTask={[Function]}
             finishedTasks={Array []}
             onGoingTasks={Array []}
           />
@@ -892,7 +890,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <Connect(TaskChecklist)
-            completeTask={[Function]}
             finishedTasks={Array []}
             onGoingTasks={Array []}
           />,
@@ -907,7 +904,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "completeTask": [Function],
             "finishedTasks": Array [],
             "onGoingTasks": Array [],
           },
@@ -1080,7 +1076,6 @@ ShallowWrapper {
             }
           >
             <Connect(TaskChecklist)
-              completeTask={[Function]}
               finishedTasks={Array []}
               onGoingTasks={Array []}
             />
@@ -1634,7 +1629,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <Connect(TaskChecklist)
-              completeTask={[Function]}
               finishedTasks={Array []}
               onGoingTasks={Array []}
             />,
@@ -1649,7 +1643,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "completeTask": [Function],
               "finishedTasks": Array [],
               "onGoingTasks": Array [],
             },

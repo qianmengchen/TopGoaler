@@ -4,7 +4,7 @@ import * as styles from './styles';
 
 const CheckEntry = props => {
   const { item, finished, completeTask } = props;
-  const onCompleteTask = finished ? () => {} : completeTask;
+  const onCompleteTask = completeTask;
 
   return (
     <TouchableOpacity

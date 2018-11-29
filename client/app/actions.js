@@ -139,3 +139,29 @@ export const SUBSCRIBE_CHANNEL = 'SUBSCRIBE_CHANNEL';
 export function subscribeChannel(channel) {
   return { type: SUBSCRIBE_CHANNEL, channel };
 }
+
+/*
+ * task check-in
+ */
+
+export const ADD_ACTIVITY = 'ADD_ACTIVITY';
+export const ADD_FAILURE = 'ADD_FAILURE';
+export function activityUploadFailure() {
+  return { type: ADD_FAILURE };
+}
+export function activityUploaded(task_id, user_id, event) {
+  return { type: ADD_ACTIVITY, task_id, user_id, event };
+}
+export function newActivityLog(task_id, user_id, event) {
+  return async dispatch => {
+    const body = { task_id, user_id, event };
+    try {
+      const res = await _post('/activity_log', body);
+      if (!res.ok) return dispatch(activityUploadFailure());
+      dispatch(activityUploaded(task_id, user_id, event));
+    } catch (e) {
+      console.log(e);
+      dispatch(serverError(e));
+    }
+  };
+}

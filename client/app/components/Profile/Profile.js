@@ -17,6 +17,11 @@ class Profile extends Component {
     this.props.logout();
   }
 
+  _goToPerformancePage() {
+    const { navigate } = this.props.navigation;
+    navigate('PerformancePage');
+  }
+
   render() {
     return (
       <View style={board.container}>
@@ -38,7 +43,11 @@ class Profile extends Component {
           </View>
           <View style={personalInfo.actions}>
             <View style={actions.summary}>
-              <Button title="My Summary" buttonStyle={buttons.summary} />
+              <Button
+                title="My Summary"
+                buttonStyle={buttons.summary}
+                onPress={this._goToPerformancePage.bind(this)}
+              />
             </View>
             <View style={actions.buttons}>
               <Button

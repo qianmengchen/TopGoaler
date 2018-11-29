@@ -4,100 +4,113 @@ const board = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between'
+    flexDirection: 'column'
   },
   title: {
     flex: 0.1,
-    justifyContent: 'flex-start',
-    fontWeight: 'bold',
-    fontSize: 20
+    flexDirection: 'row',
+    justifyContent: 'center'
   },
   infoCard: {
-    flex: 0.45,
-    flexDirection: 'row'
+    flex: 0.35,
+    flexDirection: 'row',
+    marginHorizontal: 20
   },
   chart: {
-    flex: 0.45,
-    flexDirection: 'row'
-  }
-});
-
-const infoCard = StyleSheet.create({
-  container: {
+    borderRadius: 15,
+    borderWidth: 0,
+    flex: 0.55,
+    flexDirection: 'row',
     backgroundColor: '#555',
-    borderRadius: 10,
-    borderColor: '#555',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  leftPart: {
-    flex: 0.45
-  },
-  line: {
-    flex: 0.1
-  },
-  rightPart: {
-    flex: 0.45
+    marginTop: 10,
+    marginBottom: 10,
+    marginHorizontal: 20
   }
 });
 
-const leftPart = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center'
-  },
-  title: {
-    flex: 0.3,
-    justifyContent: 'flex-start',
+const title = StyleSheet.create({
+  main: {
     fontWeight: 'bold',
-    color: 'white',
-    paddingVertical: 2
+    fontSize: 40,
+    color: 'black'
   },
-  number: {
-    flex: 0.35,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  sub: {
     fontWeight: 'bold',
-    color: 'orange'
-  },
-  period: {
-    flex: 0.35,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    fontSize: 30,
     color: 'white'
   }
 });
 
-const rightPart = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center'
-  },
-  title: {
-    flex: 0.3,
-    justifyContent: 'flex-start',
+const text = StyleSheet.create({
+  number: {
     fontWeight: 'bold',
-    color: 'white',
-    paddingVertical: 2
+    fontSize: 30,
+    color: 'orange'
   },
-  stats: {
-    flex: 0.7,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+  period: {
+    fontSize: 20,
+    color: 'white'
+  },
+  stat: {
     fontSize: 10,
     color: 'white'
   }
 });
 
-const chart = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+const infoCard = StyleSheet.create({
+  leftPart: {
+    borderRadius: 15,
+    borderWidth: 0,
+    backgroundColor: '#555',
+    flex: 0.5,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    marginRight: 1
+  },
+  rightPart: {
+    borderRadius: 15,
+    borderWidth: 0,
+    backgroundColor: '#555',
+    flex: 0.5,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    marginLeft: 1
   }
 });
 
-export { board, infoCard, leftPart, rightPart, chart };
+const leftPart = StyleSheet.create({
+  subtitle: {
+    flex: 0.3,
+    alignItems: 'center',
+    paddingTop: 20
+  },
+  number: {
+    flex: 0.35,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  },
+  period: {
+    flex: 0.35,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  }
+});
+
+const rightPart = StyleSheet.create({
+  subtitle: {
+    flex: 0.3,
+    alignItems: 'center',
+    paddingTop: 20
+  },
+  stats: {
+    marginTop: -40,
+    flex: 0.7,
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
+  }
+});
+
+const chart = StyleSheet.create({});
+
+export { board, title, text, infoCard, leftPart, rightPart, chart };

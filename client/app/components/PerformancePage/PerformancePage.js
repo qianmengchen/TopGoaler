@@ -8,12 +8,10 @@ class PerformancePage extends Component {
     return (
       <View>
         <View style={board.container}>
-            <Text style={board.title}>Performance</Text>
-            <View>
-                <Card containerStyle={board.infoCard}>
-
-                </Card>
-            </View>
+          <Text style={board.title}>Performance</Text>
+          <View>
+            <Card containerStyle={board.infoCard} />
+          </View>
         </View>
       </View>
     );

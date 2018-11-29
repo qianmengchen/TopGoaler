@@ -69,35 +69,35 @@ const leftPart = StyleSheet.create({
     justifyContent: 'space-between',
     color: 'white'
   }
-})
+});
 
 const rightPart = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'column',
-      justifyContent: 'center'
-    },
-    title: {
-      flex: 0.3,
-      justifyContent: 'flex-start',
-      fontWeight: 'bold',
-      color: 'white',
-      paddingVertical: 2
-    },
-    stats: {
-        flex: 0.7,
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        fontSize: 10,
-        color: 'white'
-    }
-})
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  title: {
+    flex: 0.3,
+    justifyContent: 'flex-start',
+    fontWeight: 'bold',
+    color: 'white',
+    paddingVertical: 2
+  },
+  stats: {
+    flex: 0.7,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    fontSize: 10,
+    color: 'white'
+  }
+});
 
 const chart = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    }
-})
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
+});
 
 export { board, infoCard, leftPart, rightPart, chart };

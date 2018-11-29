@@ -16,9 +16,24 @@ class ChannelListPage extends Component {
   _subscribe = ch => () => {
     this.props.subscribe(ch.channel);
   };
-  _subscribe = ch => () => {
-    this.props.subscribe(ch.channel);
+
+  _handleSearch = text => {
+    this.setState({ input: text });
   };
+
+  _contains = channel => {
+    return channel.title
+      ? channel.title.includes(this.state.input.toLowerCase())
+      : false;
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: ''
+    };
+  }
+
   render() {
     return (
       <View style={board.container}>
@@ -26,7 +41,8 @@ class ChannelListPage extends Component {
           <View style={board.actions}>
             <SearchBar
               containerStyle={actions.searchBar}
-              onChangeText={() => {}}
+              clearIcon={false}
+              onChangeText={this._handleSearch}
               onClear={() => {}}
               placeholder="Search for channels"
               icon={{ type: 'font-awesome', name: 'search' }}
@@ -42,14 +58,22 @@ class ChannelListPage extends Component {
           <View style={board.channelList}>
             {Object.keys(this.props.channels).map(id => {
               const ch = this.props.channels[id];
-              return (
-                <ChannelOverview
-                  key={id}
-                  channel={ch}
-                  goToChannel={this._goToChannel(ch.subscribed)}
-                  subscribe={this._subscribe(ch)}
-                />
-              );
+              const check_subscribed = this.props.subscribed_channels
+                ? this.props.subscribed_channels.has(parseInt(id))
+                : false;
+              let channel_overview;
+              if (this._contains(ch)) {
+                channel_overview = (
+                  <ChannelOverview
+                    key={id}
+                    channel={ch}
+                    is_subscribed={check_subscribed}
+                    goToChannel={this._goToChannel(check_subscribed)}
+                    subscribe={this._subscribe(ch)}
+                  />
+                );
+              }
+              return channel_overview;
             })}
           </View>
         </ScrollView>

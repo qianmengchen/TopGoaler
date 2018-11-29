@@ -29,8 +29,9 @@ const actions = StyleSheet.create({
   },
   button: {
     flex: 0.1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingBottom: 10
   }
 });
 

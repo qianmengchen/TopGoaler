@@ -44,18 +44,31 @@ class ChannelOverview extends Component {
   };
 
   render() {
+    let button;
+    if (this.props.is_subscribed) {
+      button = (
+        <TouchableWithoutFeedback>
+          <Icon style={desc.icon} name="check" size={30} color="black" />
+        </TouchableWithoutFeedback>
+      );
+    } else {
+      button = (
+        <TouchableWithoutFeedback onPress={this._subscribe}>
+          <Icon style={desc.icon} name="add" size={30} color="black" />
+        </TouchableWithoutFeedback>
+      );
+    }
+
     return (
       <View style={board.container}>
         <View style={board.contents}>
-          <Text style={contents.title}>{this.props.title}</Text>
-          <Text style={contents.subtitle}>{this.props.subtitle}</Text>
+          <Text style={contents.title}>{this.props.channel.title}</Text>
+          <Text style={contents.subtitle}>{this.props.channel.subtitle}</Text>
           <View style={contents.desc}>
             <Text
               style={desc.numbers}
             >{`${this._number_of_users()} users, 0 tasks`}</Text>
-            <TouchableWithoutFeedback onPress={this._subscribe}>
-              <Icon style={desc.icon} name="add" size={30} color="black" />
-            </TouchableWithoutFeedback>
+            {button}
           </View>
         </View>
         <TouchableHighlight

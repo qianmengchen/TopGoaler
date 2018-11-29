@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, Picker } from 'react-native';
+import { View, Text } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
+import RNPickerSelect from 'react-native-picker-select';
 
 class NewTaskPage extends Component {
   _updateName(text) {
@@ -25,7 +26,22 @@ class NewTaskPage extends Component {
       name: '',
       description: '',
       period: 'Daily',
-      pattern: 'Once'
+      pattern: 'Once',
+      favColor: '',
+      items: [
+        {
+          label: 'Red',
+          value: 'red'
+        },
+        {
+          label: 'Orange',
+          value: 'orange'
+        },
+        {
+          label: 'Blue',
+          value: 'blue'
+        }
+      ]
     };
   }
 
@@ -69,15 +85,17 @@ class NewTaskPage extends Component {
           />
         </View>
 
-        <Picker
-          selectedValue={this.state.period}
-          style={{ height: 50, width: 100 }}
-          onValueChange={itemValue => this.setState({ period: itemValue })}
-          enabled={false}
+        <RNPickerSelect
+          items={this.state.items}
+          placeholder={{}}
+          onValueChange={value => {
+            this.setState({
+              favColor: value
+            });
+          }}
         >
-          <Picker.Item label="Daily" value="daily" />
-          <Picker.Item label="Weekly" value="weekly" />
-        </Picker>
+          <Text>Select your favorite color</Text>
+        </RNPickerSelect>
       </View>
     );
   }

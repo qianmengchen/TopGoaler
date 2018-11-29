@@ -16,7 +16,7 @@ class ChannelPublicView extends Component {
         NavigationActions.navigate({ routeName: 'ChannelListPage' }),
         NavigationActions.navigate({
           routeName: 'ChannelMemberView',
-          params: { name: this.props.channelName }
+          params: { id: this.props.channelId }
         })
       ]
     });
@@ -27,7 +27,7 @@ class ChannelPublicView extends Component {
     return (
       <View>
         <View style={header.container}>
-          <Text style={header.title}>{this.props.channelName}</Text>
+          <Text style={header.title}>{this.props.channelId}</Text>
           <Avatar
             size={100}
             rounded

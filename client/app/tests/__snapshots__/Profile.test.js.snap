@@ -154,7 +154,9 @@ ShallowWrapper {
         }
       }
     >
-      <Connect(ChannelIconList) />
+      <Connect(ChannelIconList)
+        navigate={[MockFunction]}
+      />
     </Component>
     <Component
       style={
@@ -326,7 +328,9 @@ ShallowWrapper {
             }
           }
         >
-          <Connect(ChannelIconList) />
+          <Connect(ChannelIconList)
+            navigate={[MockFunction]}
+          />
         </Component>,
         <Component
           style={
@@ -864,7 +868,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <Connect(ChannelIconList) />,
+          "children": <Connect(ChannelIconList)
+            navigate={[MockFunction]}
+          />,
           "style": Object {
             "backgroundColor": "white",
             "flex": 0.2,
@@ -877,6 +883,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "channels": undefined,
+            "navigate": [MockFunction],
           },
           "ref": null,
           "rendered": null,
@@ -1065,7 +1072,9 @@ ShallowWrapper {
               }
             }
           >
-            <Connect(ChannelIconList) />
+            <Connect(ChannelIconList)
+              navigate={[MockFunction]}
+            />
           </Component>,
           <Component
             style={
@@ -1603,7 +1612,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Connect(ChannelIconList) />,
+            "children": <Connect(ChannelIconList)
+              navigate={[MockFunction]}
+            />,
             "style": Object {
               "backgroundColor": "white",
               "flex": 0.2,
@@ -1616,6 +1627,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "channels": undefined,
+              "navigate": [MockFunction],
             },
             "ref": null,
             "rendered": null,

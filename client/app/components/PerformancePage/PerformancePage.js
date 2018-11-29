@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import {
-  board,
-  title,
-  text,
-  infoCard,
-  leftPart,
-  rightPart,
-  chart
-} from './styles';
+import { Text, View, Dimensions } from 'react-native';
+import { LineChart } from 'react-native-chart-kit';
+import { board, title, text, infoCard, leftPart, rightPart } from './styles';
 
 class PerformancePage extends Component {
   render() {
@@ -45,7 +38,28 @@ class PerformancePage extends Component {
             </View>
           </View>
         </View>
-        <View style={board.chart} />
+        <View style={board.chart}>
+          <LineChart
+            data={{
+              labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+              datasets: [{ data: [5, 3, 5, 6, 1, 4] }]
+            }}
+            width={Dimensions.get('window').width - 40}
+            height={300}
+            chartConfig={{
+              //backgroundColor: '#555',
+              backgroundGradientFrom: 'grey',
+              backgroundGradientTo: '#555',
+              decimalPlaces: 0,
+              color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`
+            }}
+            //bezier
+            style={{
+              marginVertical: 8,
+              borderRadius: 15
+            }}
+          />
+        </View>
       </View>
     );
   }

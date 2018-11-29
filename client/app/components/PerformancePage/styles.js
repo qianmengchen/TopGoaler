@@ -20,11 +20,10 @@ const board = StyleSheet.create({
     borderRadius: 15,
     borderWidth: 0,
     flex: 0.55,
-    flexDirection: 'row',
-    backgroundColor: '#555',
     marginTop: 10,
     marginBottom: 10,
-    marginHorizontal: 20
+    marginHorizontal: 20,
+    alignItems: 'center'
   }
 });
 
@@ -111,6 +110,4 @@ const rightPart = StyleSheet.create({
   }
 });
 
-const chart = StyleSheet.create({});
-
-export { board, title, text, infoCard, leftPart, rightPart, chart };
+export { board, title, text, infoCard, leftPart, rightPart };

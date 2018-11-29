@@ -22,7 +22,7 @@ class Profile extends Component {
     const { navigate } = this.props.navigation;
     navigate('PerformancePage');
   }
-  
+
   _activityAggregateReducer(acc, obj) {
     const { userTasks } = this.props;
 

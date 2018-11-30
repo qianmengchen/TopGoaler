@@ -5,6 +5,7 @@ import { ChannelMemberView } from '../ChannelMemberView/index';
 import { NewChannelPage } from '../NewChannelPage/index';
 import { NewTaskPage } from '../NewTaskPage/index';
 import { ProposalsPage } from '../ProposalsPage/index';
+import { TaskListPage } from '../TaskListPage/index';
 
 const ChannelNav = createStackNavigator(
   {
@@ -13,7 +14,8 @@ const ChannelNav = createStackNavigator(
     ChannelMemberView: { screen: ChannelMemberView },
     NewChannelPage: { screen: NewChannelPage },
     NewTaskPage: { screen: NewTaskPage },
-    ProposalsPage: { screen: ProposalsPage }
+    ProposalsPage: { screen: ProposalsPage },
+    TaskListPage: { screen: TaskListPage }
   },
   {
     initialRouteName: 'ChannelListPage'

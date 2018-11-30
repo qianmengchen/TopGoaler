@@ -23,7 +23,7 @@ const channel = {
 
 describe('Testing Channel Memberview Page', () => {
   const navigation = { navigate: jest.fn() };
-  const nav = sinon.spy(ChannelMemberView.prototype, '_goToHomepage');
+  const nav = sinon.spy(ChannelMemberView.prototype, '_goToTaskListPage');
 
   const wrapper = shallow(
     <ChannelMemberView

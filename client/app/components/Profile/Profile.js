@@ -91,7 +91,10 @@ class Profile extends Component {
           </View>
         </View>
         <View style={board.channels}>
-          <ChannelIconList channels={userChannels} />
+          <ChannelIconList
+            channels={userChannels}
+            navigate={this.props.navigation.navigate}
+          />
         </View>
         <View style={board.tasks}>
           <TaskChecklist

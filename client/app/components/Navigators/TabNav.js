@@ -1,14 +1,14 @@
 import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { TabBarBottom } from 'react-native';
-import { Profile } from '../Profile/index';
 import { Ionicons } from '@expo/vector-icons';
 import ChannelNav from './ChannelNav';
+import ProfileNav from './ProfileNav';
 
 const TabNav = createBottomTabNavigator(
   {
     Channel: { screen: ChannelNav },
-    Profile: { screen: Profile }
+    Profile: { screen: ProfileNav }
   },
   {
     initialRouteName: 'Channel',

@@ -10,6 +10,11 @@ class ChannelMemberView extends Component {
     navigate('ChannelListPage');
   }
 
+  _goToNewTaskPage() {
+    const { navigate } = this.props.navigation;
+    navigate('NewTaskPage');
+  }
+
   _goToProposalsPage() {
     const { navigate } = this.props.navigation;
     navigate('ProposalsPage');
@@ -19,7 +24,7 @@ class ChannelMemberView extends Component {
     return (
       <View>
         <View style={header.container}>
-          <Text style={header.title}>{this.props.channelName}</Text>
+          <Text style={header.title}>{this.props.channelId}</Text>
           <Avatar
             size={100}
             rounded
@@ -77,6 +82,7 @@ class ChannelMemberView extends Component {
               <TouchableHighlight
                 style={cardRight.taskButton}
                 underlayColor="#aaa"
+                onPress={this._goToNewTaskPage.bind(this)}
               >
                 <Text style={cardRight.taskButtonText}>Add</Text>
               </TouchableHighlight>

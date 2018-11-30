@@ -22,7 +22,9 @@ const mapStateToProps = state => ({
   userActivities: state.activity_log
     .filter(
       log =>
-        log.user_id === state.auth.id && log.event.toString() === Event.FINISH
+        log.user_id === state.auth.id &&
+        log.event &&
+        log.event.toString() === Event.FINISH
     )
     .map(log => ({
       task_id: log.task_id,

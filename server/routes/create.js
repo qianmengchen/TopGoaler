@@ -4,10 +4,16 @@ const router = express.Router()
 const pool = require('../data/config');
 
 
-// post for activity_log
-// primary key is task_id, user_id, create_time,
-// note: create_time is auto generated, so only need two arguments: task_id, user_id
-// curl -d "task_id=1&user_id=2" http://localhost:8001/activity_log
+/**
+ * Create an entry for table activity_log 
+ * @function
+ * @param {string} task_id - The id of the task.
+ * @param {string} user_id - The id of the user.
+ * @example
+ * // returns 1
+ * curl -d "task_id=1&user_id=2" http://localhost:8001/activity_log
+ * @returns {Integer} Returns the insert id of the entry.
+ */ 
 router.post('/activity_log', (request, response) => {
     try {
         pool.query('INSERT INTO activity_log SET ?', request.body, (error, result) => { 
@@ -19,11 +25,16 @@ router.post('/activity_log', (request, response) => {
     
 });
 
-
-// post for channel
-// arguments are:title, creator, subtitle, image_url
-// primary key is id, title is a must , other arguments are optional
-// curl -d "title=2&creator=1" http://localhost:8001/channel
+/**
+ * Create an entry for table channel 
+ * @function
+ * @param {string} title - The title of the channel.
+ * @param {string} creator - The creator of the channel.
+ * @example
+ * // returns 1
+ * curl -d "title=2&creator=1" http://localhost:8001/channel
+ * @returns {Integer} Returns the insert id of the entry.
+ */ 
 router.post('/channel', (request, response) => {
     try {
         pool.query('INSERT INTO channel SET ?', request.body, (error, result) => {
@@ -34,10 +45,16 @@ router.post('/channel', (request, response) => {
     }
 });
 
-// post for proposal
-// arguments are:title, channel_id, subtitle, period, pattern
-// primary key is id, must have: title, channel_id, other arguments are optional
-// curl -d "title=2&channel_id=1" http://localhost:8001/proposal
+/**
+ * Create an entry for table proposal 
+ * @function
+ * @param {string} title - The title of the proposal.
+ * @param {string} channel_id - The channel where proposal at.
+ * @example
+ * // returns 1
+ * curl -d "title=2&channel_id=1" http://localhost:8001/proposal
+ * @returns {Integer} Returns the insert id of the entry.
+ */ 
 router.post('/proposal', (request, response) => {
     try {
         pool.query('INSERT INTO proposal SET ?', request.body, (error, result) => {
@@ -49,11 +66,16 @@ router.post('/proposal', (request, response) => {
     
 });
 
-
-// post for task
-// arguments are:title, channel_id, subtitle, period, pattern, point
-// primary key is id, must have: title, channel_id, other arguments are optional
-// curl -d "channel_id=1&title=bxzhu_task" http://localhost:8001/task
+/**
+ * Create an entry for table task 
+ * @function
+ * @param {string} title - The title of the task.
+ * @param {string} channel_id - The channel where task at. 
+ * @example
+ * // returns 1
+ * curl -d "channel_id=1&title=bxzhu_task" http://localhost:8001/task
+ * @returns {Integer} Returns the insert id of the entry.
+ */   
 router.post('/task', (request, response) => {
     try {
         pool.query('INSERT INTO task SET ?', request.body, (error, result) => {
@@ -65,10 +87,17 @@ router.post('/task', (request, response) => {
 
 });
 
-// post for user
-// arguments are:name, password, email, avatar_url, description
-// primary key is id, must have: name, password, other arguments are optional
-// curl -d "name=bzhu&password=bzhu" http://localhost:8001/user
+
+/**
+ * Create an entry for table user 
+ * @function
+ * @param {string} name - The name of the user.
+ * @param {string} password - The password of the account. 
+ * @example
+ * // returns 1
+ * curl -d "name=bzhu&password=bzhu" http://localhost:8001/user
+ * @returns {Integer} Returns the insert id of the entry.
+ */   
 router.post('/user', (request, response) => {
     try {
         pool.query('INSERT INTO user SET ?', request.body, (error, result) => {
@@ -82,10 +111,16 @@ router.post('/user', (request, response) => {
 
 
 
-// post for user_channel
-// arguments are:user_id, channel_id
-// must have: user_id, channel_id
-// curl -d "user_id=1&channel_id=1" http://localhost:8001/user_channel
+/**
+ * Create an entry for table user_channel 
+ * @function
+ * @param {string} user_id - The user_id of the user.
+ * @param {string} channel_id - The channel_id of the channel. 
+ * @example
+ * // returns 1
+ * curl -d "user_id=1&channel_id=1" http://localhost:8001/user_channel
+ * @returns {Integer} Returns the insert id of the entry.
+ */    
 router.post('/user_channel', (request, response) => {
     try {
         pool.query('INSERT INTO user_channel SET ?', request.body, (error, result) => {
@@ -97,10 +132,17 @@ router.post('/user_channel', (request, response) => {
     
 });
  
-// post for user_task
-// arguments are:user_id, task_id
-// must have: user_id, task_id
-// curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
+
+/**
+ * Create an entry for table user_channel 
+ * @function
+ * @param {string} user_id - The user_id of the user.
+ * @param {string} task_id - The task_id of the task. 
+ * @example
+ * // returns 1
+ * curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
+ * @returns {Integer} Returns the insert id of the entry.
+ */     
 router.post('/user_task', (request, response) => {
     try {
         pool.query('INSERT INTO user_task SET ?', request.body, (error, result) => {
@@ -111,11 +153,17 @@ router.post('/user_task', (request, response) => {
     }
 });
 
-// post for vote
-// arguments are:proposal_id, user_id, score
-// must have: user_id, proposal_id
-// curl -d "user_id=1&proposal_id=1&score=1 http://localhost:8001/vote
-// return 1 means this proposal is able to change to a task, return 0 means not yet
+/**
+ * Create an entry for table vote 
+ * @function
+ * @param {string} user_id - The user_id of the user.
+ * @param {string} proposal_id - The proposal_id of the voting proposal. 
+ * @param {Integer} proposal_id - The score of the proposal that user voted. 
+ * @example
+ * // returns 1
+ * curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
+ * @returns {Integer} Returns the result that if the proposal if able to transform to a task. 1 means able to. 0 means not yet.
+ */      
 router.post('/vote', (request, response) => {
     try {
         const proposal_id = request.body.proposal_id;  
@@ -130,8 +178,7 @@ router.post('/vote', (request, response) => {
             });
     } catch (error) {
         response.status(401).send(`error create: ${error}`); 
-    }
- 
+    } 
 });
 
 module.exports = router;

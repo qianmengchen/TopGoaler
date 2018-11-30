@@ -24,10 +24,17 @@ class TaskListPage extends Component {
         />
         <TaskDetail
           title="Leetcode Daily x2"
-          subtitle="Do two problem from LeetCode everyday"
+          subtitle="Do two problems from LeetCode everyday"
           period="Daily"
           pattern="Twice"
-          points="200"
+          points="300"
+        />
+        <TaskDetail
+          title="Solve 100 Problems"
+          subtitle="Solve 100 Problems from LeetCode"
+          period="Monthly"
+          pattern="Once"
+          points="350"
         />
       </ScrollView>
     );

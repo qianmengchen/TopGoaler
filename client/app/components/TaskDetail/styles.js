@@ -19,7 +19,7 @@ const frequency = StyleSheet.create({
   }
 });
 
-const vote = StyleSheet.create({
+const status = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -37,4 +37,4 @@ const vote = StyleSheet.create({
   }
 });
 
-export { list, frequency, vote };
+export { list, frequency, status };

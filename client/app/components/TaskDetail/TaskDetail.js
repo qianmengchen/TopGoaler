@@ -34,7 +34,7 @@ class TaskDetail extends Component {
     if (this.state.status == 'available') {
       button = (
         <TouchableHighlight
-          style={[status.container, { backgroundColor: 'blue' }]}
+          style={[status.container, status.accept]}
           underlayColor="#aaa"
           onPress={this._accept.bind(this)}
         >
@@ -43,22 +43,16 @@ class TaskDetail extends Component {
       );
     } else {
       button = (
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
+        <View style={status.multipleBtns}>
           <TouchableHighlight
-            style={[
-              status.container,
-              { backgroundColor: 'red', paddingHorizontal: 15 }
-            ]}
+            style={[status.container, status.unfollow]}
             underlayColor="#aaa"
             onPress={this._unfollow.bind(this)}
           >
             <Text style={status.buttonText}>Unfollow</Text>
           </TouchableHighlight>
           <TouchableHighlight
-            style={[
-              status.container,
-              { backgroundColor: 'yellowgreen', paddingHorizontal: 15 }
-            ]}
+            style={[status.container, status.done]}
             underlayColor="#aaa"
             onPress={this._done.bind(this)}
           >

@@ -24,10 +24,24 @@ const status = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
     borderRadius: 5,
     marginTop: 10,
     marginHorizontal: 80
+  },
+  accept: {
+    backgroundColor: 'blue'
+  },
+  done: {
+    backgroundColor: 'red',
+    paddingHorizontal: 15
+  },
+  unfollow: {
+    backgroundColor: 'yellowgreen',
+    paddingHorizontal: 15
+  },
+  multipleBtns: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
   },
   buttonText: {
     color: '#fff',

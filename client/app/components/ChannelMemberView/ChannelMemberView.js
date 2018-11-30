@@ -47,7 +47,7 @@ class ChannelMemberView extends Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._loadRankingScore().then(res => {
       this.setState({ ...res });
     });
@@ -156,16 +156,17 @@ class ChannelMemberView extends Component {
         />
 
         <ScrollView>
-          {activities.map(activity => (
+          {activities.map((activity, idx) => (
             <Feed
               name={nameToInitialMap(users[activity.user_id].name)}
               taskTitle={tasks[activity.task_id].title}
               comment={eventToComment(activity.event)}
-              timestamp={timestampToDescription(activity.timestamp)}
+              timestamp={timestampToDescription(activity.create_time)}
               point={eventPointToResult(
                 activity.event,
                 tasks[activity.task_id].point
               )}
+              key={activity.create_time + idx.toString()}
             />
           ))}
         </ScrollView>

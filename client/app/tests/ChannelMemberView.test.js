@@ -17,13 +17,24 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
+const channel = {
+  title: ''
+};
+
 describe('Testing Channel Memberview Page', () => {
   const navigation = { navigate: jest.fn() };
   const nav = sinon.spy(ChannelMemberView.prototype, '_goToHomepage');
 
-  const wrapper = shallow(<ChannelMemberView navigation={navigation} />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const wrapper = shallow(
+    <ChannelMemberView
+      navigation={navigation}
+      channel={channel}
+      activities={[]}
+    />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {

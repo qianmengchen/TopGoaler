@@ -26,7 +26,9 @@ ShallowWrapper {
             "justifyContent": "center",
           }
         }
-      />
+      >
+        
+      </Text>
       <Themed.Avatar
         containerStyle={
           Object {
@@ -101,7 +103,7 @@ ShallowWrapper {
               ]
             }
           >
-            Top 10%
+            0
           </Text>
         </Component>
         <Component
@@ -123,7 +125,7 @@ ShallowWrapper {
               }
             }
           >
-            Rating
+            Score
           </Text>
           <Text
             accessible={true}
@@ -143,7 +145,7 @@ ShallowWrapper {
               ]
             }
           >
-            1830
+            0
           </Text>
         </Component>
       </Themed.Card>
@@ -424,43 +426,7 @@ ShallowWrapper {
         }
       }
     />
-    <ScrollViewMock>
-      <Connect(Feed)
-        comment="solved problem 251!"
-        name="QM"
-        points="+30"
-        taskTitle="LeetCode Daily"
-        timestamp="3 hours ago"
-      />
-      <Connect(Feed)
-        comment="yay makin progress"
-        name="BB"
-        points="+60"
-        taskTitle="LeetCode Daily 2x"
-        timestamp="5 hours ago"
-      />
-      <Connect(Feed)
-        comment=""
-        name="SY"
-        points="+100"
-        taskTitle="Learn Data Struct"
-        timestamp="8 hours ago"
-      />
-      <Connect(Feed)
-        comment="wow this group is so fun"
-        name="BZ"
-        points="+30"
-        taskTitle="Solve 100 Problems"
-        timestamp="1 day ago"
-      />
-      <Connect(Feed)
-        comment="xxx xxxx xxxxx"
-        name="JS"
-        points="+30"
-        taskTitle="LeetCode Daily"
-        timestamp="2 days ago"
-      />
-    </ScrollViewMock>
+    <ScrollViewMock />
   </Component>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -498,7 +464,9 @@ ShallowWrapper {
                 "justifyContent": "center",
               }
             }
-          />
+          >
+            
+          </Text>
           <Themed.Avatar
             containerStyle={
               Object {
@@ -573,7 +541,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                Top 10%
+                0
               </Text>
             </Component>
             <Component
@@ -595,7 +563,7 @@ ShallowWrapper {
                   }
                 }
               >
-                Rating
+                Score
               </Text>
               <Text
                 accessible={true}
@@ -615,7 +583,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                1830
+                0
               </Text>
             </Component>
           </Themed.Card>
@@ -896,43 +864,7 @@ ShallowWrapper {
             }
           }
         />,
-        <ScrollViewMock>
-          <Connect(Feed)
-            comment="solved problem 251!"
-            name="QM"
-            points="+30"
-            taskTitle="LeetCode Daily"
-            timestamp="3 hours ago"
-          />
-          <Connect(Feed)
-            comment="yay makin progress"
-            name="BB"
-            points="+60"
-            taskTitle="LeetCode Daily 2x"
-            timestamp="5 hours ago"
-          />
-          <Connect(Feed)
-            comment=""
-            name="SY"
-            points="+100"
-            taskTitle="Learn Data Struct"
-            timestamp="8 hours ago"
-          />
-          <Connect(Feed)
-            comment="wow this group is so fun"
-            name="BZ"
-            points="+30"
-            taskTitle="Solve 100 Problems"
-            timestamp="1 day ago"
-          />
-          <Connect(Feed)
-            comment="xxx xxxx xxxxx"
-            name="JS"
-            points="+30"
-            taskTitle="LeetCode Daily"
-            timestamp="2 days ago"
-          />
-        </ScrollViewMock>,
+        <ScrollViewMock />,
       ],
     },
     "ref": null,
@@ -955,7 +887,9 @@ ShallowWrapper {
                   "justifyContent": "center",
                 }
               }
-            />,
+            >
+              
+            </Text>,
             <Themed.Avatar
               containerStyle={
                 Object {
@@ -987,7 +921,7 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": undefined,
+              "children": "",
               "ellipsizeMode": "tail",
               "style": Object {
                 "alignItems": "center",
@@ -997,7 +931,7 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "",
             "type": [Function],
           },
           Object {
@@ -1078,7 +1012,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  Top 10%
+                  0
                 </Text>
               </Component>
               <Component
@@ -1100,7 +1034,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Rating
+                  Score
                 </Text>
                 <Text
                   accessible={true}
@@ -1120,7 +1054,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  1830
+                  0
                 </Text>
               </Component>
             </Themed.Card>,
@@ -1409,7 +1343,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    Top 10%
+                    0
                   </Text>
                 </Component>,
                 <Component
@@ -1431,7 +1365,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Rating
+                    Score
                   </Text>
                   <Text
                     accessible={true}
@@ -1451,7 +1385,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    1830
+                    0
                   </Text>
                 </Component>,
               ],
@@ -1504,7 +1438,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      Top 10%
+                      0
                     </Text>,
                   ],
                   "style": Object {
@@ -1539,7 +1473,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "Top 10%",
+                      "children": 0,
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1554,7 +1488,7 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": "Top 10%",
+                    "rendered": 0,
                     "type": [Function],
                   },
                 ],
@@ -1578,7 +1512,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Rating
+                      Score
                     </Text>,
                     <Text
                       accessible={true}
@@ -1598,7 +1532,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      1830
+                      0
                     </Text>,
                   ],
                   "style": Object {
@@ -1614,7 +1548,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "Rating",
+                      "children": "Score",
                       "ellipsizeMode": "tail",
                       "style": Object {
                         "color": "white",
@@ -1623,7 +1557,7 @@ ShallowWrapper {
                       },
                     },
                     "ref": null,
-                    "rendered": "Rating",
+                    "rendered": "Score",
                     "type": [Function],
                   },
                   Object {
@@ -1633,7 +1567,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "1830",
+                      "children": 0,
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1648,7 +1582,7 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": "1830",
+                    "rendered": 0,
                     "type": [Function],
                   },
                 ],
@@ -2515,122 +2449,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <Connect(Feed)
-              comment="solved problem 251!"
-              name="QM"
-              points="+30"
-              taskTitle="LeetCode Daily"
-              timestamp="3 hours ago"
-            />,
-            <Connect(Feed)
-              comment="yay makin progress"
-              name="BB"
-              points="+60"
-              taskTitle="LeetCode Daily 2x"
-              timestamp="5 hours ago"
-            />,
-            <Connect(Feed)
-              comment=""
-              name="SY"
-              points="+100"
-              taskTitle="Learn Data Struct"
-              timestamp="8 hours ago"
-            />,
-            <Connect(Feed)
-              comment="wow this group is so fun"
-              name="BZ"
-              points="+30"
-              taskTitle="Solve 100 Problems"
-              timestamp="1 day ago"
-            />,
-            <Connect(Feed)
-              comment="xxx xxxx xxxxx"
-              name="JS"
-              points="+30"
-              taskTitle="LeetCode Daily"
-              timestamp="2 days ago"
-            />,
-          ],
+          "children": Array [],
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "comment": "solved problem 251!",
-              "name": "QM",
-              "points": "+30",
-              "taskTitle": "LeetCode Daily",
-              "timestamp": "3 hours ago",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "comment": "yay makin progress",
-              "name": "BB",
-              "points": "+60",
-              "taskTitle": "LeetCode Daily 2x",
-              "timestamp": "5 hours ago",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "comment": "",
-              "name": "SY",
-              "points": "+100",
-              "taskTitle": "Learn Data Struct",
-              "timestamp": "8 hours ago",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "comment": "wow this group is so fun",
-              "name": "BZ",
-              "points": "+30",
-              "taskTitle": "Solve 100 Problems",
-              "timestamp": "1 day ago",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "comment": "xxx xxxx xxxxx",
-              "name": "JS",
-              "points": "+30",
-              "taskTitle": "LeetCode Daily",
-              "timestamp": "2 days ago",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
+        "rendered": Array [],
         "type": [MockFunction],
       },
     ],
@@ -2665,7 +2487,9 @@ ShallowWrapper {
                   "justifyContent": "center",
                 }
               }
-            />
+            >
+              
+            </Text>
             <Themed.Avatar
               containerStyle={
                 Object {
@@ -2740,7 +2564,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  Top 10%
+                  0
                 </Text>
               </Component>
               <Component
@@ -2762,7 +2586,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Rating
+                  Score
                 </Text>
                 <Text
                   accessible={true}
@@ -2782,7 +2606,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  1830
+                  0
                 </Text>
               </Component>
             </Themed.Card>
@@ -3063,43 +2887,7 @@ ShallowWrapper {
               }
             }
           />,
-          <ScrollViewMock>
-            <Connect(Feed)
-              comment="solved problem 251!"
-              name="QM"
-              points="+30"
-              taskTitle="LeetCode Daily"
-              timestamp="3 hours ago"
-            />
-            <Connect(Feed)
-              comment="yay makin progress"
-              name="BB"
-              points="+60"
-              taskTitle="LeetCode Daily 2x"
-              timestamp="5 hours ago"
-            />
-            <Connect(Feed)
-              comment=""
-              name="SY"
-              points="+100"
-              taskTitle="Learn Data Struct"
-              timestamp="8 hours ago"
-            />
-            <Connect(Feed)
-              comment="wow this group is so fun"
-              name="BZ"
-              points="+30"
-              taskTitle="Solve 100 Problems"
-              timestamp="1 day ago"
-            />
-            <Connect(Feed)
-              comment="xxx xxxx xxxxx"
-              name="JS"
-              points="+30"
-              taskTitle="LeetCode Daily"
-              timestamp="2 days ago"
-            />
-          </ScrollViewMock>,
+          <ScrollViewMock />,
         ],
       },
       "ref": null,
@@ -3122,7 +2910,9 @@ ShallowWrapper {
                     "justifyContent": "center",
                   }
                 }
-              />,
+              >
+                
+              </Text>,
               <Themed.Avatar
                 containerStyle={
                   Object {
@@ -3154,7 +2944,7 @@ ShallowWrapper {
               "props": Object {
                 "accessible": true,
                 "allowFontScaling": true,
-                "children": undefined,
+                "children": "",
                 "ellipsizeMode": "tail",
                 "style": Object {
                   "alignItems": "center",
@@ -3164,7 +2954,7 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "",
               "type": [Function],
             },
             Object {
@@ -3245,7 +3035,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    Top 10%
+                    0
                   </Text>
                 </Component>
                 <Component
@@ -3267,7 +3057,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Rating
+                    Score
                   </Text>
                   <Text
                     accessible={true}
@@ -3287,7 +3077,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    1830
+                    0
                   </Text>
                 </Component>
               </Themed.Card>,
@@ -3576,7 +3366,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      Top 10%
+                      0
                     </Text>
                   </Component>,
                   <Component
@@ -3598,7 +3388,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Rating
+                      Score
                     </Text>
                     <Text
                       accessible={true}
@@ -3618,7 +3408,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      1830
+                      0
                     </Text>
                   </Component>,
                 ],
@@ -3671,7 +3461,7 @@ ShallowWrapper {
                           ]
                         }
                       >
-                        Top 10%
+                        0
                       </Text>,
                     ],
                     "style": Object {
@@ -3706,7 +3496,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "Top 10%",
+                        "children": 0,
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -3721,7 +3511,7 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": "Top 10%",
+                      "rendered": 0,
                       "type": [Function],
                     },
                   ],
@@ -3745,7 +3535,7 @@ ShallowWrapper {
                           }
                         }
                       >
-                        Rating
+                        Score
                       </Text>,
                       <Text
                         accessible={true}
@@ -3765,7 +3555,7 @@ ShallowWrapper {
                           ]
                         }
                       >
-                        1830
+                        0
                       </Text>,
                     ],
                     "style": Object {
@@ -3781,7 +3571,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "Rating",
+                        "children": "Score",
                         "ellipsizeMode": "tail",
                         "style": Object {
                           "color": "white",
@@ -3790,7 +3580,7 @@ ShallowWrapper {
                         },
                       },
                       "ref": null,
-                      "rendered": "Rating",
+                      "rendered": "Score",
                       "type": [Function],
                     },
                     Object {
@@ -3800,7 +3590,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "1830",
+                        "children": 0,
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -3815,7 +3605,7 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": "1830",
+                      "rendered": 0,
                       "type": [Function],
                     },
                   ],
@@ -4682,122 +4472,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <Connect(Feed)
-                comment="solved problem 251!"
-                name="QM"
-                points="+30"
-                taskTitle="LeetCode Daily"
-                timestamp="3 hours ago"
-              />,
-              <Connect(Feed)
-                comment="yay makin progress"
-                name="BB"
-                points="+60"
-                taskTitle="LeetCode Daily 2x"
-                timestamp="5 hours ago"
-              />,
-              <Connect(Feed)
-                comment=""
-                name="SY"
-                points="+100"
-                taskTitle="Learn Data Struct"
-                timestamp="8 hours ago"
-              />,
-              <Connect(Feed)
-                comment="wow this group is so fun"
-                name="BZ"
-                points="+30"
-                taskTitle="Solve 100 Problems"
-                timestamp="1 day ago"
-              />,
-              <Connect(Feed)
-                comment="xxx xxxx xxxxx"
-                name="JS"
-                points="+30"
-                taskTitle="LeetCode Daily"
-                timestamp="2 days ago"
-              />,
-            ],
+            "children": Array [],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "comment": "solved problem 251!",
-                "name": "QM",
-                "points": "+30",
-                "taskTitle": "LeetCode Daily",
-                "timestamp": "3 hours ago",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "comment": "yay makin progress",
-                "name": "BB",
-                "points": "+60",
-                "taskTitle": "LeetCode Daily 2x",
-                "timestamp": "5 hours ago",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "comment": "",
-                "name": "SY",
-                "points": "+100",
-                "taskTitle": "Learn Data Struct",
-                "timestamp": "8 hours ago",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "comment": "wow this group is so fun",
-                "name": "BZ",
-                "points": "+30",
-                "taskTitle": "Solve 100 Problems",
-                "timestamp": "1 day ago",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "comment": "xxx xxxx xxxxx",
-                "name": "JS",
-                "points": "+30",
-                "taskTitle": "LeetCode Daily",
-                "timestamp": "2 days ago",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
+          "rendered": Array [],
           "type": [MockFunction],
         },
       ],

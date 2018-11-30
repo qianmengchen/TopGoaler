@@ -32,11 +32,11 @@ const status = StyleSheet.create({
     backgroundColor: 'blue'
   },
   done: {
-    backgroundColor: 'red',
+    backgroundColor: 'yellowgreen',
     paddingHorizontal: 15
   },
   unfollow: {
-    backgroundColor: 'yellowgreen',
+    backgroundColor: 'red',
     paddingHorizontal: 15
   },
   multipleBtns: {

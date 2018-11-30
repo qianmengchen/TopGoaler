@@ -16,7 +16,7 @@ class NewTaskPage extends Component {
   _errorCheck = () => false;
 
   _submit() {
-    this.props.navigation.navigate('ChannelListPage');
+    this.props.navigation.navigate('ChannelMemberView');
     console.log('Should go back to task list and update database');
   }
 

@@ -47,13 +47,12 @@ class PerformancePage extends Component {
             width={Dimensions.get('window').width - 40}
             height={300}
             chartConfig={{
-              //backgroundColor: '#555',
-              backgroundGradientFrom: 'grey',
-              backgroundGradientTo: '#555',
+              backgroundGradientFrom: '#fb8c00',
+              backgroundGradientTo: '#ffa726',
               decimalPlaces: 0,
               color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`
             }}
-            //bezier
+            bezier
             style={{
               marginVertical: 8,
               borderRadius: 15

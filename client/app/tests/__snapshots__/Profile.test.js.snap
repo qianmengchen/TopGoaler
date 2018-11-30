@@ -116,6 +116,7 @@ ShallowWrapper {
                 "width": 160,
               }
             }
+            onPress={[Function]}
             title="My Summary"
           />
         </Component>
@@ -290,6 +291,7 @@ ShallowWrapper {
                     "width": 160,
                   }
                 }
+                onPress={[Function]}
                 title="My Summary"
               />
             </Component>
@@ -457,6 +459,7 @@ ShallowWrapper {
                       "width": 160,
                     }
                   }
+                  onPress={[Function]}
                   title="My Summary"
                 />
               </Component>
@@ -718,6 +721,7 @@ ShallowWrapper {
                         "width": 160,
                       }
                     }
+                    onPress={[Function]}
                     title="My Summary"
                   />
                 </Component>,
@@ -772,6 +776,7 @@ ShallowWrapper {
                         "width": 160,
                       }
                     }
+                    onPress={[Function]}
                     title="My Summary"
                   />,
                   "style": Object {
@@ -794,6 +799,7 @@ ShallowWrapper {
                       "borderWidth": 3,
                       "width": 160,
                     },
+                    "onPress": [Function],
                     "title": "My Summary",
                   },
                   "ref": null,
@@ -1034,6 +1040,7 @@ ShallowWrapper {
                       "width": 160,
                     }
                   }
+                  onPress={[Function]}
                   title="My Summary"
                 />
               </Component>
@@ -1201,6 +1208,7 @@ ShallowWrapper {
                         "width": 160,
                       }
                     }
+                    onPress={[Function]}
                     title="My Summary"
                   />
                 </Component>
@@ -1462,6 +1470,7 @@ ShallowWrapper {
                           "width": 160,
                         }
                       }
+                      onPress={[Function]}
                       title="My Summary"
                     />
                   </Component>,
@@ -1516,6 +1525,7 @@ ShallowWrapper {
                           "width": 160,
                         }
                       }
+                      onPress={[Function]}
                       title="My Summary"
                     />,
                     "style": Object {
@@ -1538,6 +1548,7 @@ ShallowWrapper {
                         "borderWidth": 3,
                         "width": 160,
                       },
+                      "onPress": [Function],
                       "title": "My Summary",
                     },
                     "ref": null,

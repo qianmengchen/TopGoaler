@@ -51,7 +51,7 @@ const text = StyleSheet.create({
     color: 'white'
   },
   stat: {
-    fontSize: 10,
+    fontSize: 14,
     color: 'white'
   }
 });
@@ -102,10 +102,9 @@ const rightPart = StyleSheet.create({
     paddingTop: 20
   },
   stats: {
-    marginTop: -40,
     flex: 0.7,
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     alignItems: 'center'
   }
 });

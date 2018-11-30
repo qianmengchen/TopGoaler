@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions } from 'react-native';
+import { Text, View, ScrollView, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { board, title, text, infoCard, leftPart, rightPart } from './styles';
 
@@ -30,12 +30,12 @@ class PerformancePage extends Component {
             <View style={rightPart.subtitle}>
               <Text style={title.sub}>Scores</Text>
             </View>
-            <View style={rightPart.stats}>
+            <ScrollView contentContainerStyle={rightPart.stats}>
               <Text style={text.stat}>#LeetCoders 1830 10%</Text>
               <Text style={text.stat}>#Bruinrunner 1300 5%</Text>
               <Text style={text.stat}>#Random1 30 70%</Text>
               <Text style={text.stat}>#Random2 460 45%</Text>
-            </View>
+            </ScrollView>
           </View>
         </View>
         <View style={board.chart}>

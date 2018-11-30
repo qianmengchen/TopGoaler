@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
+import {
+  Text,
+  View,
+  TouchableHighlight,
+  ScrollView,
+  Alert
+} from 'react-native';
 import { Card, Avatar, Divider } from 'react-native-elements';
 import { header, cardLeft, cardRight, vote } from './styles';
 import { Feed } from '../Feed/index';
+import { _get } from '../../actions';
+import {
+  nameToInitialMap,
+  timestampToDescription,
+  eventToComment,
+  eventPointToResult
+} from './utils';
 
 class ChannelMemberView extends Component {
   _goToHomepage() {
@@ -20,11 +33,41 @@ class ChannelMemberView extends Component {
     navigate('ProposalsPage');
   }
 
+  async _loadRankingScore() {
+    const { userId, channel } = this.props;
+    try {
+      const score = await (await _get(`/score/${userId}&${channel.id}`)).json();
+      const ranking = await (await _get(
+        `/ranking/${userId}&${channel.id}`
+      )).json();
+      return { ...score, ...ranking };
+    } catch (_) {
+      Alert('Retrive ranking info error');
+      return null;
+    }
+  }
+
+  UNSAFE_componentWillMount() {
+    this._loadRankingScore().then(res => {
+      this.setState({ ...res });
+    });
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      score: 0,
+      rank: 0
+    };
+  }
+
   render() {
+    const { channel, activities, users, tasks } = this.props;
+
     return (
       <View>
         <View style={header.container}>
-          <Text style={header.title}>{this.props.channelId}</Text>
+          <Text style={header.title}>{channel.title}</Text>
           <Avatar
             size={100}
             rounded
@@ -37,11 +80,15 @@ class ChannelMemberView extends Component {
           <Card containerStyle={cardLeft.container}>
             <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rank</Text>
-              <Text style={[cardLeft.stats, cardLeft.number]}>Top 10%</Text>
+              <Text style={[cardLeft.stats, cardLeft.number]}>
+                {this.state.rank}
+              </Text>
             </View>
             <View style={cardLeft.statsContainer}>
-              <Text style={cardLeft.stats}>Rating</Text>
-              <Text style={[cardLeft.stats, cardLeft.number]}>1830</Text>
+              <Text style={cardLeft.stats}>Score</Text>
+              <Text style={[cardLeft.stats, cardLeft.number]}>
+                {this.state.score}
+              </Text>
             </View>
           </Card>
 
@@ -109,41 +156,19 @@ class ChannelMemberView extends Component {
         />
 
         <ScrollView>
-          <Feed
-            name="QM"
-            taskTitle="LeetCode Daily"
-            comment="solved problem 251!"
-            timestamp="3 hours ago"
-            points="+30"
-          />
-          <Feed
-            name="BB"
-            taskTitle="LeetCode Daily 2x"
-            comment="yay makin progress"
-            timestamp="5 hours ago"
-            points="+60"
-          />
-          <Feed
-            name="SY"
-            taskTitle="Learn Data Struct"
-            comment=""
-            timestamp="8 hours ago"
-            points="+100"
-          />
-          <Feed
-            name="BZ"
-            taskTitle="Solve 100 Problems"
-            comment="wow this group is so fun"
-            timestamp="1 day ago"
-            points="+30"
-          />
-          <Feed
-            name="JS"
-            taskTitle="LeetCode Daily"
-            comment="xxx xxxx xxxxx"
-            timestamp="2 days ago"
-            points="+30"
-          />
+          {activities.map((activity, idx) => (
+            <Feed
+              name={nameToInitialMap(users[activity.user_id].name)}
+              taskTitle={tasks[activity.task_id].title}
+              comment={eventToComment(activity.event)}
+              timestamp={timestampToDescription(activity.create_time)}
+              point={eventPointToResult(
+                activity.event,
+                tasks[activity.task_id].point
+              )}
+              key={activity.create_time + idx.toString()}
+            />
+          ))}
         </ScrollView>
       </View>
     );

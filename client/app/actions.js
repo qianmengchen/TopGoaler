@@ -22,7 +22,7 @@ export function loginFailure(username) {
   return { type: LOGIN_FAILURE, username };
 }
 
-const _post = (url, body) =>
+export const _post = (url, body) =>
   fetch(serverAddr + url, {
     method: 'POST',
     mode: 'no-cors',
@@ -32,6 +32,8 @@ const _post = (url, body) =>
     },
     body: JSON.stringify(body)
   });
+
+export const _get = url => fetch(serverAddr + url);
 
 export function login(username, password) {
   return async dispatch => {

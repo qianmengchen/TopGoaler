@@ -72,6 +72,7 @@ routes.forEach( ([route, query]) => {
 
 router.get('/score/:user_id&:channel_id', async (req, res) => {
     let { user_id, channel_id } = req.params
+    console.log(user_id, channel_id);
     try {
         const result = await doQuery(
         ` SELECT SUM(point) as score
@@ -79,8 +80,10 @@ router.get('/score/:user_id&:channel_id', async (req, res) => {
           WHERE user_id = ? AND channel_id = ?`,
         [user_id, channel_id]
         )
+        console.log(result);
         res.json(result[0])
     } catch (e) {
+        console.log(e);
         res.status(401).send(`Error ${e}`)
     }
 })
@@ -146,7 +149,7 @@ router.get('/ranking/:user_id&:channel_id', async (req, res) => {
         `
           , [channel_id, user_id]
         )
-        res.json(result)
+        res.json(result[0])
     } catch (e) {
         res.status(401).send(`Error ${e}`)
     }

@@ -18,6 +18,11 @@ class Profile extends Component {
     this.props.logout();
   }
 
+  _goToPerformancePage() {
+    const { navigate } = this.props.navigation;
+    navigate('PerformancePage');
+  }
+
   _activityAggregateReducer(acc, obj) {
     const { userTasks } = this.props;
 
@@ -70,7 +75,11 @@ class Profile extends Component {
           </View>
           <View style={personalInfo.actions}>
             <View style={actions.summary}>
-              <Button title="My Summary" buttonStyle={buttons.summary} />
+              <Button
+                title="My Summary"
+                buttonStyle={buttons.summary}
+                onPress={this._goToPerformancePage.bind(this)}
+              />
             </View>
             <View style={actions.buttons}>
               <Button

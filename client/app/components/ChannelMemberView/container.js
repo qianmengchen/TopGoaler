@@ -1,8 +1,15 @@
 import { connect } from 'react-redux';
 import ChannelMemberView from './ChannelMemberView';
+import { channelActivityFilterWrap } from './utils';
 
-const mapStateToProps = (_, ownProps) => ({
-  channelId: ownProps.navigation.state.params.id
+const mapStateToProps = (state, ownProps) => ({
+  channel: state.channels[ownProps.navigation.state.params.id],
+  userId: state.auth.id,
+  activities: state.activity_log.filter(
+    channelActivityFilterWrap(ownProps.navigation.state.params.id, state.tasks)
+  ),
+  users: state.users,
+  tasks: state.tasks
 });
 
 export default connect(mapStateToProps)(ChannelMemberView);

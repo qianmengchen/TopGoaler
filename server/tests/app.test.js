@@ -19,7 +19,7 @@ const _query = params => {
 
 const username = 'admin_' + new Date().toISOString()
 const password = 'admin1'
-const channelID = 42
+const channelID = 1
 
 describe('User Login / Signup', () => {
     it('should create new user', (done) => {

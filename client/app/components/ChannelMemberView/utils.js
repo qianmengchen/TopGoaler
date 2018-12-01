@@ -6,7 +6,7 @@ export const channelActivityFilterWrap = (channel_id, tasks) => activity_log =>
 export const nameToInitialMap = name =>
   name
     .split(' ')
-    .map(word => word[0])
+    .map(word => word[0].toUpperCase())
     .join('');
 
 //note: this 'timestamp' should be ISO format time

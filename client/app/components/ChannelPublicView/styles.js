@@ -9,7 +9,7 @@ const header = StyleSheet.create({
   title: {
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: 40,
+    fontSize: 30,
     paddingTop: 20,
     paddingRight: 30,
     fontWeight: 'bold'

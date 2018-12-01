@@ -23,8 +23,47 @@ describe('Testing Channel List Page', () => {
   const mockNav = { dispatch: jest.fn() };
   const nav = sinon.spy(ChannelPublicView.prototype, '_goToMemberPage');
 
+  const mockChannel = {
+    id: 42,
+    title: 'bxzhu_channel',
+    creator: 1,
+    subtitle: 'bxzhu',
+    image_url: 'http://shortlink.in/themes/v3/styles/img/url-link.png'
+  };
+  const mockUserChannel = [
+    {
+      user_id: 1,
+      channel_id: 1
+    }
+  ];
+  const mockTask = [
+    {
+      channel_id: 1
+    }
+  ];
+  const mockChannelActivities = [
+    {
+      create_time: '2018-11-27T14:19:14.000Z',
+      task_id: 1,
+      user_id: 1,
+      event: 2
+    }
+  ];
+  const mockSubscribed_users = [
+    {
+      user_id: 1
+    }
+  ];
   const wrapper = shallow(
-    <ChannelPublicView navigation={mockNav} subscribe={mockSubscribe} />,
+    <ChannelPublicView
+      channel={mockChannel}
+      user_channel={mockUserChannel}
+      task={mockTask}
+      navigation={mockNav}
+      subscribe={mockSubscribe}
+      channelActivities={mockChannelActivities}
+      subscribed_users={mockSubscribed_users}
+    />,
     {
       context: { store: mockStore(initialTaskState) }
     }

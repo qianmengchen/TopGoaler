@@ -67,7 +67,7 @@ class ChannelOverview extends Component {
           <View style={contents.desc}>
             <Text
               style={desc.numbers}
-            >{`${this._number_of_users()} users, 0 tasks`}</Text>
+            >{`${this._number_of_users()} users, ${this._number_of_tasks()} tasks`}</Text>
             {button}
           </View>
         </View>

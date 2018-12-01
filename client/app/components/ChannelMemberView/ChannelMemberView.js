@@ -63,9 +63,7 @@ class ChannelMemberView extends Component {
       this.setState({ ...res });
     });
     this._loadTasks().then(res => {
-      console.log(res);
-      // this.setState({ tasks: res });
-      this.setState({ tasks: { ...res } });
+      this.setState({ tasks: res });
     });
   }
 

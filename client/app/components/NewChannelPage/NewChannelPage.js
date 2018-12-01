@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
+import { constructChannel } from '../../constructors';
 
 class NewChannelPage extends Component {
   _updateName(text) {
@@ -12,10 +13,17 @@ class NewChannelPage extends Component {
     this.setState({ description: text });
   }
 
+  _updateImageUrl(text) {
+    this.setState({ image_url: text });
+  }
+
   _errorCheck = () => false;
 
   _submit() {
-    this.props.addChannel(this.state.name, this.props.username);
+    const { name, description, image_url } = this.state;
+    const { userId } = this.props;
+    const channel = constructChannel(name, description, userId, image_url);
+    this.props.addChannel(channel, this.props.userId);
     this.props.navigation.navigate('ChannelListPage');
   }
 
@@ -23,7 +31,8 @@ class NewChannelPage extends Component {
     super(props);
     this.state = {
       name: '',
-      description: ''
+      description: '',
+      image_url: 'http://shortlink.in/themes/v3/styles/img/url-link.png'
     };
   }
 
@@ -52,12 +61,25 @@ class NewChannelPage extends Component {
           errorStyle={{ color: 'red' }}
           errorMessage={
             this._errorCheck(this.state.description)
-              ? 'Please enter a valid channel name'
+              ? 'Please enter a valid channel description'
               : null
           }
           containerStyle={board.input}
           value={this.state.description}
           onChangeText={this._updateDescription.bind(this)}
+        />
+        <Input
+          label="Image"
+          labelStyle={text.label}
+          errorStyle={{ color: 'red' }}
+          errorMessage={
+            this._errorCheck(this.state.image_url)
+              ? 'Please enter a valid url'
+              : null
+          }
+          containerStyle={board.input}
+          value={this.state.image_url}
+          onChangeText={this._updateImageUrl.bind(this)}
         />
         <View style={board.button}>
           <Button

@@ -34,11 +34,12 @@ router.post('/activity_log', async (request, response) => {
  * @returns {Integer} Returns the insert id of the entry.
  */ 
 router.post('/channel', async (request, response) => {
+    console.log(request.body);
     try {
         const result = await doQuery('INSERT INTO channel SET ?', request.body);
-        response.status(201).send(`channel added with channel: ${result.insertId}`);
+        response.status(201).json({id: result.insertId});
     } catch (error) {
-        response.status(401).send(`error create: ${error}`);   
+        response.status(401).json({error});   
     }
 });
 

@@ -3,11 +3,12 @@ import NewChannelPage from './NewChannelPage';
 import { createChannelAsUser } from '../../actions';
 
 const mapStateToProps = state => ({
-  username: state.auth.username
+  userId: state.auth.id
 });
 
 const mapDispatchToProps = dispatch => ({
-  addChannel: (channel, user) => dispatch(createChannelAsUser(channel, user))
+  addChannel: (channel, user_id) =>
+    dispatch(createChannelAsUser(channel, user_id))
 });
 
 export default connect(

@@ -43,7 +43,7 @@ describe('Testing New Channel Page', () => {
   });
 
   it('should have 2 Input fields for name and description', () => {
-    expect(render.find(Input)).toHaveLength(2);
+    expect(render.find(Input)).toHaveLength(3);
   });
 
   it('should invoke corresponding methods when create channel button is pressed', () => {

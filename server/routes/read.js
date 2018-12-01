@@ -84,7 +84,7 @@ router.get('/score/:user_id&:channel_id', async (req, res) => {
         res.json(result[0])
     } catch (e) {
         console.log(e);
-        res.status(401).send(`Error ${e}`)
+        res.status(401).json({error: e});
     }
 })
 
@@ -107,7 +107,7 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
         )
         res.json(result)
     } catch (e) {
-        res.status(401).send(`Error ${e}`)
+        res.status(401).json({error: e});
     }
 })
 
@@ -135,7 +135,7 @@ router.get('/ranking/:user_id&:channel_id', async (req, res) => {
         )
         res.json(result[0])
     } catch (e) {
-        res.status(401).send(`Error ${e}`)
+        res.status(401).json({error: e});
     }
 })
 

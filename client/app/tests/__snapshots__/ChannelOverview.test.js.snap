@@ -79,12 +79,10 @@ ShallowWrapper {
         >
           0 users, 0 tasks
         </Themed.Text>
-        <TouchableWithoutFeedback
-          onPress={[Function]}
-        >
+        <TouchableWithoutFeedback>
           <Themed.Icon
             color="black"
-            name="add"
+            name="check"
             size={30}
             style={
               Object {
@@ -192,12 +190,10 @@ ShallowWrapper {
             >
               0 users, 0 tasks
             </Themed.Text>
-            <TouchableWithoutFeedback
-              onPress={[Function]}
-            >
+            <TouchableWithoutFeedback>
               <Themed.Icon
                 color="black"
-                name="add"
+                name="check"
                 size={30}
                 style={
                   Object {
@@ -306,12 +302,10 @@ ShallowWrapper {
               >
                 0 users, 0 tasks
               </Themed.Text>
-              <TouchableWithoutFeedback
-                onPress={[Function]}
-              >
+              <TouchableWithoutFeedback>
                 <Themed.Icon
                   color="black"
-                  name="add"
+                  name="check"
                   size={30}
                   style={
                     Object {
@@ -385,12 +379,10 @@ ShallowWrapper {
                 >
                   0 users, 0 tasks
                 </Themed.Text>,
-                <TouchableWithoutFeedback
-                  onPress={[Function]}
-                >
+                <TouchableWithoutFeedback>
                   <Themed.Icon
                     color="black"
-                    name="add"
+                    name="check"
                     size={30}
                     style={
                       Object {
@@ -433,7 +425,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": <Themed.Icon
                     color="black"
-                    name="add"
+                    name="check"
                     size={30}
                     style={
                       Object {
@@ -443,7 +435,6 @@ ShallowWrapper {
                       }
                     }
                   />,
-                  "onPress": [Function],
                 },
                 "ref": null,
                 "rendered": Object {
@@ -452,7 +443,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "color": "black",
-                    "name": "add",
+                    "name": "check",
                     "size": 30,
                     "style": Object {
                       "alignItems": "center",
@@ -597,12 +588,10 @@ ShallowWrapper {
               >
                 0 users, 0 tasks
               </Themed.Text>
-              <TouchableWithoutFeedback
-                onPress={[Function]}
-              >
+              <TouchableWithoutFeedback>
                 <Themed.Icon
                   color="black"
-                  name="add"
+                  name="check"
                   size={30}
                   style={
                     Object {
@@ -711,12 +700,10 @@ ShallowWrapper {
                 >
                   0 users, 0 tasks
                 </Themed.Text>
-                <TouchableWithoutFeedback
-                  onPress={[Function]}
-                >
+                <TouchableWithoutFeedback>
                   <Themed.Icon
                     color="black"
-                    name="add"
+                    name="check"
                     size={30}
                     style={
                       Object {
@@ -790,12 +777,10 @@ ShallowWrapper {
                   >
                     0 users, 0 tasks
                   </Themed.Text>,
-                  <TouchableWithoutFeedback
-                    onPress={[Function]}
-                  >
+                  <TouchableWithoutFeedback>
                     <Themed.Icon
                       color="black"
-                      name="add"
+                      name="check"
                       size={30}
                       style={
                         Object {
@@ -838,7 +823,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": <Themed.Icon
                       color="black"
-                      name="add"
+                      name="check"
                       size={30}
                       style={
                         Object {
@@ -848,7 +833,6 @@ ShallowWrapper {
                         }
                       }
                     />,
-                    "onPress": [Function],
                   },
                   "ref": null,
                   "rendered": Object {
@@ -857,7 +841,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "color": "black",
-                      "name": "add",
+                      "name": "check",
                       "size": 30,
                       "style": Object {
                         "alignItems": "center",

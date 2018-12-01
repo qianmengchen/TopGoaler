@@ -39,6 +39,7 @@ describe('Testing Channel Overview Page', () => {
       subscribe={() => _subscribe()}
       user_channel={user_channel}
       task={task}
+      is_subscribed={true}
     />,
     {
       context: { store: mockStore(initialTaskState) }
@@ -66,5 +67,28 @@ describe('Testing Channel Overview Page', () => {
     const submitBtn = render.find('TouchableHighlight');
     submitBtn.simulate('press');
     expect(_goToChannel).toHaveBeenCalledTimes(1);
+  });
+
+  it('should invoke correct methods when pressing subscribe button', () => {
+    const wrapper = shallow(
+      <ChannelOverview
+        key={0}
+        channel={ch}
+        goToChannel={() => _goToChannel()}
+        subscribe={() => _subscribe()}
+        user_channel={user_channel}
+        task={task}
+        is_subscribed={false}
+      />,
+      {
+        context: { store: mockStore(initialTaskState) }
+      }
+    );
+    const render = wrapper.dive();
+
+    const subscribeBtn = render.find('TouchableWithoutFeedback');
+    subscribeBtn.simulate('press');
+    console.log(subscribeBtn.debug());
+    expect(_subscribe).toHaveBeenCalledTimes(1);
   });
 });

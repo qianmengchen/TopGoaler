@@ -49,8 +49,8 @@ describe('Testing Channel Memberview Page', () => {
     expect(render.find(Avatar)).toHaveLength(1);
   });
 
-  it('should have 16 Text: title, card info, more, add, and vote task button text', () => {
-    expect(render.find('Text')).toHaveLength(16);
+  it('should have 112 Text: title, card info, more, add, and vote task button text', () => {
+    expect(render.find('Text')).toHaveLength(12);
   });
   ``;
 

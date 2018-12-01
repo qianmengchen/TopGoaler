@@ -83,6 +83,30 @@ ShallowWrapper {
       onChangeText={[Function]}
       value=""
     />
+    <ForwardRef(Themed.Input)
+      containerStyle={
+        Object {
+          "marginBottom": 10,
+          "paddingLeft": 10,
+        }
+      }
+      errorMessage={null}
+      errorStyle={
+        Object {
+          "color": "red",
+        }
+      }
+      label="Image"
+      labelStyle={
+        Object {
+          "color": "grey",
+          "fontSize": 15,
+          "fontWeight": "300",
+        }
+      }
+      onChangeText={[Function]}
+      value="http://shortlink.in/themes/v3/styles/img/url-link.png"
+    />
     <Component
       style={
         Object {
@@ -191,6 +215,30 @@ ShallowWrapper {
           }
           onChangeText={[Function]}
           value=""
+        />,
+        <ForwardRef(Themed.Input)
+          containerStyle={
+            Object {
+              "marginBottom": 10,
+              "paddingLeft": 10,
+            }
+          }
+          errorMessage={null}
+          errorStyle={
+            Object {
+              "color": "red",
+            }
+          }
+          label="Image"
+          labelStyle={
+            Object {
+              "color": "grey",
+              "fontSize": 15,
+              "fontWeight": "300",
+            }
+          }
+          onChangeText={[Function]}
+          value="http://shortlink.in/themes/v3/styles/img/url-link.png"
         />,
         <Component
           style={
@@ -330,6 +378,35 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "containerStyle": Object {
+            "marginBottom": 10,
+            "paddingLeft": 10,
+          },
+          "errorMessage": null,
+          "errorStyle": Object {
+            "color": "red",
+          },
+          "label": "Image",
+          "labelStyle": Object {
+            "color": "grey",
+            "fontSize": 15,
+            "fontWeight": "300",
+          },
+          "onChangeText": [Function],
+          "value": "http://shortlink.in/themes/v3/styles/img/url-link.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "children": <ForwardRef(Themed.Button)
@@ -458,6 +535,30 @@ ShallowWrapper {
             onChangeText={[Function]}
             value=""
           />,
+          <ForwardRef(Themed.Input)
+            containerStyle={
+              Object {
+                "marginBottom": 10,
+                "paddingLeft": 10,
+              }
+            }
+            errorMessage={null}
+            errorStyle={
+              Object {
+                "color": "red",
+              }
+            }
+            label="Image"
+            labelStyle={
+              Object {
+                "color": "grey",
+                "fontSize": 15,
+                "fontWeight": "300",
+              }
+            }
+            onChangeText={[Function]}
+            value="http://shortlink.in/themes/v3/styles/img/url-link.png"
+          />,
           <Component
             style={
               Object {
@@ -585,6 +686,35 @@ ShallowWrapper {
             },
             "onChangeText": [Function],
             "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "containerStyle": Object {
+              "marginBottom": 10,
+              "paddingLeft": 10,
+            },
+            "errorMessage": null,
+            "errorStyle": Object {
+              "color": "red",
+            },
+            "label": "Image",
+            "labelStyle": Object {
+              "color": "grey",
+              "fontSize": 15,
+              "fontWeight": "300",
+            },
+            "onChangeText": [Function],
+            "value": "http://shortlink.in/themes/v3/styles/img/url-link.png",
           },
           "ref": null,
           "rendered": null,

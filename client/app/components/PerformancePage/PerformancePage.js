@@ -3,6 +3,8 @@ import { Text, View, ScrollView, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { board, title, text, infoCard, leftPart, rightPart } from './styles';
 import { periodDecoder } from '../../constants';
+import { _alert } from '../ChannelMemberView/utils';
+import { _get } from '../../actions';
 
 class PerformancePage extends Component {
   //utils
@@ -92,7 +94,39 @@ class PerformancePage extends Component {
     });
   };
 
+  async _loadScores() {
+    const { userId, subscribed_channels } = this.props;
+    console.log(userId);
+    const channel_point = {};
+    for (const { channel_id } of subscribed_channels.keys()) {
+      try {
+        const { score } = await (await _get(
+          `/score/${userId}&${channel_id}`
+        )).json();
+        channel_point[channel_id] = score;
+      } catch (e) {
+        console.log(e);
+        _alert('Retrieve score info error');
+      }
+    }
+    return { channel_point };
+  }
+
+  UNSAFE_componentWillMount() {
+    this._loadScores().then(res => {
+      this.setState({ ...res });
+    });
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      channel_point: {}
+    };
+  }
+
   render() {
+    console.log(this.state.channel_point);
     return (
       <View style={board.container}>
         <View style={board.title}>
@@ -120,10 +154,11 @@ class PerformancePage extends Component {
             </View>
             <ScrollView contentContainerStyle={rightPart.stats}>
               {Array.from(this.props.subscribed_channels.keys()).map(id => {
-                const channel_title = this.props.channels[
-                  id.channel_id.toString()
-                ].title;
-                const point = Math.ceil(Math.random() * 10) * 10;
+                const { channel_id } = id;
+                const channel_title = this.props.channels[channel_id.toString()]
+                  .title;
+                var point = this.state.channel_point[channel_id];
+                if (!point) point = 'N/A';
                 return (
                   <Text key={id.channel_id} style={text.stat}>
                     #{channel_title}: {point}

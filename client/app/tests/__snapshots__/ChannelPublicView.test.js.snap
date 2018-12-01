@@ -20,14 +20,16 @@ ShallowWrapper {
         style={
           Object {
             "alignItems": "center",
-            "fontSize": 40,
+            "fontSize": 30,
             "fontWeight": "bold",
             "justifyContent": "center",
             "paddingRight": 30,
             "paddingTop": 20,
           }
         }
-      />
+      >
+        bxzhu_channel
+      </Text>
       <Themed.Avatar
         containerStyle={
           Object {
@@ -38,7 +40,7 @@ ShallowWrapper {
         size={100}
         source={
           Object {
-            "testUri": "../../../app/images/leetcodeIcon.png",
+            "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
           }
         }
       />
@@ -65,8 +67,7 @@ ShallowWrapper {
           }
         }
       >
-        Learn yourself some 
-         with friends!
+        bxzhu
       </Text>
       <Component
         style={
@@ -101,7 +102,7 @@ ShallowWrapper {
               ]
             }
           >
-            8
+            0
           </Text>
           <Text
             accessible={true}
@@ -114,7 +115,7 @@ ShallowWrapper {
               }
             }
           >
-            Tasks
+            Users
           </Text>
         </Component>
         <Component
@@ -147,7 +148,7 @@ ShallowWrapper {
               ]
             }
           >
-            15
+            0
           </Text>
           <Text
             accessible={true}
@@ -160,7 +161,7 @@ ShallowWrapper {
               }
             }
           >
-            Members
+            Tasks
           </Text>
         </Component>
         <Component
@@ -188,7 +189,7 @@ ShallowWrapper {
               ]
             }
           >
-            148
+            1
           </Text>
           <Text
             accessible={true}
@@ -219,7 +220,13 @@ ShallowWrapper {
         </Component>
       </Component>
     </Themed.Card>
-    <Connect(MemberList) />
+    <Connect(MemberList)
+      user_ids={
+        Array [
+          1,
+        ]
+      }
+    />
     <TouchableHighlight
       activeOpacity={0.85}
       delayPressOut={100}
@@ -283,14 +290,16 @@ ShallowWrapper {
             style={
               Object {
                 "alignItems": "center",
-                "fontSize": 40,
+                "fontSize": 30,
                 "fontWeight": "bold",
                 "justifyContent": "center",
                 "paddingRight": 30,
                 "paddingTop": 20,
               }
             }
-          />
+          >
+            bxzhu_channel
+          </Text>
           <Themed.Avatar
             containerStyle={
               Object {
@@ -301,7 +310,7 @@ ShallowWrapper {
             size={100}
             source={
               Object {
-                "testUri": "../../../app/images/leetcodeIcon.png",
+                "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
               }
             }
           />
@@ -328,8 +337,7 @@ ShallowWrapper {
               }
             }
           >
-            Learn yourself some 
-             with friends!
+            bxzhu
           </Text>
           <Component
             style={
@@ -364,7 +372,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                8
+                0
               </Text>
               <Text
                 accessible={true}
@@ -377,7 +385,7 @@ ShallowWrapper {
                   }
                 }
               >
-                Tasks
+                Users
               </Text>
             </Component>
             <Component
@@ -410,7 +418,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                15
+                0
               </Text>
               <Text
                 accessible={true}
@@ -423,7 +431,7 @@ ShallowWrapper {
                   }
                 }
               >
-                Members
+                Tasks
               </Text>
             </Component>
             <Component
@@ -451,7 +459,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                148
+                1
               </Text>
               <Text
                 accessible={true}
@@ -482,7 +490,13 @@ ShallowWrapper {
             </Component>
           </Component>
         </Themed.Card>,
-        <Connect(MemberList) />,
+        <Connect(MemberList)
+          user_ids={
+            Array [
+              1,
+            ]
+          }
+        />,
         <TouchableHighlight
           activeOpacity={0.85}
           delayPressOut={100}
@@ -532,14 +546,16 @@ ShallowWrapper {
               style={
                 Object {
                   "alignItems": "center",
-                  "fontSize": 40,
+                  "fontSize": 30,
                   "fontWeight": "bold",
                   "justifyContent": "center",
                   "paddingRight": 30,
                   "paddingTop": 20,
                 }
               }
-            />,
+            >
+              bxzhu_channel
+            </Text>,
             <Themed.Avatar
               containerStyle={
                 Object {
@@ -550,7 +566,7 @@ ShallowWrapper {
               size={100}
               source={
                 Object {
-                  "testUri": "../../../app/images/leetcodeIcon.png",
+                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                 }
               }
             />,
@@ -570,11 +586,11 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": undefined,
+              "children": "bxzhu_channel",
               "ellipsizeMode": "tail",
               "style": Object {
                 "alignItems": "center",
-                "fontSize": 40,
+                "fontSize": 30,
                 "fontWeight": "bold",
                 "justifyContent": "center",
                 "paddingRight": 30,
@@ -582,7 +598,7 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "bxzhu_channel",
             "type": [Function],
           },
           Object {
@@ -596,7 +612,7 @@ ShallowWrapper {
               "rounded": true,
               "size": 100,
               "source": Object {
-                "testUri": "../../../app/images/leetcodeIcon.png",
+                "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
               },
             },
             "ref": null,
@@ -626,8 +642,7 @@ ShallowWrapper {
                 }
               }
             >
-              Learn yourself some 
-               with friends!
+              bxzhu
             </Text>,
             <Component
               style={
@@ -662,7 +677,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  8
+                  0
                 </Text>
                 <Text
                   accessible={true}
@@ -675,7 +690,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Tasks
+                  Users
                 </Text>
               </Component>
               <Component
@@ -708,7 +723,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  15
+                  0
                 </Text>
                 <Text
                   accessible={true}
@@ -721,7 +736,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Members
+                  Tasks
                 </Text>
               </Component>
               <Component
@@ -749,7 +764,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  148
+                  1
                 </Text>
                 <Text
                   accessible={true}
@@ -794,11 +809,7 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": Array [
-                "Learn yourself some ",
-                undefined,
-                " with friends!",
-              ],
+              "children": "bxzhu",
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "white",
@@ -809,11 +820,7 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": Array [
-              "Learn yourself some ",
-              undefined,
-              " with friends!",
-            ],
+            "rendered": "bxzhu",
             "type": [Function],
           },
           Object {
@@ -847,7 +854,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    8
+                    0
                   </Text>
                   <Text
                     accessible={true}
@@ -860,7 +867,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Tasks
+                    Users
                   </Text>
                 </Component>,
                 <Component
@@ -893,7 +900,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    15
+                    0
                   </Text>
                   <Text
                     accessible={true}
@@ -906,7 +913,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Members
+                    Tasks
                   </Text>
                 </Component>,
                 <Component
@@ -934,7 +941,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    148
+                    1
                   </Text>
                   <Text
                     accessible={true}
@@ -994,7 +1001,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      8
+                      0
                     </Text>,
                     <Text
                       accessible={true}
@@ -1007,7 +1014,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Tasks
+                      Users
                     </Text>,
                   ],
                   "style": Object {
@@ -1024,7 +1031,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "8",
+                      "children": 0,
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1038,7 +1045,103 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": "8",
+                    "rendered": 0,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Users",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "white",
+                        "textAlign": "center",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Users",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "white",
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "fontSize": 40,
+                            "marginBottom": 10,
+                          },
+                        ]
+                      }
+                    >
+                      0
+                    </Text>,
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Tasks
+                    </Text>,
+                  ],
+                  "style": Array [
+                    Object {
+                      "paddingHorizontal": 10,
+                      "paddingTop": 20,
+                    },
+                    Object {
+                      "paddingHorizontal": 60,
+                    },
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": 0,
+                      "ellipsizeMode": "tail",
+                      "style": Array [
+                        Object {
+                          "color": "white",
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "fontSize": 40,
+                          "marginBottom": 10,
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": 0,
                     "type": [Function],
                   },
                   Object {
@@ -1085,103 +1188,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      15
-                    </Text>,
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      Members
-                    </Text>,
-                  ],
-                  "style": Array [
-                    Object {
-                      "paddingHorizontal": 10,
-                      "paddingTop": 20,
-                    },
-                    Object {
-                      "paddingHorizontal": 60,
-                    },
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "accessible": true,
-                      "allowFontScaling": true,
-                      "children": "15",
-                      "ellipsizeMode": "tail",
-                      "style": Array [
-                        Object {
-                          "color": "white",
-                          "textAlign": "center",
-                        },
-                        Object {
-                          "fontSize": 40,
-                          "marginBottom": 10,
-                        },
-                      ],
-                    },
-                    "ref": null,
-                    "rendered": "15",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "accessible": true,
-                      "allowFontScaling": true,
-                      "children": "Members",
-                      "ellipsizeMode": "tail",
-                      "style": Object {
-                        "color": "white",
-                        "textAlign": "center",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": "Members",
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "textAlign": "center",
-                          },
-                          Object {
-                            "fontSize": 40,
-                            "marginBottom": 10,
-                          },
-                        ]
-                      }
-                    >
-                      148
+                      1
                     </Text>,
                     <Text
                       accessible={true}
@@ -1224,7 +1231,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "148",
+                      "children": 1,
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1238,7 +1245,7 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": "148",
+                    "rendered": 1,
                     "type": [Function],
                   },
                   Object {
@@ -1290,7 +1297,11 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "user_ids": Array [
+            1,
+          ],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -1376,14 +1387,16 @@ ShallowWrapper {
               style={
                 Object {
                   "alignItems": "center",
-                  "fontSize": 40,
+                  "fontSize": 30,
                   "fontWeight": "bold",
                   "justifyContent": "center",
                   "paddingRight": 30,
                   "paddingTop": 20,
                 }
               }
-            />
+            >
+              bxzhu_channel
+            </Text>
             <Themed.Avatar
               containerStyle={
                 Object {
@@ -1394,7 +1407,7 @@ ShallowWrapper {
               size={100}
               source={
                 Object {
-                  "testUri": "../../../app/images/leetcodeIcon.png",
+                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                 }
               }
             />
@@ -1421,8 +1434,7 @@ ShallowWrapper {
                 }
               }
             >
-              Learn yourself some 
-               with friends!
+              bxzhu
             </Text>
             <Component
               style={
@@ -1457,7 +1469,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  8
+                  0
                 </Text>
                 <Text
                   accessible={true}
@@ -1470,7 +1482,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Tasks
+                  Users
                 </Text>
               </Component>
               <Component
@@ -1503,7 +1515,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  15
+                  0
                 </Text>
                 <Text
                   accessible={true}
@@ -1516,7 +1528,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Members
+                  Tasks
                 </Text>
               </Component>
               <Component
@@ -1544,7 +1556,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  148
+                  1
                 </Text>
                 <Text
                   accessible={true}
@@ -1575,7 +1587,13 @@ ShallowWrapper {
               </Component>
             </Component>
           </Themed.Card>,
-          <Connect(MemberList) />,
+          <Connect(MemberList)
+            user_ids={
+              Array [
+                1,
+              ]
+            }
+          />,
           <TouchableHighlight
             activeOpacity={0.85}
             delayPressOut={100}
@@ -1625,14 +1643,16 @@ ShallowWrapper {
                 style={
                   Object {
                     "alignItems": "center",
-                    "fontSize": 40,
+                    "fontSize": 30,
                     "fontWeight": "bold",
                     "justifyContent": "center",
                     "paddingRight": 30,
                     "paddingTop": 20,
                   }
                 }
-              />,
+              >
+                bxzhu_channel
+              </Text>,
               <Themed.Avatar
                 containerStyle={
                   Object {
@@ -1643,7 +1663,7 @@ ShallowWrapper {
                 size={100}
                 source={
                   Object {
-                    "testUri": "../../../app/images/leetcodeIcon.png",
+                    "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                   }
                 }
               />,
@@ -1663,11 +1683,11 @@ ShallowWrapper {
               "props": Object {
                 "accessible": true,
                 "allowFontScaling": true,
-                "children": undefined,
+                "children": "bxzhu_channel",
                 "ellipsizeMode": "tail",
                 "style": Object {
                   "alignItems": "center",
-                  "fontSize": 40,
+                  "fontSize": 30,
                   "fontWeight": "bold",
                   "justifyContent": "center",
                   "paddingRight": 30,
@@ -1675,7 +1695,7 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "bxzhu_channel",
               "type": [Function],
             },
             Object {
@@ -1689,7 +1709,7 @@ ShallowWrapper {
                 "rounded": true,
                 "size": 100,
                 "source": Object {
-                  "testUri": "../../../app/images/leetcodeIcon.png",
+                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                 },
               },
               "ref": null,
@@ -1719,8 +1739,7 @@ ShallowWrapper {
                   }
                 }
               >
-                Learn yourself some 
-                 with friends!
+                bxzhu
               </Text>,
               <Component
                 style={
@@ -1755,7 +1774,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    8
+                    0
                   </Text>
                   <Text
                     accessible={true}
@@ -1768,7 +1787,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Tasks
+                    Users
                   </Text>
                 </Component>
                 <Component
@@ -1801,7 +1820,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    15
+                    0
                   </Text>
                   <Text
                     accessible={true}
@@ -1814,7 +1833,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Members
+                    Tasks
                   </Text>
                 </Component>
                 <Component
@@ -1842,7 +1861,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    148
+                    1
                   </Text>
                   <Text
                     accessible={true}
@@ -1887,11 +1906,7 @@ ShallowWrapper {
               "props": Object {
                 "accessible": true,
                 "allowFontScaling": true,
-                "children": Array [
-                  "Learn yourself some ",
-                  undefined,
-                  " with friends!",
-                ],
+                "children": "bxzhu",
                 "ellipsizeMode": "tail",
                 "style": Object {
                   "color": "white",
@@ -1902,11 +1917,7 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": Array [
-                "Learn yourself some ",
-                undefined,
-                " with friends!",
-              ],
+              "rendered": "bxzhu",
               "type": [Function],
             },
             Object {
@@ -1940,7 +1951,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      8
+                      0
                     </Text>
                     <Text
                       accessible={true}
@@ -1953,7 +1964,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Tasks
+                      Users
                     </Text>
                   </Component>,
                   <Component
@@ -1986,7 +1997,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      15
+                      0
                     </Text>
                     <Text
                       accessible={true}
@@ -1999,7 +2010,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Members
+                      Tasks
                     </Text>
                   </Component>,
                   <Component
@@ -2027,7 +2038,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      148
+                      1
                     </Text>
                     <Text
                       accessible={true}
@@ -2087,7 +2098,7 @@ ShallowWrapper {
                           ]
                         }
                       >
-                        8
+                        0
                       </Text>,
                       <Text
                         accessible={true}
@@ -2100,7 +2111,7 @@ ShallowWrapper {
                           }
                         }
                       >
-                        Tasks
+                        Users
                       </Text>,
                     ],
                     "style": Object {
@@ -2117,7 +2128,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "8",
+                        "children": 0,
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -2131,7 +2142,103 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": "8",
+                      "rendered": 0,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "Users",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "color": "white",
+                          "textAlign": "center",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Users",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "textAlign": "center",
+                            },
+                            Object {
+                              "fontSize": 40,
+                              "marginBottom": 10,
+                            },
+                          ]
+                        }
+                      >
+                        0
+                      </Text>,
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "textAlign": "center",
+                          }
+                        }
+                      >
+                        Tasks
+                      </Text>,
+                    ],
+                    "style": Array [
+                      Object {
+                        "paddingHorizontal": 10,
+                        "paddingTop": 20,
+                      },
+                      Object {
+                        "paddingHorizontal": 60,
+                      },
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": 0,
+                        "ellipsizeMode": "tail",
+                        "style": Array [
+                          Object {
+                            "color": "white",
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "fontSize": 40,
+                            "marginBottom": 10,
+                          },
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": 0,
                       "type": [Function],
                     },
                     Object {
@@ -2178,103 +2285,7 @@ ShallowWrapper {
                           ]
                         }
                       >
-                        15
-                      </Text>,
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "textAlign": "center",
-                          }
-                        }
-                      >
-                        Members
-                      </Text>,
-                    ],
-                    "style": Array [
-                      Object {
-                        "paddingHorizontal": 10,
-                        "paddingTop": 20,
-                      },
-                      Object {
-                        "paddingHorizontal": 60,
-                      },
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "accessible": true,
-                        "allowFontScaling": true,
-                        "children": "15",
-                        "ellipsizeMode": "tail",
-                        "style": Array [
-                          Object {
-                            "color": "white",
-                            "textAlign": "center",
-                          },
-                          Object {
-                            "fontSize": 40,
-                            "marginBottom": 10,
-                          },
-                        ],
-                      },
-                      "ref": null,
-                      "rendered": "15",
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "accessible": true,
-                        "allowFontScaling": true,
-                        "children": "Members",
-                        "ellipsizeMode": "tail",
-                        "style": Object {
-                          "color": "white",
-                          "textAlign": "center",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "Members",
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Array [
-                            Object {
-                              "color": "white",
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontSize": 40,
-                              "marginBottom": 10,
-                            },
-                          ]
-                        }
-                      >
-                        148
+                        1
                       </Text>,
                       <Text
                         accessible={true}
@@ -2317,7 +2328,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "148",
+                        "children": 1,
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -2331,7 +2342,7 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": "148",
+                      "rendered": 1,
                       "type": [Function],
                     },
                     Object {
@@ -2383,7 +2394,11 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "user_ids": Array [
+              1,
+            ],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

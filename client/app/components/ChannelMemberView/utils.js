@@ -1,4 +1,5 @@
 import { Event } from '../../constants';
+import { Alert } from 'react-native';
 
 export const channelActivityFilterWrap = (channel_id, tasks) => activity_log =>
   channel_id === tasks[activity_log.task_id].channel_id;
@@ -6,7 +7,7 @@ export const channelActivityFilterWrap = (channel_id, tasks) => activity_log =>
 export const nameToInitialMap = name =>
   name
     .split(' ')
-    .map(word => word[0])
+    .map(word => word[0].toUpperCase())
     .join('');
 
 //note: this 'timestamp' should be ISO format time
@@ -57,3 +58,5 @@ export const eventPointToResult = (event, point) => {
       return '';
   }
 };
+
+export const _alert = msg => Alert.alert(msg, '', [{ text: 'OK' }]);

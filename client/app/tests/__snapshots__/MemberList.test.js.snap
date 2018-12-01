@@ -47,7 +47,6 @@ ShallowWrapper {
                 "marginHorizontal": 5,
               }
             }
-            onPress={[Function]}
             placeholderStyle={
               Object {
                 "backgroundColor": "greenyellow",
@@ -56,91 +55,6 @@ ShallowWrapper {
             rounded={true}
             size="medium"
             title="QM"
-          />
-          <Themed.Avatar
-            activeOpacity={0.7}
-            containerStyle={
-              Object {
-                "marginHorizontal": 5,
-              }
-            }
-            onPress={[Function]}
-            placeholderStyle={
-              Object {
-                "backgroundColor": "dodgerblue",
-              }
-            }
-            rounded={true}
-            size="medium"
-            title="BB"
-          />
-          <Themed.Avatar
-            activeOpacity={0.7}
-            containerStyle={
-              Object {
-                "marginHorizontal": 5,
-              }
-            }
-            onPress={[Function]}
-            placeholderStyle={
-              Object {
-                "backgroundColor": "orange",
-              }
-            }
-            rounded={true}
-            size="medium"
-            title="AS"
-          />
-          <Themed.Avatar
-            activeOpacity={0.7}
-            containerStyle={
-              Object {
-                "marginHorizontal": 5,
-              }
-            }
-            onPress={[Function]}
-            placeholderStyle={
-              Object {
-                "backgroundColor": "lightgreen",
-              }
-            }
-            rounded={true}
-            size="medium"
-            title="SY"
-          />
-          <Themed.Avatar
-            activeOpacity={0.7}
-            containerStyle={
-              Object {
-                "marginHorizontal": 5,
-              }
-            }
-            oonPress={[Function]}
-            placeholderStyle={
-              Object {
-                "backgroundColor": "magenta",
-              }
-            }
-            rounded={true}
-            size="medium"
-            title="JS"
-          />
-          <Themed.Avatar
-            activeOpacity={0.7}
-            containerStyle={
-              Object {
-                "marginHorizontal": 5,
-              }
-            }
-            onPress={[Function]}
-            placeholderStyle={
-              Object {
-                "backgroundColor": "red",
-              }
-            }
-            rounded={true}
-            size="medium"
-            title="BX"
           />
         </Component>
       </ScrollViewMock>
@@ -202,7 +116,6 @@ ShallowWrapper {
                   "marginHorizontal": 5,
                 }
               }
-              onPress={[Function]}
               placeholderStyle={
                 Object {
                   "backgroundColor": "greenyellow",
@@ -211,91 +124,6 @@ ShallowWrapper {
               rounded={true}
               size="medium"
               title="QM"
-            />
-            <Themed.Avatar
-              activeOpacity={0.7}
-              containerStyle={
-                Object {
-                  "marginHorizontal": 5,
-                }
-              }
-              onPress={[Function]}
-              placeholderStyle={
-                Object {
-                  "backgroundColor": "dodgerblue",
-                }
-              }
-              rounded={true}
-              size="medium"
-              title="BB"
-            />
-            <Themed.Avatar
-              activeOpacity={0.7}
-              containerStyle={
-                Object {
-                  "marginHorizontal": 5,
-                }
-              }
-              onPress={[Function]}
-              placeholderStyle={
-                Object {
-                  "backgroundColor": "orange",
-                }
-              }
-              rounded={true}
-              size="medium"
-              title="AS"
-            />
-            <Themed.Avatar
-              activeOpacity={0.7}
-              containerStyle={
-                Object {
-                  "marginHorizontal": 5,
-                }
-              }
-              onPress={[Function]}
-              placeholderStyle={
-                Object {
-                  "backgroundColor": "lightgreen",
-                }
-              }
-              rounded={true}
-              size="medium"
-              title="SY"
-            />
-            <Themed.Avatar
-              activeOpacity={0.7}
-              containerStyle={
-                Object {
-                  "marginHorizontal": 5,
-                }
-              }
-              oonPress={[Function]}
-              placeholderStyle={
-                Object {
-                  "backgroundColor": "magenta",
-                }
-              }
-              rounded={true}
-              size="medium"
-              title="JS"
-            />
-            <Themed.Avatar
-              activeOpacity={0.7}
-              containerStyle={
-                Object {
-                  "marginHorizontal": 5,
-                }
-              }
-              onPress={[Function]}
-              placeholderStyle={
-                Object {
-                  "backgroundColor": "red",
-                }
-              }
-              rounded={true}
-              size="medium"
-              title="BX"
             />
           </Component>
         </ScrollViewMock>
@@ -341,7 +169,6 @@ ShallowWrapper {
                     "marginHorizontal": 5,
                   }
                 }
-                onPress={[Function]}
                 placeholderStyle={
                   Object {
                     "backgroundColor": "greenyellow",
@@ -350,91 +177,6 @@ ShallowWrapper {
                 rounded={true}
                 size="medium"
                 title="QM"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "dodgerblue",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="BB"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "orange",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="AS"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "lightgreen",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="SY"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                oonPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "magenta",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="JS"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "red",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="BX"
               />
             </Component>
           </ScrollViewMock>,
@@ -488,7 +230,6 @@ ShallowWrapper {
                     "marginHorizontal": 5,
                   }
                 }
-                onPress={[Function]}
                 placeholderStyle={
                   Object {
                     "backgroundColor": "greenyellow",
@@ -497,91 +238,6 @@ ShallowWrapper {
                 rounded={true}
                 size="medium"
                 title="QM"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "dodgerblue",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="BB"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "orange",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="AS"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "lightgreen",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="SY"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                oonPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "magenta",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="JS"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "red",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="BX"
               />
             </Component>,
             "horizontal": true,
@@ -600,7 +256,6 @@ ShallowWrapper {
                       "marginHorizontal": 5,
                     }
                   }
-                  onPress={[Function]}
                   placeholderStyle={
                     Object {
                       "backgroundColor": "greenyellow",
@@ -610,91 +265,9 @@ ShallowWrapper {
                   size="medium"
                   title="QM"
                 />,
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "dodgerblue",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="BB"
-                />,
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "orange",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="AS"
-                />,
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "lightgreen",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="SY"
-                />,
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  oonPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "magenta",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="JS"
-                />,
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "red",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="BX"
-                />,
+                Array [
+                  undefined,
+                ],
               ],
               "style": Object {
                 "flexDirection": "row",
@@ -713,7 +286,6 @@ ShallowWrapper {
                   "containerStyle": Object {
                     "marginHorizontal": 5,
                   },
-                  "onPress": [Function],
                   "placeholderStyle": Object {
                     "backgroundColor": "greenyellow",
                   },
@@ -725,111 +297,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "activeOpacity": 0.7,
-                  "containerStyle": Object {
-                    "marginHorizontal": 5,
-                  },
-                  "onPress": [Function],
-                  "placeholderStyle": Object {
-                    "backgroundColor": "dodgerblue",
-                  },
-                  "rounded": true,
-                  "size": "medium",
-                  "title": "BB",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "activeOpacity": 0.7,
-                  "containerStyle": Object {
-                    "marginHorizontal": 5,
-                  },
-                  "onPress": [Function],
-                  "placeholderStyle": Object {
-                    "backgroundColor": "orange",
-                  },
-                  "rounded": true,
-                  "size": "medium",
-                  "title": "AS",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "activeOpacity": 0.7,
-                  "containerStyle": Object {
-                    "marginHorizontal": 5,
-                  },
-                  "onPress": [Function],
-                  "placeholderStyle": Object {
-                    "backgroundColor": "lightgreen",
-                  },
-                  "rounded": true,
-                  "size": "medium",
-                  "title": "SY",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "activeOpacity": 0.7,
-                  "containerStyle": Object {
-                    "marginHorizontal": 5,
-                  },
-                  "oonPress": [Function],
-                  "placeholderStyle": Object {
-                    "backgroundColor": "magenta",
-                  },
-                  "rounded": true,
-                  "size": "medium",
-                  "title": "JS",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "activeOpacity": 0.7,
-                  "containerStyle": Object {
-                    "marginHorizontal": 5,
-                  },
-                  "onPress": [Function],
-                  "placeholderStyle": Object {
-                    "backgroundColor": "red",
-                  },
-                  "rounded": true,
-                  "size": "medium",
-                  "title": "BX",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+              undefined,
             ],
             "type": [Function],
           },
@@ -889,7 +357,6 @@ ShallowWrapper {
                     "marginHorizontal": 5,
                   }
                 }
-                onPress={[Function]}
                 placeholderStyle={
                   Object {
                     "backgroundColor": "greenyellow",
@@ -898,91 +365,6 @@ ShallowWrapper {
                 rounded={true}
                 size="medium"
                 title="QM"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "dodgerblue",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="BB"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "orange",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="AS"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "lightgreen",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="SY"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                oonPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "magenta",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="JS"
-              />
-              <Themed.Avatar
-                activeOpacity={0.7}
-                containerStyle={
-                  Object {
-                    "marginHorizontal": 5,
-                  }
-                }
-                onPress={[Function]}
-                placeholderStyle={
-                  Object {
-                    "backgroundColor": "red",
-                  }
-                }
-                rounded={true}
-                size="medium"
-                title="BX"
               />
             </Component>
           </ScrollViewMock>
@@ -1028,7 +410,6 @@ ShallowWrapper {
                       "marginHorizontal": 5,
                     }
                   }
-                  onPress={[Function]}
                   placeholderStyle={
                     Object {
                       "backgroundColor": "greenyellow",
@@ -1037,91 +418,6 @@ ShallowWrapper {
                   rounded={true}
                   size="medium"
                   title="QM"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "dodgerblue",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="BB"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "orange",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="AS"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "lightgreen",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="SY"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  oonPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "magenta",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="JS"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "red",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="BX"
                 />
               </Component>
             </ScrollViewMock>,
@@ -1175,7 +471,6 @@ ShallowWrapper {
                       "marginHorizontal": 5,
                     }
                   }
-                  onPress={[Function]}
                   placeholderStyle={
                     Object {
                       "backgroundColor": "greenyellow",
@@ -1184,91 +479,6 @@ ShallowWrapper {
                   rounded={true}
                   size="medium"
                   title="QM"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "dodgerblue",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="BB"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "orange",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="AS"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "lightgreen",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="SY"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  oonPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "magenta",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="JS"
-                />
-                <Themed.Avatar
-                  activeOpacity={0.7}
-                  containerStyle={
-                    Object {
-                      "marginHorizontal": 5,
-                    }
-                  }
-                  onPress={[Function]}
-                  placeholderStyle={
-                    Object {
-                      "backgroundColor": "red",
-                    }
-                  }
-                  rounded={true}
-                  size="medium"
-                  title="BX"
                 />
               </Component>,
               "horizontal": true,
@@ -1287,7 +497,6 @@ ShallowWrapper {
                         "marginHorizontal": 5,
                       }
                     }
-                    onPress={[Function]}
                     placeholderStyle={
                       Object {
                         "backgroundColor": "greenyellow",
@@ -1297,91 +506,9 @@ ShallowWrapper {
                     size="medium"
                     title="QM"
                   />,
-                  <Themed.Avatar
-                    activeOpacity={0.7}
-                    containerStyle={
-                      Object {
-                        "marginHorizontal": 5,
-                      }
-                    }
-                    onPress={[Function]}
-                    placeholderStyle={
-                      Object {
-                        "backgroundColor": "dodgerblue",
-                      }
-                    }
-                    rounded={true}
-                    size="medium"
-                    title="BB"
-                  />,
-                  <Themed.Avatar
-                    activeOpacity={0.7}
-                    containerStyle={
-                      Object {
-                        "marginHorizontal": 5,
-                      }
-                    }
-                    onPress={[Function]}
-                    placeholderStyle={
-                      Object {
-                        "backgroundColor": "orange",
-                      }
-                    }
-                    rounded={true}
-                    size="medium"
-                    title="AS"
-                  />,
-                  <Themed.Avatar
-                    activeOpacity={0.7}
-                    containerStyle={
-                      Object {
-                        "marginHorizontal": 5,
-                      }
-                    }
-                    onPress={[Function]}
-                    placeholderStyle={
-                      Object {
-                        "backgroundColor": "lightgreen",
-                      }
-                    }
-                    rounded={true}
-                    size="medium"
-                    title="SY"
-                  />,
-                  <Themed.Avatar
-                    activeOpacity={0.7}
-                    containerStyle={
-                      Object {
-                        "marginHorizontal": 5,
-                      }
-                    }
-                    oonPress={[Function]}
-                    placeholderStyle={
-                      Object {
-                        "backgroundColor": "magenta",
-                      }
-                    }
-                    rounded={true}
-                    size="medium"
-                    title="JS"
-                  />,
-                  <Themed.Avatar
-                    activeOpacity={0.7}
-                    containerStyle={
-                      Object {
-                        "marginHorizontal": 5,
-                      }
-                    }
-                    onPress={[Function]}
-                    placeholderStyle={
-                      Object {
-                        "backgroundColor": "red",
-                      }
-                    }
-                    rounded={true}
-                    size="medium"
-                    title="BX"
-                  />,
+                  Array [
+                    undefined,
+                  ],
                 ],
                 "style": Object {
                   "flexDirection": "row",
@@ -1400,7 +527,6 @@ ShallowWrapper {
                     "containerStyle": Object {
                       "marginHorizontal": 5,
                     },
-                    "onPress": [Function],
                     "placeholderStyle": Object {
                       "backgroundColor": "greenyellow",
                     },
@@ -1412,111 +538,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": [Function],
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "activeOpacity": 0.7,
-                    "containerStyle": Object {
-                      "marginHorizontal": 5,
-                    },
-                    "onPress": [Function],
-                    "placeholderStyle": Object {
-                      "backgroundColor": "dodgerblue",
-                    },
-                    "rounded": true,
-                    "size": "medium",
-                    "title": "BB",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "activeOpacity": 0.7,
-                    "containerStyle": Object {
-                      "marginHorizontal": 5,
-                    },
-                    "onPress": [Function],
-                    "placeholderStyle": Object {
-                      "backgroundColor": "orange",
-                    },
-                    "rounded": true,
-                    "size": "medium",
-                    "title": "AS",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "activeOpacity": 0.7,
-                    "containerStyle": Object {
-                      "marginHorizontal": 5,
-                    },
-                    "onPress": [Function],
-                    "placeholderStyle": Object {
-                      "backgroundColor": "lightgreen",
-                    },
-                    "rounded": true,
-                    "size": "medium",
-                    "title": "SY",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "activeOpacity": 0.7,
-                    "containerStyle": Object {
-                      "marginHorizontal": 5,
-                    },
-                    "oonPress": [Function],
-                    "placeholderStyle": Object {
-                      "backgroundColor": "magenta",
-                    },
-                    "rounded": true,
-                    "size": "medium",
-                    "title": "JS",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "activeOpacity": 0.7,
-                    "containerStyle": Object {
-                      "marginHorizontal": 5,
-                    },
-                    "onPress": [Function],
-                    "placeholderStyle": Object {
-                      "backgroundColor": "red",
-                    },
-                    "rounded": true,
-                    "size": "medium",
-                    "title": "BX",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                undefined,
               ],
               "type": [Function],
             },

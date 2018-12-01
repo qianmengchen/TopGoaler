@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import { memberList } from './styles';
+import { nameToInitialMap } from '../ChannelMemberView/utils';
 
 class MemberList extends Component {
-  _navigateToProfile() {
-    // console.log("Goes to member's profile page");
+  _getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
 
   render() {
@@ -20,56 +26,28 @@ class MemberList extends Component {
                 size="medium"
                 rounded
                 title="QM"
-                onPress={this._navigateToProfile.bind(this)}
                 activeOpacity={0.7}
                 placeholderStyle={{ backgroundColor: 'greenyellow' }}
                 containerStyle={memberList.icon}
               />
-              <Avatar
-                size="medium"
-                rounded
-                title="BB"
-                onPress={this._navigateToProfile.bind(this)}
-                activeOpacity={0.7}
-                placeholderStyle={{ backgroundColor: 'dodgerblue' }}
-                containerStyle={memberList.icon}
-              />
-              <Avatar
-                size="medium"
-                rounded
-                title="AS"
-                onPress={this._navigateToProfile.bind(this)}
-                activeOpacity={0.7}
-                placeholderStyle={{ backgroundColor: 'orange' }}
-                containerStyle={memberList.icon}
-              />
-              <Avatar
-                size="medium"
-                rounded
-                title="SY"
-                onPress={this._navigateToProfile.bind(this)}
-                activeOpacity={0.7}
-                placeholderStyle={{ backgroundColor: 'lightgreen' }}
-                containerStyle={memberList.icon}
-              />
-              <Avatar
-                size="medium"
-                rounded
-                title="JS"
-                oonPress={this._navigateToProfile.bind(this)}
-                activeOpacity={0.7}
-                placeholderStyle={{ backgroundColor: 'magenta' }}
-                containerStyle={memberList.icon}
-              />
-              <Avatar
-                size="medium"
-                rounded
-                title="BX"
-                onPress={this._navigateToProfile.bind(this)}
-                activeOpacity={0.7}
-                placeholderStyle={{ backgroundColor: 'red' }}
-                containerStyle={memberList.icon}
-              />
+              {this.props.user_ids.map(uid => {
+                if (this.props.users[uid]) {
+                  const name = nameToInitialMap(this.props.users[uid].name);
+                  const avatar = (
+                    <Avatar
+                      size="medium"
+                      rounded
+                      title={name}
+                      activeOpacity={0.7}
+                      placeholderStyle={{
+                        backgroundColor: this._getRandomColor()
+                      }}
+                      containerStyle={memberList.icon}
+                    />
+                  );
+                  return avatar;
+                }
+              })}
             </View>
           </ScrollView>
         </View>

@@ -13,6 +13,14 @@ class NewTaskPage extends Component {
     this.setState({ description: text });
   }
 
+  _updatePeriod(text) {
+    this.setState({ period: text });
+  }
+
+  _updatePattern(text) {
+    this.setState({ pattern: text });
+  }
+
   _errorCheck = () => false;
 
   _submit() {
@@ -102,9 +110,7 @@ class NewTaskPage extends Component {
         <RNPickerSelect
           items={this.state.periodItems}
           placeholder={{ label: 'Select something', value: null }}
-          onValueChange={value => {
-            this.setState({ period: value });
-          }}
+          onValueChange={this._updatePeriod.bind(this)}
           value={this.state.period}
         >
           <Input
@@ -120,9 +126,7 @@ class NewTaskPage extends Component {
         <RNPickerSelect
           items={this.state.patternItems}
           placeholder={{}}
-          onValueChange={value => {
-            this.setState({ pattern: value });
-          }}
+          onValueChange={this._updatePattern.bind(this)}
         >
           <Input
             label="Pattern"

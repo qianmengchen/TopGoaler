@@ -42,7 +42,18 @@ class ChannelMemberView extends Component {
       )).json();
       return { ...score, ...ranking };
     } catch (_) {
-      Alert('Retrive ranking info error');
+      Alert('Retrieve ranking info error');
+      return null;
+    }
+  }
+
+  async _loadTasks() {
+    const { channel } = this.props;
+    try {
+      const tasks = await (await _get(`/task/channel_id/${channel.id}`)).json();
+      return { ...tasks };
+    } catch (_) {
+      Alert('Retrieve tasks info error');
       return null;
     }
   }
@@ -51,13 +62,29 @@ class ChannelMemberView extends Component {
     this._loadRankingScore().then(res => {
       this.setState({ ...res });
     });
+    this._loadTasks().then(res => {
+      this.setState({ tasks: res });
+    });
+  }
+
+  tasklist() {
+    const tasklist = this.state.tasks;
+    return Object.keys(tasklist).map(idx => {
+      return (
+        <View key={idx} style={cardRight.taskContainer}>
+          <Text style={cardRight.task}>{tasklist[idx].title}</Text>
+          <Text style={cardRight.task}>{tasklist[idx].point}</Text>
+        </View>
+      );
+    });
   }
 
   constructor(props) {
     super(props);
     this.state = {
       score: 0,
-      rank: 0
+      rank: 0,
+      tasks: [{ time: '1', id: '1' }, { time: '3', id: '2' }]
     };
   }
 
@@ -93,22 +120,7 @@ class ChannelMemberView extends Component {
           </Card>
 
           <Card containerStyle={cardRight.container}>
-            <View style={cardRight.taskContainer}>
-              <Text style={cardRight.task}>LeetCode Daily</Text>
-              <Text style={cardRight.task}>30</Text>
-            </View>
-            <View style={cardRight.taskContainer}>
-              <Text style={cardRight.task}>LeetCode Daily 2x</Text>
-              <Text style={cardRight.task}>60</Text>
-            </View>
-            <View style={cardRight.taskContainer}>
-              <Text style={cardRight.task}>Learn Data Struct</Text>
-              <Text style={cardRight.task}>100</Text>
-            </View>
-            <View style={cardRight.taskContainer}>
-              <Text style={cardRight.task}>Solve 100 Probs</Text>
-              <Text style={cardRight.task}>500</Text>
-            </View>
+            <ScrollView style={{ height: 110 }}>{this.tasklist()}</ScrollView>
 
             <Divider style={{ backgroundColor: '#bbb', height: 1 }} />
 

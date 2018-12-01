@@ -5,8 +5,7 @@ const { doQuery } = require('./helper');
 
 
 /**
- * Create an entry for table activity_log
- * @function
+ * Create an entry for table activity_log 
  * @param {string} task_id - The id of the task.
  * @param {string} user_id - The id of the user.
  * @example
@@ -14,6 +13,7 @@ const { doQuery } = require('./helper');
  * curl -d "task_id=1&user_id=2" http://localhost:8001/activity_log
  * @returns {Integer} Returns the insert id of the entry.
  */
+function create_activity_log_entry(task_id, user_id){}
 router.post('/activity_log', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO activity_log SET ?', request.body)
@@ -33,6 +33,7 @@ router.post('/activity_log', async (request, response) => {
  * curl -d "title=2&creator=1" http://localhost:8001/channel
  * @returns {Integer} Returns the insert id of the entry.
  */ 
+function create_channel_entry(title, creator){}
 router.post('/channel', async (request, response) => {
     console.log(request.body);
     try {
@@ -53,6 +54,7 @@ router.post('/channel', async (request, response) => {
  * curl -d "title=2&channel_id=1" http://localhost:8001/proposal
  * @returns {Integer} Returns the insert id of the entry.
  */ 
+function create_proposal_entry(title, channel_id){}
 router.post('/proposal', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO proposal SET ?', request.body);
@@ -73,6 +75,7 @@ router.post('/proposal', async (request, response) => {
  * curl -d "channel_id=1&title=bxzhu_task" http://localhost:8001/task
  * @returns {Integer} Returns the insert id of the entry.
  */   
+function create_task_entry(title, channel_id){}
 router.post('/task', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO task SET ?', request.body);
@@ -94,6 +97,7 @@ router.post('/task', async (request, response) => {
  * curl -d "name=bzhu&password=bzhu" http://localhost:8001/user
  * @returns {Integer} Returns the insert id of the entry.
  */   
+function create_user_entry(name, password){}
 router.post('/user', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO user SET ?', request.body);
@@ -116,6 +120,7 @@ router.post('/user', async (request, response) => {
  * curl -d "user_id=1&channel_id=1" http://localhost:8001/user_channel
  * @returns {Integer} Returns the insert id of the entry.
  */    
+function create_user_channel_entry(user_id, channel_id){}
 router.post('/user_channel', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO user_channel SET ?', request.body);
@@ -137,6 +142,7 @@ router.post('/user_channel', async (request, response) => {
  * curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
  * @returns {Integer} Returns the insert id of the entry.
  */     
+function create_user_task_entry(user_id, task_id){}
 router.post('/user_task', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO user_task SET ?', request.body);
@@ -157,6 +163,7 @@ router.post('/user_task', async (request, response) => {
  * curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
  * @returns {Integer} Returns the result that if the proposal if able to transform to a task. 1 means able to. 0 means not yet.
  */      
+function create_vote_entry(user_id, proposal_id, score){}
 router.post('/vote', async (request, response) => {
     try {
         console.log('/vote', request.body)

@@ -86,7 +86,7 @@ export function signUp(username, password) {
 export function handleVote(user_id, proposal_id, score) {
   return async dispatch => {
     const body = { user_id, proposal_id, score };
-    console.log("in handleVote", body)
+    console.log('in handleVote', body);
     try {
       const res = await _post('/vote', body);
       if (!res.ok) return;

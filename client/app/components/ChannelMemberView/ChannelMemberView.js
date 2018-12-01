@@ -30,7 +30,7 @@ class ChannelMemberView extends Component {
 
   _goToProposalsPage() {
     const { navigate } = this.props.navigation;
-    navigate('ProposalsPage', {channel_id : this.props.channel.id});
+    navigate('ProposalsPage', { channel_id: this.props.channel.id });
   }
 
   async _loadRankingScore() {

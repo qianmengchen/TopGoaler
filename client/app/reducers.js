@@ -106,8 +106,9 @@ function proposals(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.proposal.map(x => ({
-        ...x, id : +x.id
-      }))
+        ...x,
+        id: +x.id
+      }));
     default:
       return state;
   }

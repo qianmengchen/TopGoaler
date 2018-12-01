@@ -16,7 +16,7 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
-describe('Testing Sign In Page', () => {
+describe('Testing Task Detail Page', () => {
   const accept = sinon.spy(TaskDetail.prototype, '_accept');
   const unfollow = sinon.spy(TaskDetail.prototype, '_unfollow');
   const done = sinon.spy(TaskDetail.prototype, '_done');

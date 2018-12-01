@@ -14,7 +14,7 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
-describe('Testing Task Checklist component', () => {
+describe('Testing Task List Page', () => {
   const wrapper = shallow(<TaskListPage />, {
     context: { store: mockStore(initialTaskState) }
   });

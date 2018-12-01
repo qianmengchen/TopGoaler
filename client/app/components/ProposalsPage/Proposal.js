@@ -37,8 +37,6 @@ class Proposal extends Component {
           onValueChange={value => this.setState({ points: value })}
         />
 
-        {/* <Text>{this.state.points}</Text> */}
-
         <TouchableHighlight
           style={vote.container}
           underlayColor="#aaa"

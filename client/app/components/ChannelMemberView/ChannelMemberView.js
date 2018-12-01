@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  View,
-  TouchableHighlight,
-  ScrollView,
-  Alert
-} from 'react-native';
+import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import { Card, Avatar, Divider } from 'react-native-elements';
 import { header, cardLeft, cardRight, vote } from './styles';
 import { Feed } from '../Feed/index';
@@ -14,7 +8,8 @@ import {
   nameToInitialMap,
   timestampToDescription,
   eventToComment,
-  eventPointToResult
+  eventPointToResult,
+  _alert
 } from './utils';
 
 class ChannelMemberView extends Component {
@@ -30,7 +25,7 @@ class ChannelMemberView extends Component {
 
   _goToProposalsPage() {
     const { navigate } = this.props.navigation;
-    navigate('ProposalsPage');
+    navigate('ProposalsPage', { channel_id: this.props.channel.id });
   }
 
   async _loadRankingScore() {
@@ -42,7 +37,7 @@ class ChannelMemberView extends Component {
       )).json();
       return { ...score, ...ranking };
     } catch (_) {
-      Alert('Retrieve ranking info error');
+      _alert('Retrieve ranking info error');
       return null;
     }
   }
@@ -53,7 +48,7 @@ class ChannelMemberView extends Component {
       const tasks = await (await _get(`/task/channel_id/${channel.id}`)).json();
       return { ...tasks };
     } catch (_) {
-      Alert('Retrieve tasks info error');
+      _alert('Retrieve tasks info error');
       return null;
     }
   }

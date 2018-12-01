@@ -8,10 +8,15 @@ import {
   LOAD_DATA,
   ADD_CHANNEL,
   ADD_ACTIVITY,
-  ADD_FAILURE
+  ADD_FAILURE,
+  CREATE_CHANNEL_FAILURE
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
+
+function _alertOperationFailure() {
+  Alert.alert('Operation failed', '', [{ text: 'OK' }]);
+}
 
 const initAuthState = {
   isLoggedIn: false,
@@ -70,6 +75,9 @@ function channels(state = {}, action) {
       return action.data.channel.reduce(_arrayToDictReducer, {});
     case ADD_CHANNEL:
       return { [action.channel_id]: action.channel, ...state };
+    case CREATE_CHANNEL_FAILURE:
+      _alertOperationFailure();
+      return state;
     default:
       return state;
   }
@@ -107,6 +115,18 @@ function user_task(state = [], action) {
   }
 }
 
+function proposals(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return action.data.proposal.map(x => ({
+        ...x,
+        id: +x.id
+      }));
+    default:
+      return state;
+  }
+}
+
 function tasks(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
@@ -114,10 +134,6 @@ function tasks(state = {}, action) {
     default:
       return state;
   }
-}
-
-function _alertOperationFailure() {
-  Alert.alert('Operation failed', '', [{ text: 'OK' }]);
 }
 
 function activity_log(state = [], action) {
@@ -149,5 +165,6 @@ export default combineReducers({
   users,
   user_task,
   tasks,
-  activity_log
+  activity_log,
+  proposals
 });

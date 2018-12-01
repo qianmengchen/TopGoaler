@@ -81,6 +81,23 @@ export function signUp(username, password) {
 }
 
 /*
+ * Vote action
+ */
+export function handleVote(user_id, proposal_id, score) {
+  return async dispatch => {
+    const body = { user_id, proposal_id, score };
+    console.log('in handleVote', body);
+    try {
+      const res = await _post('/vote', body);
+      if (!res.ok) return;
+      dispatch(loadData());
+    } catch (e) {
+      dispatch(serverError(e));
+    }
+  };
+}
+
+/*
  * Data actions
  */
 export const LOAD_DATA = 'LOAD_DATA';
@@ -103,6 +120,7 @@ export function loadData() {
  * Channel actions
  */
 export const ADD_CHANNEL = 'ADD_CHANNEL';
+export const CREATE_CHANNEL_FAILURE = 'CREATE_CHANNEL_FAILURE';
 
 const _query = params => {
   var esc = encodeURIComponent;
@@ -116,29 +134,18 @@ const _createChannelLocal = (channel, channel_id, user_id) => {
   return { type: ADD_CHANNEL, channel, channel_id, user_id };
 };
 
+const _createFailure = () => {
+  return { type: CREATE_CHANNEL_FAILURE };
+};
+
 export function createChannelAsUser(channel, user_id) {
   return async dispatch => {
     var res = await _post('/channel', { ...channel });
-    // const res = await fetch(`${serverAddr}/channel`, {
-    //   method: 'POST',
-    //   body,
-    //   mode: 'cors',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/x-www-form-urlencoded'
-    //   }
-    // });
-    // const res2 = await fetch(`${serverAddr}/user_channel`, {
-    //   method: 'POST',
-    //   body,
-    //   mode: 'cors',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/x-www-form-urlencoded'
-    //   }
-    // });
-    console.log(res);
-    dispatch(_createChannelLocal(channel, -1, user_id));
+    if (!res.ok) return dispatch(_createFailure());
+    const { id } = await res.json();
+    res = await _post('/user_channel', { channel_id: id, user_id });
+    if (!res.ok) return dispatch(_createFailure());
+    dispatch(_createChannelLocal(channel, id, user_id));
   };
 }
 

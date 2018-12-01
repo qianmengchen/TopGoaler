@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 // Load the MySQL pool connection
 const pool = require('../data/config');
+const { doQuery } = require('./helper');
 
 
 /**
@@ -158,27 +159,28 @@ router.post('/user_task', (request, response) => {
  * @function
  * @param {string} user_id - The user_id of the user.
  * @param {string} proposal_id - The proposal_id of the voting proposal. 
- * @param {Integer} proposal_id - The score of the proposal that user voted. 
+ * @param {Integer} score - The score of the proposal that user voted. 
  * @example
  * // returns 1
  * curl -d "user_id=1&task_id=1" http://localhost:8001/user_task
  * @returns {Integer} Returns the result that if the proposal if able to transform to a task. 1 means able to. 0 means not yet.
  */      
-router.post('/vote', (request, response) => {
+router.post('/vote', async (request, response) => {
     try {
-        const proposal_id = request.body.proposal_id;  
-        pool.query('INSERT INTO vote SET ?',  request.body, (error, result) => { 
-        });
-        pool.query(` SELECT 
+        console.log('/vote', request.body)
+        const proposal_id = request.body.proposal_id;
+        await doQuery('INSERT INTO vote SET ?',  request.body);
+        const result = await doQuery(
+            ` SELECT
                 (SELECT
                 (SELECT COUNT(*) FROM user_channel WHERE channel_id = (SELECT channel_id FROM proposal WHERE id = ? )) /
-                (SELECT COUNT(*) FROM vote WHERE proposal_id = ? ) 
-                ) <= 2`, [proposal_id, proposal_id], (error, result) => {  
-                response.json(result[0]);  
-            });
+                (SELECT COUNT(*) FROM vote WHERE proposal_id = ? )
+            ) <= 2`,
+            [proposal_id, proposal_id])
+        response.json(result[0]);
     } catch (error) {
-        response.status(401).send(`error create: ${error}`); 
-    } 
+        response.status(401).send(`error create: ${error}`);
+    }
 });
 
 module.exports = router;

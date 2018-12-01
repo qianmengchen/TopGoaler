@@ -37,11 +37,12 @@ router.post('/activity_log', (request, response) => {
  */ 
 router.post('/channel', (request, response) => {
     try {
+        console.log(request.body);
         pool.query('INSERT INTO channel SET ?', request.body, (error, result) => {
-            response.status(201).send(`channel added with channel: ${result.insertId}`);
+            response.status(201).json({id: result.insertId});
         });
     } catch (error) {
-        response.status(401).send(`error create: ${error}`);   
+        response.status(401).json({error});   
     }
 });
 

@@ -69,7 +69,7 @@ function channels(state = {}, action) {
     case LOAD_DATA:
       return action.data.channel.reduce(_arrayToDictReducer, {});
     case ADD_CHANNEL:
-      return { [action.newchannel.id]: action.newchannel, ...state };
+      return { [action.channel_id]: action.channel, ...state };
     default:
       return state;
   }
@@ -79,6 +79,11 @@ function user_channel(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return [...action.data.user_channel];
+    case ADD_CHANNEL:
+      return [
+        { user_id: action.user_id, channel_id: action.channel_id },
+        ...state
+      ];
     default:
       return state;
   }

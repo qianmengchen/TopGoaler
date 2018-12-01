@@ -112,24 +112,33 @@ const _query = params => {
   return query;
 };
 
-const _createChannelLocal = (channel, user) => {
-  return { type: ADD_CHANNEL, channel, user };
+const _createChannelLocal = (channel, channel_id, user_id) => {
+  return { type: ADD_CHANNEL, channel, channel_id, user_id };
 };
 
-export function createChannelAsUser(channel, user) {
-  return dispatch => {
-    let body = _query({ channel, user });
-    let url = `${serverAddr}/channel_creator`;
-    fetch(url, {
-      method: 'POST',
-      body,
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    }).then(() => {
-      dispatch(_createChannelLocal(channel, user));
-    });
+export function createChannelAsUser(channel, user_id) {
+  return async dispatch => {
+    var res = await _post('/channel', { ...channel });
+    // const res = await fetch(`${serverAddr}/channel`, {
+    //   method: 'POST',
+    //   body,
+    //   mode: 'cors',
+    //   headers: {
+    //     Accept: 'application/json',
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   }
+    // });
+    // const res2 = await fetch(`${serverAddr}/user_channel`, {
+    //   method: 'POST',
+    //   body,
+    //   mode: 'cors',
+    //   headers: {
+    //     Accept: 'application/json',
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   }
+    // });
+    console.log(res);
+    dispatch(_createChannelLocal(channel, -1, user_id));
   };
 }
 

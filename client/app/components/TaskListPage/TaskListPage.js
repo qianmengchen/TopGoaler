@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
-// import { list } from './styles';
+import { ScrollView, Text } from 'react-native';
+import { list } from './styles';
 import { TaskDetail } from '../TaskDetail/index';
 
 class TaskListPage extends Component {
-  static navigationOptions = () => ({
-    title: 'Task List',
-    headerTitleStyle: { textAlign: 'center', alignSelf: 'center' },
-    headerStyle: {
-      backgroundColor: 'white'
-    }
-  });
-
   render() {
     return (
       <ScrollView>
+        <Text style={list.title}>Channel Tasks</Text>
+
         <TaskDetail
           title="Leetcode Daily"
           subtitle="Do a problem from LeetCode everyday"

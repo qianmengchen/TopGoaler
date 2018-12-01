@@ -28,7 +28,8 @@ const mapStateToProps = state => ({
     state.user_channel,
     state.auth.id
   ),
-  channels: state.channels
+  channels: state.channels,
+  userId: state.auth.id
 });
 
 export default connect(mapStateToProps)(PerformancePage);

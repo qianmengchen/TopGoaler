@@ -92,14 +92,6 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
     let { channel_id } = req.params
     try {
         const result = await doQuery(
-            /*
-        `
-            FIND_IN_SET( score, (
-                SELECT GROUP_CONCAT( score
-                ORDER BY score DESC )
-                FROM scores )
-                ) AS rank
-        ` *///SUM(point) as score, user_id
         ` SELECT
           user_id, @curRank := @curRank + 1 AS rank
           FROM (
@@ -123,14 +115,6 @@ router.get('/ranking/:user_id&:channel_id', async (req, res) => {
     let { user_id, channel_id } = req.params
     try {
         const result = await doQuery(
-            /*
-        `
-            FIND_IN_SET( score, (
-                SELECT GROUP_CONCAT( score
-                ORDER BY score DESC )
-                FROM scores )
-                ) AS rank
-        ` *///SUM(point) as score, user_id
         `
           SELECT rank FROM
           (

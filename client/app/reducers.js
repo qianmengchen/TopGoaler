@@ -102,6 +102,17 @@ function user_task(state = [], action) {
   }
 }
 
+function proposals(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return action.data.proposal.map(x => ({
+        ...x, id : +x.id
+      }))
+    default:
+      return state;
+  }
+}
+
 function tasks(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
@@ -144,5 +155,6 @@ export default combineReducers({
   users,
   user_task,
   tasks,
-  activity_log
+  activity_log,
+  proposals
 });

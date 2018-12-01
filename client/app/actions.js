@@ -81,6 +81,23 @@ export function signUp(username, password) {
 }
 
 /*
+ * Vote action
+ */
+export function handleVote(user_id, proposal_id, score) {
+  return async dispatch => {
+    const body = { user_id, proposal_id, score };
+    console.log("in handleVote", body)
+    try {
+      const res = await _post('/vote', body);
+      if (!res.ok) return;
+      dispatch(loadData());
+    } catch (e) {
+      dispatch(serverError(e));
+    }
+  };
+}
+
+/*
  * Data actions
  */
 export const LOAD_DATA = 'LOAD_DATA';

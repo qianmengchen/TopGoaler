@@ -3,7 +3,7 @@ import ChannelPublicView from './ChannelPublicView';
 import { subscribeChannel } from '../../actions';
 
 const mapStateToProps = (_, ownProps) => ({
-  channelId: ownProps.navigation.state.params.id
+  channel_id: ownProps.navigation.state.params.id
 });
 
 const mapDispatchToProps = dispatch => ({

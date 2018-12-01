@@ -122,14 +122,6 @@ export function loadData() {
 export const ADD_CHANNEL = 'ADD_CHANNEL';
 export const CREATE_CHANNEL_FAILURE = 'CREATE_CHANNEL_FAILURE';
 
-const _query = params => {
-  var esc = encodeURIComponent;
-  var query = Object.keys(params)
-    .map(k => esc(k) + '=' + esc(params[k]))
-    .join('&');
-  return query;
-};
-
 const _createChannelLocal = (channel, channel_id, user_id) => {
   return { type: ADD_CHANNEL, channel, channel_id, user_id };
 };

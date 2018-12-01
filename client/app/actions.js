@@ -81,6 +81,23 @@ export function signUp(username, password) {
 }
 
 /*
+ * Vote action
+ */
+export function handleVote(user_id, proposal_id, score) {
+  return async dispatch => {
+    const body = { user_id, proposal_id, score };
+    console.log('in handleVote', body);
+    try {
+      const res = await _post('/vote', body);
+      if (!res.ok) return;
+      dispatch(loadData());
+    } catch (e) {
+      dispatch(serverError(e));
+    }
+  };
+}
+
+/*
  * Data actions
  */
 export const LOAD_DATA = 'LOAD_DATA';
@@ -103,33 +120,24 @@ export function loadData() {
  * Channel actions
  */
 export const ADD_CHANNEL = 'ADD_CHANNEL';
+export const CREATE_CHANNEL_FAILURE = 'CREATE_CHANNEL_FAILURE';
 
-const _query = params => {
-  var esc = encodeURIComponent;
-  var query = Object.keys(params)
-    .map(k => esc(k) + '=' + esc(params[k]))
-    .join('&');
-  return query;
+const _createChannelLocal = (channel, channel_id, user_id) => {
+  return { type: ADD_CHANNEL, channel, channel_id, user_id };
 };
 
-const _createChannelLocal = (channel, user) => {
-  return { type: ADD_CHANNEL, channel, user };
+const _createFailure = () => {
+  return { type: CREATE_CHANNEL_FAILURE };
 };
 
-export function createChannelAsUser(channel, user) {
-  return dispatch => {
-    let body = _query({ channel, user });
-    let url = `${serverAddr}/channel_creator`;
-    fetch(url, {
-      method: 'POST',
-      body,
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    }).then(() => {
-      dispatch(_createChannelLocal(channel, user));
-    });
+export function createChannelAsUser(channel, user_id) {
+  return async dispatch => {
+    var res = await _post('/channel', { ...channel });
+    if (!res.ok) return dispatch(_createFailure());
+    const { id } = await res.json();
+    res = await _post('/user_channel', { channel_id: id, user_id });
+    if (!res.ok) return dispatch(_createFailure());
+    dispatch(_createChannelLocal(channel, id, user_id));
   };
 }
 

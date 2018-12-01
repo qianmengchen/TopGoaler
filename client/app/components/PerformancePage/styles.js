@@ -104,8 +104,9 @@ const rightPart = StyleSheet.create({
   stats: {
     flex: 0.7,
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center'
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    marginLeft: 20
   }
 });
 

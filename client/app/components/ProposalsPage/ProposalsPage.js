@@ -12,21 +12,25 @@ class ProposalsPage extends Component {
     }
   });
 
+  _handleVoteFactory = proposal_id => points => {
+    console.log("if i never reach here i'll quit cs");
+    this.props.handleVote(this.props.user_id, proposal_id, points);
+  };
   render() {
     return (
       <ScrollView contentContainerStyle={list.container}>
-        <Proposal
-          title="Leetcode Daily"
-          subtitle="Do a problem from LeetCode everyday"
-          period="Daily"
-          pattern="Once"
-        />
-        <Proposal
-          title="Leetcode Daily x2"
-          subtitle="Do two problem from LeetCode everyday"
-          period="Daily"
-          pattern="Twice"
-        />
+        {this.props.proposals.map(id => {
+          return (
+            <Proposal
+              key={id.id}
+              title={id.title}
+              subtitle={id.subtitle}
+              period={id.period}
+              pattern={id.pattern}
+              handleVote={this._handleVoteFactory(id.id)}
+            />
+          );
+        })}
       </ScrollView>
     );
   }

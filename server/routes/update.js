@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 // Load the MySQL pool connection
 const pool = require('../data/config');
+const { doQuery } = require('./helper');
 
 /**
  * UPDATE an entry for table activity_log 
@@ -12,17 +13,17 @@ const pool = require('../data/config');
  * curl -X PUT -d "task_id=1" -d "user_id=2" http://localhost:8001/activity_log/1\&1
  * @returns {json} Json format of result.
  */  
-router.put('/activity_log/:orig_task_id&:orig_user_id', (request, response) => { 
+router.put('/activity_log/:orig_task_id&:orig_user_id', async (request, response) => { 
     try {
         const orig_task_id = request.params.orig_task_id; 
         const orig_user_id = request.params.orig_user_id; 
-        pool.query('UPDATE activity_log SET ? WHERE task_id = ? AND user_id = ?', [request.body, orig_task_id, orig_user_id], (error, result) => {
-            response.send(result);
-        });
+        const result = await doQuery(
+            'UPDATE activity_log SET ? WHERE task_id = ? AND user_id = ?', 
+            [request.body, orig_task_id, orig_user_id])
+        response.send(result);
     } catch (error) {
-        response.status(401).send(`unable to update: ${err}`);  
+        response.status(401).send(`unable to update: ${error}`);  
     }
-
 });
 
 /**
@@ -36,14 +37,13 @@ router.put('/activity_log/:orig_task_id&:orig_user_id', (request, response) => {
  * curl -X PUT -d "title=bxzhu_channel" -d "creator=2" http://localhost:8001/channel/bxzhu_channel\&1
  * @returns {json} Json format of result.
  */ 
-router.put('/channel/:orig_title&:orig_creator', (request, response) => {
+router.put('/channel/:orig_title&:orig_creator', async (request, response) => {
     try {
         const orig_title = request.params.orig_title; 
         const orig_creator = request.params.orig_creator; 
      
-        pool.query('UPDATE channel SET ? WHERE title = ? AND creator = ?', [request.body, orig_title, orig_creator], (error, result) => {
-            response.send(result);
-        });
+        const result = await doQuery('UPDATE channel SET ? WHERE title = ? AND creator = ?', [request.body, orig_title, orig_creator]);
+        response.send(result);
     } catch (error) {
         response.status(401).json({msg: `cannot update: ${err}`}) 
     }
@@ -59,13 +59,14 @@ router.put('/channel/:orig_title&:orig_creator', (request, response) => {
  * curl -X PUT -d "title=bxzhu_proposal" -d "channel_id=2" http://localhost:8001/proposal/bxzhu_proposal\&1
  * @returns {json} Json format of result.
  */ 
-router.put('/proposal/:orig_title&:orig_channel_id', (request, response) => {
+router.put('/proposal/:orig_title&:orig_channel_id', async (request, response) => {
     try {
         const orig_title = request.params.orig_title; 
         const orig_channel_id = request.params.orig_channel_id;  
-        pool.query('UPDATE proposal SET ? WHERE title = ? AND channel_id = ?', [request.body, orig_title, orig_channel_id], (error, result) => {
-            response.send(result);
-        });
+        const result = await doQuery(
+            'UPDATE proposal SET ? WHERE title = ? AND channel_id = ?', 
+            [request.body, orig_title, orig_channel_id]) 
+        response.send(result);
     } catch (error) {
         esponse.status(401).send(`unable to update: ${err}`); 
     }
@@ -84,20 +85,20 @@ router.put('/proposal/:orig_title&:orig_channel_id', (request, response) => {
  * curl -X PUT -d "title=bxzhu_task" -d "channel_id=2" http://localhost:8001/task/bxzhu_task\&1
  * @returns {json} Json format of result.
  */ 
-router.put('/task/:orig_title&:orig_channel_id', (request, response) => {
+router.put('/task/:orig_title&:orig_channel_id', async (request, response) => {
     try {
         const orig_title = request.params.orig_title; 
         const orig_channel_id = request.params.orig_channel_id; 
-     
-        pool.query('UPDATE task SET ? WHERE title = ? AND channel_id = ?', [request.body,orig_title, orig_channel_id], (error, result) => {
-            response.send(result);
-        });       
+        const result = await doQuery('UPDATE task SET ? WHERE title = ? AND channel_id = ?', [request.body,orig_title, orig_channel_id])
+        response.send(result);
     } catch (error) {
         response.status(401).send(`unable to update: ${err}`);  
     }
 
 
 });
+
+//todo: THE FOLLOWING NEEDS REFACTORING , TRY CATCH ISN"T WORKING HERE!!!!!! 
 
 /**
  * UPDATE an entry for table user 

@@ -72,7 +72,6 @@ export function signUp(username, password) {
     try {
       const res = await _post('/login', body);
       if (!res.ok) return dispatch(loginFailure(username));
-      //const json = await res.json()
       dispatch(loginSuccess(username));
     } catch (e) {
       dispatch(serverError(e));

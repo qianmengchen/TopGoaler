@@ -13,6 +13,7 @@ const { doQuery } = require('./helper');
  * curl -X PUT -d "task_id=1" -d "user_id=2" http://localhost:8001/activity_log/1\&1
  * @returns {json} Json format of result.
  */  
+function update_activity_log(task_id, user_id){}
 router.put('/activity_log/:orig_task_id&:orig_user_id', async (request, response) => { 
     try {
         const orig_task_id = request.params.orig_task_id; 
@@ -37,6 +38,7 @@ router.put('/activity_log/:orig_task_id&:orig_user_id', async (request, response
  * curl -X PUT -d "title=bxzhu_channel" -d "creator=2" http://localhost:8001/channel/bxzhu_channel\&1
  * @returns {json} Json format of result.
  */ 
+function update_channel(orig_title, orig_creator, title, creator){}
 router.put('/channel/:orig_title&:orig_creator', async (request, response) => {
     try {
         const orig_title = request.params.orig_title; 
@@ -59,6 +61,7 @@ router.put('/channel/:orig_title&:orig_creator', async (request, response) => {
  * curl -X PUT -d "title=bxzhu_proposal" -d "channel_id=2" http://localhost:8001/proposal/bxzhu_proposal\&1
  * @returns {json} Json format of result.
  */ 
+function update_proposal(orig_proposal_id, orig_channel_id, proposal_id, channel_id){}
 router.put('/proposal/:orig_title&:orig_channel_id', async (request, response) => {
     try {
         const orig_title = request.params.orig_title; 
@@ -85,6 +88,7 @@ router.put('/proposal/:orig_title&:orig_channel_id', async (request, response) =
  * curl -X PUT -d "title=bxzhu_task" -d "channel_id=2" http://localhost:8001/task/bxzhu_task\&1
  * @returns {json} Json format of result.
  */ 
+function update_task(orig_title, orig_channel_id, title, channel_id){}
 router.put('/task/:orig_title&:orig_channel_id', async (request, response) => {
     try {
         const orig_title = request.params.orig_title; 
@@ -111,6 +115,7 @@ router.put('/task/:orig_title&:orig_channel_id', async (request, response) => {
  * curl -X PUT -d "name=bzhu" -d "password=bzhu" http://localhost:8001/user/bxzhu\&bxzhu_password
  * @returns {json} Json format of result.
  */  
+function update_user(orig_name, orig_password, name, password){}
 router.put('/user/:orig_name:orig_password', (request, response) => {
     try {
         const orig_name = request.params.orig_name; 
@@ -135,6 +140,7 @@ router.put('/user/:orig_name:orig_password', (request, response) => {
  * curl -X PUT -d "user_id=1" -d "channel_id=1" http://localhost:8001/user_channel/2\&1
  * @returns {json} Json format of result.
  */    
+function update_user_channel(orig_user_id, orig_channel_id,user_id, channel_id){}
 router.put('/user_channel/:orig_user_id:orig_channel_id', (request, response) => {
     try {
         const orig_user_id = request.params.orig_user_id; 
@@ -149,7 +155,7 @@ router.put('/user_channel/:orig_user_id:orig_channel_id', (request, response) =>
 });
 
 /**
- * Create an entry for table user_channel 
+ * Create an entry for table use_task 
  * @function
  * @param {string} orig_user_id - The original user_id of the user.
  * @param {string} orig_task_id - The original task_id of the task. 
@@ -159,6 +165,7 @@ router.put('/user_channel/:orig_user_id:orig_channel_id', (request, response) =>
  * curl -X PUT -d "user_id=1" -d "task_id=1" http://localhost:8001/user_task/2\&1
  * @returns {json} Json format of result.
  */  
+function update_user_task(orig_user_id, orig_task_id, user_id, task_id){}
 router.put('/user_task/:orig_user_id:orig_task_id', (request, response) => {
     try {
         const orig_user_id = request.params.orig_user_id; 
@@ -177,11 +184,12 @@ router.put('/user_task/:orig_user_id:orig_task_id', (request, response) => {
  * @param {string} orig_proposal_id - The original proposal_id of the voting proposal. 
  * @param {string} orig_user_id - The original user_id of the user.
  * @param {string} proposal_id - The proposal_id of the voting proposal. 
- * @param {Integer} proposal_id - The score of the proposal that user voted. 
+ * @param {Integer} score - The score of the proposal that user voted. 
  * @example
  * curl -X PUT -d "user_id=1" -d "proposal_id=1" http://localhost:8001/vote/2\&1
  * @returns {json} Json format of result.
- */  
+ */   
+function update_vote(orig_user_id, orig_proposal_id, proposal_id, score){}
 router.put('/vote/:orig_user_id:orig_proposal_id', (request, response) => {
     try {
         const orig_user_id = request.params.orig_user_id; 

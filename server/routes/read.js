@@ -18,7 +18,12 @@ let routes =
 
 routes = routes.map( ([route, query]) => [route, query || `SELECT * FROM ${route}`] );
 
-
+/**
+ * load data to frontend
+ * @function
+ * @returns {json} Returns json format of all data stored in backend
+ */
+function loaddata(task_id, user_id){}
 router.get('/loaddata', async (req, res) => {
     const data = {}
     await Promise.all(routes.map( async ([route, query]) => {
@@ -88,6 +93,16 @@ router.get('/score/:user_id&:channel_id', async (req, res) => {
     }
 })
 
+/**
+ * Get scoreboard of a specific channel
+ * @function
+ * @param {string} channel_id - The id of the channel. 
+ * @example
+ * // returns a table order by score DESC
+ * curl -d "channel_id=1" http://localhost:8001/scoreboard
+ * @returns {table} Returns a table which contains user_id and score order by score DESC
+ */
+function get_score_board(channel_id){}
 router.get('/scoreboard/:channel_id', async (req, res) => {
     let { channel_id } = req.params
     try {
@@ -111,6 +126,17 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
     }
 })
 
+/**
+ * Get scoreboard of a specific user in a specific channel
+ * @function
+ * @param {string} channel_id - The id of the channel. 
+ * @param {string} user_id - The id of the user. 
+ * @example
+ * // return 1 
+ * curl -d "channel_id=1&user_id=1" http://localhost:8001/ranking
+ * @returns {Integer} returns ranking of the user in the channel
+ */
+function get_score_board(channel_id){}
 router.get('/ranking/:user_id&:channel_id', async (req, res) => {
     let { user_id, channel_id } = req.params
     try {

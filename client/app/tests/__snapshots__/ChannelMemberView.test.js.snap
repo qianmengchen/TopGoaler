@@ -27,7 +27,7 @@ ShallowWrapper {
           }
         }
       >
-        
+        test
       </Text>
       <Themed.Avatar
         containerStyle={
@@ -389,7 +389,7 @@ ShallowWrapper {
               }
             }
           >
-            
+            test
           </Text>
           <Themed.Avatar
             containerStyle={
@@ -736,7 +736,7 @@ ShallowWrapper {
                 }
               }
             >
-              
+              test
             </Text>,
             <Themed.Avatar
               containerStyle={
@@ -769,7 +769,7 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": "",
+              "children": "test",
               "ellipsizeMode": "tail",
               "style": Object {
                 "alignItems": "center",
@@ -779,7 +779,7 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": "",
+            "rendered": "test",
             "type": [Function],
           },
           Object {
@@ -2092,7 +2092,7 @@ ShallowWrapper {
                 }
               }
             >
-              
+              test
             </Text>
             <Themed.Avatar
               containerStyle={
@@ -2439,7 +2439,7 @@ ShallowWrapper {
                   }
                 }
               >
-                
+                test
               </Text>,
               <Themed.Avatar
                 containerStyle={
@@ -2472,7 +2472,7 @@ ShallowWrapper {
               "props": Object {
                 "accessible": true,
                 "allowFontScaling": true,
-                "children": "",
+                "children": "test",
                 "ellipsizeMode": "tail",
                 "style": Object {
                   "alignItems": "center",
@@ -2482,7 +2482,7 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": "",
+              "rendered": "test",
               "type": [Function],
             },
             Object {

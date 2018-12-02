@@ -18,17 +18,30 @@ const initialTaskState = {
 };
 
 const channel = {
-  title: ''
+  title: 'test',
+  id: 1
 };
 
 describe('Testing Channel Memberview Page', () => {
   const navigation = { navigate: jest.fn() };
-  const nav = sinon.spy(ChannelMemberView.prototype, '_goToTaskListPage');
+  const goToTaskListPage = sinon.spy(
+    ChannelMemberView.prototype,
+    '_goToTaskListPage'
+  );
+  const goToNewTaskPage = sinon.spy(
+    ChannelMemberView.prototype,
+    '_goToNewTaskPage'
+  );
+  const goToProposalsPage = sinon.spy(
+    ChannelMemberView.prototype,
+    '_goToProposalsPage'
+  );
 
   const wrapper = shallow(
     <ChannelMemberView
       navigation={navigation}
       channel={channel}
+      userID={1}
       activities={[]}
     />,
     {
@@ -58,9 +71,18 @@ describe('Testing Channel Memberview Page', () => {
     expect(render.find('TouchableHighlight')).toHaveLength(3);
   });
 
-  it('should invoke correct methods when pressing more button', () => {
-    const moreBtn = render.find('TouchableHighlight').at(0);
-    moreBtn.simulate('press');
-    expect(nav.callCount).toBe(1);
+  it('should invoke correct methods when pressing more/add/vote buttons', () => {
+    wrapper.find('TouchableHighlight').forEach(child => {
+      child.simulate('press');
+    });
+
+    expect(goToNewTaskPage.calledOnce).toBe(true);
+    expect(goToProposalsPage.calledOnce).toBe(true);
+    expect(goToTaskListPage.calledOnce).toBe(true);
+  });
+
+  it('should be able to load ranking score', () => {
+    // ChannelMemberView.prototype.UNSAFE_componentWillMount();
+    // console.log(ChannelMemberView.prototype._loadRankingScore())
   });
 });

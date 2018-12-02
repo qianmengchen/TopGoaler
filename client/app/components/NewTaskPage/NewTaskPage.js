@@ -15,12 +15,28 @@ class NewTaskPage extends Component {
 
   _errorCheck = () => false;
 
+  _lookupPattern = s => {
+    return { Once: 1, Twice: 2, 'Three times': 3, Unlimited: 1e9 }[s];
+  };
+  _lookupPeriod = s => {
+    return { Daily: 0, Weekly: 1, Monthly: 2, 'One Time Only': 3 }[s];
+  };
   _submit() {
+    const proposal = {
+      //user_id : this.props.user_id,
+      channel_id: this.props.channel_id.toString(),
+      title: this.state.name,
+      subtitle: this.state.description,
+      period: this._lookupPeriod(this.state.period),
+      pattern: this._lookupPattern(this.state.pattern)
+    };
+    this.props.addProposal(proposal);
     this.props.navigation.navigate('ChannelMemberView');
   }
 
   constructor(props) {
     super(props);
+    console.log('newtaskpage', props);
     this.state = {
       name: '',
       description: '',

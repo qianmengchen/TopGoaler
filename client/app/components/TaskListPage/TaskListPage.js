@@ -12,7 +12,7 @@ class TaskListPage extends Component {
   });
 
   _map_period_to_string = raw => {
-    const period_map = { 0: 'day', 1: 'week', 2: 'month' };
+    const period_map = { 0: 'day', 1: 'week', 2: 'month', 3: 'once' };
     return period_map[raw];
   };
 

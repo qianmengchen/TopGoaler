@@ -155,6 +155,14 @@ export function createChannelAsUser(channel, user_id) {
   };
 }
 
+export function createProposal(proposal) {
+  return async dispatch => {
+    var res = await _post('/proposal', { ...proposal });
+    if (!res.ok) return dispatch(_createFailure());
+    //const { id } = await res.json();
+    dispatch(loadData());
+  };
+}
 /*
  * subscription
  */

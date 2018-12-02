@@ -9,7 +9,7 @@ const board = StyleSheet.create({
   title: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 20
+    marginVertical: 10
   },
   input: {
     paddingLeft: 10,

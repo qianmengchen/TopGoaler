@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
 import { constructChannel } from '../../constructors';
@@ -27,6 +27,11 @@ class NewChannelPage extends Component {
     this.props.navigation.navigate('ChannelListPage');
   }
 
+  static navigationOptions = {
+    title: 'New Channel',
+    headerTitleStyle: { fontWeight: 'bold' }
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -39,9 +44,7 @@ class NewChannelPage extends Component {
   render() {
     return (
       <View style={board.container}>
-        <View style={board.title}>
-          <Text style={text.title}>New Channel</Text>
-        </View>
+        <View style={board.title} />
         <Input
           label="Name"
           labelStyle={text.label}

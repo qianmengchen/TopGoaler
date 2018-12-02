@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import { list } from './styles';
 import Proposal from './Proposal';
 
@@ -7,11 +7,12 @@ class ProposalsPage extends Component {
   _handleVoteFactory = proposal_id => points => {
     this.props.handleVote(this.props.user_id, proposal_id, points);
   };
+  static navigationOptions = {
+    title: 'Task Proposals'
+  };
   render() {
     return (
       <ScrollView contentContainerStyle={list.container}>
-        <Text style={list.title}>Task Proposals</Text>
-
         {this.props.proposals.map(id => {
           return (
             <Proposal
@@ -20,6 +21,8 @@ class ProposalsPage extends Component {
               subtitle={id.subtitle}
               period={id.period}
               pattern={id.pattern}
+              voted={id.voted}
+              points={id.points}
               handleVote={this._handleVoteFactory(id.id)}
             />
           );

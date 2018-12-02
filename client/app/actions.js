@@ -3,6 +3,11 @@ import { serverAddr } from '../config';
 /*
  * Auth actions
  */
+
+/** @constant
+    @type {string}
+    @default
+*/
 export const LOGIN_BEGIN = 'LOGIN_BEGIN';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
@@ -14,6 +19,12 @@ export const SIGNUP_FAILURE = 'SIGNIN_FAIL';
 
 export const SERVER_ERR = 'SERVER_ERR';
 
+/** @function loginSuccess
+ * Returns the action object for login success.
+ * @param {string} username - The username of current user.
+ * @param {number} id - The id of current user.
+ * @returns {Object} - The action object for login success.
+ */
 export function loginSuccess(username, id) {
   return { type: LOGIN_SUCCESS, username, id };
 }
@@ -169,6 +180,45 @@ export function newActivityLog(task_id, user_id, event) {
       const res = await _post('/activity_log', body);
       if (!res.ok) return dispatch(activityUploadFailure());
       dispatch(activityUploaded(task_id, user_id, event));
+    } catch (e) {
+      console.log(e);
+      dispatch(serverError(e));
+    }
+  };
+}
+
+export const ENROLL_TASK = 'ENROLL_TASK';
+export const USER_TASK_FAILURE = 'USER_TASK_FAILURE';
+
+export function userTaskEnroll(task_id, user_id) {
+  return { type: ENROLL_TASK, task_id, user_id };
+}
+
+export function userTaskOperationFailure() {
+  return { type: USER_TASK_FAILURE };
+}
+
+export function enrollTaskAsUser(task_id, user_id) {
+  return async dispatch => {
+    const body = { task_id, user_id };
+    try {
+      const res = await _post('/user_task', body);
+      if (!res.ok) return dispatch(userTaskOperationFailure());
+      dispatch(userTaskEnroll(task_id, user_id));
+    } catch (e) {
+      console.log(e);
+      dispatch(serverError(e));
+    }
+  };
+}
+
+export function dropTaskAsUser(task_id, user_id) {
+  return async dispatch => {
+    const body = { task_id, user_id };
+    try {
+      const res = await _post('/user_task', body);
+      if (!res.ok) return dispatch(userTaskOperationFailure());
+      dispatch(userTaskEnroll(task_id, user_id));
     } catch (e) {
       console.log(e);
       dispatch(serverError(e));

@@ -1,3 +1,3 @@
-import TaskDetail from './TaskDetail';
+import TaskDetail from './container';
 
 export { TaskDetail };

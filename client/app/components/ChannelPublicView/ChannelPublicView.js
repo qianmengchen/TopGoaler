@@ -60,7 +60,6 @@ class ChannelPublicView extends Component {
   };
 
   render() {
-    console.log(this.props.task);
     return (
       <View>
         <View style={header.container}>

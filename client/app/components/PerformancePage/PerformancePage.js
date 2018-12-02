@@ -3,7 +3,6 @@ import { Text, View, ScrollView, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { board, title, text, infoCard, leftPart, rightPart } from './styles';
 import { periodDecoder } from '../../constants';
-import { _alert } from '../ChannelMemberView/utils';
 import { _get } from '../../actions';
 
 class PerformancePage extends Component {
@@ -105,8 +104,7 @@ class PerformancePage extends Component {
         )).json();
         channel_point[channel_id] = score;
       } catch (e) {
-        console.log(e);
-        _alert('Retrieve score info error');
+        channel_point[channel_id] = 0;
       }
     }
     return { channel_point };
@@ -158,7 +156,7 @@ class PerformancePage extends Component {
                 const channel_title = this.props.channels[channel_id.toString()]
                   .title;
                 var point = this.state.channel_point[channel_id];
-                if (!point) point = 'N/A';
+                if (!point) point = 0;
                 return (
                   <Text key={id.channel_id} style={text.stat}>
                     #{channel_title}: {point}

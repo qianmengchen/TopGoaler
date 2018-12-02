@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
-// import { list } from './styles';
 import { TaskDetail } from '../TaskDetail/index';
 
 class TaskListPage extends Component {
@@ -12,30 +11,29 @@ class TaskListPage extends Component {
     }
   });
 
+  _map_period_to_string = raw => {
+    const period_map = { 0: 'day', 1: 'week', 2: 'month' };
+    return period_map[raw];
+  };
+
+  _check_is_task_enrolled = tid => {
+    return this.props.user_task_ids.includes(tid);
+  };
+
   render() {
     return (
       <ScrollView>
-        <TaskDetail
-          title="Leetcode Daily"
-          subtitle="Do a problem from LeetCode everyday"
-          period="Daily"
-          pattern="Once"
-          points="200"
-        />
-        <TaskDetail
-          title="Leetcode Daily x2"
-          subtitle="Do two problems from LeetCode everyday"
-          period="Daily"
-          pattern="Twice"
-          points="300"
-        />
-        <TaskDetail
-          title="Solve 100 Problems"
-          subtitle="Solve 100 Problems from LeetCode"
-          period="Monthly"
-          pattern="Once"
-          points="350"
-        />
+        {this.props.tasks.map(task => (
+          <TaskDetail
+            key={task.task_id}
+            task_id={task.task_id}
+            enrolled={this._check_is_task_enrolled(task.task_id)}
+            title={task.title}
+            period={this._map_period_to_string(task.period)}
+            pattern={task.pattern}
+            points={task.point}
+          />
+        ))}
       </ScrollView>
     );
   }

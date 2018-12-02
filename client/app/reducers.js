@@ -9,7 +9,9 @@ import {
   ADD_CHANNEL,
   ADD_ACTIVITY,
   ADD_FAILURE,
-  CREATE_CHANNEL_FAILURE
+  CREATE_CHANNEL_FAILURE,
+  ENROLL_TASK,
+  USER_TASK_FAILURE
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
@@ -110,6 +112,11 @@ function user_task(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return [...action.data.user_task];
+    case USER_TASK_FAILURE:
+      _alertOperationFailure();
+      return state;
+    case ENROLL_TASK:
+      return [{ task_id: action.task_id, user_id: action.user_id }, ...state];
     default:
       return state;
   }

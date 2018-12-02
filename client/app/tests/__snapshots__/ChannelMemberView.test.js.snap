@@ -103,7 +103,7 @@ ShallowWrapper {
               ]
             }
           >
-            0
+            N/A
           </Text>
         </Component>
         <Component
@@ -465,7 +465,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                0
+                N/A
               </Text>
             </Component>
             <Component
@@ -860,7 +860,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  0
+                  N/A
                 </Text>
               </Component>
               <Component
@@ -1115,7 +1115,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    0
+                    N/A
                   </Text>
                 </Component>,
                 <Component
@@ -1210,7 +1210,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      0
+                      N/A
                     </Text>,
                   ],
                   "style": Object {
@@ -1245,7 +1245,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": 0,
+                      "children": "N/A",
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1260,7 +1260,7 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": 0,
+                    "rendered": "N/A",
                     "type": [Function],
                   },
                 ],
@@ -2168,7 +2168,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  0
+                  N/A
                 </Text>
               </Component>
               <Component
@@ -2563,7 +2563,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    0
+                    N/A
                   </Text>
                 </Component>
                 <Component
@@ -2818,7 +2818,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      0
+                      N/A
                     </Text>
                   </Component>,
                   <Component
@@ -2913,7 +2913,7 @@ ShallowWrapper {
                           ]
                         }
                       >
-                        0
+                        N/A
                       </Text>,
                     ],
                     "style": Object {
@@ -2948,7 +2948,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": 0,
+                        "children": "N/A",
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -2963,7 +2963,7 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": 0,
+                      "rendered": "N/A",
                       "type": [Function],
                     },
                   ],

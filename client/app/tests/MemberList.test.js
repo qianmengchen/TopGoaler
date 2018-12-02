@@ -45,7 +45,6 @@ describe('Testing Member List Component', () => {
   });
 
   it('contains avatar', () => {
-    console.log(wrapper.find(Avatar).debug());
     expect(wrapper.find(Avatar).exists()).toBe(true);
   });
 });

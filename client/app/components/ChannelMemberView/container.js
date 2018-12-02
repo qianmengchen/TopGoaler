@@ -8,9 +8,9 @@ const mapStateToProps = (state, ownProps) => {
     channel_id,
     channel: state.channels[channel_id],
     userId: state.auth.id,
-    activities: state.activity_log.filter(
-      channelActivityFilterWrap(channel_id, state.tasks)
-    ),
+    activities: state.activity_log
+      .filter(channelActivityFilterWrap(channel_id, state.tasks))
+      .sort((a, b) => b - a),
     users: state.users,
     tasks: state.tasks,
     navigation: ownProps.navigation

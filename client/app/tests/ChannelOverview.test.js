@@ -88,7 +88,6 @@ describe('Testing Channel Overview Page', () => {
 
     const subscribeBtn = render.find('TouchableWithoutFeedback');
     subscribeBtn.simulate('press');
-    console.log(subscribeBtn.debug());
     expect(_subscribe).toHaveBeenCalledTimes(1);
   });
 });

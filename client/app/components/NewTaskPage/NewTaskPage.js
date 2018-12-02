@@ -44,7 +44,6 @@ class NewTaskPage extends Component {
 
   constructor(props) {
     super(props);
-    console.log('newtaskpage', props);
     this.state = {
       name: '',
       description: '',

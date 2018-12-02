@@ -45,7 +45,6 @@ global.fetch = jest.fn().mockImplementation((url, params) => {
     json: mockJson
   };
   if (params && params.method === 'POST') {
-    console.log(params.body.password);
     if (params.body && params.body.password === 'pass') {
       return Promise.resolve({ type: 'POST', ...response, ok: true });
     } else {

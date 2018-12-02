@@ -3,47 +3,13 @@
 exports[`Testing Channel Memberview Page renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Component>
-    <Component
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-evenly",
-          "marginTop": 10,
-        }
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "backgroundColor": "white",
       }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "alignItems": "center",
-            "fontSize": 30,
-            "fontWeight": "bold",
-            "justifyContent": "center",
-          }
-        }
-      >
-        
-      </Text>
-      <Themed.Avatar
-        containerStyle={
-          Object {
-            "backgroundColor": "white",
-          }
-        }
-        rounded={true}
-        size={100}
-        source={
-          Object {
-            "testUri": "../../../app/images/leetcodeIcon.png",
-          }
-        }
-      />
-    </Component>
+    }
+  >
     <Component
       style={
         Object {
@@ -55,8 +21,8 @@ ShallowWrapper {
       <Themed.Card
         containerStyle={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#555",
+            "alignItems": "flex-start",
+            "backgroundColor": "#777",
             "borderColor": "#555",
             "borderRadius": 10,
             "flex": 1,
@@ -67,7 +33,7 @@ ShallowWrapper {
         <Component
           style={
             Object {
-              "paddingVertical": 10,
+              "paddingBottom": 20,
             }
           }
         >
@@ -97,19 +63,20 @@ ShallowWrapper {
                   "paddingVertical": 2,
                 },
                 Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
+                  "fontFamily": "Avenir-Black",
+                  "fontSize": 22,
+                  "paddingTop": 5,
                 },
               ]
             }
           >
-            N/A
+            #N/A
           </Text>
         </Component>
         <Component
           style={
             Object {
-              "paddingVertical": 10,
+              "paddingBottom": 20,
             }
           }
         >
@@ -139,8 +106,9 @@ ShallowWrapper {
                   "paddingVertical": 2,
                 },
                 Object {
-                  "fontSize": 18,
-                  "fontWeight": "bold",
+                  "fontFamily": "Avenir-Black",
+                  "fontSize": 22,
+                  "paddingTop": 5,
                 },
               ]
             }
@@ -155,15 +123,15 @@ ShallowWrapper {
             "backgroundColor": "#555",
             "borderColor": "#555",
             "borderRadius": 10,
-            "flex": 2.5,
-            "marginLeft": 2,
+            "flex": 4,
+            "marginLeft": 5,
           }
         }
       >
         <ScrollViewMock
           style={
             Object {
-              "height": 110,
+              "height": 140,
             }
           }
         >
@@ -249,7 +217,9 @@ ShallowWrapper {
             Object {
               "alignItems": "center",
               "flexDirection": "row",
-              "justifyContent": "space-evenly",
+              "justifyContent": "space-between",
+              "paddingLeft": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -259,7 +229,7 @@ ShallowWrapper {
             onPress={[Function]}
             style={
               Object {
-                "marginTop": 5,
+                "paddingTop": 10,
               }
             }
             underlayColor="#aaa"
@@ -284,7 +254,7 @@ ShallowWrapper {
             onPress={[Function]}
             style={
               Object {
-                "marginTop": 5,
+                "paddingTop": 10,
               }
             }
             underlayColor="#aaa"
@@ -303,44 +273,36 @@ ShallowWrapper {
               Add
             </Text>
           </TouchableHighlight>
+          <TouchableHighlight
+            activeOpacity={0.85}
+            delayPressOut={100}
+            onPress={[Function]}
+            style={
+              Object {
+                "paddingTop": 10,
+              }
+            }
+            underlayColor="#aaa"
+          >
+            <Component>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "white",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                 Vote 
+              </Text>
+            </Component>
+          </TouchableHighlight>
         </Component>
       </Themed.Card>
     </Component>
-    <TouchableHighlight
-      activeOpacity={0.85}
-      delayPressOut={100}
-      onPress={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "red",
-          "borderRadius": 5,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "marginHorizontal": 80,
-          "marginTop": 10,
-        }
-      }
-      underlayColor="#aaa"
-    >
-      <Component>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "color": "#fff",
-              "fontSize": 20,
-              "paddingVertical": 10,
-              "textAlign": "center",
-            }
-          }
-        >
-           Vote on Task Proposals 
-        </Text>
-      </Component>
-    </TouchableHighlight>
     <Themed.Divider
       style={
         Object {
@@ -369,46 +331,6 @@ ShallowWrapper {
         <Component
           style={
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "space-evenly",
-              "marginTop": 10,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "alignItems": "center",
-                "fontSize": 30,
-                "fontWeight": "bold",
-                "justifyContent": "center",
-              }
-            }
-          >
-            
-          </Text>
-          <Themed.Avatar
-            containerStyle={
-              Object {
-                "backgroundColor": "white",
-              }
-            }
-            rounded={true}
-            size={100}
-            source={
-              Object {
-                "testUri": "../../../app/images/leetcodeIcon.png",
-              }
-            }
-          />
-        </Component>,
-        <Component
-          style={
-            Object {
               "alignItems": "stretch",
               "flexDirection": "row",
             }
@@ -417,8 +339,8 @@ ShallowWrapper {
           <Themed.Card
             containerStyle={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#555",
+                "alignItems": "flex-start",
+                "backgroundColor": "#777",
                 "borderColor": "#555",
                 "borderRadius": 10,
                 "flex": 1,
@@ -429,7 +351,7 @@ ShallowWrapper {
             <Component
               style={
                 Object {
-                  "paddingVertical": 10,
+                  "paddingBottom": 20,
                 }
               }
             >
@@ -459,19 +381,20 @@ ShallowWrapper {
                       "paddingVertical": 2,
                     },
                     Object {
-                      "fontSize": 18,
-                      "fontWeight": "bold",
+                      "fontFamily": "Avenir-Black",
+                      "fontSize": 22,
+                      "paddingTop": 5,
                     },
                   ]
                 }
               >
-                N/A
+                #N/A
               </Text>
             </Component>
             <Component
               style={
                 Object {
-                  "paddingVertical": 10,
+                  "paddingBottom": 20,
                 }
               }
             >
@@ -501,8 +424,9 @@ ShallowWrapper {
                       "paddingVertical": 2,
                     },
                     Object {
-                      "fontSize": 18,
-                      "fontWeight": "bold",
+                      "fontFamily": "Avenir-Black",
+                      "fontSize": 22,
+                      "paddingTop": 5,
                     },
                   ]
                 }
@@ -517,15 +441,15 @@ ShallowWrapper {
                 "backgroundColor": "#555",
                 "borderColor": "#555",
                 "borderRadius": 10,
-                "flex": 2.5,
-                "marginLeft": 2,
+                "flex": 4,
+                "marginLeft": 5,
               }
             }
           >
             <ScrollViewMock
               style={
                 Object {
-                  "height": 110,
+                  "height": 140,
                 }
               }
             >
@@ -611,7 +535,9 @@ ShallowWrapper {
                 Object {
                   "alignItems": "center",
                   "flexDirection": "row",
-                  "justifyContent": "space-evenly",
+                  "justifyContent": "space-between",
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
                 }
               }
             >
@@ -621,7 +547,7 @@ ShallowWrapper {
                 onPress={[Function]}
                 style={
                   Object {
-                    "marginTop": 5,
+                    "paddingTop": 10,
                   }
                 }
                 underlayColor="#aaa"
@@ -646,7 +572,7 @@ ShallowWrapper {
                 onPress={[Function]}
                 style={
                   Object {
-                    "marginTop": 5,
+                    "paddingTop": 10,
                   }
                 }
                 underlayColor="#aaa"
@@ -665,44 +591,36 @@ ShallowWrapper {
                   Add
                 </Text>
               </TouchableHighlight>
+              <TouchableHighlight
+                activeOpacity={0.85}
+                delayPressOut={100}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "paddingTop": 10,
+                  }
+                }
+                underlayColor="#aaa"
+              >
+                <Component>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                     Vote 
+                  </Text>
+                </Component>
+              </TouchableHighlight>
             </Component>
           </Themed.Card>
         </Component>,
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
-          onPress={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "red",
-              "borderRadius": 5,
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "marginHorizontal": 80,
-              "marginTop": 10,
-            }
-          }
-          underlayColor="#aaa"
-        >
-          <Component>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#fff",
-                  "fontSize": 20,
-                  "paddingVertical": 10,
-                  "textAlign": "center",
-                }
-              }
-            >
-               Vote on Task Proposals 
-            </Text>
-          </Component>
-        </TouchableHighlight>,
         <Themed.Divider
           style={
             Object {
@@ -714,6 +632,9 @@ ShallowWrapper {
         />,
         <ScrollViewMock />,
       ],
+      "style": Object {
+        "backgroundColor": "white",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -723,97 +644,11 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": Array [
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "alignItems": "center",
-                  "fontSize": 30,
-                  "fontWeight": "bold",
-                  "justifyContent": "center",
-                }
-              }
-            >
-              
-            </Text>,
-            <Themed.Avatar
-              containerStyle={
-                Object {
-                  "backgroundColor": "white",
-                }
-              }
-              rounded={true}
-              size={100}
-              source={
-                Object {
-                  "testUri": "../../../app/images/leetcodeIcon.png",
-                }
-              }
-            />,
-          ],
-          "style": Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "justifyContent": "space-evenly",
-            "marginTop": 10,
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
-              "children": "",
-              "ellipsizeMode": "tail",
-              "style": Object {
-                "alignItems": "center",
-                "fontSize": 30,
-                "fontWeight": "bold",
-                "justifyContent": "center",
-              },
-            },
-            "ref": null,
-            "rendered": "",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "containerStyle": Object {
-                "backgroundColor": "white",
-              },
-              "rounded": true,
-              "size": 100,
-              "source": Object {
-                "testUri": "../../../app/images/leetcodeIcon.png",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
             <Themed.Card
               containerStyle={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#555",
+                  "alignItems": "flex-start",
+                  "backgroundColor": "#777",
                   "borderColor": "#555",
                   "borderRadius": 10,
                   "flex": 1,
@@ -824,7 +659,7 @@ ShallowWrapper {
               <Component
                 style={
                   Object {
-                    "paddingVertical": 10,
+                    "paddingBottom": 20,
                   }
                 }
               >
@@ -854,19 +689,20 @@ ShallowWrapper {
                         "paddingVertical": 2,
                       },
                       Object {
-                        "fontSize": 18,
-                        "fontWeight": "bold",
+                        "fontFamily": "Avenir-Black",
+                        "fontSize": 22,
+                        "paddingTop": 5,
                       },
                     ]
                   }
                 >
-                  N/A
+                  #N/A
                 </Text>
               </Component>
               <Component
                 style={
                   Object {
-                    "paddingVertical": 10,
+                    "paddingBottom": 20,
                   }
                 }
               >
@@ -896,8 +732,9 @@ ShallowWrapper {
                         "paddingVertical": 2,
                       },
                       Object {
-                        "fontSize": 18,
-                        "fontWeight": "bold",
+                        "fontFamily": "Avenir-Black",
+                        "fontSize": 22,
+                        "paddingTop": 5,
                       },
                     ]
                   }
@@ -912,15 +749,15 @@ ShallowWrapper {
                   "backgroundColor": "#555",
                   "borderColor": "#555",
                   "borderRadius": 10,
-                  "flex": 2.5,
-                  "marginLeft": 2,
+                  "flex": 4,
+                  "marginLeft": 5,
                 }
               }
             >
               <ScrollViewMock
                 style={
                   Object {
-                    "height": 110,
+                    "height": 140,
                   }
                 }
               >
@@ -1006,7 +843,9 @@ ShallowWrapper {
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
-                    "justifyContent": "space-evenly",
+                    "justifyContent": "space-between",
+                    "paddingLeft": 5,
+                    "paddingRight": 5,
                   }
                 }
               >
@@ -1016,7 +855,7 @@ ShallowWrapper {
                   onPress={[Function]}
                   style={
                     Object {
-                      "marginTop": 5,
+                      "paddingTop": 10,
                     }
                   }
                   underlayColor="#aaa"
@@ -1041,7 +880,7 @@ ShallowWrapper {
                   onPress={[Function]}
                   style={
                     Object {
-                      "marginTop": 5,
+                      "paddingTop": 10,
                     }
                   }
                   underlayColor="#aaa"
@@ -1059,6 +898,33 @@ ShallowWrapper {
                   >
                     Add
                   </Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "paddingTop": 10,
+                    }
+                  }
+                  underlayColor="#aaa"
+                >
+                  <Component>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        }
+                      }
+                    >
+                       Vote 
+                    </Text>
+                  </Component>
                 </TouchableHighlight>
               </Component>
             </Themed.Card>,
@@ -1079,7 +945,7 @@ ShallowWrapper {
                 <Component
                   style={
                     Object {
-                      "paddingVertical": 10,
+                      "paddingBottom": 20,
                     }
                   }
                 >
@@ -1109,19 +975,20 @@ ShallowWrapper {
                           "paddingVertical": 2,
                         },
                         Object {
-                          "fontSize": 18,
-                          "fontWeight": "bold",
+                          "fontFamily": "Avenir-Black",
+                          "fontSize": 22,
+                          "paddingTop": 5,
                         },
                       ]
                     }
                   >
-                    N/A
+                    #N/A
                   </Text>
                 </Component>,
                 <Component
                   style={
                     Object {
-                      "paddingVertical": 10,
+                      "paddingBottom": 20,
                     }
                   }
                 >
@@ -1151,8 +1018,9 @@ ShallowWrapper {
                           "paddingVertical": 2,
                         },
                         Object {
-                          "fontSize": 18,
-                          "fontWeight": "bold",
+                          "fontFamily": "Avenir-Black",
+                          "fontSize": 22,
+                          "paddingTop": 5,
                         },
                       ]
                     }
@@ -1162,8 +1030,8 @@ ShallowWrapper {
                 </Component>,
               ],
               "containerStyle": Object {
-                "alignItems": "center",
-                "backgroundColor": "#555",
+                "alignItems": "flex-start",
+                "backgroundColor": "#777",
                 "borderColor": "#555",
                 "borderRadius": 10,
                 "flex": 1,
@@ -1204,17 +1072,18 @@ ShallowWrapper {
                             "paddingVertical": 2,
                           },
                           Object {
-                            "fontSize": 18,
-                            "fontWeight": "bold",
+                            "fontFamily": "Avenir-Black",
+                            "fontSize": 22,
+                            "paddingTop": 5,
                           },
                         ]
                       }
                     >
-                      N/A
+                      #N/A
                     </Text>,
                   ],
                   "style": Object {
-                    "paddingVertical": 10,
+                    "paddingBottom": 20,
                   },
                 },
                 "ref": null,
@@ -1245,7 +1114,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "N/A",
+                      "children": "#N/A",
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1254,13 +1123,14 @@ ShallowWrapper {
                           "paddingVertical": 2,
                         },
                         Object {
-                          "fontSize": 18,
-                          "fontWeight": "bold",
+                          "fontFamily": "Avenir-Black",
+                          "fontSize": 22,
+                          "paddingTop": 5,
                         },
                       ],
                     },
                     "ref": null,
-                    "rendered": "N/A",
+                    "rendered": "#N/A",
                     "type": [Function],
                   },
                 ],
@@ -1298,8 +1168,9 @@ ShallowWrapper {
                             "paddingVertical": 2,
                           },
                           Object {
-                            "fontSize": 18,
-                            "fontWeight": "bold",
+                            "fontFamily": "Avenir-Black",
+                            "fontSize": 22,
+                            "paddingTop": 5,
                           },
                         ]
                       }
@@ -1308,7 +1179,7 @@ ShallowWrapper {
                     </Text>,
                   ],
                   "style": Object {
-                    "paddingVertical": 10,
+                    "paddingBottom": 20,
                   },
                 },
                 "ref": null,
@@ -1348,8 +1219,9 @@ ShallowWrapper {
                           "paddingVertical": 2,
                         },
                         Object {
-                          "fontSize": 18,
-                          "fontWeight": "bold",
+                          "fontFamily": "Avenir-Black",
+                          "fontSize": 22,
+                          "paddingTop": 5,
                         },
                       ],
                     },
@@ -1372,7 +1244,7 @@ ShallowWrapper {
                 <ScrollViewMock
                   style={
                     Object {
-                      "height": 110,
+                      "height": 140,
                     }
                   }
                 >
@@ -1458,7 +1330,9 @@ ShallowWrapper {
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
-                      "justifyContent": "space-evenly",
+                      "justifyContent": "space-between",
+                      "paddingLeft": 5,
+                      "paddingRight": 5,
                     }
                   }
                 >
@@ -1468,7 +1342,7 @@ ShallowWrapper {
                     onPress={[Function]}
                     style={
                       Object {
-                        "marginTop": 5,
+                        "paddingTop": 10,
                       }
                     }
                     underlayColor="#aaa"
@@ -1493,7 +1367,7 @@ ShallowWrapper {
                     onPress={[Function]}
                     style={
                       Object {
-                        "marginTop": 5,
+                        "paddingTop": 10,
                       }
                     }
                     underlayColor="#aaa"
@@ -1512,14 +1386,41 @@ ShallowWrapper {
                       Add
                     </Text>
                   </TouchableHighlight>
+                  <TouchableHighlight
+                    activeOpacity={0.85}
+                    delayPressOut={100}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "paddingTop": 10,
+                      }
+                    }
+                    underlayColor="#aaa"
+                  >
+                    <Component>
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                         Vote 
+                      </Text>
+                    </Component>
+                  </TouchableHighlight>
                 </Component>,
               ],
               "containerStyle": Object {
                 "backgroundColor": "#555",
                 "borderColor": "#555",
                 "borderRadius": 10,
-                "flex": 2.5,
-                "marginLeft": 2,
+                "flex": 4,
+                "marginLeft": 5,
               },
             },
             "ref": null,
@@ -1600,7 +1501,7 @@ ShallowWrapper {
                     </Component>,
                   ],
                   "style": Object {
-                    "height": 110,
+                    "height": 140,
                   },
                 },
                 "ref": null,
@@ -1794,7 +1695,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       style={
                         Object {
-                          "marginTop": 5,
+                          "paddingTop": 10,
                         }
                       }
                       underlayColor="#aaa"
@@ -1819,7 +1720,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       style={
                         Object {
-                          "marginTop": 5,
+                          "paddingTop": 10,
                         }
                       }
                       underlayColor="#aaa"
@@ -1838,11 +1739,40 @@ ShallowWrapper {
                         Add
                       </Text>
                     </TouchableHighlight>,
+                    <TouchableHighlight
+                      activeOpacity={0.85}
+                      delayPressOut={100}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "paddingTop": 10,
+                        }
+                      }
+                      underlayColor="#aaa"
+                    >
+                      <Component>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                           Vote 
+                        </Text>
+                      </Component>
+                    </TouchableHighlight>,
                   ],
                   "style": Object {
                     "alignItems": "center",
                     "flexDirection": "row",
-                    "justifyContent": "space-evenly",
+                    "justifyContent": "space-between",
+                    "paddingLeft": 5,
+                    "paddingRight": 5,
                   },
                 },
                 "ref": null,
@@ -1869,7 +1799,7 @@ ShallowWrapper {
                       "delayPressOut": 100,
                       "onPress": [Function],
                       "style": Object {
-                        "marginTop": 5,
+                        "paddingTop": 10,
                       },
                       "underlayColor": "#aaa",
                     },
@@ -1916,7 +1846,7 @@ ShallowWrapper {
                       "delayPressOut": 100,
                       "onPress": [Function],
                       "style": Object {
-                        "marginTop": 5,
+                        "paddingTop": 10,
                       },
                       "underlayColor": "#aaa",
                     },
@@ -1941,6 +1871,77 @@ ShallowWrapper {
                     },
                     "type": [Function],
                   },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.85,
+                      "children": <Component>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                           Vote 
+                        </Text>
+                      </Component>,
+                      "delayPressOut": 100,
+                      "onPress": [Function],
+                      "style": Object {
+                        "paddingTop": 10,
+                      },
+                      "underlayColor": "#aaa",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                           Vote 
+                        </Text>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "accessible": true,
+                          "allowFontScaling": true,
+                          "children": " Vote ",
+                          "ellipsizeMode": "tail",
+                          "style": Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          },
+                        },
+                        "ref": null,
+                        "rendered": " Vote ",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
                 ],
                 "type": [Function],
               },
@@ -1948,89 +1949,6 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "activeOpacity": 0.85,
-          "children": <Component>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#fff",
-                  "fontSize": 20,
-                  "paddingVertical": 10,
-                  "textAlign": "center",
-                }
-              }
-            >
-               Vote on Task Proposals 
-            </Text>
-          </Component>,
-          "delayPressOut": 100,
-          "onPress": [Function],
-          "style": Object {
-            "alignItems": "center",
-            "backgroundColor": "red",
-            "borderRadius": 5,
-            "flexDirection": "row",
-            "justifyContent": "center",
-            "marginHorizontal": 80,
-            "marginTop": 10,
-          },
-          "underlayColor": "#aaa",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#fff",
-                  "fontSize": 20,
-                  "paddingVertical": 10,
-                  "textAlign": "center",
-                }
-              }
-            >
-               Vote on Task Proposals 
-            </Text>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
-              "children": " Vote on Task Proposals ",
-              "ellipsizeMode": "tail",
-              "style": Object {
-                "color": "#fff",
-                "fontSize": 20,
-                "paddingVertical": 10,
-                "textAlign": "center",
-              },
-            },
-            "ref": null,
-            "rendered": " Vote on Task Proposals ",
-            "type": [Function],
-          },
-          "type": [Function],
-        },
         "type": [Function],
       },
       Object {
@@ -2072,46 +1990,6 @@ ShallowWrapper {
           <Component
             style={
               Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "justifyContent": "space-evenly",
-                "marginTop": 10,
-              }
-            }
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "alignItems": "center",
-                  "fontSize": 30,
-                  "fontWeight": "bold",
-                  "justifyContent": "center",
-                }
-              }
-            >
-              
-            </Text>
-            <Themed.Avatar
-              containerStyle={
-                Object {
-                  "backgroundColor": "white",
-                }
-              }
-              rounded={true}
-              size={100}
-              source={
-                Object {
-                  "testUri": "../../../app/images/leetcodeIcon.png",
-                }
-              }
-            />
-          </Component>,
-          <Component
-            style={
-              Object {
                 "alignItems": "stretch",
                 "flexDirection": "row",
               }
@@ -2120,8 +1998,8 @@ ShallowWrapper {
             <Themed.Card
               containerStyle={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#555",
+                  "alignItems": "flex-start",
+                  "backgroundColor": "#777",
                   "borderColor": "#555",
                   "borderRadius": 10,
                   "flex": 1,
@@ -2132,7 +2010,7 @@ ShallowWrapper {
               <Component
                 style={
                   Object {
-                    "paddingVertical": 10,
+                    "paddingBottom": 20,
                   }
                 }
               >
@@ -2162,19 +2040,20 @@ ShallowWrapper {
                         "paddingVertical": 2,
                       },
                       Object {
-                        "fontSize": 18,
-                        "fontWeight": "bold",
+                        "fontFamily": "Avenir-Black",
+                        "fontSize": 22,
+                        "paddingTop": 5,
                       },
                     ]
                   }
                 >
-                  N/A
+                  #N/A
                 </Text>
               </Component>
               <Component
                 style={
                   Object {
-                    "paddingVertical": 10,
+                    "paddingBottom": 20,
                   }
                 }
               >
@@ -2204,8 +2083,9 @@ ShallowWrapper {
                         "paddingVertical": 2,
                       },
                       Object {
-                        "fontSize": 18,
-                        "fontWeight": "bold",
+                        "fontFamily": "Avenir-Black",
+                        "fontSize": 22,
+                        "paddingTop": 5,
                       },
                     ]
                   }
@@ -2220,15 +2100,15 @@ ShallowWrapper {
                   "backgroundColor": "#555",
                   "borderColor": "#555",
                   "borderRadius": 10,
-                  "flex": 2.5,
-                  "marginLeft": 2,
+                  "flex": 4,
+                  "marginLeft": 5,
                 }
               }
             >
               <ScrollViewMock
                 style={
                   Object {
-                    "height": 110,
+                    "height": 140,
                   }
                 }
               >
@@ -2314,7 +2194,9 @@ ShallowWrapper {
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
-                    "justifyContent": "space-evenly",
+                    "justifyContent": "space-between",
+                    "paddingLeft": 5,
+                    "paddingRight": 5,
                   }
                 }
               >
@@ -2324,7 +2206,7 @@ ShallowWrapper {
                   onPress={[Function]}
                   style={
                     Object {
-                      "marginTop": 5,
+                      "paddingTop": 10,
                     }
                   }
                   underlayColor="#aaa"
@@ -2349,7 +2231,7 @@ ShallowWrapper {
                   onPress={[Function]}
                   style={
                     Object {
-                      "marginTop": 5,
+                      "paddingTop": 10,
                     }
                   }
                   underlayColor="#aaa"
@@ -2368,44 +2250,36 @@ ShallowWrapper {
                     Add
                   </Text>
                 </TouchableHighlight>
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "paddingTop": 10,
+                    }
+                  }
+                  underlayColor="#aaa"
+                >
+                  <Component>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 16,
+                        }
+                      }
+                    >
+                       Vote 
+                    </Text>
+                  </Component>
+                </TouchableHighlight>
               </Component>
             </Themed.Card>
           </Component>,
-          <TouchableHighlight
-            activeOpacity={0.85}
-            delayPressOut={100}
-            onPress={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "red",
-                "borderRadius": 5,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "marginHorizontal": 80,
-                "marginTop": 10,
-              }
-            }
-            underlayColor="#aaa"
-          >
-            <Component>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#fff",
-                    "fontSize": 20,
-                    "paddingVertical": 10,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                 Vote on Task Proposals 
-              </Text>
-            </Component>
-          </TouchableHighlight>,
           <Themed.Divider
             style={
               Object {
@@ -2417,6 +2291,9 @@ ShallowWrapper {
           />,
           <ScrollViewMock />,
         ],
+        "style": Object {
+          "backgroundColor": "white",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -2426,97 +2303,11 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "fontSize": 30,
-                    "fontWeight": "bold",
-                    "justifyContent": "center",
-                  }
-                }
-              >
-                
-              </Text>,
-              <Themed.Avatar
-                containerStyle={
-                  Object {
-                    "backgroundColor": "white",
-                  }
-                }
-                rounded={true}
-                size={100}
-                source={
-                  Object {
-                    "testUri": "../../../app/images/leetcodeIcon.png",
-                  }
-                }
-              />,
-            ],
-            "style": Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "space-evenly",
-              "marginTop": 10,
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
-                "children": "",
-                "ellipsizeMode": "tail",
-                "style": Object {
-                  "alignItems": "center",
-                  "fontSize": 30,
-                  "fontWeight": "bold",
-                  "justifyContent": "center",
-                },
-              },
-              "ref": null,
-              "rendered": "",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "containerStyle": Object {
-                  "backgroundColor": "white",
-                },
-                "rounded": true,
-                "size": 100,
-                "source": Object {
-                  "testUri": "../../../app/images/leetcodeIcon.png",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": Array [
               <Themed.Card
                 containerStyle={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#555",
+                    "alignItems": "flex-start",
+                    "backgroundColor": "#777",
                     "borderColor": "#555",
                     "borderRadius": 10,
                     "flex": 1,
@@ -2527,7 +2318,7 @@ ShallowWrapper {
                 <Component
                   style={
                     Object {
-                      "paddingVertical": 10,
+                      "paddingBottom": 20,
                     }
                   }
                 >
@@ -2557,19 +2348,20 @@ ShallowWrapper {
                           "paddingVertical": 2,
                         },
                         Object {
-                          "fontSize": 18,
-                          "fontWeight": "bold",
+                          "fontFamily": "Avenir-Black",
+                          "fontSize": 22,
+                          "paddingTop": 5,
                         },
                       ]
                     }
                   >
-                    N/A
+                    #N/A
                   </Text>
                 </Component>
                 <Component
                   style={
                     Object {
-                      "paddingVertical": 10,
+                      "paddingBottom": 20,
                     }
                   }
                 >
@@ -2599,8 +2391,9 @@ ShallowWrapper {
                           "paddingVertical": 2,
                         },
                         Object {
-                          "fontSize": 18,
-                          "fontWeight": "bold",
+                          "fontFamily": "Avenir-Black",
+                          "fontSize": 22,
+                          "paddingTop": 5,
                         },
                       ]
                     }
@@ -2615,15 +2408,15 @@ ShallowWrapper {
                     "backgroundColor": "#555",
                     "borderColor": "#555",
                     "borderRadius": 10,
-                    "flex": 2.5,
-                    "marginLeft": 2,
+                    "flex": 4,
+                    "marginLeft": 5,
                   }
                 }
               >
                 <ScrollViewMock
                   style={
                     Object {
-                      "height": 110,
+                      "height": 140,
                     }
                   }
                 >
@@ -2709,7 +2502,9 @@ ShallowWrapper {
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
-                      "justifyContent": "space-evenly",
+                      "justifyContent": "space-between",
+                      "paddingLeft": 5,
+                      "paddingRight": 5,
                     }
                   }
                 >
@@ -2719,7 +2514,7 @@ ShallowWrapper {
                     onPress={[Function]}
                     style={
                       Object {
-                        "marginTop": 5,
+                        "paddingTop": 10,
                       }
                     }
                     underlayColor="#aaa"
@@ -2744,7 +2539,7 @@ ShallowWrapper {
                     onPress={[Function]}
                     style={
                       Object {
-                        "marginTop": 5,
+                        "paddingTop": 10,
                       }
                     }
                     underlayColor="#aaa"
@@ -2762,6 +2557,33 @@ ShallowWrapper {
                     >
                       Add
                     </Text>
+                  </TouchableHighlight>
+                  <TouchableHighlight
+                    activeOpacity={0.85}
+                    delayPressOut={100}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "paddingTop": 10,
+                      }
+                    }
+                    underlayColor="#aaa"
+                  >
+                    <Component>
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": 16,
+                          }
+                        }
+                      >
+                         Vote 
+                      </Text>
+                    </Component>
                   </TouchableHighlight>
                 </Component>
               </Themed.Card>,
@@ -2782,7 +2604,7 @@ ShallowWrapper {
                   <Component
                     style={
                       Object {
-                        "paddingVertical": 10,
+                        "paddingBottom": 20,
                       }
                     }
                   >
@@ -2812,19 +2634,20 @@ ShallowWrapper {
                             "paddingVertical": 2,
                           },
                           Object {
-                            "fontSize": 18,
-                            "fontWeight": "bold",
+                            "fontFamily": "Avenir-Black",
+                            "fontSize": 22,
+                            "paddingTop": 5,
                           },
                         ]
                       }
                     >
-                      N/A
+                      #N/A
                     </Text>
                   </Component>,
                   <Component
                     style={
                       Object {
-                        "paddingVertical": 10,
+                        "paddingBottom": 20,
                       }
                     }
                   >
@@ -2854,8 +2677,9 @@ ShallowWrapper {
                             "paddingVertical": 2,
                           },
                           Object {
-                            "fontSize": 18,
-                            "fontWeight": "bold",
+                            "fontFamily": "Avenir-Black",
+                            "fontSize": 22,
+                            "paddingTop": 5,
                           },
                         ]
                       }
@@ -2865,8 +2689,8 @@ ShallowWrapper {
                   </Component>,
                 ],
                 "containerStyle": Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#555",
+                  "alignItems": "flex-start",
+                  "backgroundColor": "#777",
                   "borderColor": "#555",
                   "borderRadius": 10,
                   "flex": 1,
@@ -2907,17 +2731,18 @@ ShallowWrapper {
                               "paddingVertical": 2,
                             },
                             Object {
-                              "fontSize": 18,
-                              "fontWeight": "bold",
+                              "fontFamily": "Avenir-Black",
+                              "fontSize": 22,
+                              "paddingTop": 5,
                             },
                           ]
                         }
                       >
-                        N/A
+                        #N/A
                       </Text>,
                     ],
                     "style": Object {
-                      "paddingVertical": 10,
+                      "paddingBottom": 20,
                     },
                   },
                   "ref": null,
@@ -2948,7 +2773,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "N/A",
+                        "children": "#N/A",
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -2957,13 +2782,14 @@ ShallowWrapper {
                             "paddingVertical": 2,
                           },
                           Object {
-                            "fontSize": 18,
-                            "fontWeight": "bold",
+                            "fontFamily": "Avenir-Black",
+                            "fontSize": 22,
+                            "paddingTop": 5,
                           },
                         ],
                       },
                       "ref": null,
-                      "rendered": "N/A",
+                      "rendered": "#N/A",
                       "type": [Function],
                     },
                   ],
@@ -3001,8 +2827,9 @@ ShallowWrapper {
                               "paddingVertical": 2,
                             },
                             Object {
-                              "fontSize": 18,
-                              "fontWeight": "bold",
+                              "fontFamily": "Avenir-Black",
+                              "fontSize": 22,
+                              "paddingTop": 5,
                             },
                           ]
                         }
@@ -3011,7 +2838,7 @@ ShallowWrapper {
                       </Text>,
                     ],
                     "style": Object {
-                      "paddingVertical": 10,
+                      "paddingBottom": 20,
                     },
                   },
                   "ref": null,
@@ -3051,8 +2878,9 @@ ShallowWrapper {
                             "paddingVertical": 2,
                           },
                           Object {
-                            "fontSize": 18,
-                            "fontWeight": "bold",
+                            "fontFamily": "Avenir-Black",
+                            "fontSize": 22,
+                            "paddingTop": 5,
                           },
                         ],
                       },
@@ -3075,7 +2903,7 @@ ShallowWrapper {
                   <ScrollViewMock
                     style={
                       Object {
-                        "height": 110,
+                        "height": 140,
                       }
                     }
                   >
@@ -3161,7 +2989,9 @@ ShallowWrapper {
                       Object {
                         "alignItems": "center",
                         "flexDirection": "row",
-                        "justifyContent": "space-evenly",
+                        "justifyContent": "space-between",
+                        "paddingLeft": 5,
+                        "paddingRight": 5,
                       }
                     }
                   >
@@ -3171,7 +3001,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       style={
                         Object {
-                          "marginTop": 5,
+                          "paddingTop": 10,
                         }
                       }
                       underlayColor="#aaa"
@@ -3196,7 +3026,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       style={
                         Object {
-                          "marginTop": 5,
+                          "paddingTop": 10,
                         }
                       }
                       underlayColor="#aaa"
@@ -3215,14 +3045,41 @@ ShallowWrapper {
                         Add
                       </Text>
                     </TouchableHighlight>
+                    <TouchableHighlight
+                      activeOpacity={0.85}
+                      delayPressOut={100}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "paddingTop": 10,
+                        }
+                      }
+                      underlayColor="#aaa"
+                    >
+                      <Component>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            }
+                          }
+                        >
+                           Vote 
+                        </Text>
+                      </Component>
+                    </TouchableHighlight>
                   </Component>,
                 ],
                 "containerStyle": Object {
                   "backgroundColor": "#555",
                   "borderColor": "#555",
                   "borderRadius": 10,
-                  "flex": 2.5,
-                  "marginLeft": 2,
+                  "flex": 4,
+                  "marginLeft": 5,
                 },
               },
               "ref": null,
@@ -3303,7 +3160,7 @@ ShallowWrapper {
                       </Component>,
                     ],
                     "style": Object {
-                      "height": 110,
+                      "height": 140,
                     },
                   },
                   "ref": null,
@@ -3497,7 +3354,7 @@ ShallowWrapper {
                         onPress={[Function]}
                         style={
                           Object {
-                            "marginTop": 5,
+                            "paddingTop": 10,
                           }
                         }
                         underlayColor="#aaa"
@@ -3522,7 +3379,7 @@ ShallowWrapper {
                         onPress={[Function]}
                         style={
                           Object {
-                            "marginTop": 5,
+                            "paddingTop": 10,
                           }
                         }
                         underlayColor="#aaa"
@@ -3541,11 +3398,40 @@ ShallowWrapper {
                           Add
                         </Text>
                       </TouchableHighlight>,
+                      <TouchableHighlight
+                        activeOpacity={0.85}
+                        delayPressOut={100}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "paddingTop": 10,
+                          }
+                        }
+                        underlayColor="#aaa"
+                      >
+                        <Component>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "white",
+                                "fontSize": 16,
+                              }
+                            }
+                          >
+                             Vote 
+                          </Text>
+                        </Component>
+                      </TouchableHighlight>,
                     ],
                     "style": Object {
                       "alignItems": "center",
                       "flexDirection": "row",
-                      "justifyContent": "space-evenly",
+                      "justifyContent": "space-between",
+                      "paddingLeft": 5,
+                      "paddingRight": 5,
                     },
                   },
                   "ref": null,
@@ -3572,7 +3458,7 @@ ShallowWrapper {
                         "delayPressOut": 100,
                         "onPress": [Function],
                         "style": Object {
-                          "marginTop": 5,
+                          "paddingTop": 10,
                         },
                         "underlayColor": "#aaa",
                       },
@@ -3619,7 +3505,7 @@ ShallowWrapper {
                         "delayPressOut": 100,
                         "onPress": [Function],
                         "style": Object {
-                          "marginTop": 5,
+                          "paddingTop": 10,
                         },
                         "underlayColor": "#aaa",
                       },
@@ -3644,6 +3530,77 @@ ShallowWrapper {
                       },
                       "type": [Function],
                     },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeOpacity": 0.85,
+                        "children": <Component>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "white",
+                                "fontSize": 16,
+                              }
+                            }
+                          >
+                             Vote 
+                          </Text>
+                        </Component>,
+                        "delayPressOut": 100,
+                        "onPress": [Function],
+                        "style": Object {
+                          "paddingTop": 10,
+                        },
+                        "underlayColor": "#aaa",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "white",
+                                "fontSize": 16,
+                              }
+                            }
+                          >
+                             Vote 
+                          </Text>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "accessible": true,
+                            "allowFontScaling": true,
+                            "children": " Vote ",
+                            "ellipsizeMode": "tail",
+                            "style": Object {
+                              "color": "white",
+                              "fontSize": 16,
+                            },
+                          },
+                          "ref": null,
+                          "rendered": " Vote ",
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
                   ],
                   "type": [Function],
                 },
@@ -3651,89 +3608,6 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "activeOpacity": 0.85,
-            "children": <Component>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#fff",
-                    "fontSize": 20,
-                    "paddingVertical": 10,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                 Vote on Task Proposals 
-              </Text>
-            </Component>,
-            "delayPressOut": 100,
-            "onPress": [Function],
-            "style": Object {
-              "alignItems": "center",
-              "backgroundColor": "red",
-              "borderRadius": 5,
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "marginHorizontal": 80,
-              "marginTop": 10,
-            },
-            "underlayColor": "#aaa",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#fff",
-                    "fontSize": 20,
-                    "paddingVertical": 10,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                 Vote on Task Proposals 
-              </Text>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
-                "children": " Vote on Task Proposals ",
-                "ellipsizeMode": "tail",
-                "style": Object {
-                  "color": "#fff",
-                  "fontSize": 20,
-                  "paddingVertical": 10,
-                  "textAlign": "center",
-                },
-              },
-              "ref": null,
-              "rendered": " Vote on Task Proposals ",
-              "type": [Function],
-            },
-            "type": [Function],
-          },
           "type": [Function],
         },
         Object {

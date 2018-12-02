@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import { Button, SearchBar, Icon } from 'react-native-elements';
 import { board, actions } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
@@ -23,6 +23,11 @@ class ChannelListPage extends Component {
       : false;
   };
 
+  static navigationOptions = {
+    headerVisible: false,
+    headerStyle: { height: 0 }
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -36,9 +41,16 @@ class ChannelListPage extends Component {
     return (
       <View style={board.container}>
         <ScrollView>
+          <View style={{ marginLeft: 10, marginTop: 40 }}>
+            <Text style={{ fontSize: 24, fontFamily: 'Avenir-Black' }}>
+              Search
+            </Text>
+          </View>
+
           <View style={board.actions}>
             <SearchBar
               containerStyle={actions.searchBar}
+              lightTheme={true}
               clearIcon={false}
               onChangeText={this._handleSearch}
               onClear={() => {}}
@@ -53,6 +65,13 @@ class ChannelListPage extends Component {
               onPress={this._addChannel.bind(this)}
             />
           </View>
+
+          <View style={{ marginLeft: 12, marginTop: 5, marginBottom: 10 }}>
+            <Text style={{ fontSize: 24, fontFamily: 'Avenir-Black' }}>
+              List
+            </Text>
+          </View>
+
           <View style={board.channelList}>
             {Object.keys(this.props.channels).map(id => {
               const ch = this.props.channels[id];

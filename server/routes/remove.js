@@ -2,67 +2,57 @@ const express = require('express')
 const router = express.Router()
 // Load the MySQL pool connection
 const pool = require('../data/config');
+const { doQuery } = require('./helper'); 
 
-// delete for channel_creator 
-// curl -X DELETE http://localhost:8001/channel_creator/bxzhu_channel
-router.delete('/channel_creator/:channel', (request, response) => {
-    const channel = request.params.channel;
-    pool.query('DELETE FROM channel_creator WHERE channel = ?', channel, (error, result) => {
-        if (error) throw error;
+/**
+ * Remove an entry for table user_channel 
+ * @function
+ * @param {string} user_id - The user_id of the user.
+ * @param {string} channel_id - The channel_id of the channel. 
+ * @example 
+ * curl -X DELETE http://localhost:8001/user_channel/1\&1
+ * @returns {Integer} Returns the removed id of the entry.
+ */    
+function remove_user_channel_entry(user_id, channel_id){} 
+router.delete('/user_channel/:user&:channel', async (request, response) => {
+    try {
+        const user = request.params.user;
+        const channel = request.params.channel;  
+        const result = await doQuery(
+            'DELETE FROM user_channel WHERE user_id = ? AND channel_id = ?', 
+            [user, channel])
         response.send(result);
-    });
-});
-
-// delete for channel_task
-// curl -X DELETE http://localhost:8001/channel_task/bxzhu_channel
-router.delete('/channel_task/:channel', (request, response) => {
-    const channel = request.params.channel;
-    pool.query('DELETE FROM channel_task WHERE channel = ?', channel, (error, result) => {
-        if (error) throw error;
-        response.send(result);
-    });
-});
-
-// delete for channel_user_subscribe
-// curl -X DELETE http://localhost:8001/channel_user_subscribe/bxzhu_channel
-router.delete('/channel_user_subscribe/:channel', (request, response) => {
-    const channel = request.params.channel;
-    pool.query('DELETE FROM channel_user_subscribe WHERE channel = ?', channel, (error, result) => {
-        if (error) throw error;
-        response.send(result);
-    });
+    } catch (error) {
+        response.status(401).send(`unable to remove: ${error}`);  
+    }
 });
 
-// delete for task_info
-// curl -X DELETE http://localhost:8001/task_info/bxzhu\&bxchannel  
-router.delete('/task_info/:task&:channel', (request, response) => {
-    const task = request.params.task;
-    const channel = request.params.channel;
-    pool.query('DELETE FROM task_info WHERE task = ? AND channel = ?', [task, channel], (error, result) => {
-        if (error) throw error;
+ 
+/**
+ * Remove an entry for table user_task 
+ * @function
+ * @param {string} user_id - The user_id of the user.
+ * @param {string} task_id - The channel_id of the task. 
+ * @example 
+ * curl -X DELETE http://localhost:8001/user_task/1\&1
+ * @returns {Integer} Returns the removed id of the entry.
+ */    
+
+function remove_user_task_entry(user_id, task_id){} 
+router.delete('/user_task/:user&:task', async (request, response) => {
+
+    try {
+        console.log(request.params)
+        console.log(request.body)
+        const user = request.params.user;
+        const task = request.params.task;
+        const result = await doQuery(
+            'DELETE FROM user_task WHERE user_id = ? AND task_id = ?', 
+            [user, task])
         response.send(result);
-    });
-});
-//delete for user_channel_point
-//curl -X DELETE http://localhost:8001/user_channel_point/bxzhu\&xzhu_channel
-router.delete('/user_channel_point/:user&:channel', (request, response) => {
-    const user = request.params.user;
-    const channel = request.params.channel;
-    pool.query('DELETE FROM user_channel_point WHERE user = ? AND channel = ?', [user, channel], (error, result) => {
-        if (error) throw error;
-        response.send(result);
-    });
-});
-// delete for user_task_info 
-// curl -X DELETE http://localhost:8001/user_task_info/bxzhu\&bxzhu_channel\&bxzhu_task
-router.delete('/user_task_info/:user&:channel&:task', (request, response) => {
-    const user = request.params.user;
-    const channel = request.params.channel;
-    const task = request.params.task;
-    pool.query('DELETE FROM user_task_info WHERE user = ? AND channel = ? AND task = ?', [user, channel, task], (error, result) => {
-        if (error) throw error;
-        response.send(result);
-    });
+    } catch (error) {
+        response.status(401).send(`unable to remove: ${error}`);  
+    } 
 });
 
 module.exports = router

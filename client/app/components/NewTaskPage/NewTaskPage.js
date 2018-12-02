@@ -25,7 +25,6 @@ class NewTaskPage extends Component {
 
   _submit() {
     this.props.navigation.navigate('ChannelMemberView');
-    console.log('Should go back to task list and update database');
   }
 
   constructor(props) {

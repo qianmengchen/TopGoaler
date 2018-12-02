@@ -41,7 +41,9 @@ const styles = StyleSheet.create({
   },
   title: {
     alignSelf: 'center',
-    fontSize: 40
+    fontSize: 40,
+    fontFamily: 'Avenir',
+    fontWeight: '500'
   },
   signUpButton: {
     marginHorizontal: 100,

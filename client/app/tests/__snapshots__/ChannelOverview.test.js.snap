@@ -3,124 +3,22 @@
 exports[`Testing Channel Overview Page renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Component
-    style={
+  Symbol(enzyme.__unrendered__): <ChannelOverview
+    channel={
       Object {
-        "backgroundColor": "lightgrey",
-        "borderColor": "black",
-        "borderWidth": 1,
-        "elevation": 1,
-        "flex": 1,
-        "flexDirection": "row",
-        "height": 150,
-        "marginBottom": 20,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 2,
-          "width": 0,
-        },
-        "shadowOpacity": 0.8,
-        "shadowRadius": 2,
+        "creator": 1,
+        "id": 42,
+        "image_url": "http://shortlink.in/themes/v3/styles/img/url-link.png",
+        "subtitle": "bxzhu",
+        "title": "bxzhu_channel",
       }
     }
-  >
-    <Component
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "flex": 0.75,
-          "flexDirection": "column",
-          "justifyContent": "center",
-          "paddingLeft": 20,
-        }
-      }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0.3,
-            "fontSize": 20,
-            "fontWeight": "bold",
-            "paddingBottom": 15,
-            "paddingTop": 20,
-          }
-        }
-      >
-        bxzhu_channel
-      </Themed.Text>
-      <Themed.Text
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0.35,
-          }
-        }
-      >
-        bxzhu
-      </Themed.Text>
-      <Component
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 0.35,
-            "flexDirection": "row",
-          }
-        }
-      >
-        <Themed.Text
-          style={
-            Object {
-              "alignItems": "center",
-              "flex": 0.7,
-              "justifyContent": "center",
-            }
-          }
-        >
-          0 users, 0 tasks
-        </Themed.Text>
-        <TouchableWithoutFeedback>
-          <Themed.Icon
-            color="black"
-            name="check"
-            size={30}
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 0.3,
-                "justifyContent": "center",
-              }
-            }
-          />
-        </TouchableWithoutFeedback>
-      </Component>
-    </Component>
-    <TouchableHighlight
-      activeOpacity={0.85}
-      delayPressOut={100}
-      onPress={[Function]}
-      style={
-        Object {
-          "alignItems": "flex-end",
-          "flex": 0.25,
-          "justifyContent": "center",
-          "paddingRight": 20,
-        }
-      }
-      underlayColor="#aaa"
-    >
-      <Component>
-        <Themed.Avatar
-          size={120}
-          source={
-            Object {
-              "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-            }
-          }
-        />
-      </Component>
-    </TouchableHighlight>
-  </Component>,
+    goToChannel={[Function]}
+    is_subscribed={true}
+    subscribe={[Function]}
+    task={Array []}
+    user_channel={Array []}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -132,9 +30,31 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": Array [
+      "activeOpacity": 0.85,
+      "children": <Component
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "borderRadius": 6,
+            "borderWidth": 0,
+            "elevation": 1,
+            "flex": 1,
+            "flexDirection": "row",
+            "height": 120,
+            "marginBottom": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
+          }
+        }
+      >
         <Component
           style={
             Object {
@@ -151,8 +71,8 @@ ShallowWrapper {
               Object {
                 "alignItems": "center",
                 "flex": 0.3,
+                "fontFamily": "Avenir-Heavy",
                 "fontSize": 20,
-                "fontWeight": "bold",
                 "paddingBottom": 15,
                 "paddingTop": 20,
               }
@@ -165,6 +85,8 @@ ShallowWrapper {
               Object {
                 "alignItems": "center",
                 "flex": 0.35,
+                "fontFamily": "Avenir-Light",
+                "fontSize": 16,
               }
             }
           >
@@ -176,6 +98,7 @@ ShallowWrapper {
                 "alignItems": "center",
                 "flex": 0.35,
                 "flexDirection": "row",
+                "paddingBottom": 10,
               }
             }
           >
@@ -183,7 +106,9 @@ ShallowWrapper {
               style={
                 Object {
                   "alignItems": "center",
+                  "color": "#555",
                   "flex": 0.7,
+                  "fontFamily": "Helvetica-Light",
                   "justifyContent": "center",
                 }
               }
@@ -200,16 +125,14 @@ ShallowWrapper {
                     "alignItems": "center",
                     "flex": 0.3,
                     "justifyContent": "center",
+                    "paddingBottom": 10,
                   }
                 }
               />
             </TouchableWithoutFeedback>
           </Component>
-        </Component>,
-        <TouchableHighlight
-          activeOpacity={0.85}
-          delayPressOut={100}
-          onPress={[Function]}
+        </Component>
+        <Component
           style={
             Object {
               "alignItems": "flex-end",
@@ -218,319 +141,26 @@ ShallowWrapper {
               "paddingRight": 20,
             }
           }
-          underlayColor="#aaa"
         >
-          <Component>
-            <Themed.Avatar
-              size={120}
-              source={
-                Object {
-                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-                }
+          <Themed.Avatar
+            size={80}
+            source={
+              Object {
+                "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
               }
-            />
-          </Component>
-        </TouchableHighlight>,
-      ],
-      "style": Object {
-        "backgroundColor": "lightgrey",
-        "borderColor": "black",
-        "borderWidth": 1,
-        "elevation": 1,
-        "flex": 1,
-        "flexDirection": "row",
-        "height": 150,
-        "marginBottom": 20,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 2,
-          "width": 0,
-        },
-        "shadowOpacity": 0.8,
-        "shadowRadius": 2,
-      },
+            }
+          />
+        </Component>
+      </Component>,
+      "delayPressOut": 100,
+      "onPress": [Function],
+      "underlayColor": "#aaa",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Themed.Text
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flex": 0.3,
-                  "fontSize": 20,
-                  "fontWeight": "bold",
-                  "paddingBottom": 15,
-                  "paddingTop": 20,
-                }
-              }
-            >
-              bxzhu_channel
-            </Themed.Text>,
-            <Themed.Text
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flex": 0.35,
-                }
-              }
-            >
-              bxzhu
-            </Themed.Text>,
-            <Component
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flex": 0.35,
-                  "flexDirection": "row",
-                }
-              }
-            >
-              <Themed.Text
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 0.7,
-                    "justifyContent": "center",
-                  }
-                }
-              >
-                0 users, 0 tasks
-              </Themed.Text>
-              <TouchableWithoutFeedback>
-                <Themed.Icon
-                  color="black"
-                  name="check"
-                  size={30}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 0.3,
-                      "justifyContent": "center",
-                    }
-                  }
-                />
-              </TouchableWithoutFeedback>
-            </Component>,
-          ],
-          "style": Object {
-            "alignItems": "flex-start",
-            "flex": 0.75,
-            "flexDirection": "column",
-            "justifyContent": "center",
-            "paddingLeft": 20,
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "bxzhu_channel",
-              "style": Object {
-                "alignItems": "center",
-                "flex": 0.3,
-                "fontSize": 20,
-                "fontWeight": "bold",
-                "paddingBottom": 15,
-                "paddingTop": 20,
-              },
-            },
-            "ref": null,
-            "rendered": "bxzhu_channel",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "bxzhu",
-              "style": Object {
-                "alignItems": "center",
-                "flex": 0.35,
-              },
-            },
-            "ref": null,
-            "rendered": "bxzhu",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": Array [
-                <Themed.Text
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 0.7,
-                      "justifyContent": "center",
-                    }
-                  }
-                >
-                  0 users, 0 tasks
-                </Themed.Text>,
-                <TouchableWithoutFeedback>
-                  <Themed.Icon
-                    color="black"
-                    name="check"
-                    size={30}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flex": 0.3,
-                        "justifyContent": "center",
-                      }
-                    }
-                  />
-                </TouchableWithoutFeedback>,
-              ],
-              "style": Object {
-                "alignItems": "center",
-                "flex": 0.35,
-                "flexDirection": "row",
-              },
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "0 users, 0 tasks",
-                  "style": Object {
-                    "alignItems": "center",
-                    "flex": 0.7,
-                    "justifyContent": "center",
-                  },
-                },
-                "ref": null,
-                "rendered": "0 users, 0 tasks",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": <Themed.Icon
-                    color="black"
-                    name="check"
-                    size={30}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flex": 0.3,
-                        "justifyContent": "center",
-                      }
-                    }
-                  />,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "color": "black",
-                    "name": "check",
-                    "size": 30,
-                    "style": Object {
-                      "alignItems": "center",
-                      "flex": 0.3,
-                      "justifyContent": "center",
-                    },
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-            ],
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "activeOpacity": 0.85,
-          "children": <Component>
-            <Themed.Avatar
-              size={120}
-              source={
-                Object {
-                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-                }
-              }
-            />
-          </Component>,
-          "delayPressOut": 100,
-          "onPress": [Function],
-          "style": Object {
-            "alignItems": "flex-end",
-            "flex": 0.25,
-            "justifyContent": "center",
-            "paddingRight": 20,
-          },
-          "underlayColor": "#aaa",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Themed.Avatar
-              size={120}
-              source={
-                Object {
-                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-                }
-              }
-            />,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "size": 120,
-              "source": Object {
-                "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-    ],
-    "type": "View",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
           <Component
@@ -549,8 +179,8 @@ ShallowWrapper {
                 Object {
                   "alignItems": "center",
                   "flex": 0.3,
+                  "fontFamily": "Avenir-Heavy",
                   "fontSize": 20,
-                  "fontWeight": "bold",
                   "paddingBottom": 15,
                   "paddingTop": 20,
                 }
@@ -563,6 +193,8 @@ ShallowWrapper {
                 Object {
                   "alignItems": "center",
                   "flex": 0.35,
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 16,
                 }
               }
             >
@@ -574,6 +206,7 @@ ShallowWrapper {
                   "alignItems": "center",
                   "flex": 0.35,
                   "flexDirection": "row",
+                  "paddingBottom": 10,
                 }
               }
             >
@@ -581,7 +214,9 @@ ShallowWrapper {
                 style={
                   Object {
                     "alignItems": "center",
+                    "color": "#555",
                     "flex": 0.7,
+                    "fontFamily": "Helvetica-Light",
                     "justifyContent": "center",
                   }
                 }
@@ -598,16 +233,14 @@ ShallowWrapper {
                       "alignItems": "center",
                       "flex": 0.3,
                       "justifyContent": "center",
+                      "paddingBottom": 10,
                     }
                   }
                 />
               </TouchableWithoutFeedback>
             </Component>
           </Component>,
-          <TouchableHighlight
-            activeOpacity={0.85}
-            delayPressOut={100}
-            onPress={[Function]}
+          <Component
             style={
               Object {
                 "alignItems": "flex-end",
@@ -616,36 +249,34 @@ ShallowWrapper {
                 "paddingRight": 20,
               }
             }
-            underlayColor="#aaa"
           >
-            <Component>
-              <Themed.Avatar
-                size={120}
-                source={
-                  Object {
-                    "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-                  }
+            <Themed.Avatar
+              size={80}
+              source={
+                Object {
+                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                 }
-              />
-            </Component>
-          </TouchableHighlight>,
+              }
+            />
+          </Component>,
         ],
         "style": Object {
-          "backgroundColor": "lightgrey",
+          "backgroundColor": "white",
           "borderColor": "black",
-          "borderWidth": 1,
+          "borderRadius": 6,
+          "borderWidth": 0,
           "elevation": 1,
           "flex": 1,
           "flexDirection": "row",
-          "height": 150,
-          "marginBottom": 20,
-          "shadowColor": "#000",
+          "height": 120,
+          "marginBottom": 10,
+          "shadowColor": "#888",
           "shadowOffset": Object {
-            "height": 2,
+            "height": 1,
             "width": 0,
           },
           "shadowOpacity": 0.8,
-          "shadowRadius": 2,
+          "shadowRadius": 1,
         },
       },
       "ref": null,
@@ -661,8 +292,8 @@ ShallowWrapper {
                   Object {
                     "alignItems": "center",
                     "flex": 0.3,
+                    "fontFamily": "Avenir-Heavy",
                     "fontSize": 20,
-                    "fontWeight": "bold",
                     "paddingBottom": 15,
                     "paddingTop": 20,
                   }
@@ -675,6 +306,8 @@ ShallowWrapper {
                   Object {
                     "alignItems": "center",
                     "flex": 0.35,
+                    "fontFamily": "Avenir-Light",
+                    "fontSize": 16,
                   }
                 }
               >
@@ -686,6 +319,7 @@ ShallowWrapper {
                     "alignItems": "center",
                     "flex": 0.35,
                     "flexDirection": "row",
+                    "paddingBottom": 10,
                   }
                 }
               >
@@ -693,7 +327,9 @@ ShallowWrapper {
                   style={
                     Object {
                       "alignItems": "center",
+                      "color": "#555",
                       "flex": 0.7,
+                      "fontFamily": "Helvetica-Light",
                       "justifyContent": "center",
                     }
                   }
@@ -710,6 +346,7 @@ ShallowWrapper {
                         "alignItems": "center",
                         "flex": 0.3,
                         "justifyContent": "center",
+                        "paddingBottom": 10,
                       }
                     }
                   />
@@ -735,8 +372,8 @@ ShallowWrapper {
                 "style": Object {
                   "alignItems": "center",
                   "flex": 0.3,
+                  "fontFamily": "Avenir-Heavy",
                   "fontSize": 20,
-                  "fontWeight": "bold",
                   "paddingBottom": 15,
                   "paddingTop": 20,
                 },
@@ -754,6 +391,8 @@ ShallowWrapper {
                 "style": Object {
                   "alignItems": "center",
                   "flex": 0.35,
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 16,
                 },
               },
               "ref": null,
@@ -770,7 +409,9 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "center",
+                        "color": "#555",
                         "flex": 0.7,
+                        "fontFamily": "Helvetica-Light",
                         "justifyContent": "center",
                       }
                     }
@@ -787,6 +428,7 @@ ShallowWrapper {
                           "alignItems": "center",
                           "flex": 0.3,
                           "justifyContent": "center",
+                          "paddingBottom": 10,
                         }
                       }
                     />
@@ -796,6 +438,7 @@ ShallowWrapper {
                   "alignItems": "center",
                   "flex": 0.35,
                   "flexDirection": "row",
+                  "paddingBottom": 10,
                 },
               },
               "ref": null,
@@ -808,7 +451,9 @@ ShallowWrapper {
                     "children": "0 users, 0 tasks",
                     "style": Object {
                       "alignItems": "center",
+                      "color": "#555",
                       "flex": 0.7,
+                      "fontFamily": "Helvetica-Light",
                       "justifyContent": "center",
                     },
                   },
@@ -830,6 +475,7 @@ ShallowWrapper {
                           "alignItems": "center",
                           "flex": 0.3,
                           "justifyContent": "center",
+                          "paddingBottom": 10,
                         }
                       }
                     />,
@@ -847,6 +493,7 @@ ShallowWrapper {
                         "alignItems": "center",
                         "flex": 0.3,
                         "justifyContent": "center",
+                        "paddingBottom": 10,
                       },
                     },
                     "ref": null,
@@ -866,26 +513,20 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "activeOpacity": 0.85,
-            "children": <Component>
-              <Themed.Avatar
-                size={120}
-                source={
-                  Object {
-                    "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
-                  }
+            "children": <Themed.Avatar
+              size={80}
+              source={
+                Object {
+                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                 }
-              />
-            </Component>,
-            "delayPressOut": 100,
-            "onPress": [Function],
+              }
+            />,
             "style": Object {
               "alignItems": "flex-end",
               "flex": 0.25,
               "justifyContent": "center",
               "paddingRight": 20,
             },
-            "underlayColor": "#aaa",
           },
           "ref": null,
           "rendered": Object {
@@ -893,14 +534,523 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "size": 80,
+              "source": Object {
+                "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "activeOpacity": 0.85,
+        "children": <Component
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderColor": "black",
+              "borderRadius": 6,
+              "borderWidth": 0,
+              "elevation": 1,
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 120,
+              "marginBottom": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 0.75,
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "paddingLeft": 20,
+              }
+            }
+          >
+            <Themed.Text
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 0.3,
+                  "fontFamily": "Avenir-Heavy",
+                  "fontSize": 20,
+                  "paddingBottom": 15,
+                  "paddingTop": 20,
+                }
+              }
+            >
+              bxzhu_channel
+            </Themed.Text>
+            <Themed.Text
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 0.35,
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 16,
+                }
+              }
+            >
+              bxzhu
+            </Themed.Text>
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 0.35,
+                  "flexDirection": "row",
+                  "paddingBottom": 10,
+                }
+              }
+            >
+              <Themed.Text
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "color": "#555",
+                    "flex": 0.7,
+                    "fontFamily": "Helvetica-Light",
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                0 users, 0 tasks
+              </Themed.Text>
+              <TouchableWithoutFeedback>
+                <Themed.Icon
+                  color="black"
+                  name="check"
+                  size={30}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 0.3,
+                      "justifyContent": "center",
+                      "paddingBottom": 10,
+                    }
+                  }
+                />
+              </TouchableWithoutFeedback>
+            </Component>
+          </Component>
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 0.25,
+                "justifyContent": "center",
+                "paddingRight": 20,
+              }
+            }
+          >
+            <Themed.Avatar
+              size={80}
+              source={
+                Object {
+                  "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
+                }
+              }
+            />
+          </Component>
+        </Component>,
+        "delayPressOut": 100,
+        "onPress": [Function],
+        "underlayColor": "#aaa",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 0.75,
+                  "flexDirection": "column",
+                  "justifyContent": "center",
+                  "paddingLeft": 20,
+                }
+              }
+            >
+              <Themed.Text
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 0.3,
+                    "fontFamily": "Avenir-Heavy",
+                    "fontSize": 20,
+                    "paddingBottom": 15,
+                    "paddingTop": 20,
+                  }
+                }
+              >
+                bxzhu_channel
+              </Themed.Text>
+              <Themed.Text
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 0.35,
+                    "fontFamily": "Avenir-Light",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                bxzhu
+              </Themed.Text>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 0.35,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                  }
+                }
+              >
+                <Themed.Text
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "color": "#555",
+                      "flex": 0.7,
+                      "fontFamily": "Helvetica-Light",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  0 users, 0 tasks
+                </Themed.Text>
+                <TouchableWithoutFeedback>
+                  <Themed.Icon
+                    color="black"
+                    name="check"
+                    size={30}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flex": 0.3,
+                        "justifyContent": "center",
+                        "paddingBottom": 10,
+                      }
+                    }
+                  />
+                </TouchableWithoutFeedback>
+              </Component>
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 0.25,
+                  "justifyContent": "center",
+                  "paddingRight": 20,
+                }
+              }
+            >
+              <Themed.Avatar
+                size={80}
+                source={
+                  Object {
+                    "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
+                  }
+                }
+              />
+            </Component>,
+          ],
+          "style": Object {
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "borderRadius": 6,
+            "borderWidth": 0,
+            "elevation": 1,
+            "flex": 1,
+            "flexDirection": "row",
+            "height": 120,
+            "marginBottom": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Themed.Text
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 0.3,
+                      "fontFamily": "Avenir-Heavy",
+                      "fontSize": 20,
+                      "paddingBottom": 15,
+                      "paddingTop": 20,
+                    }
+                  }
+                >
+                  bxzhu_channel
+                </Themed.Text>,
+                <Themed.Text
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 0.35,
+                      "fontFamily": "Avenir-Light",
+                      "fontSize": 16,
+                    }
+                  }
+                >
+                  bxzhu
+                </Themed.Text>,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 0.35,
+                      "flexDirection": "row",
+                      "paddingBottom": 10,
+                    }
+                  }
+                >
+                  <Themed.Text
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "color": "#555",
+                        "flex": 0.7,
+                        "fontFamily": "Helvetica-Light",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    0 users, 0 tasks
+                  </Themed.Text>
+                  <TouchableWithoutFeedback>
+                    <Themed.Icon
+                      color="black"
+                      name="check"
+                      size={30}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "flex": 0.3,
+                          "justifyContent": "center",
+                          "paddingBottom": 10,
+                        }
+                      }
+                    />
+                  </TouchableWithoutFeedback>
+                </Component>,
+              ],
+              "style": Object {
+                "alignItems": "flex-start",
+                "flex": 0.75,
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "paddingLeft": 20,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "bxzhu_channel",
+                  "style": Object {
+                    "alignItems": "center",
+                    "flex": 0.3,
+                    "fontFamily": "Avenir-Heavy",
+                    "fontSize": 20,
+                    "paddingBottom": 15,
+                    "paddingTop": 20,
+                  },
+                },
+                "ref": null,
+                "rendered": "bxzhu_channel",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "bxzhu",
+                  "style": Object {
+                    "alignItems": "center",
+                    "flex": 0.35,
+                    "fontFamily": "Avenir-Light",
+                    "fontSize": 16,
+                  },
+                },
+                "ref": null,
+                "rendered": "bxzhu",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Themed.Text
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "color": "#555",
+                          "flex": 0.7,
+                          "fontFamily": "Helvetica-Light",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      0 users, 0 tasks
+                    </Themed.Text>,
+                    <TouchableWithoutFeedback>
+                      <Themed.Icon
+                        color="black"
+                        name="check"
+                        size={30}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 0.3,
+                            "justifyContent": "center",
+                            "paddingBottom": 10,
+                          }
+                        }
+                      />
+                    </TouchableWithoutFeedback>,
+                  ],
+                  "style": Object {
+                    "alignItems": "center",
+                    "flex": 0.35,
+                    "flexDirection": "row",
+                    "paddingBottom": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "0 users, 0 tasks",
+                      "style": Object {
+                        "alignItems": "center",
+                        "color": "#555",
+                        "flex": 0.7,
+                        "fontFamily": "Helvetica-Light",
+                        "justifyContent": "center",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "0 users, 0 tasks",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <Themed.Icon
+                        color="black"
+                        name="check"
+                        size={30}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 0.3,
+                            "justifyContent": "center",
+                            "paddingBottom": 10,
+                          }
+                        }
+                      />,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "color": "black",
+                        "name": "check",
+                        "size": 30,
+                        "style": Object {
+                          "alignItems": "center",
+                          "flex": 0.3,
+                          "justifyContent": "center",
+                          "paddingBottom": 10,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
               "children": <Themed.Avatar
-                size={120}
+                size={80}
                 source={
                   Object {
                     "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                   }
                 }
               />,
+              "style": Object {
+                "alignItems": "flex-end",
+                "flex": 0.25,
+                "justifyContent": "center",
+                "paddingRight": 20,
+              },
             },
             "ref": null,
             "rendered": Object {
@@ -908,7 +1058,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "size": 120,
+                "size": 80,
                 "source": Object {
                   "uri": "http://shortlink.in/themes/v3/styles/img/url-link.png",
                 },
@@ -919,10 +1069,10 @@ ShallowWrapper {
             },
             "type": [Function],
           },
-          "type": [Function],
-        },
-      ],
-      "type": "View",
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

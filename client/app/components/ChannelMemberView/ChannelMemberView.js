@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
-import { Card, Avatar, Divider } from 'react-native-elements';
-import { header, cardLeft, cardRight, vote } from './styles';
+import { Card, Avatar, Divider, Icon } from 'react-native-elements';
+import { headerBar, header, cardLeft, cardRight } from './styles';
 import { Feed } from '../Feed/index';
 import { _get } from '../../actions';
 import {
@@ -15,7 +15,7 @@ import {
 class ChannelMemberView extends Component {
   _goToTaskListPage() {
     const { navigate } = this.props.navigation;
-    navigate('TaskListPage');
+    navigate('TaskListPage', { channel_id: this.props.channel.id });
   }
 
   _goToNewTaskPage() {
@@ -37,8 +37,7 @@ class ChannelMemberView extends Component {
       )).json();
       return { ...score, ...ranking };
     } catch (_) {
-      _alert('Retrieve ranking info error');
-      return null;
+      return { score: 0, ranking: -1 };
     }
   }
 
@@ -83,27 +82,32 @@ class ChannelMemberView extends Component {
     };
   }
 
+  static navigationOptions = ({ navigation }) => {
+    const { params } = navigation.state;
+    const channel = params ? (params.channel ? params.channel : null) : null;
+    return {
+      headerTitle: <ChannelTitle channel={channel} />,
+      headerRight: <ChannelRight channel={channel} />,
+      headerBackImage: <BackImage />,
+      ...headerBar
+    };
+  };
+
+  componentDidMount() {
+    this.props.navigation.setParams({
+      channel: this.props.channel
+    });
+  }
   render() {
-    const { channel, activities, users, tasks } = this.props;
-
+    const { activities, users, tasks } = this.props;
     return (
-      <View>
-        <View style={header.container}>
-          <Text style={header.title}>{channel.title}</Text>
-          <Avatar
-            size={100}
-            rounded
-            source={require('../../images/leetcodeIcon.png')}
-            containerStyle={header.avatar}
-          />
-        </View>
-
+      <View style={{ backgroundColor: 'white' }}>
         <View style={{ flexDirection: 'row', alignItems: 'stretch' }}>
           <Card containerStyle={cardLeft.container}>
             <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rank</Text>
               <Text style={[cardLeft.stats, cardLeft.number]}>
-                {this.state.rank}
+                {'#' + (this.state.rank > 0 ? this.state.rank : 'N/A')}
               </Text>
             </View>
             <View style={cardLeft.statsContainer}>
@@ -115,15 +119,17 @@ class ChannelMemberView extends Component {
           </Card>
 
           <Card containerStyle={cardRight.container}>
-            <ScrollView style={{ height: 110 }}>{this.tasklist()}</ScrollView>
+            <ScrollView style={{ height: 140 }}>{this.tasklist()}</ScrollView>
 
             <Divider style={{ backgroundColor: '#bbb', height: 1 }} />
 
             <View
               style={{
                 flexDirection: 'row',
-                justifyContent: 'space-evenly',
-                alignItems: 'center'
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingLeft: 5,
+                paddingRight: 5
               }}
             >
               <TouchableHighlight
@@ -140,19 +146,19 @@ class ChannelMemberView extends Component {
               >
                 <Text style={cardRight.taskButtonText}>Add</Text>
               </TouchableHighlight>
+
+              <TouchableHighlight
+                style={cardRight.taskButton}
+                underlayColor="#aaa"
+                onPress={this._goToProposalsPage.bind(this)}
+              >
+                <View>
+                  <Text style={cardRight.taskButtonText}> Vote </Text>
+                </View>
+              </TouchableHighlight>
             </View>
           </Card>
         </View>
-
-        <TouchableHighlight
-          style={vote.container}
-          underlayColor="#aaa"
-          onPress={this._goToProposalsPage.bind(this)}
-        >
-          <View>
-            <Text style={vote.buttonText}> Vote on Task Proposals </Text>
-          </View>
-        </TouchableHighlight>
 
         <Divider
           style={{
@@ -181,5 +187,29 @@ class ChannelMemberView extends Component {
     );
   }
 }
+
+const ChannelTitle = ({ channel }) => {
+  const title = channel ? '#' + channel.title : '';
+  return (
+    <View style={header.container}>
+      <Text style={header.title}>{title}</Text>
+    </View>
+  );
+};
+
+const BackImage = () => <Icon color="#888" name="chevron-left" size={30} />;
+
+const ChannelRight = ({ channel }) => {
+  const default_url = 'http://shortlink.in/themes/v3/styles/img/url-link.png';
+  const image_url = channel ? channel.image_url : default_url;
+  return (
+    <Avatar
+      size={35}
+      rounded
+      source={{ uri: image_url }}
+      containerStyle={header.avatar}
+    />
+  );
+};
 
 export default ChannelMemberView;

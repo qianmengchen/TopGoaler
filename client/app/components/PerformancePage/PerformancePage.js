@@ -3,13 +3,12 @@ import { Text, View, ScrollView, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { board, title, text, infoCard, leftPart, rightPart } from './styles';
 import { periodDecoder } from '../../constants';
-import { _alert } from '../ChannelMemberView/utils';
 import { _get } from '../../actions';
 
 class PerformancePage extends Component {
   //utils
   _day_task_reducer = (acc, val) => {
-    const now = new Date();
+    const now = new Date(Date.now());
     if (val && now - val.create_time <= periodDecoder[0]) {
       return acc + 1;
     } else {
@@ -22,7 +21,7 @@ class PerformancePage extends Component {
   };
 
   _week_task_reducer = (acc, val) => {
-    const now = new Date();
+    const now = new Date(Date.now());
     if (val && now - val.create_time <= periodDecoder[1]) {
       return acc + 1;
     } else {
@@ -35,7 +34,7 @@ class PerformancePage extends Component {
   };
 
   _month_task_reducer = (acc, val) => {
-    const now = new Date();
+    const now = new Date(Date.now());
     if (val && now - val.create_time <= periodDecoder[2]) {
       return acc + 1;
     } else {
@@ -48,7 +47,7 @@ class PerformancePage extends Component {
   };
 
   _get_last_months = () => {
-    const now = new Date().getMonth();
+    const now = new Date(Date.now()).getMonth();
     const months = [
       'Jan',
       'Feb',
@@ -68,7 +67,7 @@ class PerformancePage extends Component {
   };
 
   _specific_month_task_reducer = month => (acc, val) => {
-    const now_year = new Date().getFullYear();
+    const now_year = new Date(Date.now()).getFullYear();
     if (
       val &&
       val.create_time.getFullYear() === now_year &&
@@ -88,7 +87,7 @@ class PerformancePage extends Component {
   };
 
   _get_last_tasks_num = () => {
-    const start = new Date().getMonth() - 4;
+    const start = new Date(Date.now()).getMonth() - 4;
     return Array.apply(null, Array(6)).map((x, i) => {
       return this._specific_month_task(start + i);
     });
@@ -96,7 +95,6 @@ class PerformancePage extends Component {
 
   async _loadScores() {
     const { userId, subscribed_channels } = this.props;
-    console.log(userId);
     const channel_point = {};
     for (const { channel_id } of subscribed_channels.keys()) {
       try {
@@ -105,8 +103,7 @@ class PerformancePage extends Component {
         )).json();
         channel_point[channel_id] = score;
       } catch (e) {
-        console.log(e);
-        _alert('Retrieve score info error');
+        channel_point[channel_id] = 0;
       }
     }
     return { channel_point };
@@ -126,7 +123,6 @@ class PerformancePage extends Component {
   }
 
   render() {
-    console.log(this.state.channel_point);
     return (
       <View style={board.container}>
         <View style={board.title}>
@@ -158,7 +154,7 @@ class PerformancePage extends Component {
                 const channel_title = this.props.channels[channel_id.toString()]
                   .title;
                 var point = this.state.channel_point[channel_id];
-                if (!point) point = 'N/A';
+                if (!point) point = 0;
                 return (
                   <Text key={id.channel_id} style={text.stat}>
                     #{channel_title}: {point}

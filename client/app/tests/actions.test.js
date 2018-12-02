@@ -9,7 +9,8 @@ import {
   CREATE_CHANNEL_FAILURE,
   SUBSCRIBE_CHANNEL,
   ADD_ACTIVITY,
-  ADD_FAILURE
+  ADD_FAILURE,
+  SUBSCRIBE_FAILURE
 } from '../actions';
 import {
   _post,
@@ -17,7 +18,8 @@ import {
   _createChannelLocal,
   _createFailure,
   activityUploaded,
-  subscribeChannel,
+  _subscribeChannelLocal,
+  _subscribeFailure,
   login,
   loginSuccess,
   logout,
@@ -150,8 +152,13 @@ describe('data actions', () => {
 
 describe('subscribe actions', () => {
   it('subscribes channel', () => {
-    const response = subscribeChannel('channel');
+    const response = _subscribeChannelLocal('channel');
     expect(response.type).toBe(SUBSCRIBE_CHANNEL);
+  });
+
+  it('subscribes channel failure', () => {
+    const response = _subscribeFailure();
+    expect(response.type).toBe(SUBSCRIBE_FAILURE);
   });
 });
 

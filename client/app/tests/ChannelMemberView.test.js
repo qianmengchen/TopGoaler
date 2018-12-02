@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
-import { Avatar, Card } from 'react-native-elements';
+import { Card } from 'react-native-elements';
 import sinon from 'sinon';
 require('isomorphic-fetch');
 
@@ -23,7 +23,6 @@ const channel = {
 };
 
 describe('Testing Channel Memberview Page', () => {
-  const navigation = { navigate: jest.fn() };
   const goToTaskListPage = sinon.spy(
     ChannelMemberView.prototype,
     '_goToTaskListPage'
@@ -36,6 +35,18 @@ describe('Testing Channel Memberview Page', () => {
     ChannelMemberView.prototype,
     '_goToProposalsPage'
   );
+  const navigation = {
+    navigate: jest.fn(),
+    setParams: jest.fn(),
+    state: {
+      params: {
+        channel: {
+          title: 'xxx',
+          image_url: 'xxx'
+        }
+      }
+    }
+  };
 
   const wrapper = shallow(
     <ChannelMemberView
@@ -58,12 +69,8 @@ describe('Testing Channel Memberview Page', () => {
     expect(render.find(Card)).toHaveLength(2);
   });
 
-  it('should have 1 Avatar for channel logo', () => {
-    expect(render.find(Avatar)).toHaveLength(1);
-  });
-
-  it('should have 112 Text: title, card info, more, add, and vote task button text', () => {
-    expect(render.find('Text')).toHaveLength(12);
+  it('should have 11 Text: title, card info, more, add, and vote task button text', () => {
+    expect(render.find('Text')).toHaveLength(11);
   });
   ``;
 

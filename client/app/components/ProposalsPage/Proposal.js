@@ -5,7 +5,6 @@ import { frequency, vote } from './styles';
 
 class Proposal extends Component {
   _handleVote() {
-    console.log('Remove proposal card for user and update database');
     this.props.handleVote(this.state.points);
   }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import { Button, SearchBar, Icon } from 'react-native-elements';
 import { board, actions } from './styles';
 import { ChannelOverview } from '../ChannelOverview/index';
@@ -9,8 +9,8 @@ class ChannelListPage extends Component {
   _addChannel() {
     this.props.navigation.navigate('NewChannelPage');
   }
-  _subscribe = ch => () => {
-    this.props.subscribe(ch.channel);
+  _subscribe = (channel_id, user_id) => () => {
+    this.props.subscribe(parseInt(channel_id), user_id);
   };
 
   _handleSearch(text) {
@@ -19,8 +19,13 @@ class ChannelListPage extends Component {
 
   _contains = channel => {
     return channel.title
-      ? channel.title.includes(this.state.input.toLowerCase())
+      ? channel.title.toLowerCase().includes(this.state.input.toLowerCase())
       : false;
+  };
+
+  static navigationOptions = {
+    headerVisible: false,
+    headerStyle: { height: 0 }
   };
 
   constructor(props) {
@@ -31,14 +36,21 @@ class ChannelListPage extends Component {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, userId } = this.props;
 
     return (
       <View style={board.container}>
         <ScrollView>
+          <View style={{ marginLeft: 10, marginTop: 40 }}>
+            <Text style={{ fontSize: 24, fontFamily: 'Avenir-Black' }}>
+              Search
+            </Text>
+          </View>
+
           <View style={board.actions}>
             <SearchBar
               containerStyle={actions.searchBar}
+              lightTheme={true}
               clearIcon={false}
               onChangeText={this._handleSearch.bind(this)}
               onClear={() => {}}
@@ -53,6 +65,13 @@ class ChannelListPage extends Component {
               onPress={this._addChannel.bind(this)}
             />
           </View>
+
+          <View style={{ marginLeft: 12, marginTop: 5, marginBottom: 10 }}>
+            <Text style={{ fontSize: 24, fontFamily: 'Avenir-Black' }}>
+              List
+            </Text>
+          </View>
+
           <View style={board.channelList}>
             {Object.keys(this.props.channels).map(id => {
               const ch = this.props.channels[id];
@@ -70,7 +89,7 @@ class ChannelListPage extends Component {
                       check_subscribed,
                       navigation.navigate
                     )}
-                    subscribe={this._subscribe(ch)}
+                    subscribe={this._subscribe(id, userId)}
                   />
                 );
               }

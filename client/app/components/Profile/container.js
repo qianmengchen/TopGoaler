@@ -14,11 +14,11 @@ const mapStateToProps = state => ({
   userChannels: channelGetter(
     state.user_channel.filter(userChannelFilter(state.auth.id)),
     state.channels
-  ),
+  ).filter(e => e),
   userTasks: taskGetter(
     state.user_task.filter(userTaskFilter(state.auth.id)),
     state.tasks
-  ),
+  ).filter(e => e),
   userActivities: state.activity_log
     .filter(
       log =>
@@ -28,8 +28,9 @@ const mapStateToProps = state => ({
     )
     .map(log => ({
       task_id: log.task_id,
-      create_time: new Date(log.create_time)
-    }))
+      create_time: new Date(new Date(log.create_time) - 1000 * 3600 * 8)
+    })),
+  tasks: state.tasks
 });
 
 const mapDispatchToProps = dispatch => ({

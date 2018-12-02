@@ -4,11 +4,6 @@ exports[`Testing Task Detail Page renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Themed.Card>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    />
     <Component
       style={
         Object {
@@ -24,7 +19,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
       >
         Frequency: 
-         
+         time(s) per 
       </Text>
       <Text
         accessible={true}
@@ -32,7 +27,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
       >
         Reward: 
-         points!
+         point(s)!
       </Text>
     </Component>
     <TouchableHighlight

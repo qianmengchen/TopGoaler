@@ -19,26 +19,11 @@ ShallowWrapper {
     >
       Channel Tasks
     </Text>
-    <TaskDetail
-      pattern="Once"
-      period="Daily"
-      points="200"
-      subtitle="Do a problem from LeetCode everyday"
-      title="Leetcode Daily"
-    />
-    <TaskDetail
-      pattern="Twice"
-      period="Daily"
-      points="300"
-      subtitle="Do two problems from LeetCode everyday"
-      title="Leetcode Daily x2"
-    />
-    <TaskDetail
-      pattern="Once"
-      period="Monthly"
-      points="350"
-      subtitle="Solve 100 Problems from LeetCode"
-      title="Solve 100 Problems"
+    <Connect(TaskDetail)
+      pattern={1}
+      period="week"
+      points={1}
+      title="Review course material"
     />
   </ScrollViewMock>,
   Symbol(enzyme.__renderer__): Object {

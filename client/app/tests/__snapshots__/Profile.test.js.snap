@@ -168,7 +168,8 @@ ShallowWrapper {
       }
     >
       <Connect(TaskChecklist)
-        finishedTasks={
+        finishedTasks={Array []}
+        onGoingTasks={
           Array [
             Object {
               "channel_id": 1,
@@ -180,7 +181,6 @@ ShallowWrapper {
             },
           ]
         }
-        onGoingTasks={Array []}
       />
     </Component>
   </Component>,
@@ -354,7 +354,8 @@ ShallowWrapper {
           }
         >
           <Connect(TaskChecklist)
-            finishedTasks={
+            finishedTasks={Array []}
+            onGoingTasks={
               Array [
                 Object {
                   "channel_id": 1,
@@ -366,7 +367,6 @@ ShallowWrapper {
                 },
               ]
             }
-            onGoingTasks={Array []}
           />
         </Component>,
       ],
@@ -925,7 +925,8 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <Connect(TaskChecklist)
-            finishedTasks={
+            finishedTasks={Array []}
+            onGoingTasks={
               Array [
                 Object {
                   "channel_id": 1,
@@ -937,7 +938,6 @@ ShallowWrapper {
                 },
               ]
             }
-            onGoingTasks={Array []}
           />,
           "style": Object {
             "alignItems": "stretch",
@@ -950,7 +950,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "finishedTasks": Array [
+            "finishedTasks": Array [],
+            "onGoingTasks": Array [
               Object {
                 "channel_id": 1,
                 "id": 1,
@@ -960,7 +961,6 @@ ShallowWrapper {
                 "title": "Review course material",
               },
             ],
-            "onGoingTasks": Array [],
           },
           "ref": null,
           "rendered": null,
@@ -1134,7 +1134,8 @@ ShallowWrapper {
             }
           >
             <Connect(TaskChecklist)
-              finishedTasks={
+              finishedTasks={Array []}
+              onGoingTasks={
                 Array [
                   Object {
                     "channel_id": 1,
@@ -1146,7 +1147,6 @@ ShallowWrapper {
                   },
                 ]
               }
-              onGoingTasks={Array []}
             />
           </Component>,
         ],
@@ -1705,7 +1705,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <Connect(TaskChecklist)
-              finishedTasks={
+              finishedTasks={Array []}
+              onGoingTasks={
                 Array [
                   Object {
                     "channel_id": 1,
@@ -1717,7 +1718,6 @@ ShallowWrapper {
                   },
                 ]
               }
-              onGoingTasks={Array []}
             />,
             "style": Object {
               "alignItems": "stretch",
@@ -1730,7 +1730,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "finishedTasks": Array [
+              "finishedTasks": Array [],
+              "onGoingTasks": Array [
                 Object {
                   "channel_id": 1,
                   "id": 1,
@@ -1740,7 +1741,6 @@ ShallowWrapper {
                   "title": "Review course material",
                 },
               ],
-              "onGoingTasks": Array [],
             },
             "ref": null,
             "rendered": null,

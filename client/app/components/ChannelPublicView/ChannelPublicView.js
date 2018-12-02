@@ -7,7 +7,6 @@ import { NavigationActions, StackActions } from 'react-navigation';
 
 class ChannelPublicView extends Component {
   _goToMemberPage() {
-    this.props.subscribe(this.props.channel.title);
     const { dispatch } = this.props.navigation;
     const resetAction = StackActions.reset({
       index: 1,
@@ -22,6 +21,14 @@ class ChannelPublicView extends Component {
     dispatch(resetAction);
   }
 
+  _subscribe = (channel_id, user_id) => {
+    this.props.subscribe(parseInt(channel_id), user_id);
+  };
+
+  _on_subscribe = (channel_id, user_id) => {
+    this._subscribe(channel_id, user_id);
+    this._goToMemberPage();
+  };
   //utils function
   _count_users_reducer = (acc, val) => {
     if (val.channel_id === this.props.channel.id) {
@@ -60,7 +67,6 @@ class ChannelPublicView extends Component {
   };
 
   render() {
-    console.log(this.props.task);
     return (
       <View>
         <View style={header.container}>
@@ -108,7 +114,9 @@ class ChannelPublicView extends Component {
         <TouchableHighlight
           style={follow.button}
           underlayColor="#aaa"
-          onPress={this._goToMemberPage.bind(this)}
+          onPress={() =>
+            this._on_subscribe(this.props.channel.id, this.props.user_id)
+          }
         >
           <Text style={follow.buttonText}> Follow </Text>
         </TouchableHighlight>

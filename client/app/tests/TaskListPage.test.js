@@ -15,9 +15,23 @@ const initialTaskState = {
 };
 
 describe('Testing Task List Page', () => {
-  const wrapper = shallow(<TaskListPage />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const tasks = [
+    {
+      id: 1,
+      title: 'Review course material',
+      channel_id: 1,
+      point: 1,
+      period: 1,
+      pattern: 1
+    }
+  ];
+  const mockInclude = { includes: jest.fn() };
+  const wrapper = shallow(
+    <TaskListPage tasks={tasks} user_task_ids={mockInclude} />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {

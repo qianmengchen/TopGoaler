@@ -167,7 +167,7 @@ function activity_log(state = [], action) {
         {
           task_id: action.task_id,
           user_id: action.user_id,
-          timestamp: new Date().toISOString(),
+          create_time: new Date().toISOString(),
           event: action.event
         },
         ...state

@@ -83,10 +83,8 @@ class ChannelMemberView extends Component {
   }
 
   static navigationOptions = ({ navigation }) => {
-    console.log('navigation optoins: navigation', navigation);
     const { params } = navigation.state;
     const channel = params ? (params.channel ? params.channel : null) : null;
-    console.log('navig state', channel);
     return {
       headerTitle: <ChannelTitle channel={channel} />,
       headerRight: <ChannelRight channel={channel} />,
@@ -99,7 +97,6 @@ class ChannelMemberView extends Component {
     this.props.navigation.setParams({
       channel: this.props.channel
     });
-    console.log('nav  = ', this.props.navigation);
   }
   render() {
     const { activities, users, tasks } = this.props;

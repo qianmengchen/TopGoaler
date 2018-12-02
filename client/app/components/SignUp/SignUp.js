@@ -37,6 +37,7 @@ class SignUp extends Component {
             autoCapitalize="none"
             textContentType="password"
             value={this.state.password}
+            secureTextEntry={true}
             onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />

@@ -4,7 +4,7 @@ import configureStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 require('isomorphic-fetch');
 
-import ChannelIcon from '../components/ChannelIconList/ChannelIcon';
+import App from '../components/App/App';
 
 const middlewares = [thunkMiddleware]; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
@@ -15,10 +15,8 @@ const initialTaskState = {
   currentTaskPage: 'ChannelListPage'
 };
 
-describe('Testing Channel Icon component', () => {
-  const item = { icon: null };
-
-  const wrapper = shallow(<ChannelIcon item={item} goToChannel={jest.fn()} />, {
+describe('Testing App component', () => {
+  const wrapper = shallow(<App loadData={jest.fn()} />, {
     context: { store: mockStore(initialTaskState) }
   });
   const render = wrapper.dive();
@@ -26,14 +24,4 @@ describe('Testing Channel Icon component', () => {
   it('renders as expected', () => {
     expect(render).toMatchSnapshot();
   });
-
-  it('should have 1 Image for icons', () => {
-    expect(render.find('Image')).toHaveLength(1);
-  });
-
-  it('should be pressable and go to channel', () => {
-    wrapper.find('TouchableOpacity').simulate('press');
-  });
-
-  it('should have state mapping', () => {});
 });

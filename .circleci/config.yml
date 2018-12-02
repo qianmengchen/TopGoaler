@@ -41,7 +41,7 @@ jobs:
       - run: cd client && npm run lint
 
       # run tests!
-      - run: cd client && npm test
+      - run: cd client && npm run CI-test
 
 
       # server

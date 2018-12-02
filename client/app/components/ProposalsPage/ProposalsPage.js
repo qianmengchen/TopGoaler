@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import { list } from './styles';
 import Proposal from './Proposal';
 
 class ProposalsPage extends Component {
-  static navigationOptions = () => ({
-    title: 'Task Proposals',
-    headerTitleStyle: { textAlign: 'center', alignSelf: 'center' },
-    headerStyle: {
-      backgroundColor: 'white'
-    }
-  });
-
   _handleVoteFactory = proposal_id => points => {
     this.props.handleVote(this.props.user_id, proposal_id, points);
   };
   render() {
     return (
       <ScrollView contentContainerStyle={list.container}>
+        <Text style={list.title}>Task Proposals</Text>
+
         {this.props.proposals.map(id => {
           return (
             <Proposal

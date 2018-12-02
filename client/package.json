@@ -13,7 +13,8 @@
     "coverage": "jest --coverage --coverageDirectory=coverage",
     "pretty": "prettier --write 'app/**/*.js'",
     "check-pretty": "prettier --list-different 'app/**/*.js'",
-    "lint": "eslint 'app/**/*.js'"
+    "lint": "eslint 'app/**/*.js'",
+    "CI-test": "jest --runInBand"
   },
   "dependencies": {
     "eslint": "^5.8.0",

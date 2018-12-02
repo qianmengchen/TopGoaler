@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Proposal Component renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Themed.Card>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    />
+    <Component
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Frequency: 
+         
+         
+      </Text>
+    </Component>
+    <Slider
+      disabled={false}
+      maximumValue={350}
+      minimumValue={50}
+      onValueChange={[Function]}
+      step={50}
+      value={50}
+    />
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginHorizontal": 80,
+          "marginTop": 10,
+        }
+      }
+      underlayColor="#aaa"
+    >
+      <Component>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 17,
+              "paddingVertical": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+           
+          Vote for 
+          50
+           points!
+           
+        </Text>
+      </Component>
+    </TouchableHighlight>
+  </Themed.Card>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": [Function],
+    },
+    "ref": null,
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "Consumer": [Circular],
+      "Provider": Object {
+        "$$typeof": Symbol(react.provider),
+        "_context": [Circular],
+      },
+      "_calculateChangedBits": null,
+      "_changedBits": 0,
+      "_currentRenderer": null,
+      "_currentValue": undefined,
+      "_defaultValue": undefined,
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": [Function],
+      },
+      "ref": null,
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
+        },
+        "_calculateChangedBits": null,
+        "_changedBits": 0,
+        "_currentRenderer": null,
+        "_currentValue": undefined,
+        "_defaultValue": undefined,
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;
+
+exports[`Testing Proposals Page renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ScrollViewMock
+    contentContainerStyle={
+      Object {
+        "alignItems": "stretch",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      Task Proposals
+    </Text>
+    <Proposal
+      handleVote={[Function]}
+      pattern={1}
+      period={0}
+      subtitle="this is a proposal"
+      title="do 10 hard problems"
+    />
+    <Proposal
+      handleVote={[Function]}
+      pattern={4}
+      period={1}
+      subtitle="this is a proposal"
+      title="go to gym"
+    />
+  </ScrollViewMock>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): undefined,
+  Symbol(enzyme.__nodes__): Array [
+    undefined,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

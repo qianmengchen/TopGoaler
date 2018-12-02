@@ -53,7 +53,7 @@ class ChannelOverview extends Component {
       );
     } else {
       button = (
-        <TouchableWithoutFeedback onPress={this._subscribe}>
+        <TouchableWithoutFeedback onPress={this._subscribe.bind(this)}>
           <Icon style={desc.icon} name="add" size={30} color="black" />
         </TouchableWithoutFeedback>
       );

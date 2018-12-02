@@ -197,7 +197,6 @@ export function signUp(username, password) {
     try {
       const res = await _post('/login', body);
       if (!res.ok) return dispatch(loginFailure(username));
-      //const json = await res.json()
       dispatch(loginSuccess(username));
     } catch (e) {
       dispatch(serverError(e));
@@ -293,7 +292,7 @@ export const CREATE_CHANNEL_FAILURE = 'CREATE_CHANNEL_FAILURE';
  * @param {number} user_id - The id of the user.
  * @returns {Object} - The action object for creating channel locally.
  */
-const _createChannelLocal = (channel, channel_id, user_id) => {
+export const _createChannelLocal = (channel, channel_id, user_id) => {
   return { type: ADD_CHANNEL, channel, channel_id, user_id };
 };
 
@@ -303,7 +302,7 @@ const _createChannelLocal = (channel, channel_id, user_id) => {
  * @function _createChannelLocal
  * @returns {Object} - The action object for failing to creating channel.
  */
-const _createFailure = () => {
+export const _createFailure = () => {
   return { type: CREATE_CHANNEL_FAILURE };
 };
 
@@ -358,7 +357,7 @@ export const SUBSCRIBE_FAILURE = 'SUBSCRIBE_FAILURE';
  * @param {number} channel_id - The id of the channel.
  * @returns {Object} - The action object for subscribing to channel locally.
  */
-function _subscribeChannelLocal(user_id, channel_id) {
+export function _subscribeChannelLocal(user_id, channel_id) {
   return { type: SUBSCRIBE_CHANNEL, user_id, channel_id };
 }
 
@@ -368,7 +367,7 @@ function _subscribeChannelLocal(user_id, channel_id) {
  * @function _subscribeFailure
  * @returns {Object} - The action object for failure to subscribe to channel.
  */
-const _subscribeFailure = () => {
+export const _subscribeFailure = () => {
   return { type: SUBSCRIBE_FAILURE };
 };
 

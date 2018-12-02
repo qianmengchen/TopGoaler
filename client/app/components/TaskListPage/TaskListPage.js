@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import { TaskDetail } from '../TaskDetail/index';
+import { list } from './styles';
 
 class TaskListPage extends Component {
-  static navigationOptions = () => ({
-    title: 'Task List',
-    headerTitleStyle: { textAlign: 'center', alignSelf: 'center' },
-    headerStyle: {
-      backgroundColor: 'white'
-    }
-  });
-
   _map_period_to_string = raw => {
     const period_map = { 0: 'day', 1: 'week', 2: 'month', 3: 'once' };
     return period_map[raw];
@@ -23,6 +16,7 @@ class TaskListPage extends Component {
   render() {
     return (
       <ScrollView>
+        <Text style={list.title}>Channel Tasks</Text>
         {this.props.tasks.map(task => (
           <TaskDetail
             key={task.task_id}

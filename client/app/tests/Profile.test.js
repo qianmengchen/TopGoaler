@@ -7,6 +7,12 @@ import { Button, Avatar } from 'react-native-elements';
 require('isomorphic-fetch');
 
 import Profile from '../components/Profile/Profile';
+import {
+  userChannelFilter,
+  channelGetter,
+  taskGetter,
+  userTaskFilter
+} from '../components/Profile/utils';
 
 const middlewares = [thunkMiddleware]; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
@@ -26,15 +32,28 @@ const navigation = {
 };
 
 describe('Testing Channel List Page', () => {
-  const _logout = jest.fn();
+  const mockLogout = jest.fn();
   const logout = sinon.spy(Profile.prototype, '_handleLogout');
+  const goToPerformancePage = sinon.spy(
+    Profile.prototype,
+    '_goToPerformancePage'
+  );
 
   const wrapper = shallow(
     <Profile
-      logout={_logout}
+      logout={mockLogout}
       userInfo={userInfo}
       userActivities={[]}
-      userTasks={[]}
+      userTasks={[
+        {
+          id: 1,
+          title: 'Review course material',
+          channel_id: 1,
+          point: 1,
+          period: 1,
+          pattern: 1
+        }
+      ]}
       navigation={navigation}
     />,
     {
@@ -56,9 +75,72 @@ describe('Testing Channel List Page', () => {
   });
 
   it('should invoke correct methods when pressing logout', () => {
-    const logoutBtn = render.find(Button).at(1);
-    logoutBtn.simulate('press');
+    render.find(Button).forEach(child => {
+      child.simulate('press');
+    });
+
     expect(logout.calledOnce).toBe(true);
-    expect(_logout).toHaveBeenCalledTimes(1);
+    expect(goToPerformancePage.calledOnce).toBe(true);
+  });
+
+  it('should push tasks into the correct array', () => {
+    const wrapper = shallow(
+      <Profile
+        logout={mockLogout}
+        userInfo={userInfo}
+        userActivities={[]}
+        userTasks={[
+          {
+            id: 1,
+            title: 'Review course material',
+            channel_id: 1,
+            point: 1,
+            period: 1,
+            pattern: null
+          }
+        ]}
+        navigation={navigation}
+      />,
+      {
+        context: { store: mockStore(initialTaskState) }
+      }
+    );
+    const render = wrapper.dive();
+    expect(render).toMatchSnapshot();
+  });
+
+  it('util functions should return correct results', () => {
+    expect(userChannelFilter(1)({ user_id: 1 })).toBe(true);
+    expect(userChannelFilter(1)({ user_id: 2 })).toBe(false);
+
+    expect(userTaskFilter(1)({ user_id: 1 })).toBe(true);
+    expect(userTaskFilter(1)({ user_id: 2 })).toBe(false);
+
+    // not sure what to expect
+    channelGetter(
+      [{ user_id: 1, channel_id: 1 }],
+      [
+        {
+          id: 1,
+          title: 'CS130',
+          creator: 1,
+          subtitle: 'admin title',
+          image_url: 'http://shortlink.in/themes/v3/styles/img/url-link.png'
+        }
+      ]
+    );
+    taskGetter(
+      [{ task_id: 1, user_id: 1 }],
+      [
+        {
+          id: 1,
+          title: 'Review course material',
+          channel_id: 1,
+          point: 1,
+          period: 1,
+          pattern: 1
+        }
+      ]
+    );
   });
 });

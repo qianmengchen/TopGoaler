@@ -13,9 +13,9 @@ class ChannelListPage extends Component {
     this.props.subscribe(parseInt(channel_id), user_id);
   };
 
-  _handleSearch = text => {
+  _handleSearch(text) {
     this.setState({ input: text });
-  };
+  }
 
   _contains = channel => {
     return channel.title
@@ -52,7 +52,7 @@ class ChannelListPage extends Component {
               containerStyle={actions.searchBar}
               lightTheme={true}
               clearIcon={false}
-              onChangeText={this._handleSearch}
+              onChangeText={this._handleSearch.bind(this)}
               onClear={() => {}}
               placeholder="Search for channels"
               icon={{ type: 'font-awesome', name: 'search' }}

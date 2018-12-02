@@ -169,7 +169,10 @@ const _subscribeFailure = () => {
 export function subscribeChannelAsUser(user_id, channel_id) {
   return async dispatch => {
     const res = await _post('/user_channel', { channel_id, user_id });
-    if (!res.ok) return dispatch(_subscribeFailure());
+    if (!res.ok) {
+      console.log(res);
+      return dispatch(_subscribeFailure());
+    }
     dispatch(_subscribeChannelLocal(user_id, channel_id));
   };
 }

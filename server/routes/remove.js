@@ -45,10 +45,10 @@ router.delete('/user_task/:user&:task', async (request, response) => {
         console.log(request.params)
         console.log(request.body)
         const user = request.params.user;
-        const task = request.params.channel;
+        const task = request.params.task;
         const result = await doQuery(
-            'DELETE FROM user_task WHERE task_id = ? AND user_id = ?', 
-            [task, user])
+            'DELETE FROM user_task WHERE user_id = ? AND task_id = ?', 
+            [user, task])
         response.send(result);
     } catch (error) {
         response.status(401).send(`unable to remove: ${error}`);  

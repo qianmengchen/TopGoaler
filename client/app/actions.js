@@ -121,11 +121,11 @@ export function loadData() {
 export const ADD_CHANNEL = 'ADD_CHANNEL';
 export const CREATE_CHANNEL_FAILURE = 'CREATE_CHANNEL_FAILURE';
 
-const _createChannelLocal = (channel, channel_id, user_id) => {
+export const _createChannelLocal = (channel, channel_id, user_id) => {
   return { type: ADD_CHANNEL, channel, channel_id, user_id };
 };
 
-const _createFailure = () => {
+export const _createFailure = () => {
   return { type: CREATE_CHANNEL_FAILURE };
 };
 

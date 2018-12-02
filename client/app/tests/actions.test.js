@@ -1,24 +1,32 @@
 import {
-  // LOGIN_SUCCESS,
-  // LOGIN_FAILURE,
   LOGOUT,
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE,
   SERVER_ERR,
-  LOAD_DATA
-  // ADD_CHANNEL,
-  // ADD_ACTIVITY,
-  // ADD_FAILURE
+  LOAD_DATA,
+  LOGIN_SUCCESS,
+  ADD_CHANNEL,
+  CREATE_CHANNEL_FAILURE,
+  SUBSCRIBE_CHANNEL,
+  ADD_ACTIVITY,
+  ADD_FAILURE
 } from '../actions';
 import {
   _post,
   _get,
+  _createChannelLocal,
+  _createFailure,
+  activityUploaded,
+  subscribeChannel,
   login,
+  loginSuccess,
   logout,
+  // signUp,
   signUpSuccess,
   signUpFailure,
   serverError,
-  receiveData
+  receiveData,
+  activityUploadFailure
 } from '../actions';
 import { serverAddr } from '../../config';
 
@@ -37,7 +45,7 @@ global.fetch = jest.fn().mockImplementation((url, params) => {
   if (params && params.method === 'POST') {
     console.log(params.body.password);
     if (params.body && params.body.password === 'pass') {
-      return Promise.resolve({ type: 'POST', ...response });
+      return Promise.resolve({ type: 'POST', ...response, ok: true });
     } else {
       return Promise.resolve({ type: 'POST', ...response, ok: false });
     }
@@ -77,6 +85,13 @@ describe('login action', () => {
       username: 'user'
     });
   });
+
+  it('login successful', () => {
+    const response = loginSuccess('username', 1);
+    expect(response.type).toBe(LOGIN_SUCCESS);
+    expect(response.username).toBe('username');
+    expect(response.id).toBe(1);
+  });
 });
 
 describe('logout action', () => {
@@ -97,6 +112,13 @@ describe('signup action', () => {
     const response = signUpFailure();
     expect(response.type).toBe(SIGNUP_FAILURE);
   });
+
+  // it('signup failed', async function() {
+  //   await signUp('user', 'fail')(mockDispatch);
+  //   expect(mockDispatch).toHaveBeenLastCalledWith({
+  //     type: SIGNUP_FAILURE,
+  //   });
+  // });
 });
 
 it('server error', () => {
@@ -110,5 +132,40 @@ describe('data actions', () => {
     const response = receiveData('data');
     expect(response.type).toBe(LOAD_DATA);
     expect(response.data).toBe('data');
+  });
+
+  it('creates local channel', () => {
+    const response = _createChannelLocal('channel', 1, 1);
+    expect(response.type).toBe(ADD_CHANNEL);
+    expect(response.channel).toBe('channel');
+    expect(response.channel_id).toBe(1);
+    expect(response.user_id).toBe(1);
+  });
+
+  it('creates local channel - failure', () => {
+    const response = _createFailure();
+    expect(response.type).toBe(CREATE_CHANNEL_FAILURE);
+  });
+});
+
+describe('subscribe actions', () => {
+  it('subscribes channel', () => {
+    const response = subscribeChannel('channel');
+    expect(response.type).toBe(SUBSCRIBE_CHANNEL);
+  });
+});
+
+describe('task check-in actions', () => {
+  it('activity uploads', () => {
+    const response = activityUploaded(1, 1, 'event');
+    expect(response.type).toBe(ADD_ACTIVITY);
+    expect(response.task_id).toBe(1);
+    expect(response.user_id).toBe(1);
+    expect(response.event).toBe('event');
+  });
+
+  it('activity uploads failure', () => {
+    const response = activityUploadFailure();
+    expect(response.type).toBe(ADD_FAILURE);
   });
 });

@@ -15,7 +15,7 @@ import {
 class ChannelMemberView extends Component {
   _goToTaskListPage() {
     const { navigate } = this.props.navigation;
-    navigate('TaskListPage');
+    navigate('TaskListPage', { channel_id: this.props.channel.id });
   }
 
   _goToNewTaskPage() {
@@ -37,8 +37,7 @@ class ChannelMemberView extends Component {
       )).json();
       return { ...score, ...ranking };
     } catch (_) {
-      _alert('Retrieve ranking info error');
-      return null;
+      return { score: 0, ranking: -1 };
     }
   }
 
@@ -103,7 +102,7 @@ class ChannelMemberView extends Component {
             <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rank</Text>
               <Text style={[cardLeft.stats, cardLeft.number]}>
-                {this.state.rank}
+                {this.state.rank > 0 ? this.state.rank : 'N/A'}
               </Text>
             </View>
             <View style={cardLeft.statsContainer}>

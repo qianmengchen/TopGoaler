@@ -41,7 +41,7 @@ class Profile extends Component {
   render() {
     const { userInfo, userChannels, userTasks, userActivities } = this.props;
 
-    //numActivities maps task_id to the number of FINISH activities within its period
+    console.log(this.props);
     const numActivities = userActivities.reduce(
       this._activityAggregateReducer.bind(this),
       {}

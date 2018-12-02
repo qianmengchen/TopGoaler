@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ChannelPublicView from './ChannelPublicView';
-import { subscribeChannel } from '../../actions';
+import { subscribeChannelAsUser } from '../../actions';
 import { Event } from '../../constants';
 
 const _get_all_task_id = (state, ownProps) => {
@@ -18,6 +18,7 @@ const _get_all_task_id = (state, ownProps) => {
 };
 
 const mapStateToProps = (state, ownProps) => ({
+  user_id: state.auth.id,
   channel: state.channels[ownProps.navigation.state.params.id]
     ? state.channels[ownProps.navigation.state.params.id]
     : {},
@@ -39,7 +40,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  subscribe: channel => dispatch(subscribeChannel(channel))
+  subscribe: (channel_id, user_id) =>
+    dispatch(subscribeChannelAsUser(user_id, channel_id))
 });
 
 export default connect(

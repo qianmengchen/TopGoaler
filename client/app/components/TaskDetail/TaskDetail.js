@@ -2,41 +2,37 @@ import React, { Component } from 'react';
 import { Text, View, TouchableHighlight } from 'react-native';
 import { Card } from 'react-native-elements';
 import { frequency, status } from './styles';
+import { Event } from '../../constants';
 
 class TaskDetail extends Component {
-  _accept() {
-    this.setState({ status: 'in-progress' });
-    console.log('Task is now In-Progress; update database');
+  _accept(task_id, user_id) {
+    this.props.enroll(user_id, task_id);
+    this.props.newActivity(user_id, task_id, Event.JOIN);
   }
 
-  _unfollow() {
-    this.setState({ status: 'available' });
-    console.log('Task is now available; update database');
-  }
-
-  _done() {
-    this.setState({ status: 'done' });
-    console.log('Remove task card for user; update database');
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      status: 'available'
-    };
+  _unfollow(task_id, user_id) {
+    this.props.drop(user_id, task_id);
+    this.props.newActivity(user_id, task_id, Event.DROP);
   }
 
   render() {
-    let { title, subtitle, period, pattern, points } = this.props;
-
+    let {
+      title,
+      period,
+      pattern,
+      points,
+      enrolled,
+      task_id,
+      user_id
+    } = this.props;
     let button;
 
-    if (this.state.status == 'available') {
+    if (!enrolled) {
       button = (
         <TouchableHighlight
           style={[status.container, status.accept]}
           underlayColor="#aaa"
-          onPress={this._accept.bind(this)}
+          onPress={() => this._accept(task_id, user_id)}
         >
           <Text style={status.buttonText}>Accept Challenge!</Text>
         </TouchableHighlight>
@@ -47,16 +43,9 @@ class TaskDetail extends Component {
           <TouchableHighlight
             style={[status.container, status.unfollow]}
             underlayColor="#aaa"
-            onPress={this._unfollow.bind(this)}
+            onPress={() => this._unfollow(task_id, user_id)}
           >
             <Text style={status.buttonText}>Unfollow</Text>
-          </TouchableHighlight>
-          <TouchableHighlight
-            style={[status.container, status.done]}
-            underlayColor="#aaa"
-            onPress={this._done.bind(this)}
-          >
-            <Text style={status.buttonText}>Done!</Text>
           </TouchableHighlight>
         </View>
       );
@@ -64,15 +53,12 @@ class TaskDetail extends Component {
 
     return (
       <Card title={title}>
-        <Text>{subtitle}</Text>
-
         <View style={frequency.container}>
           <Text>
-            Frequency: {pattern} {period}
+            Frequency: {pattern} time(s) per {period}
           </Text>
-          <Text>Reward: {points} points!</Text>
+          <Text>Reward: {points} point(s)!</Text>
         </View>
-
         {button}
       </Card>
     );

@@ -16,8 +16,6 @@ const { doQuery } = require('./helper');
 function remove_user_channel_entry(user_id, channel_id){} 
 router.delete('/user_channel/:user&:channel', async (request, response) => {
     try {
-        console.log(request.params)
-        console.log(request.body)
         const user = request.params.user;
         const channel = request.params.channel;  
         const result = await doQuery(

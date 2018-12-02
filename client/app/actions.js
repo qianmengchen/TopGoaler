@@ -3,6 +3,11 @@ import { serverAddr } from '../config';
 /*
  * Auth actions
  */
+
+/** @constant
+    @type {string}
+    @default
+*/
 export const LOGIN_BEGIN = 'LOGIN_BEGIN';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
@@ -14,6 +19,12 @@ export const SIGNUP_FAILURE = 'SIGNIN_FAIL';
 
 export const SERVER_ERR = 'SERVER_ERR';
 
+/** @function loginSuccess
+ * Returns the action object for login success.
+ * @param {string} username - The username of current user.
+ * @param {number} id - The id of current user.
+ * @returns {Object} - The action object for login success.
+ */
 export function loginSuccess(username, id) {
   return { type: LOGIN_SUCCESS, username, id };
 }
@@ -31,6 +42,11 @@ export const _post = (url, body) =>
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)
+  });
+
+export const _delete = url =>
+  fetch(serverAddr + url, {
+    method: 'DELETE'
   });
 
 export const _get = url => fetch(serverAddr + url);
@@ -158,7 +174,10 @@ const _subscribeFailure = () => {
 export function subscribeChannelAsUser(user_id, channel_id) {
   return async dispatch => {
     const res = await _post('/user_channel', { channel_id, user_id });
-    if (!res.ok) return dispatch(_subscribeFailure());
+    if (!res.ok) {
+      console.log(res);
+      return dispatch(_subscribeFailure());
+    }
     dispatch(_subscribeChannelLocal(user_id, channel_id));
   };
 }
@@ -182,6 +201,49 @@ export function newActivityLog(task_id, user_id, event) {
       const res = await _post('/activity_log', body);
       if (!res.ok) return dispatch(activityUploadFailure());
       dispatch(activityUploaded(task_id, user_id, event));
+    } catch (e) {
+      console.log(e);
+      dispatch(serverError(e));
+    }
+  };
+}
+
+export const ENROLL_TASK = 'ENROLL_TASK';
+export const DROP_TASK = 'DROP_TASK';
+export const USER_TASK_FAILURE = 'USER_TASK_FAILURE';
+
+export function userTaskEnroll(task_id, user_id) {
+  return { type: ENROLL_TASK, task_id, user_id };
+}
+
+export function userTaskDrop(task_id, user_id) {
+  return { type: DROP_TASK, task_id, user_id };
+}
+
+export function userTaskOperationFailure() {
+  return { type: USER_TASK_FAILURE };
+}
+
+export function enrollTaskAsUser(task_id, user_id) {
+  return async dispatch => {
+    const body = { task_id, user_id };
+    try {
+      const res = await _post('/user_task', body);
+      if (!res.ok) return dispatch(userTaskOperationFailure());
+      dispatch(userTaskEnroll(task_id, user_id));
+    } catch (e) {
+      console.log(e);
+      dispatch(serverError(e));
+    }
+  };
+}
+
+export function dropTaskAsUser(task_id, user_id) {
+  return async dispatch => {
+    try {
+      const res = await _delete(`/user_task/${user_id}&${task_id}`);
+      if (!res.ok) return dispatch(userTaskOperationFailure());
+      dispatch(userTaskDrop(task_id, user_id));
     } catch (e) {
       console.log(e);
       dispatch(serverError(e));

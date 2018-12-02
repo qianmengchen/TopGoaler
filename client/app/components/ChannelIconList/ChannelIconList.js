@@ -7,7 +7,7 @@ import { goToChannel } from '../ChannelListPage/index';
 class ChannelIconList extends Component {
   render() {
     const { navigate } = this.props;
-
+    console.log(this.props.channels);
     return (
       <View style={styles.list.container}>
         <FlatList

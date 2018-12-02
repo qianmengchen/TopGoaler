@@ -1,9 +1,14 @@
 import { connect } from 'react-redux';
 import TaskDetail from './TaskDetail';
-import { enrollTaskAsUser, newActivityLog } from '../../actions';
+import {
+  enrollTaskAsUser,
+  newActivityLog,
+  dropTaskAsUser
+} from '../../actions';
 
 const mapDispatchToProps = dispatch => ({
   enroll: (user_id, task_id) => dispatch(enrollTaskAsUser(task_id, user_id)),
+  drop: (user_id, task_id) => dispatch(dropTaskAsUser(task_id, user_id)),
   newActivity: (user_id, task_id, event) =>
     dispatch(newActivityLog(task_id, user_id, event))
 });

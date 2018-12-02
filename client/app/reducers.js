@@ -11,6 +11,7 @@ import {
   ADD_FAILURE,
   CREATE_CHANNEL_FAILURE,
   ENROLL_TASK,
+  DROP_TASK,
   USER_TASK_FAILURE,
   SUBSCRIBE_CHANNEL,
   SUBSCRIBE_FAILURE
@@ -127,6 +128,10 @@ function user_task(state = [], action) {
       return state;
     case ENROLL_TASK:
       return [{ task_id: action.task_id, user_id: action.user_id }, ...state];
+    case DROP_TASK:
+      return [...state].filter(({ task_id, user_id }) => {
+        return !(task_id === action.task_id && user_id === action.user_id);
+      });
     default:
       return state;
   }

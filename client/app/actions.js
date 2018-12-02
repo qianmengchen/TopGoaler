@@ -44,6 +44,11 @@ export const _post = (url, body) =>
     body: JSON.stringify(body)
   });
 
+export const _delete = url =>
+  fetch(serverAddr + url, {
+    method: 'DELETE'
+  });
+
 export const _get = url => fetch(serverAddr + url);
 
 export function login(username, password) {
@@ -204,10 +209,15 @@ export function newActivityLog(task_id, user_id, event) {
 }
 
 export const ENROLL_TASK = 'ENROLL_TASK';
+export const DROP_TASK = 'DROP_TASK';
 export const USER_TASK_FAILURE = 'USER_TASK_FAILURE';
 
 export function userTaskEnroll(task_id, user_id) {
   return { type: ENROLL_TASK, task_id, user_id };
+}
+
+export function userTaskDrop(task_id, user_id) {
+  return { type: DROP_TASK, task_id, user_id };
 }
 
 export function userTaskOperationFailure() {
@@ -230,11 +240,10 @@ export function enrollTaskAsUser(task_id, user_id) {
 
 export function dropTaskAsUser(task_id, user_id) {
   return async dispatch => {
-    const body = { task_id, user_id };
     try {
-      const res = await _post('/user_task', body);
+      const res = await _delete(`/user_task/${user_id}&${task_id}`);
       if (!res.ok) return dispatch(userTaskOperationFailure());
-      dispatch(userTaskEnroll(task_id, user_id));
+      dispatch(userTaskDrop(task_id, user_id));
     } catch (e) {
       console.log(e);
       dispatch(serverError(e));

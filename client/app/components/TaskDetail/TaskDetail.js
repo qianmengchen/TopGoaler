@@ -10,10 +10,12 @@ class TaskDetail extends Component {
     this.props.newActivity(user_id, task_id, Event.JOIN);
   }
 
-  _unfollow() {}
+  _unfollow(task_id, user_id) {
+    this.props.drop(user_id, task_id);
+    this.props.newActivity(user_id, task_id, Event.DROP);
+  }
 
   render() {
-    console.log(this.props);
     let {
       title,
       period,
@@ -41,7 +43,7 @@ class TaskDetail extends Component {
           <TouchableHighlight
             style={[status.container, status.unfollow]}
             underlayColor="#aaa"
-            onPress={this._unfollow.bind(this)}
+            onPress={() => this._unfollow(task_id, user_id)}
           >
             <Text style={status.buttonText}>Unfollow</Text>
           </TouchableHighlight>

@@ -146,8 +146,21 @@ export function createChannelAsUser(channel, user_id) {
  */
 
 export const SUBSCRIBE_CHANNEL = 'SUBSCRIBE_CHANNEL';
-export function subscribeChannel(channel) {
-  return { type: SUBSCRIBE_CHANNEL, channel };
+export const SUBSCRIBE_FAILURE = 'SUBSCRIBE_FAILURE';
+function _subscribeChannelLocal(user_id, channel_id) {
+  return { type: SUBSCRIBE_CHANNEL, user_id, channel_id };
+}
+
+const _subscribeFailure = () => {
+  return { type: SUBSCRIBE_FAILURE };
+};
+
+export function subscribeChannelAsUser(user_id, channel_id) {
+  return async dispatch => {
+    const res = await _post('/user_channel', { channel_id, user_id });
+    if (!res.ok) return dispatch(_subscribeFailure());
+    dispatch(_subscribeChannelLocal(user_id, channel_id));
+  };
 }
 
 /*

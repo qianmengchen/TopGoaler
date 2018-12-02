@@ -9,8 +9,8 @@ class ChannelListPage extends Component {
   _addChannel() {
     this.props.navigation.navigate('NewChannelPage');
   }
-  _subscribe = ch => () => {
-    this.props.subscribe(ch.channel);
+  _subscribe = (channel_id, user_id) => () => {
+    this.props.subscribe(parseInt(channel_id), user_id);
   };
 
   _handleSearch = text => {
@@ -31,7 +31,7 @@ class ChannelListPage extends Component {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, userId } = this.props;
 
     return (
       <View style={board.container}>
@@ -70,7 +70,7 @@ class ChannelListPage extends Component {
                       check_subscribed,
                       navigation.navigate
                     )}
-                    subscribe={this._subscribe(ch)}
+                    subscribe={this._subscribe(id, userId)}
                   />
                 );
               }

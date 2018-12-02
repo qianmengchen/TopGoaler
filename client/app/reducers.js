@@ -9,7 +9,9 @@ import {
   ADD_CHANNEL,
   ADD_ACTIVITY,
   ADD_FAILURE,
-  CREATE_CHANNEL_FAILURE
+  CREATE_CHANNEL_FAILURE,
+  SUBSCRIBE_CHANNEL,
+  SUBSCRIBE_FAILURE
 } from './actions';
 import { combineReducers } from 'redux';
 import { Alert } from 'react-native';
@@ -92,6 +94,14 @@ function user_channel(state = [], action) {
         { user_id: action.user_id, channel_id: action.channel_id },
         ...state
       ];
+    case SUBSCRIBE_CHANNEL:
+      return [
+        { user_id: action.user_id, channel_id: action.channel_id },
+        ...state
+      ];
+    case SUBSCRIBE_FAILURE:
+      _alertOperationFailure();
+      return state;
     default:
       return state;
   }

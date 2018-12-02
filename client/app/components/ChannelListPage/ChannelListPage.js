@@ -13,9 +13,9 @@ class ChannelListPage extends Component {
     this.props.subscribe(ch.channel);
   };
 
-  _handleSearch = text => {
+  _handleSearch(text) {
     this.setState({ input: text });
-  };
+  }
 
   _contains = channel => {
     return channel.title
@@ -40,7 +40,7 @@ class ChannelListPage extends Component {
             <SearchBar
               containerStyle={actions.searchBar}
               clearIcon={false}
-              onChangeText={this._handleSearch}
+              onChangeText={this._handleSearch.bind(this)}
               onClear={() => {}}
               placeholder="Search for channels"
               icon={{ type: 'font-awesome', name: 'search' }}

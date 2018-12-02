@@ -20,7 +20,7 @@ class ChannelMemberView extends Component {
 
   _goToNewTaskPage() {
     const { navigate } = this.props.navigation;
-    navigate('NewTaskPage');
+    navigate('NewTaskPage', { channel_id: this.props.channel_id });
   }
 
   _goToProposalsPage() {

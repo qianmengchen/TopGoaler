@@ -2,12 +2,15 @@ import { StyleSheet } from 'react-native';
 
 const board = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '#eee',
     flex: 1,
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    paddingLeft: 8,
+    paddingRight: 8
   },
   actions: {
-    flex: 0.1,
+    flex: 0.13,
+    marginTop: 5,
     flexDirection: 'row'
   },
   channelList: {

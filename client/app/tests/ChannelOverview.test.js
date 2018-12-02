@@ -44,7 +44,7 @@ describe('Testing Channel Overview Page', () => {
       context: { store: mockStore(initialTaskState) }
     }
   );
-  const render = wrapper.dive();
+  const render = wrapper;
 
   it('renders as expected', () => {
     expect(render).toMatchSnapshot();

@@ -60,32 +60,31 @@ class ChannelOverview extends Component {
     }
 
     return (
-      <View style={board.container}>
-        <View style={board.contents}>
-          <Text style={contents.title}>{this.props.channel.title}</Text>
-          <Text style={contents.subtitle}>{this.props.channel.subtitle}</Text>
-          <View style={contents.desc}>
-            <Text
-              style={desc.numbers}
-            >{`${this._number_of_users()} users, ${this._number_of_tasks()} tasks`}</Text>
-            {button}
+      <TouchableHighlight
+        underlayColor="#aaa"
+        onPress={this._submit.bind(this)}
+      >
+        <View style={board.container}>
+          <View style={board.contents}>
+            <Text style={contents.title}>{this.props.channel.title}</Text>
+            <Text style={contents.subtitle}>{this.props.channel.subtitle}</Text>
+            <View style={contents.desc}>
+              <Text
+                style={desc.numbers}
+              >{`${this._number_of_users()} users, ${this._number_of_tasks()} tasks`}</Text>
+              {button}
+            </View>
           </View>
-        </View>
-        <TouchableHighlight
-          underlayColor="#aaa"
-          onPress={this._submit.bind(this)}
-          style={board.avatar}
-        >
-          <View>
+          <View style={board.avatar}>
             <Avatar
-              size={120}
+              size={80}
               source={{
                 uri: this.props.channel.image_url
               }}
             />
           </View>
-        </TouchableHighlight>
-      </View>
+        </View>
+      </TouchableHighlight>
     );
   }
 }

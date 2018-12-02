@@ -80,9 +80,10 @@ router.get('/score/:user_id&:channel_id', async (req, res) => {
     console.log(user_id, channel_id);
     try {
         const result = await doQuery(
-        ` SELECT SUM(point) as score
-          FROM user_task INNER JOIN task ON task.id=user_task.task_id
-          WHERE user_id = ? AND channel_id = ?`,
+        ` SELECT IF(SUM(point) IS NULL, 0, SUM(point)) as score
+          FROM activity_log INNER JOIN task ON task.id=activity_log.task_id
+          WHERE user_id = ? AND channel_id = ? AND activity_log.event = 2
+        `,
         [user_id, channel_id]
         )
         console.log(result);
@@ -108,11 +109,11 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
     try {
         const result = await doQuery(
         ` SELECT
-          user_id, @curRank := @curRank + 1 AS rank
+          user_id, score, @curRank := @curRank + 1 AS rank
           FROM (
-            SELECT SUM(point) as score, user_id
-            FROM user_task JOIN task ON task.id=user_task.task_id
-            WHERE task.channel_id = ?
+            SELECT IF(SUM(point) IS NULL, 0, SUM(point)) as score, user_id
+            FROM activity_log JOIN task ON task.id=activity_log.task_id
+            WHERE task.channel_id = ? AND activity_log.event = 2
             GROUP BY user_id
             ORDER BY score DESC
           ) AS scoreboard, (SELECT @curRank := 0) r
@@ -145,11 +146,11 @@ router.get('/ranking/:user_id&:channel_id', async (req, res) => {
           SELECT rank FROM
           (
           SELECT
-          user_id, @curRank := @curRank + 1 AS rank
+          user_id, score, @curRank := @curRank + 1 AS rank
           FROM (
-            SELECT SUM(point) as score, user_id
-            FROM user_task JOIN task ON task.id=user_task.task_id
-            WHERE task.channel_id = ?
+            SELECT IF(SUM(point) IS NULL, 0, SUM(point)) as score, user_id
+            FROM activity_log JOIN task ON task.id=activity_log.task_id
+            WHERE task.channel_id = ? AND activity_log.event = 2
             GROUP BY user_id
             ORDER BY score DESC
           ) AS scoreboard, (SELECT @curRank := 0) r

@@ -60,7 +60,6 @@ export function login(username, password) {
       const { id } = await res.json();
       dispatch(loginSuccess(username, id));
     } catch (e) {
-      console.log(e);
       dispatch(serverError(e));
     }
   };
@@ -102,7 +101,6 @@ export function signUp(username, password) {
 export function handleVote(user_id, proposal_id, score) {
   return async dispatch => {
     const body = { user_id, proposal_id, score };
-    console.log('in handleVote', body);
     try {
       const res = await _post('/vote', body);
       if (!res.ok) return;
@@ -125,7 +123,7 @@ export function receiveData(data) {
 export function loadData() {
   return dispatch => {
     return fetch(`${serverAddr}/loaddata`)
-      .then(res => res.json(), err => console.log('An error occurred', err))
+      .then(res => res.json())
       .then(json => {
         return dispatch(receiveData(json));
       });
@@ -175,7 +173,6 @@ export function subscribeChannelAsUser(user_id, channel_id) {
   return async dispatch => {
     const res = await _post('/user_channel', { channel_id, user_id });
     if (!res.ok) {
-      console.log(res);
       return dispatch(_subscribeFailure());
     }
     dispatch(_subscribeChannelLocal(user_id, channel_id));
@@ -202,7 +199,6 @@ export function newActivityLog(task_id, user_id, event) {
       if (!res.ok) return dispatch(activityUploadFailure());
       dispatch(activityUploaded(task_id, user_id, event));
     } catch (e) {
-      console.log(e);
       dispatch(serverError(e));
     }
   };
@@ -232,7 +228,6 @@ export function enrollTaskAsUser(task_id, user_id) {
       if (!res.ok) return dispatch(userTaskOperationFailure());
       dispatch(userTaskEnroll(task_id, user_id));
     } catch (e) {
-      console.log(e);
       dispatch(serverError(e));
     }
   };
@@ -245,7 +240,6 @@ export function dropTaskAsUser(task_id, user_id) {
       if (!res.ok) return dispatch(userTaskOperationFailure());
       dispatch(userTaskDrop(task_id, user_id));
     } catch (e) {
-      console.log(e);
       dispatch(serverError(e));
     }
   };

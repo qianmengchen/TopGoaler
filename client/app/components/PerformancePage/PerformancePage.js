@@ -95,7 +95,6 @@ class PerformancePage extends Component {
 
   async _loadScores() {
     const { userId, subscribed_channels } = this.props;
-    console.log(userId);
     const channel_point = {};
     for (const { channel_id } of subscribed_channels.keys()) {
       try {
@@ -124,7 +123,6 @@ class PerformancePage extends Component {
   }
 
   render() {
-    console.log(this.state.channel_point);
     return (
       <View style={board.container}>
         <View style={board.title}>

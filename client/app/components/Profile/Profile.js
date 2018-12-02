@@ -40,8 +40,6 @@ class Profile extends Component {
 
   render() {
     const { userInfo, userChannels, userTasks, userActivities } = this.props;
-
-    console.log(this.props);
     const numActivities = userActivities.reduce(
       this._activityAggregateReducer.bind(this),
       {}

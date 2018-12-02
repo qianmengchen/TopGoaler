@@ -18,7 +18,7 @@ const initialTaskState = {
 describe('Testing Channel Icon component', () => {
   const item = { icon: null };
 
-  const wrapper = shallow(<ChannelIcon item={item} />, {
+  const wrapper = shallow(<ChannelIcon item={item} goToChannel={jest.fn()} />, {
     context: { store: mockStore(initialTaskState) }
   });
   const render = wrapper.dive();
@@ -30,4 +30,10 @@ describe('Testing Channel Icon component', () => {
   it('should have 1 Image for icons', () => {
     expect(render.find('Image')).toHaveLength(1);
   });
+
+  it('should be pressable and go to channel', () => {
+    wrapper.find('TouchableOpacity').simulate('press');
+  });
+
+  it('should have state mapping', () => {});
 });

@@ -19,7 +19,7 @@ class ChannelListPage extends Component {
 
   _contains = channel => {
     return channel.title
-      ? channel.title.includes(this.state.input.toLowerCase())
+      ? channel.title.toLowerCase().includes(this.state.input.toLowerCase())
       : false;
   };
 

@@ -17,8 +17,8 @@ class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'admin',
-      password: 'admin'
+      username: '',
+      password: ''
     };
   }
   render() {
@@ -65,6 +65,7 @@ class SignIn extends Component {
             autoCapitalize="none"
             defaultValue={this.state.password}
             value={this.state.password}
+            secureTextEntry={true}
             onChangeText={text => this.setState({ password: text })}
             leftIcon={<Icon name="lock" size={24} color="grey" />}
           />

@@ -14,8 +14,8 @@ const mockStore = configureStore(middlewares);
 
 const initAuthState = {
   isLoggedIn: false,
-  username: 'admin',
-  password: 'admin'
+  username: '',
+  password: ''
 };
 
 describe('Testing Sign In Page', () => {
@@ -52,13 +52,13 @@ describe('Testing Sign In Page', () => {
 
   it('should have initial username and password be admin', () => {
     let instance = renderer.create(<SignIn />).getInstance();
-    expect(instance.state.username).toBe('admin');
-    expect(instance.state.password).toBe('admin');
+    expect(instance.state.username).toBe('');
+    expect(instance.state.password).toBe('');
   });
 
   it('should have username dependent on state', () => {
     const userfield = wrapper.find(Input).at(0);
-    expect(userfield.props().value).toBe('admin');
+    expect(userfield.props().value).toBe('');
 
     wrapper.setState({ username: 'notadmin' });
 
@@ -83,7 +83,7 @@ describe('Testing Sign In Page', () => {
 
   it('should have password dependent on state', () => {
     const pwfield = wrapper.find(Input).at(1);
-    expect(pwfield.props().value).toBe('admin');
+    expect(pwfield.props().value).toBe('');
 
     wrapper.setState({ password: 'notadmin' });
 

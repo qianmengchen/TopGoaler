@@ -64,6 +64,7 @@ ShallowWrapper {
         }
         onChangeText={[Function]}
         placeholder="Password"
+        secureTextEntry={true}
         textContentType="password"
         value=""
       />
@@ -371,6 +372,7 @@ ShallowWrapper {
             }
             onChangeText={[Function]}
             placeholder="Password"
+            secureTextEntry={true}
             textContentType="password"
             value=""
           />
@@ -682,6 +684,7 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Password"
+              secureTextEntry={true}
               textContentType="password"
               value=""
             />,
@@ -781,6 +784,7 @@ ShallowWrapper {
               />,
               "onChangeText": [Function],
               "placeholder": "Password",
+              "secureTextEntry": true,
               "textContentType": "password",
               "value": "",
             },
@@ -1373,6 +1377,7 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Password"
+              secureTextEntry={true}
               textContentType="password"
               value=""
             />
@@ -1684,6 +1689,7 @@ ShallowWrapper {
                 }
                 onChangeText={[Function]}
                 placeholder="Password"
+                secureTextEntry={true}
                 textContentType="password"
                 value=""
               />,
@@ -1783,6 +1789,7 @@ ShallowWrapper {
                 />,
                 "onChangeText": [Function],
                 "placeholder": "Password",
+                "secureTextEntry": true,
                 "textContentType": "password",
                 "value": "",
               },

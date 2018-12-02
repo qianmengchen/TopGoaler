@@ -110,7 +110,7 @@ ShallowWrapper {
             "marginBottom": 10,
           }
         }
-        defaultValue="admin"
+        defaultValue=""
         leftIcon={
           <Themed.Icon
             color="grey"
@@ -120,7 +120,7 @@ ShallowWrapper {
         }
         onChangeText={[Function]}
         placeholder="Username"
-        value="admin"
+        value=""
       />
       <ForwardRef(Themed.Input)
         autoCapitalize="none"
@@ -129,7 +129,7 @@ ShallowWrapper {
             "marginVertical": 10,
           }
         }
-        defaultValue="admin"
+        defaultValue=""
         leftIcon={
           <Themed.Icon
             color="grey"
@@ -139,8 +139,9 @@ ShallowWrapper {
         }
         onChangeText={[Function]}
         placeholder="Password"
+        secureTextEntry={true}
         textContentType="password"
-        value="admin"
+        value=""
       />
       <TouchableHighlight
         activeOpacity={0.85}
@@ -316,7 +317,7 @@ ShallowWrapper {
                 "marginBottom": 10,
               }
             }
-            defaultValue="admin"
+            defaultValue=""
             leftIcon={
               <Themed.Icon
                 color="grey"
@@ -326,7 +327,7 @@ ShallowWrapper {
             }
             onChangeText={[Function]}
             placeholder="Username"
-            value="admin"
+            value=""
           />
           <ForwardRef(Themed.Input)
             autoCapitalize="none"
@@ -335,7 +336,7 @@ ShallowWrapper {
                 "marginVertical": 10,
               }
             }
-            defaultValue="admin"
+            defaultValue=""
             leftIcon={
               <Themed.Icon
                 color="grey"
@@ -345,8 +346,9 @@ ShallowWrapper {
             }
             onChangeText={[Function]}
             placeholder="Password"
+            secureTextEntry={true}
             textContentType="password"
-            value="admin"
+            value=""
           />
           <TouchableHighlight
             activeOpacity={0.85}
@@ -526,7 +528,7 @@ ShallowWrapper {
                   "marginBottom": 10,
                 }
               }
-              defaultValue="admin"
+              defaultValue=""
               leftIcon={
                 <Themed.Icon
                   color="grey"
@@ -536,7 +538,7 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Username"
-              value="admin"
+              value=""
             />,
             <ForwardRef(Themed.Input)
               autoCapitalize="none"
@@ -545,7 +547,7 @@ ShallowWrapper {
                   "marginVertical": 10,
                 }
               }
-              defaultValue="admin"
+              defaultValue=""
               leftIcon={
                 <Themed.Icon
                   color="grey"
@@ -555,8 +557,9 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Password"
+              secureTextEntry={true}
               textContentType="password"
-              value="admin"
+              value=""
             />,
             <TouchableHighlight
               activeOpacity={0.85}
@@ -786,7 +789,7 @@ ShallowWrapper {
               "containerStyle": Object {
                 "marginBottom": 10,
               },
-              "defaultValue": "admin",
+              "defaultValue": "",
               "leftIcon": <Themed.Icon
                 color="grey"
                 name="person"
@@ -794,7 +797,7 @@ ShallowWrapper {
               />,
               "onChangeText": [Function],
               "placeholder": "Username",
-              "value": "admin",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -812,7 +815,7 @@ ShallowWrapper {
               "containerStyle": Object {
                 "marginVertical": 10,
               },
-              "defaultValue": "admin",
+              "defaultValue": "",
               "leftIcon": <Themed.Icon
                 color="grey"
                 name="lock"
@@ -820,8 +823,9 @@ ShallowWrapper {
               />,
               "onChangeText": [Function],
               "placeholder": "Password",
+              "secureTextEntry": true,
               "textContentType": "password",
-              "value": "admin",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -1047,7 +1051,7 @@ ShallowWrapper {
                   "marginBottom": 10,
                 }
               }
-              defaultValue="admin"
+              defaultValue=""
               leftIcon={
                 <Themed.Icon
                   color="grey"
@@ -1057,7 +1061,7 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Username"
-              value="admin"
+              value=""
             />
             <ForwardRef(Themed.Input)
               autoCapitalize="none"
@@ -1066,7 +1070,7 @@ ShallowWrapper {
                   "marginVertical": 10,
                 }
               }
-              defaultValue="admin"
+              defaultValue=""
               leftIcon={
                 <Themed.Icon
                   color="grey"
@@ -1076,8 +1080,9 @@ ShallowWrapper {
               }
               onChangeText={[Function]}
               placeholder="Password"
+              secureTextEntry={true}
               textContentType="password"
-              value="admin"
+              value=""
             />
             <TouchableHighlight
               activeOpacity={0.85}
@@ -1257,7 +1262,7 @@ ShallowWrapper {
                     "marginBottom": 10,
                   }
                 }
-                defaultValue="admin"
+                defaultValue=""
                 leftIcon={
                   <Themed.Icon
                     color="grey"
@@ -1267,7 +1272,7 @@ ShallowWrapper {
                 }
                 onChangeText={[Function]}
                 placeholder="Username"
-                value="admin"
+                value=""
               />,
               <ForwardRef(Themed.Input)
                 autoCapitalize="none"
@@ -1276,7 +1281,7 @@ ShallowWrapper {
                     "marginVertical": 10,
                   }
                 }
-                defaultValue="admin"
+                defaultValue=""
                 leftIcon={
                   <Themed.Icon
                     color="grey"
@@ -1286,8 +1291,9 @@ ShallowWrapper {
                 }
                 onChangeText={[Function]}
                 placeholder="Password"
+                secureTextEntry={true}
                 textContentType="password"
-                value="admin"
+                value=""
               />,
               <TouchableHighlight
                 activeOpacity={0.85}
@@ -1517,7 +1523,7 @@ ShallowWrapper {
                 "containerStyle": Object {
                   "marginBottom": 10,
                 },
-                "defaultValue": "admin",
+                "defaultValue": "",
                 "leftIcon": <Themed.Icon
                   color="grey"
                   name="person"
@@ -1525,7 +1531,7 @@ ShallowWrapper {
                 />,
                 "onChangeText": [Function],
                 "placeholder": "Username",
-                "value": "admin",
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -1543,7 +1549,7 @@ ShallowWrapper {
                 "containerStyle": Object {
                   "marginVertical": 10,
                 },
-                "defaultValue": "admin",
+                "defaultValue": "",
                 "leftIcon": <Themed.Icon
                   color="grey"
                   name="lock"
@@ -1551,8 +1557,9 @@ ShallowWrapper {
                 />,
                 "onChangeText": [Function],
                 "placeholder": "Password",
+                "secureTextEntry": true,
                 "textContentType": "password",
-                "value": "admin",
+                "value": "",
               },
               "ref": null,
               "rendered": null,

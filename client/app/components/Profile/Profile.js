@@ -24,11 +24,13 @@ class Profile extends Component {
   }
 
   _activityAggregateReducer(acc, obj) {
-    const { userTasks } = this.props;
+    const { tasks } = this.props;
 
-    const now = new Date();
-    const task = userTasks[obj.task_id];
-    if (task && now - obj.create_time <= periodDecoder[task.period]) {
+    const now = new Date(Date.now());
+    const task = tasks[obj.task_id];
+    if (!task) return acc;
+    const diff = now - obj.create_time;
+    if (diff <= periodDecoder[task.period] && diff > 0) {
       if (acc[obj.task_id]) {
         acc[obj.task_id]++;
       } else {
@@ -40,6 +42,8 @@ class Profile extends Component {
 
   render() {
     const { userInfo, userChannels, userTasks, userActivities } = this.props;
+
+    //numActivities maps task_id to the number of FINISH activities within its period
     const numActivities = userActivities.reduce(
       this._activityAggregateReducer.bind(this),
       {}
@@ -48,7 +52,11 @@ class Profile extends Component {
     const onGoingTasks = [],
       finishedTasks = [];
     for (const task of userTasks) {
-      if (!task.pattern || numActivities[task.id] < task.pattern) {
+      if (
+        !task.pattern ||
+        !numActivities[task.id] ||
+        numActivities[task.id] < task.pattern
+      ) {
         onGoingTasks.push(task);
       } else {
         finishedTasks.push(task);

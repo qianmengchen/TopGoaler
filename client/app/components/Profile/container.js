@@ -28,8 +28,9 @@ const mapStateToProps = state => ({
     )
     .map(log => ({
       task_id: log.task_id,
-      create_time: new Date(log.create_time)
-    }))
+      create_time: new Date(new Date(log.create_time) - 1000 * 3600 * 8)
+    })),
+  tasks: state.tasks
 });
 
 const mapDispatchToProps = dispatch => ({

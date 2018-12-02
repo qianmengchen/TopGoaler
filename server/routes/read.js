@@ -127,7 +127,7 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
 })
 
 /**
- * Get scoreboard of a specific user in a specific channel
+ * Get ranking of a specific user in a specific channel
  * @function
  * @param {string} channel_id - The id of the channel. 
  * @param {string} user_id - The id of the user. 
@@ -136,7 +136,7 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
  * curl -d "channel_id=1&user_id=1" http://localhost:8001/ranking
  * @returns {Integer} returns ranking of the user in the channel
  */
-function get_score_board(channel_id){}
+function get_user_rank(channel_id){}
 router.get('/ranking/:user_id&:channel_id', async (req, res) => {
     let { user_id, channel_id } = req.params
     try {

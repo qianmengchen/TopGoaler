@@ -102,7 +102,6 @@ router.put('/task/:orig_title&:orig_channel_id', async (request, response) => {
 
 });
 
-//todo: THE FOLLOWING NEEDS REFACTORING , TRY CATCH ISN"T WORKING HERE!!!!!! 
 
 /**
  * UPDATE an entry for table user 
@@ -116,13 +115,12 @@ router.put('/task/:orig_title&:orig_channel_id', async (request, response) => {
  * @returns {json} Json format of result.
  */  
 function update_user(orig_name, orig_password, name, password){}
-router.put('/user/:orig_name:orig_password', (request, response) => {
+router.put('/user/:orig_name:orig_password', async (request, response) => {
     try {
         const orig_name = request.params.orig_name; 
-        const orig_password = request.params.orig_password; 
-        pool.query('UPDATE user SET ? WHERE name = ? AND password = ?', [request.body, orig_name, orig_password], (error, result) => {
-            response.send(result);
-        });
+        const orig_password = request.params.orig_password;  
+        const result = await doQuery('UPDATE user SET ? WHERE name = ? AND password = ?', [request.body,orig_name, orig_password])
+        response.send(result);
     } catch (error) {
         response.status(401).send(`unable to update: ${err}`); 
     }
@@ -141,13 +139,12 @@ router.put('/user/:orig_name:orig_password', (request, response) => {
  * @returns {json} Json format of result.
  */    
 function update_user_channel(orig_user_id, orig_channel_id,user_id, channel_id){}
-router.put('/user_channel/:orig_user_id:orig_channel_id', (request, response) => {
+router.put('/user_channel/:orig_user_id:orig_channel_id', async (request, response) => {
     try {
         const orig_user_id = request.params.orig_user_id; 
-        const orig_channel_id = request.params.orig_channel_id; 
-        pool.query('UPDATE user_channel SET ? WHERE user_id = ? AND channel_id = ?', [request.body, orig_user_id, orig_channel_id], (error, result) => {
-            response.send(result);
-        });
+        const orig_channel_id = request.params.orig_channel_id;  
+        const result = await doQuery('UPDATE user_channel SET ? WHERE user_id = ? AND channel_id = ?', [request.body,orig_user_id, orig_channel_id])
+        response.send(result);
     } catch (error) {
         response.status(401).send(`unable to update: ${err}`); 
         
@@ -166,13 +163,12 @@ router.put('/user_channel/:orig_user_id:orig_channel_id', (request, response) =>
  * @returns {json} Json format of result.
  */  
 function update_user_task(orig_user_id, orig_task_id, user_id, task_id){}
-router.put('/user_task/:orig_user_id:orig_task_id', (request, response) => {
+router.put('/user_task/:orig_user_id:orig_task_id', async (request, response) => {
     try {
         const orig_user_id = request.params.orig_user_id; 
         const orig_task_id = request.params.orig_task_id; 
-        pool.query('UPDATE user_task SET ? WHERE user_id = ? AND task_id = ?', [request.body, orig_user_id, orig_task_id], (error, result) => {
-            response.send(result);
-        });
+        const result = await doQuery('UPDATE user_task SET ? WHERE user_id = ? AND task_id = ?', [request.body,orig_user_id, orig_task_id])
+        response.send(result); 
     } catch (error) {
         response.status(401).send(`unable to update: ${err}`);  
     }
@@ -190,13 +186,13 @@ router.put('/user_task/:orig_user_id:orig_task_id', (request, response) => {
  * @returns {json} Json format of result.
  */   
 function update_vote(orig_user_id, orig_proposal_id, proposal_id, score){}
-router.put('/vote/:orig_user_id:orig_proposal_id', (request, response) => {
+router.put('/vote/:orig_user_id:orig_proposal_id', async (request, response) => {
     try {
         const orig_user_id = request.params.orig_user_id; 
         const orig_proposal_id = request.params.proposal_id; 
-        pool.query('UPDATE vote SET ?  WHERE user_id = ? AND proposal_id =  ?', [request.body, orig_user_id, orig_proposal_id], (error, result) => { 
-            response.send(result);
-        });
+
+        const result = await doQuery('UPDATE vote SET ?  WHERE user_id = ? AND proposal_id =  ?', [request.body,orig_user_id, orig_proposal_id])
+        response.send(result); 
     } catch (error) {
         response.status(401).send(`unable to update: ${err}`);  
     }

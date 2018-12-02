@@ -40,7 +40,7 @@ export const timestampToDescription = timestamp => {
     return 'some time';
   }
 
-  var s = new Date() - new Date(timestamp);
+  var s = new Date(Date.now()) - new Date(timestamp);
   var ms = s % 1000;
   s = (s - ms) / 1000;
   var secs = s % 60;

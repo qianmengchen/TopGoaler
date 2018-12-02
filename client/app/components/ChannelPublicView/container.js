@@ -10,7 +10,7 @@ const _get_all_task_id = (state, ownProps) => {
     channel_id: state.tasks[t].channel_id
   }));
   for (const t of task) {
-    if (Object.values(t)[1] === ownProps.navigation.state.params.id) {
+    if (Object.values(t)[1] === ownProps.navigation.state.params.channel_id) {
       res.push(Object.values(t)[0]);
     }
   }
@@ -19,8 +19,8 @@ const _get_all_task_id = (state, ownProps) => {
 
 const mapStateToProps = (state, ownProps) => ({
   user_id: state.auth.id,
-  channel: state.channels[ownProps.navigation.state.params.id]
-    ? state.channels[ownProps.navigation.state.params.id]
+  channel: state.channels[ownProps.navigation.state.params.channel_id]
+    ? state.channels[ownProps.navigation.state.params.channel_id]
     : {},
   user_channel: state.user_channel,
   task: Object.keys(state.tasks).map(t => ({
@@ -33,7 +33,7 @@ const mapStateToProps = (state, ownProps) => ({
       log.event.toString() === Event.FINISH
   ),
   subscribed_users: state.user_channel
-    .filter(us => us.channel_id === ownProps.navigation.state.params.id)
+    .filter(us => us.channel_id === ownProps.navigation.state.params.channel_id)
     .map(log => ({
       user_id: log.user_id
     }))

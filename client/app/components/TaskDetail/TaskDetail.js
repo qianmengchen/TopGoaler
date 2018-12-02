@@ -52,12 +52,16 @@ class TaskDetail extends Component {
     }
 
     return (
-      <Card title={title}>
+      <Card title={title} titleStyle={{ marginBottom: 0, paddingBottom: 0 }}>
         <View style={frequency.container}>
-          <Text>
-            Frequency: {pattern} time(s) per {period}
+          <Text style={frequency.cellLeft}>
+            {period == 'once'
+              ? 'once'
+              : (pattern < 10 ? pattern : 'unlimited') +
+                'time(s) per ' +
+                period}
           </Text>
-          <Text>Reward: {points} point(s)!</Text>
+          <Text style={frequency.cellRight}> + {points} pt</Text>
         </View>
         {button}
       </Card>

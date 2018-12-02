@@ -1,9 +1,5 @@
 //miliseconds in a day, week and month
-/** @constant
-    @type {string}
-    @default
-*/
-export const periodDecoder = [8.64e7, 6.048e8, 2.592e9];
+export const periodDecoder = [8.64e7, 6.048e8, 2.592e9, 1e40];
 
 /** @constant
     @type {string}

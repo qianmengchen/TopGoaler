@@ -3,7 +3,10 @@ const pool = require('../data/config');
 const util = require('util')
 const doQuery =  util.promisify(pool.query).bind(pool)
 
-exports.doQuery = doQuery
+exports.doQuery = (...args) => {
+    console.log(`executing query ${args}`)
+    return doQuery(...args)
+}
 
 exports.routeFactory = (...args) => (req, res, filter) => {
     console.log(`From routeFactory: executing query ${args}`)

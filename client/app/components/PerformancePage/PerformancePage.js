@@ -8,7 +8,7 @@ import { _get } from '../../actions';
 class PerformancePage extends Component {
   //utils
   _day_task_reducer = (acc, val) => {
-    const now = new Date();
+    const now = new Date(Date.now());
     if (val && now - val.create_time <= periodDecoder[0]) {
       return acc + 1;
     } else {
@@ -21,7 +21,7 @@ class PerformancePage extends Component {
   };
 
   _week_task_reducer = (acc, val) => {
-    const now = new Date();
+    const now = new Date(Date.now());
     if (val && now - val.create_time <= periodDecoder[1]) {
       return acc + 1;
     } else {
@@ -34,7 +34,7 @@ class PerformancePage extends Component {
   };
 
   _month_task_reducer = (acc, val) => {
-    const now = new Date();
+    const now = new Date(Date.now());
     if (val && now - val.create_time <= periodDecoder[2]) {
       return acc + 1;
     } else {
@@ -47,7 +47,7 @@ class PerformancePage extends Component {
   };
 
   _get_last_months = () => {
-    const now = new Date().getMonth();
+    const now = new Date(Date.now()).getMonth();
     const months = [
       'Jan',
       'Feb',
@@ -67,7 +67,7 @@ class PerformancePage extends Component {
   };
 
   _specific_month_task_reducer = month => (acc, val) => {
-    const now_year = new Date().getFullYear();
+    const now_year = new Date(Date.now()).getFullYear();
     if (
       val &&
       val.create_time.getFullYear() === now_year &&
@@ -87,7 +87,7 @@ class PerformancePage extends Component {
   };
 
   _get_last_tasks_num = () => {
-    const start = new Date().getMonth() - 4;
+    const start = new Date(Date.now()).getMonth() - 4;
     return Array.apply(null, Array(6)).map((x, i) => {
       return this._specific_month_task(start + i);
     });

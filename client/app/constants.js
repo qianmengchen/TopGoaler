@@ -1,6 +1,10 @@
 //miliseconds in a day, week and month
 export const periodDecoder = [8.64e7, 6.048e8, 2.592e9, 1e40];
 
+/** @constant
+    @type {string}
+    @default
+*/
 export class Event {
   static get JOIN() {
     return '0';
@@ -13,6 +17,10 @@ export class Event {
   }
 }
 
+/** @constant
+    @type {string}
+    @default
+*/
 export class Point {
   static get ONE() {
     return 'one';
@@ -37,6 +45,10 @@ export class Point {
   }
 }
 
+/** @constant
+    @type {string}
+    @default
+*/
 export class Status {
   static get NOT_REGISTERED() {
     return 'not_registered';

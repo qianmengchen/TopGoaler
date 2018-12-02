@@ -21,7 +21,9 @@ ShallowWrapper {
       style={
         Object {
           "alignSelf": "center",
+          "fontFamily": "Avenir",
           "fontSize": 40,
+          "fontWeight": "500",
         }
       }
     >
@@ -225,7 +227,9 @@ ShallowWrapper {
           style={
             Object {
               "alignSelf": "center",
+              "fontFamily": "Avenir",
               "fontSize": 40,
+              "fontWeight": "500",
             }
           }
         >
@@ -429,7 +433,9 @@ ShallowWrapper {
           "ellipsizeMode": "tail",
           "style": Object {
             "alignSelf": "center",
+            "fontFamily": "Avenir",
             "fontSize": 40,
+            "fontWeight": "500",
           },
         },
         "ref": null,
@@ -952,7 +958,9 @@ ShallowWrapper {
             style={
               Object {
                 "alignSelf": "center",
+                "fontFamily": "Avenir",
                 "fontSize": 40,
+                "fontWeight": "500",
               }
             }
           >
@@ -1156,7 +1164,9 @@ ShallowWrapper {
             "ellipsizeMode": "tail",
             "style": Object {
               "alignSelf": "center",
+              "fontFamily": "Avenir",
               "fontSize": 40,
+              "fontWeight": "500",
             },
           },
           "ref": null,

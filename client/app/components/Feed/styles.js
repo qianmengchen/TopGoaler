@@ -23,12 +23,13 @@ const task = StyleSheet.create({
     justifyContent: 'space-between'
   },
   title: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold'
   },
   text: {
     color: 'grey',
-    fontSize: 16
+    fontFamily: 'Avenir-Light',
+    fontSize: 14
   }
 });
 

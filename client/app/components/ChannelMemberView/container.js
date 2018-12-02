@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => ({
     channelActivityFilterWrap(ownProps.navigation.state.params.id, state.tasks)
   ),
   users: state.users,
-  tasks: state.tasks
+  tasks: state.tasks,
+  navigation: ownProps.navigation
 });
 
 export default connect(mapStateToProps)(ChannelMemberView);

@@ -1,34 +1,47 @@
 import { StyleSheet } from 'react-native';
 
+const headerBar = {
+  headerTitleContainerStyle: { marginLeft: -10 },
+  headerRightContainerStyle: { paddingRight: 10 },
+  headerLeftContainerStyle: { paddingLeft: 10 },
+  headerTintColor: '#555',
+  headerStyle: { height: 50 }
+};
+
 const header = StyleSheet.create({
   container: {
-    marginTop: 10,
-    justifyContent: 'space-evenly',
+    marginTop: 0,
+    justifyContent: 'space-between',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    flex: 1
   },
   title: {
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: 30,
-    fontWeight: 'bold'
+    fontSize: 24,
+    fontWeight: '700',
+    fontFamily: 'Avenir',
+    display: 'flex'
   },
   avatar: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    justifyContent: 'flex-end',
+    display: 'flex'
   }
 });
 
 const cardLeft = StyleSheet.create({
   container: {
-    backgroundColor: '#555',
+    backgroundColor: '#777',
     borderRadius: 10,
     borderColor: '#555',
     marginRight: 2,
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'flex-start'
   },
   statsContainer: {
-    paddingVertical: 10
+    paddingBottom: 20
   },
   stats: {
     fontSize: 15,
@@ -36,8 +49,9 @@ const cardLeft = StyleSheet.create({
     paddingVertical: 2
   },
   number: {
-    fontSize: 18,
-    fontWeight: 'bold'
+    paddingTop: 5,
+    fontSize: 22,
+    fontFamily: 'Avenir-Black'
   }
 });
 
@@ -46,8 +60,8 @@ const cardRight = StyleSheet.create({
     backgroundColor: '#555',
     borderRadius: 10,
     borderColor: '#555',
-    marginLeft: 2,
-    flex: 2.5
+    marginLeft: 5,
+    flex: 4
   },
   taskContainer: {
     flexDirection: 'row',
@@ -60,7 +74,7 @@ const cardRight = StyleSheet.create({
     fontWeight: 'bold'
   },
   taskButton: {
-    marginTop: 5
+    paddingTop: 10
   },
   taskButtonText: {
     color: 'white',
@@ -68,6 +82,7 @@ const cardRight = StyleSheet.create({
   }
 });
 
+/*
 const vote = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -85,5 +100,6 @@ const vote = StyleSheet.create({
     paddingVertical: 10
   }
 });
+*/
 
-export { header, cardLeft, cardRight, vote };
+export { headerBar, header, cardLeft, cardRight };

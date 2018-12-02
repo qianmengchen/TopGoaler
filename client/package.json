@@ -52,6 +52,10 @@
     "setupTestFrameworkScriptFile": "./app/tests/setupTests.js",
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-navigation)/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "container.js",
+      "index.js"
     ]
   },
   "prettier": {

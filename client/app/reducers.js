@@ -24,7 +24,7 @@ const initAuthState = {
   id: null
 };
 
-function _alertLogin(method) {
+export function _alertLogin(method) {
   Alert.alert(
     method + ' Failure',
     'Invalid username or password',
@@ -33,11 +33,11 @@ function _alertLogin(method) {
   );
 }
 
-function _alertServer() {
+export function _alertServer() {
   Alert.alert('Server error', '', [{ text: 'OK' }]);
 }
 
-function auth(state = initAuthState, action) {
+export function auth(state = initAuthState, action) {
   switch (action.type) {
     case LOGIN_SUCCESS:
       return {
@@ -64,12 +64,12 @@ function auth(state = initAuthState, action) {
   }
 }
 
-const _arrayToDictReducer = (res, obj) => {
+export const _arrayToDictReducer = (res, obj) => {
   res[obj.id] = obj;
   return res;
 };
 
-function channels(state = {}, action) {
+export function channels(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.channel.reduce(_arrayToDictReducer, {});
@@ -83,7 +83,7 @@ function channels(state = {}, action) {
   }
 }
 
-function user_channel(state = [], action) {
+export function user_channel(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return [...action.data.user_channel];
@@ -97,7 +97,7 @@ function user_channel(state = [], action) {
   }
 }
 
-function users(state = {}, action) {
+export function users(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.user.reduce(_arrayToDictReducer, {});
@@ -106,7 +106,7 @@ function users(state = {}, action) {
   }
 }
 
-function user_task(state = [], action) {
+export function user_task(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return [...action.data.user_task];
@@ -115,7 +115,7 @@ function user_task(state = [], action) {
   }
 }
 
-function proposals(state = [], action) {
+export function proposals(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.proposal.map(x => ({
@@ -127,7 +127,7 @@ function proposals(state = [], action) {
   }
 }
 
-function tasks(state = {}, action) {
+export function tasks(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.task.reduce(_arrayToDictReducer, {});
@@ -136,7 +136,7 @@ function tasks(state = {}, action) {
   }
 }
 
-function activity_log(state = [], action) {
+export function activity_log(state = [], action) {
   switch (action.type) {
     case LOAD_DATA:
       return [...action.data.activity_log];

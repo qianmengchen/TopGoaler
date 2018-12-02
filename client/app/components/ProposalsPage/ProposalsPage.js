@@ -13,7 +13,6 @@ class ProposalsPage extends Component {
   });
 
   _handleVoteFactory = proposal_id => points => {
-    console.log("if i never reach here i'll quit cs");
     this.props.handleVote(this.props.user_id, proposal_id, points);
   };
   render() {

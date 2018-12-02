@@ -53,6 +53,7 @@ let fieldRoutes =
         ['user', 'id', exclude(['password'])],
         ['channel', 'id'],
         ['user_channel', 'user_id', extract('channel_id')],
+        ['user_channel', 'channel_id', extract('user_id')],
         ['user_task', 'user_id', extract('task_id')],
         ['task', 'id'],
         ['task', 'channel_id']

@@ -11,11 +11,22 @@ const frequency = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 10
+    marginTop: 10,
+    flex: 1
   },
-  textgroup: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+  cellLeft: {
+    flex: 2,
+    fontSize: 20,
+    fontFamily: 'Avenir-Book',
+    color: 'grey',
+    alignItems: 'center'
+  },
+  cellRight: {
+    flex: 1,
+    fontSize: 20,
+    fontFamily: 'Avenir-Book',
+    color: 'grey',
+    alignItems: 'flex-end'
   }
 });
 

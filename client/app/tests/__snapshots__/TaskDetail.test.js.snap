@@ -3,10 +3,18 @@
 exports[`Testing Task Detail Page renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Themed.Card>
+  Symbol(enzyme.__unrendered__): <Themed.Card
+    titleStyle={
+      Object {
+        "marginBottom": 0,
+        "paddingBottom": 0,
+      }
+    }
+  >
     <Component
       style={
         Object {
+          "flex": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginTop": 10,
@@ -17,17 +25,34 @@ ShallowWrapper {
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "grey",
+            "flex": 2,
+            "fontFamily": "Avenir-Book",
+            "fontSize": 20,
+          }
+        }
       >
-        Frequency: 
-         time(s) per 
+        unlimitedtime(s) per undefined
       </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "color": "grey",
+            "flex": 1,
+            "fontFamily": "Avenir-Book",
+            "fontSize": 20,
+          }
+        }
       >
-        Reward: 
-         point(s)!
+         + 
+         pt
       </Text>
     </Component>
     <TouchableHighlight

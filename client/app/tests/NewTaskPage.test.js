@@ -28,9 +28,16 @@ describe('Testing New Task Page', () => {
   const submit = sinon.spy(NewTaskPage.prototype, '_submit');
   const navigation = { navigate: jest.fn() };
 
-  const wrapper = shallow(<NewTaskPage navigation={navigation} />, {
-    context: { store: mockStore(initialTaskState) }
-  });
+  const wrapper = shallow(
+    <NewTaskPage
+      navigation={navigation}
+      channel_id={1}
+      addProposal={jest.fn()}
+    />,
+    {
+      context: { store: mockStore(initialTaskState) }
+    }
+  );
   const render = wrapper.dive();
 
   it('renders as expected', () => {

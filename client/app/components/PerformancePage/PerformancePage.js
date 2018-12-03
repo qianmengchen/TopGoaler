@@ -116,6 +116,10 @@ class PerformancePage extends Component {
   }
 
   /**
+   * This is the component that shows analytical stats for an user.
+   * It contains number of task the user has done in the past day, week and month, with a chart.
+   * It also shows the user's score in each channel.
+   *
    * @class PerformancePage
    * @property {array} userActivities - An array containing all of the user's finished task activities.
    * @property {Set} subscribed_channels - A set containing all of the user's subscribed channels.

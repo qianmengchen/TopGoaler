@@ -5,6 +5,8 @@ import { memberList } from './styles';
 import { nameToInitialMap } from '../ChannelMemberView/utils';
 
 /**
+ * This is the component that shows an icon for each user in that channel with their initials.
+ *
  * @class MemberList
  * @property {Object} users - An object containing all users.
  */

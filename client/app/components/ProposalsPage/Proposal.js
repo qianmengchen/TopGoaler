@@ -9,6 +9,9 @@ class Proposal extends Component {
   }
 
   /**
+   * This is the component that represents the proposal, which is a new task waiting for voting from users.
+   * Proposal will become a task after more than a half of the users in that channel have voted.
+   *
    * @class Proposal
    * @property {number} key - A unique number identifying this proposal.
    * @property {string} title - The title of the new task.

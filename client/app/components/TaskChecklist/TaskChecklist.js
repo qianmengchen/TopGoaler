@@ -4,6 +4,8 @@ import TaskEntry from './TaskEntry';
 import * as styles from './styles';
 
 /**
+ * This is the component that shows a list of taskEntry component.
+ *
  * @class TaskChecklist
  * @property {number} user_id - A unique number identifying a user.
  * @property {function} completeTask - A function allowing the user to mark a task as completed.

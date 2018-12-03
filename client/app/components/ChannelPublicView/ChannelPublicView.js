@@ -6,6 +6,10 @@ import { MemberList } from '../MemberList/index';
 import { NavigationActions, StackActions } from 'react-navigation';
 
 /**
+ * This is the page that an user will be redirected to if the user is not subscribed to that channel.
+ * It only shows general info for this channel.
+ * User can join that channel by clicking on the button.
+ *
  * @class ChannelPublicView
  * @property {number} user_id - A unique number identifying the user.
  * @property {Object} channel - An object describing a specific channel.

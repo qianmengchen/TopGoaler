@@ -4,6 +4,8 @@ import { Avatar } from 'react-native-elements';
 import { iconColors, task } from './styles';
 
 /**
+ * This is the component that shows user's activity logs.
+ *
  * @class Feed
  * @property {string} name - The name of the user associated with the task.
  * @property {string} taskTitle - The title of the task.

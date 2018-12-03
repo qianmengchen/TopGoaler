@@ -43,6 +43,8 @@ class NewTaskPage extends Component {
   }
 
   /**
+   * This is the component that allows an user to create a new task with name, description, period and pattern.
+   *
    * @class NewTaskPage
    * @property {number} user_id - A unique number identifying a user.
    * @property {number} channel_id - A unique number identifying a channel.

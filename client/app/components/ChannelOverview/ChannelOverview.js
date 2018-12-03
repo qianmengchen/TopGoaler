@@ -8,6 +8,9 @@ import { Avatar, Text, Icon } from 'react-native-elements';
 import { board, contents, desc } from './styles';
 
 /**
+ * This is the component that shows a channel's overview.
+ * It is used in the channelList page in a searchable list way.
+ *
  * @class ChannelOverview
  * @property {number} channel_id - A unique number identifying a channel.
  * @property {function} subscribe - A function allowing the user to subscribe to a specific channel.

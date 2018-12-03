@@ -28,6 +28,8 @@ class NewChannelPage extends Component {
   }
 
   /**
+   * This is the component that allows an user to create a new channel with name, image and cover photo.
+   *
    * @class NewChannelPage
    * @property {number} userId - A unique number identifying the user.
    * @property {function} addChannel - A function allowing the user to create a new channel as the creator.

@@ -195,9 +195,9 @@ export function signUp(username, password) {
   return async dispatch => {
     const body = { username, password };
     try {
-      const res = await _post('/login', body);
+      const res = await _post('/signUp', body);
       if (!res.ok) return dispatch(loginFailure(username));
-      dispatch(loginSuccess(username));
+      dispatch(loadData());
     } catch (e) {
       dispatch(serverError(e));
     }

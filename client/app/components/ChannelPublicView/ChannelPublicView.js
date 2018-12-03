@@ -5,16 +5,6 @@ import { header, description, follow } from './styles';
 import { MemberList } from '../MemberList/index';
 import { NavigationActions, StackActions } from 'react-navigation';
 
-/**
- * @property {number} user_id - A unique number identifying the user.
- * @property {Object} channel - An object describing a specific channel.
- * @property {Object} user_channel - An array of channels that the user is subscribed to.
- * @property {Object} task - An object containing all tasks related to this channel.
- * @property {array} channelActivities - An array of all completed activities by a user.
- * @property {Object} subscribed_users - An object containing all users subscribed to a particular channel.
- * @property {function} subscribe - A function allowing the user to subscribe to a particular channel.
- */
-
 class ChannelPublicView extends Component {
   _goToMemberPage() {
     const { dispatch } = this.props.navigation;

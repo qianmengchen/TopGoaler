@@ -16,10 +16,6 @@ const SignNav = createSwitchNavigator(
   }
 );
 
-/**
- * @property {boolean} - A boolean value indicating whether the current user is logged in or not.
- */
-
 class AuthNav extends Component {
   render() {
     return this.props.isLoggedIn ? <TabNav /> : <SignNav />;

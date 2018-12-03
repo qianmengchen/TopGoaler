@@ -220,6 +220,9 @@ describe('vote', async () => {
             })
         )
 
+        // remove prev bad vote
+        await doQuery('DELETE FROM vote WHERE proposal_id = ?', 10000)
+
         // create a proposal and have two people vote on it
         proposal.channel_id = channel_id
         res = await doQuery('INSERT INTO proposal SET ?', proposal)
@@ -265,10 +268,14 @@ describe('vote', async () => {
         res = await doQuery('DELETE FROM task WHERE title = ?', proposal.title)
         expect(res.affectedRows).toBeGreaterThan(0)
 
+        // remove 
+        const res3 = await doQuery('DELETE FROM vote WHERE proposal_id = ?', 10000)
+
         await Promise.all(
             users.map(async (user) => {
                 const res = await doQuery('DELETE FROM user_channel WHERE user_id = ?', user.id)
                 expect(res.affectedRows).toBe(1)
+                const res2 = await doQuery('DELETE FROM vote WHERE user_id = ?', user.id)
             })
         )
         res = await doQuery('DELETE FROM channel WHERE title = ?', channel.title)

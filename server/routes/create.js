@@ -197,6 +197,10 @@ router.post('/vote', async (request, response) => {
     try {
         console.log('/vote', request.body)
         const { proposal_id, user_id } = request.body;
+        const exists_p = await check('SELECT * FROM proposal WHERE id = ?', [proposal_id])
+        if (!exists_p) {
+            throw 'invalid proposal'
+        }
         const exists = await check('SELECT * FROM vote WHERE proposal_id = ? AND user_id = ?', [proposal_id, user_id])
         if (exists) {
             console.log('/vote : user already voted')

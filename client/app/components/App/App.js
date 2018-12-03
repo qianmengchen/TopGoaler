@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { AuthNav } from '../Navigators/index';
 
 class App extends Component {
-  /**
-   * @property {function} loadData - A function to load the data from the database to the application.
-   */
   constructor() {
     super();
 

@@ -4,9 +4,6 @@ import { Avatar } from 'react-native-elements';
 import { memberList } from './styles';
 import { nameToInitialMap } from '../ChannelMemberView/utils';
 
-/**
- * @property {Object} users - An object containing all users.
- */
 class MemberList extends Component {
   _getRandomColor() {
     var letters = '0123456789ABCDEF';

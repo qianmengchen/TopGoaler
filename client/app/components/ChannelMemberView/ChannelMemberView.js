@@ -12,15 +12,6 @@ import {
   _alert
 } from './utils';
 
-/**
- * @property {number} channel_id - A unique number identifying a channel.
- * @property {Object} channel - An object containing the specific channel based on the channel_id.
- * @property {number} userId - A unique number identifying a user.
- * @property {Object} activities - An object containing all activities in this specific channel.
- * @property {Object} users - An object containing all users.
- * @property {Object} tasks - An object containing all tasks.
- * @property {Object} navigation - An object that contains the navigate function to navigate between components.
- */
 class ChannelMemberView extends Component {
   _goToTaskListPage() {
     const { navigate } = this.props.navigation;

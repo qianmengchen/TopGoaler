@@ -16,10 +16,11 @@ const { doQuery, check } = require('./helper');
 function create_activity_log_entry(task_id, user_id){}
 router.post('/activity_log', async (request, response) => {
     try {
+        console.log('/activity_log', request.body)
         const result = await doQuery('INSERT INTO activity_log SET ?', request.body)
-        response.status(201).send(`activity_log added with activity_log: ${result.insertId}`);
+        response.status(201).json({id: result.insertId});
     } catch (error) {
-        response.status(401).send(`error create: ${error}`);
+        response.status(401).json({error});
     }
 });
 
@@ -59,10 +60,10 @@ function create_proposal_entry(title, channel_id){}
 router.post('/proposal', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO proposal SET ?', request.body);
-        response.status(201).send(`proposal added with proposal: ${result.insertId}`);
+        response.status(201).json({id: result.insertId});
     } catch (error) {
         console.log('ERROR', error)
-        response.status(401).send(`error create: ${error}`);  
+        response.status(401).json({error});  
     }
     
 });
@@ -105,9 +106,9 @@ function create_user_entry(name, password){}
 router.post('/user', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO user SET ?', request.body);
-        response.status(201).send(`user added with user: ${result.insertId}`);
+        response.status(201).json({id:result.insertId});
     } catch (error) {
-        response.status(401).send(`error create: ${error}`);   
+        response.status(401).json({error});
     }
     
 });
@@ -128,9 +129,10 @@ function create_user_channel_entry(user_id, channel_id){}
 router.post('/user_channel', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO user_channel SET ?', request.body);
-        response.status(201).send(`user_channel added with user_channel: ${result}`);
+        response.status(201).json({id:result.insertId});
     } catch (error) {
-        response.status(401).send(`error create: ${error}`); 
+        console.log(error)
+        response.status(401).json({error}); 
     }
     
 });
@@ -150,9 +152,9 @@ function create_user_task_entry(user_id, task_id){}
 router.post('/user_task', async (request, response) => {
     try {
         const result = await doQuery('INSERT INTO user_task SET ?', request.body);
-        response.status(201).send(`user_task added with user_task: ${result} `);
+        response.status(201).json({id:result.insertId});
     } catch (error) {
-        response.status(401).send(`error create: ${error}`);
+        response.status(401).json({error}); 
     }
 });
 
@@ -186,7 +188,7 @@ const _transformToTask = async (proposal_id, body) => {
         await doQuery('DELETE FROM proposal WHERE id = ?', [proposal_id])
         console.log('Task Transformed with result ', result)
     } catch (error) {
-        console.log('Error transforming proposal to task', error)
+        throw 'Error transforming proposal to task' + error
     }
 }
 

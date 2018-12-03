@@ -3,6 +3,13 @@ import { Text, View, ScrollView } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import { iconColors, task } from './styles';
 
+/**
+ * @property {string} name - The name of the user associated with the task.
+ * @property {string} taskTitle - The title of the task.
+ * @property {string} comment - A short status description of the task.
+ * @property {string} timestamp - A description of the time the comment regarding the task was created.
+ * @property {number} points - A value indicating the numebr of points for the task.
+ */
 class Feed extends Component {
   render() {
     let { name, taskTitle, comment, timestamp, points } = this.props;

@@ -7,6 +7,17 @@ import {
 import { Avatar, Text, Icon } from 'react-native-elements';
 import { board, contents, desc } from './styles';
 
+/**
+ * @property {number} channel_id - A unique number identifying a channel.
+ * @property {function} subscribe - A function allowing the user to subscribe to a specific channel.
+ * @property {Object} channel - An object describing a specific channel.
+ * @property {string} title - The name of the channel.
+ * @property {Object} task - An object describing a specific task.
+ * @property {array} user_channel - An array of channels that the user is subscribed to.
+ * @property {boolean} is_subscribed - A boolean value indicating whether the user is subscribed or not.
+ * @property {function} goToChannel - A function that allows the user to navigate to the clicked channel.
+ */
+
 class ChannelOverview extends Component {
   _submit = () => {
     let { goToChannel, channel } = this.props;

@@ -307,7 +307,7 @@ ShallowWrapper {
       <Component
         style={
           Object {
-            "borderColor": "white",
+            "borderColor": "black",
             "borderRadius": 10,
             "borderWidth": 2,
             "height": 20,
@@ -331,7 +331,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "white",
+            "color": "black",
             "fontSize": 20,
           }
         }
@@ -355,7 +355,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "white",
+            "color": "black",
             "fontSize": 20,
           }
         }
@@ -395,7 +395,7 @@ ShallowWrapper {
             <Component
               style={
                 Object {
-                  "borderColor": "white",
+                  "borderColor": "black",
                   "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
@@ -419,7 +419,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                 }
               }
@@ -443,7 +443,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                 }
               }
@@ -487,7 +487,7 @@ ShallowWrapper {
           "children": <Component
             style={
               Object {
-                "borderColor": "white",
+                "borderColor": "black",
                 "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
@@ -508,7 +508,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "style": Object {
-              "borderColor": "white",
+              "borderColor": "black",
               "borderRadius": 10,
               "borderWidth": 2,
               "height": 20,
@@ -532,7 +532,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
               }
             }
@@ -556,7 +556,7 @@ ShallowWrapper {
             "children": "Review course material",
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
+              "color": "black",
               "fontSize": 20,
             },
           },
@@ -577,7 +577,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
               }
             }
@@ -602,7 +602,7 @@ ShallowWrapper {
             "children": 1,
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
+              "color": "black",
               "fontSize": 20,
             },
           },
@@ -640,7 +640,7 @@ ShallowWrapper {
               <Component
                 style={
                   Object {
-                    "borderColor": "white",
+                    "borderColor": "black",
                     "borderRadius": 10,
                     "borderWidth": 2,
                     "height": 20,
@@ -664,7 +664,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
+                    "color": "black",
                     "fontSize": 20,
                   }
                 }
@@ -688,7 +688,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
+                    "color": "black",
                     "fontSize": 20,
                   }
                 }
@@ -732,7 +732,7 @@ ShallowWrapper {
             "children": <Component
               style={
                 Object {
-                  "borderColor": "white",
+                  "borderColor": "black",
                   "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
@@ -753,7 +753,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "style": Object {
-                "borderColor": "white",
+                "borderColor": "black",
                 "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
@@ -777,7 +777,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                 }
               }
@@ -801,7 +801,7 @@ ShallowWrapper {
               "children": "Review course material",
               "ellipsizeMode": "tail",
               "style": Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
               },
             },
@@ -822,7 +822,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                 }
               }
@@ -847,7 +847,7 @@ ShallowWrapper {
               "children": 1,
               "ellipsizeMode": "tail",
               "style": Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
               },
             },
@@ -917,8 +917,8 @@ ShallowWrapper {
       <Component
         style={
           Object {
-            "backgroundColor": "white",
-            "borderColor": "white",
+            "backgroundColor": "black",
+            "borderColor": "black",
             "borderRadius": 10,
             "borderWidth": 2,
             "height": 20,
@@ -942,7 +942,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "white",
+            "color": "black",
             "fontSize": 20,
             "textDecorationLine": "line-through",
           }
@@ -967,7 +967,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "white",
+            "color": "black",
             "fontSize": 20,
           }
         }
@@ -1007,8 +1007,8 @@ ShallowWrapper {
             <Component
               style={
                 Object {
-                  "backgroundColor": "white",
-                  "borderColor": "white",
+                  "backgroundColor": "black",
+                  "borderColor": "black",
                   "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
@@ -1032,7 +1032,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                   "textDecorationLine": "line-through",
                 }
@@ -1057,7 +1057,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                 }
               }
@@ -1101,8 +1101,8 @@ ShallowWrapper {
           "children": <Component
             style={
               Object {
-                "backgroundColor": "white",
-                "borderColor": "white",
+                "backgroundColor": "black",
+                "borderColor": "black",
                 "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
@@ -1123,8 +1123,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "style": Object {
-              "backgroundColor": "white",
-              "borderColor": "white",
+              "backgroundColor": "black",
+              "borderColor": "black",
               "borderRadius": 10,
               "borderWidth": 2,
               "height": 20,
@@ -1148,7 +1148,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
                 "textDecorationLine": "line-through",
               }
@@ -1173,7 +1173,7 @@ ShallowWrapper {
             "children": "Review course material",
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
+              "color": "black",
               "fontSize": 20,
               "textDecorationLine": "line-through",
             },
@@ -1195,7 +1195,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
               }
             }
@@ -1220,7 +1220,7 @@ ShallowWrapper {
             "children": 1,
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
+              "color": "black",
               "fontSize": 20,
             },
           },
@@ -1258,8 +1258,8 @@ ShallowWrapper {
               <Component
                 style={
                   Object {
-                    "backgroundColor": "white",
-                    "borderColor": "white",
+                    "backgroundColor": "black",
+                    "borderColor": "black",
                     "borderRadius": 10,
                     "borderWidth": 2,
                     "height": 20,
@@ -1283,7 +1283,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
+                    "color": "black",
                     "fontSize": 20,
                     "textDecorationLine": "line-through",
                   }
@@ -1308,7 +1308,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
+                    "color": "black",
                     "fontSize": 20,
                   }
                 }
@@ -1352,8 +1352,8 @@ ShallowWrapper {
             "children": <Component
               style={
                 Object {
-                  "backgroundColor": "white",
-                  "borderColor": "white",
+                  "backgroundColor": "black",
+                  "borderColor": "black",
                   "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
@@ -1374,8 +1374,8 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "style": Object {
-                "backgroundColor": "white",
-                "borderColor": "white",
+                "backgroundColor": "black",
+                "borderColor": "black",
                 "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
@@ -1399,7 +1399,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                   "textDecorationLine": "line-through",
                 }
@@ -1424,7 +1424,7 @@ ShallowWrapper {
               "children": "Review course material",
               "ellipsizeMode": "tail",
               "style": Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
                 "textDecorationLine": "line-through",
               },
@@ -1446,7 +1446,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "white",
+                  "color": "black",
                   "fontSize": 20,
                 }
               }
@@ -1471,7 +1471,7 @@ ShallowWrapper {
               "children": 1,
               "ellipsizeMode": "tail",
               "style": Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 20,
               },
             },

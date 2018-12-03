@@ -2,20 +2,58 @@ import { StyleSheet } from 'react-native';
 
 const board = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
+    backgroundColor: '#eee',
     flex: 1,
     alignItems: 'stretch'
   },
   personalInfo: {
-    flex: 0.35
+    flex: 0.35,
+    backgroundColor: 'white',
+    marginHorizontal: 10,
+    marginVertical: 10,
+    justifyContent: 'space-around',
+    borderRadius: 6,
+    borderColor: 'white',
+    borderWidth: 3,
+    borderStyle: 'solid',
+    shadowColor: '#888',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 1
   },
   channels: {
     flex: 0.2,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    marginLeft: 10,
+    justifyContent: 'space-around',
+    borderTopLeftRadius: 6,
+    borderBottomLeftRadius: 6,
+    borderColor: 'white',
+    borderWidth: 3,
+    borderStyle: 'solid',
+    shadowColor: '#888',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 1
   },
   tasks: {
     flex: 0.45,
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: 'white',
+    marginHorizontal: 10,
+    marginVertical: 10,
+    justifyContent: 'space-around',
+    borderRadius: 6,
+    borderColor: 'white',
+    borderWidth: 3,
+    borderStyle: 'solid',
+    shadowColor: '#888',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 1
   }
 });
 
@@ -64,33 +102,43 @@ const actions = StyleSheet.create({
 const buttons = StyleSheet.create({
   summary: {
     width: 160,
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
     borderRadius: 20,
     borderColor: 'white',
     borderWidth: 3,
-    borderStyle: 'solid'
+    borderStyle: 'solid',
+    shadowColor: '#888',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 1
   },
   logout: {
     width: 100,
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
     borderRadius: 20,
     borderColor: 'white',
     borderWidth: 3,
-    borderStyle: 'solid'
+    borderStyle: 'solid',
+    shadowColor: '#888',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 1
   }
 });
 
 const introText = StyleSheet.create({
   name: {
-    fontSize: 25,
+    fontSize: 30,
     fontWeight: 'bold',
     margin: 5,
-    color: 'white'
+    color: 'black'
   },
   bio: {
     fontSize: 15,
     margin: 5,
-    color: 'white'
+    color: 'black'
   }
 });
 

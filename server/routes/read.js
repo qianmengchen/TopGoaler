@@ -67,7 +67,8 @@ let fieldRoutes =
         ['task', 'channel_id'],
         ['activity_log', 'user_id'],
         ['proposal', 'id'],
-        ['vote', 'id']
+        ['vote', 'id'],
+        ['err_demo', 'id']
     ]
 
 fieldRoutes.forEach( ([route, field, func]) => {

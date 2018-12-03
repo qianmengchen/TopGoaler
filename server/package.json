@@ -27,5 +27,13 @@
   },
   "devDependencies": {
     "jsdoc": "^3.5.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "data/*.js",
+      "routes/*.js",
+      "app.js",
+      "!routes/update.js"
+    ]
   }
 }

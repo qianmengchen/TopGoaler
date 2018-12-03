@@ -1,6 +1,7 @@
 const request = require('supertest');
 const createApp = require('../app')
 const app = createApp()
+const app2 = createApp({enable_auth:true})
 const pool = require('../data/config');
 const { doQuery } = require('../routes/helper.js')
 var async = require('async');
@@ -45,8 +46,11 @@ describe('Detail Getter shoudl work', () => {
             done()
         })
     })
+    it('should handle failure', (done) => {
+        request(app).get('/err_demo/id/word').expect(401).end(done)
+    })
 })
-describe('Score and Ranking', async () => {
+describe('Basic Score and Ranking', async () => {
     const channel = 1
     let user_id = -1
     let num = 0
@@ -92,17 +96,13 @@ describe('Score and Ranking', async () => {
                 done()
             })
     })
-    /*
-    it('should handle ranking', (done) => {
+    it('should handle bad ranking', (done) => {
         request(app)
             .get(`/ranking/1&1`)
-            .expect(200)
-            .then(res => {
-                expect(res.body).toHaveProperty("rank")
-                done()
-            })
+            .expect(401)
+            .end(done)
     })
-    */
+    
     it('should handle failure', (done) => {
         async.series([
         (done) => request(app)
@@ -120,6 +120,26 @@ describe('Score and Ranking', async () => {
         ], done);
     })
 
+})
+
+describe('produce meaningful ranking', async () => {
+    let channel_id = 1, user_id = -1
+    beforeAll( async () => {
+        const res = await doQuery(`SELECT user_channel.user_id FROM user_channel JOIN activity_log ON 
+        activity_log.user_id = user_channel.user_id
+        WHERE channel_id = ? AND event = 2`, channel_id)
+        user_id = res[0].user_id
+        console.log('best candidate for channel', channel_id, 'is', user_id)
+    })
+    it('should get valid ranking', (done) => {
+        expect(user_id).toBeGreaterThan(0)
+        request(app).get(`/ranking/${user_id}&${channel_id}`)
+        .expect(200).then(res => {
+            expect(res.body).toHaveProperty('rank')
+            expect(res.body.rank).toBe(1)
+            done()
+        })
+    })
 })
 
 afterAll(async () => {

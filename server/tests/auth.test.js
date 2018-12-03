@@ -35,6 +35,14 @@ describe('User Login / Signup', () => {
                 done()
             })
     })
+    it('should reject duplicated new user', (done) => {
+        request(app)
+            .post('/signup')
+            .send({ username , password })
+            .set('Accept', 'application/json')
+            .expect(401)
+            .end(done)
+    })
     it('should log that user in successfully with token', (done) => {
         request(app)
             .post('/login')
@@ -73,6 +81,15 @@ describe('Access Control', async () => {
         f();
     }
     it('should reject setting other users\' subscription and only allow self', (done) => {
+        const badRequest2 = () => {
+            request(app)
+            .post('/subscribe')
+            .set('Authorization', `Bearer ${token}`)
+            .send(_query({ user_id: user_id, channel_id: channelID + 1000 }))
+            .expect(401)
+            .expect(/no such/)
+            .end(done)
+        }
         const badRequest = () => {
             request(app)
             .post('/subscribe')
@@ -80,7 +97,7 @@ describe('Access Control', async () => {
             .send(_query({ user_id: user_id + 100, channel_id: channelID }))
             .expect(401)
             .expect(/access/)
-            .end(done)
+            .end(_wrap(badRequest2))
         }
         const goodRequest = () => {
             request(app)

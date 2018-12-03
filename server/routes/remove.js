@@ -21,7 +21,10 @@ router.delete('/user_channel/:user&:channel', async (request, response) => {
         const result = await doQuery(
             'DELETE FROM user_channel WHERE user_id = ? AND channel_id = ?', 
             [user, channel])
-        response.send(result);
+        if (result.affectedRows == 1)
+            response.send(result);
+        else
+            throw 'no entry found'
     } catch (error) {
         response.status(401).send(`unable to remove: ${error}`);  
     }
@@ -40,16 +43,16 @@ router.delete('/user_channel/:user&:channel', async (request, response) => {
 
 function remove_user_task_entry(user_id, task_id){} 
 router.delete('/user_task/:user&:task', async (request, response) => {
-
     try {
-        console.log(request.params)
-        console.log(request.body)
         const user = request.params.user;
         const task = request.params.task;
         const result = await doQuery(
             'DELETE FROM user_task WHERE user_id = ? AND task_id = ?', 
             [user, task])
-        response.send(result);
+        if (result.affectedRows == 1)
+            response.send(result);
+        else
+            throw 'no entry found'
     } catch (error) {
         response.status(401).send(`unable to remove: ${error}`);  
     } 

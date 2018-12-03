@@ -17,8 +17,8 @@ passport.use(new JWTStrategy({
             'SELECT * FROM user WHERE name = ? AND id = ?',
             [name, id],
             (err, results) => {
-                if (err) return done(err);
-                if (results.length == 0) return done('No such user');
+                //if (err) return done(err);
+                //if (results.length == 0) return done('No such user');
                 done(null, payload);
             })
     }

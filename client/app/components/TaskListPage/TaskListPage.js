@@ -3,6 +3,11 @@ import { ScrollView, Text } from 'react-native';
 import { TaskDetail } from '../TaskDetail/index';
 import { list } from './styles';
 
+/**
+ * @property {number} user_id - A unique number identifying a user.
+ * @property {array} user_task_ids - An array of a user's tasks.
+ * @property {Object} tasks - An object containing all tasks belonging to a specific channel.
+ */
 class TaskListPage extends Component {
   _map_period_to_string = raw => {
     const period_map = { 0: 'day', 1: 'week', 2: 'month', 3: 'once' };

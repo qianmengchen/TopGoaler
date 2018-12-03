@@ -115,6 +115,13 @@ class PerformancePage extends Component {
     });
   }
 
+  /**
+   * @property {array} userActivities - An array containing all of the user's finished task activities.
+   * @property {Set} subscribed_channels - A set containing all of the user's subscribed channels.
+   * @property {Object} channels - An object containing all the channels.
+   * @property {number} userId - A unique number identifying the user.
+   */
+
   constructor(props) {
     super(props);
     this.state = {

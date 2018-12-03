@@ -4,6 +4,11 @@ import * as styles from './styles';
 import ChannelIcon from './ChannelIcon';
 import { goToChannel } from '../ChannelListPage/index';
 
+/**
+ * @property {number} navigate
+ * @property {} channels
+ */
+
 class ChannelIconList extends Component {
   render() {
     const { navigate } = this.props;

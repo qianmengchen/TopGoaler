@@ -14,6 +14,9 @@ import {
 import { periodDecoder } from '../../constants';
 
 /**
+ * This is the component page that shows all the information of the user.
+ * It enables the user to view the performance and also check off tasks.
+ *
  * @class Profile
  * @property {Object} userInfo - An object containing the user's information.
  * @property {array} userChannels - An array of ibjects related to user.

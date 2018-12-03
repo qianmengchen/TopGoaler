@@ -3,6 +3,9 @@ import { ScrollView } from 'react-native';
 import { TaskDetail } from '../TaskDetail/index';
 
 /**
+ * This is the component that shows a list of taskDetail component.
+ * It contains all the active tasks in that channel.
+ *
  * @class TaskListPage
  * @property {number} user_id - A unique number identifying a user.
  * @property {array} user_task_ids - An array of a user's tasks.

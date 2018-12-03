@@ -8,6 +8,8 @@ function _cannotComplete() {
 }
 
 /**
+ * This is the component that shows all the information of the status of a task the user is working on.
+ *
  * @class TaskEntry
  * @property {number} userId - A unique number identifying the user.
  * @property {Object} item - An object describing a task.

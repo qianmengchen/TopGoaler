@@ -16,6 +16,9 @@ class SignIn extends Component {
   }
 
   /**
+   * This is the component that allows user to signin into the application.
+   * It can also redirect new users to signup page.
+   *
    * @class SignIn
    * @property {function} submit - A function allowing for submitting the username and password to create a new user in our database.
    * @property {Object} navigation - An object that contains a navigate function allowing the user to navigate between components.

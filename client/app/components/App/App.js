@@ -3,6 +3,8 @@ import { AuthNav } from '../Navigators/index';
 
 class App extends Component {
   /**
+   * This represents the root component of our application.
+   *
    * @class App
    * @property {function} loadData - A function to load the data from the database to the application.
    */

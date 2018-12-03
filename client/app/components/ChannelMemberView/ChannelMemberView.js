@@ -13,6 +13,10 @@ import {
 } from './utils';
 
 /**
+ * This is the page that an user will be redirected to if the user is subscribed to that channel.
+ * It shows the user's score, ranking and newsFeed from all the users in that channel.
+ * Users can also add new task, view taskList and vote on proposals.
+ *
  * @class ChannelMemberView
  * @property {number} channel_id - A unique number identifying a channel.
  * @property {Object} channel - An object containing the specific channel based on the channel_id.

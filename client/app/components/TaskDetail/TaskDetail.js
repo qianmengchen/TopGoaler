@@ -5,6 +5,9 @@ import { frequency, status } from './styles';
 import { Event } from '../../constants';
 
 /**
+ * This is the component that shows all the information of a task in that channel.
+ * It also allows the user to enroll/drop that task.
+ *
  * @class TaskDetail
  * @property {string} title - The title of the task.
  * @property {number} period - A type encoding indicating the day, week, or month period of a task.

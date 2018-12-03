@@ -207,7 +207,7 @@ router.post('/vote', async (request, response) => {
                 (SELECT
                 (SELECT COUNT(*) FROM user_channel WHERE channel_id = (SELECT channel_id FROM proposal WHERE id = ? )) /
                 (SELECT COUNT(*) FROM vote WHERE proposal_id = ? )
-            ) <= 10 as transform_ok`,
+            ) <= 2 as transform_ok`,
             // If  #Vote / #User >= 1/10 we're done
             [proposal_id, proposal_id])
         const ok = result[0].transform_ok

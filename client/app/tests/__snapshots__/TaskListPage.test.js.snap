@@ -4,21 +4,6 @@ exports[`Testing Task List Page renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ScrollViewMock>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 20,
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textAlign": "center",
-        }
-      }
-    >
-      Channel Tasks
-    </Text>
     <Connect(TaskDetail)
       pattern={1}
       period="week"

@@ -62,7 +62,7 @@ class ChannelMemberView extends Component {
   }
 
   tasklist() {
-    const tasklist = this.state.tasks;
+    const tasklist = this.state.tasks || {};
     return Object.keys(tasklist).map(idx => {
       return (
         <View key={idx} style={cardRight.taskContainer}>

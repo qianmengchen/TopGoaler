@@ -149,7 +149,16 @@ export function proposals(state = [], action) {
   }
 }
 
-export function tasks(state = {}, action) {
+function votes(state = [], action) {
+  switch (action.type) {
+    case LOAD_DATA:
+      return [...action.data.vote];
+    default:
+      return state;
+  }
+}
+
+function tasks(state = {}, action) {
   switch (action.type) {
     case LOAD_DATA:
       return action.data.task.reduce(_arrayToDictReducer, {});
@@ -188,5 +197,6 @@ export default combineReducers({
   user_task,
   tasks,
   activity_log,
-  proposals
+  proposals,
+  votes
 });

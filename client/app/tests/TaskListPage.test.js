@@ -37,8 +37,4 @@ describe('Testing Task List Page', () => {
   it('renders as expected', () => {
     expect(render).toMatchSnapshot();
   });
-
-  it('should contain a Text for title', () => {
-    expect(wrapper.find('Text')).toHaveLength(1);
-  });
 });

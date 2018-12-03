@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { ScrollView, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import { TaskDetail } from '../TaskDetail/index';
-import { list } from './styles';
 
 class TaskListPage extends Component {
   _map_period_to_string = raw => {
@@ -12,11 +11,14 @@ class TaskListPage extends Component {
   _check_is_task_enrolled = tid => {
     return this.props.user_task_ids.includes(tid);
   };
+  static navigationOptions = {
+    title: 'Channel Tasks',
+    headerTitleStyle: { fontWeight: 'bold' }
+  };
 
   render() {
     return (
       <ScrollView>
-        <Text style={list.title}>Channel Tasks</Text>
         {this.props.tasks.map(task => (
           <TaskDetail
             key={task.task_id}

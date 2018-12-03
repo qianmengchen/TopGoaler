@@ -24,8 +24,7 @@ ShallowWrapper {
         ellipsizeMode="tail"
       >
         Frequency: 
-         
-         
+        unlimitedtime(s) per undefined
       </Text>
     </Component>
     <Slider
@@ -41,15 +40,19 @@ ShallowWrapper {
       delayPressOut={100}
       onPress={[Function]}
       style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "red",
-          "borderRadius": 5,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "marginHorizontal": 80,
-          "marginTop": 10,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginHorizontal": 80,
+            "marginTop": 10,
+          },
+          Object {
+            "backgroundColor": "red",
+          },
+        ]
       }
       underlayColor="#aaa"
     >
@@ -67,11 +70,9 @@ ShallowWrapper {
             }
           }
         >
-           
           Vote for 
           50
            points!
-           
         </Text>
       </Component>
     </TouchableHighlight>
@@ -173,21 +174,6 @@ ShallowWrapper {
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 20,
-          "fontWeight": "bold",
-          "marginTop": 10,
-          "textAlign": "center",
-        }
-      }
-    >
-      Task Proposals
-    </Text>
     <Proposal
       handleVote={[Function]}
       pattern={1}

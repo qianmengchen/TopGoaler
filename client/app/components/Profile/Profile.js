@@ -40,6 +40,10 @@ class Profile extends Component {
     return acc;
   }
 
+  static navigationOptions = {
+    headerStyle: { height: 0 }
+  };
+
   render() {
     const { userInfo, userChannels, userTasks, userActivities } = this.props;
 

@@ -5,6 +5,7 @@ import { frequency, status } from './styles';
 import { Event } from '../../constants';
 
 /**
+ * @class TaskDetail
  * @property {string} title - The title of the task.
  * @property {number} period - A type encoding indicating the day, week, or month period of a task.
  * @property {number} pattern - A value indicating the numbere of times a user can complete a task within a given period.

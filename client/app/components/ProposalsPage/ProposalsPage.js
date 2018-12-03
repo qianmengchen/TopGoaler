@@ -4,6 +4,7 @@ import { list } from './styles';
 import Proposal from './Proposal';
 
 /**
+ * @class ProposalsPage
  * @property {number} channel_id - A unique value identifying the channel.
  * @property {number} user_id - A unique value identifying the user.
  * @property {Component} proposals - The Proposals component  embedded within this ProposalsPage component.

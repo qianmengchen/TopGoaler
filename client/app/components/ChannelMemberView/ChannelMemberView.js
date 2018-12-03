@@ -13,6 +13,7 @@ import {
 } from './utils';
 
 /**
+ * @class ChannelMemberView
  * @property {number} channel_id - A unique number identifying a channel.
  * @property {Object} channel - An object containing the specific channel based on the channel_id.
  * @property {number} userId - A unique number identifying a user.

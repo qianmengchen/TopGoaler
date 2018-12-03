@@ -3,6 +3,7 @@ import { AuthNav } from '../Navigators/index';
 
 class App extends Component {
   /**
+   * @class App
    * @property {function} loadData - A function to load the data from the database to the application.
    */
   constructor() {

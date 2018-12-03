@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 import { TaskDetail } from '../TaskDetail/index';
 
 /**
+ * @class TaskListPage
  * @property {number} user_id - A unique number identifying a user.
  * @property {array} user_task_ids - An array of a user's tasks.
  * @property {Object} tasks - An object containing all tasks belonging to a specific channel.

@@ -5,6 +5,7 @@ import { memberList } from './styles';
 import { nameToInitialMap } from '../ChannelMemberView/utils';
 
 /**
+ * @class MemberList
  * @property {Object} users - An object containing all users.
  */
 class MemberList extends Component {

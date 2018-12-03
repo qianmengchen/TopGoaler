@@ -43,6 +43,7 @@ class NewTaskPage extends Component {
   }
 
   /**
+   * @class NewTaskPage
    * @property {number} user_id - A unique number identifying a user.
    * @property {number} channel_id - A unique number identifying a channel.
    * @property {function} addProposal - A function allowing the user to create a proposal for a new task within a channel.

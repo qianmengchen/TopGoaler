@@ -4,6 +4,7 @@ import { Avatar } from 'react-native-elements';
 import { iconColors, task } from './styles';
 
 /**
+ * @class Feed
  * @property {string} name - The name of the user associated with the task.
  * @property {string} taskTitle - The title of the task.
  * @property {string} comment - A short status description of the task.

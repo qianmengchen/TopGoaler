@@ -6,6 +6,7 @@ import { MemberList } from '../MemberList/index';
 import { NavigationActions, StackActions } from 'react-navigation';
 
 /**
+ * @class ChannelPublicView
  * @property {number} user_id - A unique number identifying the user.
  * @property {Object} channel - An object describing a specific channel.
  * @property {Object} user_channel - An array of channels that the user is subscribed to.

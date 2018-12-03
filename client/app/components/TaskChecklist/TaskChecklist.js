@@ -4,6 +4,7 @@ import TaskEntry from './TaskEntry';
 import * as styles from './styles';
 
 /**
+ * @class TaskChecklist
  * @property {number} user_id - A unique number identifying a user.
  * @property {function} completeTask - A function allowing the user to mark a task as completed.
  * @property {Component} TaskEntry - A component representing a specific task within the channel.

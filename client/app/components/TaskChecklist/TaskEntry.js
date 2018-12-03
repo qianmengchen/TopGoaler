@@ -8,6 +8,7 @@ function _cannotComplete() {
 }
 
 /**
+ * @class TaskEntry
  * @property {number} userId - A unique number identifying the user.
  * @property {Object} item - An object describing a task.
  * @property {boolean} finished - A boolean value indicating whether or not the user has completed a task.

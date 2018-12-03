@@ -14,6 +14,7 @@ import {
 import { periodDecoder } from '../../constants';
 
 /**
+ * @class Profile
  * @property {Object} userInfo - An object containing the user's information.
  * @property {array} userChannels - An array of ibjects related to user.
  * @property {array} userTasks - An array of all tasks related to the user.

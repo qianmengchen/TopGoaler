@@ -13,6 +13,7 @@ class SignUp extends Component {
   }
 
   /**
+   * @class SignUp
    * @property {function} submit -  A function allowing for submitting the username and password to verify the credentials in our database.
    * @property {Object} navigation - An object that contains a navigate function allowing the user to navigate between components.
    */

@@ -17,6 +17,7 @@ const SignNav = createSwitchNavigator(
 );
 
 /**
+ * @class AuthNav
  * @property {boolean} - A boolean value indicating whether the current user is logged in or not.
  */
 

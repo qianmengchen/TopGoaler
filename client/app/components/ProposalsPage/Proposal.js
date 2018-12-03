@@ -9,6 +9,7 @@ class Proposal extends Component {
   }
 
   /**
+   * @class Proposal
    * @property {number} key - A unique number identifying this proposal.
    * @property {string} title - The title of the new task.
    * @property {string} subtitle - A short description of the new task.

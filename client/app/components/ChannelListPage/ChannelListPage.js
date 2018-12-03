@@ -29,6 +29,7 @@ class ChannelListPage extends Component {
   };
 
   /**
+   * @class ChannelListPage
    * @property {number} userId - A unique number identifying the user.
    * @property {Object} channels - An object with the key as the id of the channel and the value as the channel.
    * @property {set} subscribed_channels- A set that describes those channels that the user is subscribed to.

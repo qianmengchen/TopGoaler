@@ -8,6 +8,7 @@ import { Avatar, Text, Icon } from 'react-native-elements';
 import { board, contents, desc } from './styles';
 
 /**
+ * @class ChannelOverview
  * @property {number} channel_id - A unique number identifying a channel.
  * @property {function} subscribe - A function allowing the user to subscribe to a specific channel.
  * @property {Object} channel - An object describing a specific channel.

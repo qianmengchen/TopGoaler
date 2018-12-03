@@ -11,9 +11,9 @@
     "watch": "jest --watch --verbose=false",
     "update": "jest -u",
     "coverage": "jest --coverage --coverageDirectory=coverage",
-    "pretty": "prettier --write \"app\\**\\*.js\"",
-    "check-pretty": "prettier --list-different \"app\\**\\*.js\"",
-    "lint": "eslint \"app\\**\\*.js\"",
+    "pretty": "prettier --write 'app/**/*.js'",
+    "check-pretty": "prettier --list-different 'app/**/*.js'",
+    "lint": "eslint 'app/**/*.js'",
     "CI-test": "jest --runInBand"
   },
   "dependencies": {

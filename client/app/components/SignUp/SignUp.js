@@ -11,6 +11,13 @@ class SignUp extends Component {
   _signIn() {
     this.props.navigation.navigate('signIn');
   }
+
+  /**
+   * @class SignUp
+   * @property {function} submit -  A function allowing for submitting the username and password to verify the credentials in our database.
+   * @property {Object} navigation - An object that contains a navigate function allowing the user to navigate between components.
+   */
+
   constructor(props) {
     super(props);
     this.state = {

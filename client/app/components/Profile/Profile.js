@@ -13,6 +13,13 @@ import {
 } from './styles';
 import { periodDecoder } from '../../constants';
 
+/**
+ * @property {Object} userInfo - An object containing the user's information.
+ * @property {array} userChannels - An array of ibjects related to user.
+ * @property {array} userTasks - An array of all tasks related to the user.
+ * @property {array} userActivities - An array containing all of the user's finished task activities.
+ * @property {Object} tasks - An object containing all tasks.
+ */
 class Profile extends Component {
   _handleLogout() {
     this.props.logout();

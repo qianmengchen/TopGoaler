@@ -87,6 +87,7 @@ class Profile extends Component {
             <View style={actions.summary}>
               <Button
                 title="My Summary"
+                titleStyle={{ color: 'black' }}
                 buttonStyle={buttons.summary}
                 onPress={this._goToPerformancePage.bind(this)}
               />
@@ -94,6 +95,7 @@ class Profile extends Component {
             <View style={actions.buttons}>
               <Button
                 title="Log Out"
+                titleStyle={{ color: 'black' }}
                 buttonStyle={buttons.logout}
                 onPress={this._handleLogout.bind(this)}
               />

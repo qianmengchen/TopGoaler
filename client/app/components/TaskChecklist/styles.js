@@ -6,11 +6,11 @@ const checklist = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    color: 'white'
+    color: 'black'
   },
   deleteText: {
     fontSize: 20,
-    color: 'white',
+    color: 'black',
     textDecorationLine: 'line-through'
   }
 });
@@ -43,15 +43,15 @@ const checkbox = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
-    borderColor: 'white',
+    borderColor: 'black',
     borderWidth: 2
   },
   dot: {
     width: 20,
     height: 20,
     borderRadius: 10,
-    backgroundColor: 'white',
-    borderColor: 'white',
+    backgroundColor: 'black',
+    borderColor: 'black',
     borderWidth: 2
   }
 });

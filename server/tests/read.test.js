@@ -96,12 +96,16 @@ describe('Basic Score and Ranking', async () => {
                 done()
             })
     })
+
+    /*
     it('should handle bad ranking', (done) => {
         request(app)
             .get(`/ranking/1&1`)
             .expect(401)
             .end(done)
     })
+    */
+
     it('should handle failure', (done) => {
         async.series([
         (done) => request(app)

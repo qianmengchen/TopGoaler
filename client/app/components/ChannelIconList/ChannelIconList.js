@@ -5,8 +5,8 @@ import ChannelIcon from './ChannelIcon';
 import { goToChannel } from '../ChannelListPage/index';
 
 /**
- * @property {number} navigate
- * @property {} channels
+ * @property {function} navigate - A function that allows the user to nagivate to another component.
+ * @property {Object} channels - An object that contains all channels.
  */
 
 class ChannelIconList extends Component {

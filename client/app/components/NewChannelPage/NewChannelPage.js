@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
 import { constructChannel } from '../../constructors';
@@ -27,11 +27,18 @@ class NewChannelPage extends Component {
     this.props.navigation.navigate('ChannelListPage');
   }
 
+<<<<<<< HEAD
   /**
    * @property {number} userId - A unique number identifying the user.
    * @property {function} addChannel - A function allowing the user to create a new channel as the creator.
    * @property {Object} navigation - An object that contains the navigate function allowing the user to navigate to other components.
    */
+=======
+  static navigationOptions = {
+    title: 'New Channel',
+    headerTitleStyle: { fontWeight: 'bold' }
+  };
+>>>>>>> 18dc20f9b70ab273c96256467f5fbbd760bfac71
 
   constructor(props) {
     super(props);
@@ -45,9 +52,7 @@ class NewChannelPage extends Component {
   render() {
     return (
       <View style={board.container}>
-        <View style={board.title}>
-          <Text style={text.title}>New Channel</Text>
-        </View>
+        <View style={board.title} />
         <Input
           label="Name"
           labelStyle={text.label}

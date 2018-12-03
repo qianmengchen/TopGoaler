@@ -11,7 +11,7 @@ exports.doQuery = (...args) => {
 exports.routeFactory = (...args) => (req, res, filter) => {
     console.log(`From routeFactory: executing query ${args}`)
     doQuery(...args).then(result =>
-        res.status(201).send(filter ? filter(result) : result))
+        res.status(200).send(filter ? filter(result) : result))
         .catch(err => res.status(401).send(`Error :${err}`))
 }
 

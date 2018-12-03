@@ -7,7 +7,7 @@ const board = StyleSheet.create({
     flexDirection: 'column'
   },
   title: {
-    flex: 0.1,
+    flex: 0.05,
     flexDirection: 'row',
     justifyContent: 'center'
   },

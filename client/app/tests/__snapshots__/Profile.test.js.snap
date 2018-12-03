@@ -7,7 +7,7 @@ ShallowWrapper {
     style={
       Object {
         "alignItems": "stretch",
-        "backgroundColor": "grey",
+        "backgroundColor": "#eee",
         "flex": 1,
       }
     }
@@ -15,7 +15,23 @@ ShallowWrapper {
     <Component
       style={
         Object {
+          "backgroundColor": "white",
+          "borderColor": "white",
+          "borderRadius": 6,
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "elevation": 1,
           "flex": 0.35,
+          "justifyContent": "space-around",
+          "marginHorizontal": 10,
+          "marginVertical": 10,
+          "shadowColor": "#888",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
         }
       }
     >
@@ -44,8 +60,8 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
-                "fontSize": 25,
+                "color": "black",
+                "fontSize": 30,
                 "fontWeight": "bold",
                 "margin": 5,
               }
@@ -59,7 +75,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 15,
                 "margin": 5,
               }
@@ -108,16 +124,29 @@ ShallowWrapper {
           <ForwardRef(Themed.Button)
             buttonStyle={
               Object {
-                "backgroundColor": "transparent",
+                "backgroundColor": "white",
                 "borderColor": "white",
                 "borderRadius": 20,
                 "borderStyle": "solid",
                 "borderWidth": 3,
+                "elevation": 1,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
                 "width": 160,
               }
             }
             onPress={[Function]}
             title="My Summary"
+            titleStyle={
+              Object {
+                "color": "black",
+              }
+            }
           />
         </Component>
         <Component
@@ -133,16 +162,29 @@ ShallowWrapper {
           <ForwardRef(Themed.Button)
             buttonStyle={
               Object {
-                "backgroundColor": "transparent",
+                "backgroundColor": "white",
                 "borderColor": "white",
                 "borderRadius": 20,
                 "borderStyle": "solid",
                 "borderWidth": 3,
+                "elevation": 1,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
                 "width": 100,
               }
             }
             onPress={[Function]}
             title="Log Out"
+            titleStyle={
+              Object {
+                "color": "black",
+              }
+            }
           />
         </Component>
       </Component>
@@ -151,7 +193,22 @@ ShallowWrapper {
       style={
         Object {
           "backgroundColor": "white",
+          "borderBottomLeftRadius": 6,
+          "borderColor": "white",
+          "borderStyle": "solid",
+          "borderTopLeftRadius": 6,
+          "borderWidth": 3,
+          "elevation": 1,
           "flex": 0.2,
+          "justifyContent": "space-around",
+          "marginLeft": 10,
+          "shadowColor": "#888",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
         }
       }
     >
@@ -163,7 +220,23 @@ ShallowWrapper {
       style={
         Object {
           "alignItems": "stretch",
+          "backgroundColor": "white",
+          "borderColor": "white",
+          "borderRadius": 6,
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "elevation": 1,
           "flex": 0.45,
+          "justifyContent": "space-around",
+          "marginHorizontal": 10,
+          "marginVertical": 10,
+          "shadowColor": "#888",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
         }
       }
     >
@@ -201,7 +274,23 @@ ShallowWrapper {
         <Component
           style={
             Object {
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.35,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             }
           }
         >
@@ -230,8 +319,8 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
-                    "fontSize": 25,
+                    "color": "black",
+                    "fontSize": 30,
                     "fontWeight": "bold",
                     "margin": 5,
                   }
@@ -245,7 +334,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
+                    "color": "black",
                     "fontSize": 15,
                     "margin": 5,
                   }
@@ -294,16 +383,29 @@ ShallowWrapper {
               <ForwardRef(Themed.Button)
                 buttonStyle={
                   Object {
-                    "backgroundColor": "transparent",
+                    "backgroundColor": "white",
                     "borderColor": "white",
                     "borderRadius": 20,
                     "borderStyle": "solid",
                     "borderWidth": 3,
+                    "elevation": 1,
+                    "shadowColor": "#888",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.8,
+                    "shadowRadius": 1,
                     "width": 160,
                   }
                 }
                 onPress={[Function]}
                 title="My Summary"
+                titleStyle={
+                  Object {
+                    "color": "black",
+                  }
+                }
               />
             </Component>
             <Component
@@ -319,16 +421,29 @@ ShallowWrapper {
               <ForwardRef(Themed.Button)
                 buttonStyle={
                   Object {
-                    "backgroundColor": "transparent",
+                    "backgroundColor": "white",
                     "borderColor": "white",
                     "borderRadius": 20,
                     "borderStyle": "solid",
                     "borderWidth": 3,
+                    "elevation": 1,
+                    "shadowColor": "#888",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.8,
+                    "shadowRadius": 1,
                     "width": 100,
                   }
                 }
                 onPress={[Function]}
                 title="Log Out"
+                titleStyle={
+                  Object {
+                    "color": "black",
+                  }
+                }
               />
             </Component>
           </Component>
@@ -337,7 +452,22 @@ ShallowWrapper {
           style={
             Object {
               "backgroundColor": "white",
+              "borderBottomLeftRadius": 6,
+              "borderColor": "white",
+              "borderStyle": "solid",
+              "borderTopLeftRadius": 6,
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.2,
+              "justifyContent": "space-around",
+              "marginLeft": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             }
           }
         >
@@ -349,7 +479,23 @@ ShallowWrapper {
           style={
             Object {
               "alignItems": "stretch",
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.45,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             }
           }
         >
@@ -372,7 +518,7 @@ ShallowWrapper {
       ],
       "style": Object {
         "alignItems": "stretch",
-        "backgroundColor": "grey",
+        "backgroundColor": "#eee",
         "flex": 1,
       },
     },
@@ -409,8 +555,8 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
-                      "fontSize": 25,
+                      "color": "black",
+                      "fontSize": 30,
                       "fontWeight": "bold",
                       "margin": 5,
                     }
@@ -424,7 +570,7 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
+                      "color": "black",
                       "fontSize": 15,
                       "margin": 5,
                     }
@@ -473,16 +619,29 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 160,
                     }
                   }
                   onPress={[Function]}
                   title="My Summary"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
               <Component
@@ -498,22 +657,51 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 100,
                     }
                   }
                   onPress={[Function]}
                   title="Log Out"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
             </Component>,
           ],
           "style": Object {
+            "backgroundColor": "white",
+            "borderColor": "white",
+            "borderRadius": 6,
+            "borderStyle": "solid",
+            "borderWidth": 3,
+            "elevation": 1,
             "flex": 0.35,
+            "justifyContent": "space-around",
+            "marginHorizontal": 10,
+            "marginVertical": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
           },
         },
         "ref": null,
@@ -541,8 +729,8 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
-                        "fontSize": 25,
+                        "color": "black",
+                        "fontSize": 30,
                         "fontWeight": "bold",
                         "margin": 5,
                       }
@@ -556,7 +744,7 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
+                        "color": "black",
                         "fontSize": 15,
                         "margin": 5,
                       }
@@ -602,8 +790,8 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
-                          "fontSize": 25,
+                          "color": "black",
+                          "fontSize": 30,
                           "fontWeight": "bold",
                           "margin": 5,
                         }
@@ -617,7 +805,7 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
+                          "color": "black",
                           "fontSize": 15,
                           "margin": 5,
                         }
@@ -644,8 +832,8 @@ ShallowWrapper {
                       "children": "mock",
                       "ellipsizeMode": "tail",
                       "style": Object {
-                        "color": "white",
-                        "fontSize": 25,
+                        "color": "black",
+                        "fontSize": 30,
                         "fontWeight": "bold",
                         "margin": 5,
                       },
@@ -664,7 +852,7 @@ ShallowWrapper {
                       "children": undefined,
                       "ellipsizeMode": "tail",
                       "style": Object {
-                        "color": "white",
+                        "color": "black",
                         "fontSize": 15,
                         "margin": 5,
                       },
@@ -735,16 +923,29 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       }
                     }
                     onPress={[Function]}
                     title="My Summary"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>,
                 <Component
@@ -760,16 +961,29 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       }
                     }
                     onPress={[Function]}
                     title="Log Out"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>,
               ],
@@ -790,16 +1004,29 @@ ShallowWrapper {
                   "children": <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       }
                     }
                     onPress={[Function]}
                     title="My Summary"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />,
                   "style": Object {
                     "alignItems": "center",
@@ -814,15 +1041,26 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "buttonStyle": Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 160,
                     },
                     "onPress": [Function],
                     "title": "My Summary",
+                    "titleStyle": Object {
+                      "color": "black",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
@@ -841,16 +1079,29 @@ ShallowWrapper {
                   "children": <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       }
                     }
                     onPress={[Function]}
                     title="Log Out"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />,
                   "style": Object {
                     "alignItems": "center",
@@ -866,15 +1117,26 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "buttonStyle": Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 100,
                     },
                     "onPress": [Function],
                     "title": "Log Out",
+                    "titleStyle": Object {
+                      "color": "black",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
@@ -901,7 +1163,22 @@ ShallowWrapper {
           />,
           "style": Object {
             "backgroundColor": "white",
+            "borderBottomLeftRadius": 6,
+            "borderColor": "white",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 6,
+            "borderWidth": 3,
+            "elevation": 1,
             "flex": 0.2,
+            "justifyContent": "space-around",
+            "marginLeft": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
           },
         },
         "ref": null,
@@ -941,7 +1218,23 @@ ShallowWrapper {
           />,
           "style": Object {
             "alignItems": "stretch",
+            "backgroundColor": "white",
+            "borderColor": "white",
+            "borderRadius": 6,
+            "borderStyle": "solid",
+            "borderWidth": 3,
+            "elevation": 1,
             "flex": 0.45,
+            "justifyContent": "space-around",
+            "marginHorizontal": 10,
+            "marginVertical": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
           },
         },
         "ref": null,
@@ -981,7 +1274,23 @@ ShallowWrapper {
           <Component
             style={
               Object {
+                "backgroundColor": "white",
+                "borderColor": "white",
+                "borderRadius": 6,
+                "borderStyle": "solid",
+                "borderWidth": 3,
+                "elevation": 1,
                 "flex": 0.35,
+                "justifyContent": "space-around",
+                "marginHorizontal": 10,
+                "marginVertical": 10,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
               }
             }
           >
@@ -1010,8 +1319,8 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
-                      "fontSize": 25,
+                      "color": "black",
+                      "fontSize": 30,
                       "fontWeight": "bold",
                       "margin": 5,
                     }
@@ -1025,7 +1334,7 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
+                      "color": "black",
                       "fontSize": 15,
                       "margin": 5,
                     }
@@ -1074,16 +1383,29 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 160,
                     }
                   }
                   onPress={[Function]}
                   title="My Summary"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
               <Component
@@ -1099,16 +1421,29 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 100,
                     }
                   }
                   onPress={[Function]}
                   title="Log Out"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
             </Component>
@@ -1117,7 +1452,22 @@ ShallowWrapper {
             style={
               Object {
                 "backgroundColor": "white",
+                "borderBottomLeftRadius": 6,
+                "borderColor": "white",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": 6,
+                "borderWidth": 3,
+                "elevation": 1,
                 "flex": 0.2,
+                "justifyContent": "space-around",
+                "marginLeft": 10,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
               }
             }
           >
@@ -1129,7 +1479,23 @@ ShallowWrapper {
             style={
               Object {
                 "alignItems": "stretch",
+                "backgroundColor": "white",
+                "borderColor": "white",
+                "borderRadius": 6,
+                "borderStyle": "solid",
+                "borderWidth": 3,
+                "elevation": 1,
                 "flex": 0.45,
+                "justifyContent": "space-around",
+                "marginHorizontal": 10,
+                "marginVertical": 10,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
               }
             }
           >
@@ -1152,7 +1518,7 @@ ShallowWrapper {
         ],
         "style": Object {
           "alignItems": "stretch",
-          "backgroundColor": "grey",
+          "backgroundColor": "#eee",
           "flex": 1,
         },
       },
@@ -1189,8 +1555,8 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
-                        "fontSize": 25,
+                        "color": "black",
+                        "fontSize": 30,
                         "fontWeight": "bold",
                         "margin": 5,
                       }
@@ -1204,7 +1570,7 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
+                        "color": "black",
                         "fontSize": 15,
                         "margin": 5,
                       }
@@ -1253,16 +1619,29 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       }
                     }
                     onPress={[Function]}
                     title="My Summary"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>
                 <Component
@@ -1278,22 +1657,51 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       }
                     }
                     onPress={[Function]}
                     title="Log Out"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>
               </Component>,
             ],
             "style": Object {
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.35,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             },
           },
           "ref": null,
@@ -1321,8 +1729,8 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
-                          "fontSize": 25,
+                          "color": "black",
+                          "fontSize": 30,
                           "fontWeight": "bold",
                           "margin": 5,
                         }
@@ -1336,7 +1744,7 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
+                          "color": "black",
                           "fontSize": 15,
                           "margin": 5,
                         }
@@ -1382,8 +1790,8 @@ ShallowWrapper {
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "white",
-                            "fontSize": 25,
+                            "color": "black",
+                            "fontSize": 30,
                             "fontWeight": "bold",
                             "margin": 5,
                           }
@@ -1397,7 +1805,7 @@ ShallowWrapper {
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "white",
+                            "color": "black",
                             "fontSize": 15,
                             "margin": 5,
                           }
@@ -1424,8 +1832,8 @@ ShallowWrapper {
                         "children": "mock",
                         "ellipsizeMode": "tail",
                         "style": Object {
-                          "color": "white",
-                          "fontSize": 25,
+                          "color": "black",
+                          "fontSize": 30,
                           "fontWeight": "bold",
                           "margin": 5,
                         },
@@ -1444,7 +1852,7 @@ ShallowWrapper {
                         "children": undefined,
                         "ellipsizeMode": "tail",
                         "style": Object {
-                          "color": "white",
+                          "color": "black",
                           "fontSize": 15,
                           "margin": 5,
                         },
@@ -1515,16 +1923,29 @@ ShallowWrapper {
                     <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 160,
                         }
                       }
                       onPress={[Function]}
                       title="My Summary"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />
                   </Component>,
                   <Component
@@ -1540,16 +1961,29 @@ ShallowWrapper {
                     <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 100,
                         }
                       }
                       onPress={[Function]}
                       title="Log Out"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />
                   </Component>,
                 ],
@@ -1570,16 +2004,29 @@ ShallowWrapper {
                     "children": <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 160,
                         }
                       }
                       onPress={[Function]}
                       title="My Summary"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />,
                     "style": Object {
                       "alignItems": "center",
@@ -1594,15 +2041,26 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "buttonStyle": Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       },
                       "onPress": [Function],
                       "title": "My Summary",
+                      "titleStyle": Object {
+                        "color": "black",
+                      },
                     },
                     "ref": null,
                     "rendered": null,
@@ -1621,16 +2079,29 @@ ShallowWrapper {
                     "children": <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 100,
                         }
                       }
                       onPress={[Function]}
                       title="Log Out"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />,
                     "style": Object {
                       "alignItems": "center",
@@ -1646,15 +2117,26 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "buttonStyle": Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       },
                       "onPress": [Function],
                       "title": "Log Out",
+                      "titleStyle": Object {
+                        "color": "black",
+                      },
                     },
                     "ref": null,
                     "rendered": null,
@@ -1681,7 +2163,22 @@ ShallowWrapper {
             />,
             "style": Object {
               "backgroundColor": "white",
+              "borderBottomLeftRadius": 6,
+              "borderColor": "white",
+              "borderStyle": "solid",
+              "borderTopLeftRadius": 6,
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.2,
+              "justifyContent": "space-around",
+              "marginLeft": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             },
           },
           "ref": null,
@@ -1721,7 +2218,23 @@ ShallowWrapper {
             />,
             "style": Object {
               "alignItems": "stretch",
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.45,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             },
           },
           "ref": null,
@@ -1789,7 +2302,7 @@ ShallowWrapper {
     style={
       Object {
         "alignItems": "stretch",
-        "backgroundColor": "grey",
+        "backgroundColor": "#eee",
         "flex": 1,
       }
     }
@@ -1797,7 +2310,23 @@ ShallowWrapper {
     <Component
       style={
         Object {
+          "backgroundColor": "white",
+          "borderColor": "white",
+          "borderRadius": 6,
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "elevation": 1,
           "flex": 0.35,
+          "justifyContent": "space-around",
+          "marginHorizontal": 10,
+          "marginVertical": 10,
+          "shadowColor": "#888",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
         }
       }
     >
@@ -1826,8 +2355,8 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
-                "fontSize": 25,
+                "color": "black",
+                "fontSize": 30,
                 "fontWeight": "bold",
                 "margin": 5,
               }
@@ -1841,7 +2370,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
+                "color": "black",
                 "fontSize": 15,
                 "margin": 5,
               }
@@ -1890,16 +2419,29 @@ ShallowWrapper {
           <ForwardRef(Themed.Button)
             buttonStyle={
               Object {
-                "backgroundColor": "transparent",
+                "backgroundColor": "white",
                 "borderColor": "white",
                 "borderRadius": 20,
                 "borderStyle": "solid",
                 "borderWidth": 3,
+                "elevation": 1,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
                 "width": 160,
               }
             }
             onPress={[Function]}
             title="My Summary"
+            titleStyle={
+              Object {
+                "color": "black",
+              }
+            }
           />
         </Component>
         <Component
@@ -1915,16 +2457,29 @@ ShallowWrapper {
           <ForwardRef(Themed.Button)
             buttonStyle={
               Object {
-                "backgroundColor": "transparent",
+                "backgroundColor": "white",
                 "borderColor": "white",
                 "borderRadius": 20,
                 "borderStyle": "solid",
                 "borderWidth": 3,
+                "elevation": 1,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
                 "width": 100,
               }
             }
             onPress={[Function]}
             title="Log Out"
+            titleStyle={
+              Object {
+                "color": "black",
+              }
+            }
           />
         </Component>
       </Component>
@@ -1933,7 +2488,22 @@ ShallowWrapper {
       style={
         Object {
           "backgroundColor": "white",
+          "borderBottomLeftRadius": 6,
+          "borderColor": "white",
+          "borderStyle": "solid",
+          "borderTopLeftRadius": 6,
+          "borderWidth": 3,
+          "elevation": 1,
           "flex": 0.2,
+          "justifyContent": "space-around",
+          "marginLeft": 10,
+          "shadowColor": "#888",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
         }
       }
     >
@@ -1959,7 +2529,23 @@ ShallowWrapper {
       style={
         Object {
           "alignItems": "stretch",
+          "backgroundColor": "white",
+          "borderColor": "white",
+          "borderRadius": 6,
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "elevation": 1,
           "flex": 0.45,
+          "justifyContent": "space-around",
+          "marginHorizontal": 10,
+          "marginVertical": 10,
+          "shadowColor": "#888",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
         }
       }
     >
@@ -1997,7 +2583,23 @@ ShallowWrapper {
         <Component
           style={
             Object {
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.35,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             }
           }
         >
@@ -2026,8 +2628,8 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
-                    "fontSize": 25,
+                    "color": "black",
+                    "fontSize": 30,
                     "fontWeight": "bold",
                     "margin": 5,
                   }
@@ -2041,7 +2643,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "white",
+                    "color": "black",
                     "fontSize": 15,
                     "margin": 5,
                   }
@@ -2090,16 +2692,29 @@ ShallowWrapper {
               <ForwardRef(Themed.Button)
                 buttonStyle={
                   Object {
-                    "backgroundColor": "transparent",
+                    "backgroundColor": "white",
                     "borderColor": "white",
                     "borderRadius": 20,
                     "borderStyle": "solid",
                     "borderWidth": 3,
+                    "elevation": 1,
+                    "shadowColor": "#888",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.8,
+                    "shadowRadius": 1,
                     "width": 160,
                   }
                 }
                 onPress={[Function]}
                 title="My Summary"
+                titleStyle={
+                  Object {
+                    "color": "black",
+                  }
+                }
               />
             </Component>
             <Component
@@ -2115,16 +2730,29 @@ ShallowWrapper {
               <ForwardRef(Themed.Button)
                 buttonStyle={
                   Object {
-                    "backgroundColor": "transparent",
+                    "backgroundColor": "white",
                     "borderColor": "white",
                     "borderRadius": 20,
                     "borderStyle": "solid",
                     "borderWidth": 3,
+                    "elevation": 1,
+                    "shadowColor": "#888",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.8,
+                    "shadowRadius": 1,
                     "width": 100,
                   }
                 }
                 onPress={[Function]}
                 title="Log Out"
+                titleStyle={
+                  Object {
+                    "color": "black",
+                  }
+                }
               />
             </Component>
           </Component>
@@ -2133,7 +2761,22 @@ ShallowWrapper {
           style={
             Object {
               "backgroundColor": "white",
+              "borderBottomLeftRadius": 6,
+              "borderColor": "white",
+              "borderStyle": "solid",
+              "borderTopLeftRadius": 6,
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.2,
+              "justifyContent": "space-around",
+              "marginLeft": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             }
           }
         >
@@ -2159,7 +2802,23 @@ ShallowWrapper {
           style={
             Object {
               "alignItems": "stretch",
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.45,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             }
           }
         >
@@ -2182,7 +2841,7 @@ ShallowWrapper {
       ],
       "style": Object {
         "alignItems": "stretch",
-        "backgroundColor": "grey",
+        "backgroundColor": "#eee",
         "flex": 1,
       },
     },
@@ -2219,8 +2878,8 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
-                      "fontSize": 25,
+                      "color": "black",
+                      "fontSize": 30,
                       "fontWeight": "bold",
                       "margin": 5,
                     }
@@ -2234,7 +2893,7 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
+                      "color": "black",
                       "fontSize": 15,
                       "margin": 5,
                     }
@@ -2283,16 +2942,29 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 160,
                     }
                   }
                   onPress={[Function]}
                   title="My Summary"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
               <Component
@@ -2308,22 +2980,51 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 100,
                     }
                   }
                   onPress={[Function]}
                   title="Log Out"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
             </Component>,
           ],
           "style": Object {
+            "backgroundColor": "white",
+            "borderColor": "white",
+            "borderRadius": 6,
+            "borderStyle": "solid",
+            "borderWidth": 3,
+            "elevation": 1,
             "flex": 0.35,
+            "justifyContent": "space-around",
+            "marginHorizontal": 10,
+            "marginVertical": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
           },
         },
         "ref": null,
@@ -2351,8 +3052,8 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
-                        "fontSize": 25,
+                        "color": "black",
+                        "fontSize": 30,
                         "fontWeight": "bold",
                         "margin": 5,
                       }
@@ -2366,7 +3067,7 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
+                        "color": "black",
                         "fontSize": 15,
                         "margin": 5,
                       }
@@ -2412,8 +3113,8 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
-                          "fontSize": 25,
+                          "color": "black",
+                          "fontSize": 30,
                           "fontWeight": "bold",
                           "margin": 5,
                         }
@@ -2427,7 +3128,7 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
+                          "color": "black",
                           "fontSize": 15,
                           "margin": 5,
                         }
@@ -2454,8 +3155,8 @@ ShallowWrapper {
                       "children": "mock",
                       "ellipsizeMode": "tail",
                       "style": Object {
-                        "color": "white",
-                        "fontSize": 25,
+                        "color": "black",
+                        "fontSize": 30,
                         "fontWeight": "bold",
                         "margin": 5,
                       },
@@ -2474,7 +3175,7 @@ ShallowWrapper {
                       "children": undefined,
                       "ellipsizeMode": "tail",
                       "style": Object {
-                        "color": "white",
+                        "color": "black",
                         "fontSize": 15,
                         "margin": 5,
                       },
@@ -2545,16 +3246,29 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       }
                     }
                     onPress={[Function]}
                     title="My Summary"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>,
                 <Component
@@ -2570,16 +3284,29 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       }
                     }
                     onPress={[Function]}
                     title="Log Out"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>,
               ],
@@ -2600,16 +3327,29 @@ ShallowWrapper {
                   "children": <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       }
                     }
                     onPress={[Function]}
                     title="My Summary"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />,
                   "style": Object {
                     "alignItems": "center",
@@ -2624,15 +3364,26 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "buttonStyle": Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 160,
                     },
                     "onPress": [Function],
                     "title": "My Summary",
+                    "titleStyle": Object {
+                      "color": "black",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
@@ -2651,16 +3402,29 @@ ShallowWrapper {
                   "children": <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       }
                     }
                     onPress={[Function]}
                     title="Log Out"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />,
                   "style": Object {
                     "alignItems": "center",
@@ -2676,15 +3440,26 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "buttonStyle": Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 100,
                     },
                     "onPress": [Function],
                     "title": "Log Out",
+                    "titleStyle": Object {
+                      "color": "black",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
@@ -2725,7 +3500,22 @@ ShallowWrapper {
           />,
           "style": Object {
             "backgroundColor": "white",
+            "borderBottomLeftRadius": 6,
+            "borderColor": "white",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 6,
+            "borderWidth": 3,
+            "elevation": 1,
             "flex": 0.2,
+            "justifyContent": "space-around",
+            "marginLeft": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
           },
         },
         "ref": null,
@@ -2777,7 +3567,23 @@ ShallowWrapper {
           />,
           "style": Object {
             "alignItems": "stretch",
+            "backgroundColor": "white",
+            "borderColor": "white",
+            "borderRadius": 6,
+            "borderStyle": "solid",
+            "borderWidth": 3,
+            "elevation": 1,
             "flex": 0.45,
+            "justifyContent": "space-around",
+            "marginHorizontal": 10,
+            "marginVertical": 10,
+            "shadowColor": "#888",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
           },
         },
         "ref": null,
@@ -2817,7 +3623,23 @@ ShallowWrapper {
           <Component
             style={
               Object {
+                "backgroundColor": "white",
+                "borderColor": "white",
+                "borderRadius": 6,
+                "borderStyle": "solid",
+                "borderWidth": 3,
+                "elevation": 1,
                 "flex": 0.35,
+                "justifyContent": "space-around",
+                "marginHorizontal": 10,
+                "marginVertical": 10,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
               }
             }
           >
@@ -2846,8 +3668,8 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
-                      "fontSize": 25,
+                      "color": "black",
+                      "fontSize": 30,
                       "fontWeight": "bold",
                       "margin": 5,
                     }
@@ -2861,7 +3683,7 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "color": "white",
+                      "color": "black",
                       "fontSize": 15,
                       "margin": 5,
                     }
@@ -2910,16 +3732,29 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 160,
                     }
                   }
                   onPress={[Function]}
                   title="My Summary"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
               <Component
@@ -2935,16 +3770,29 @@ ShallowWrapper {
                 <ForwardRef(Themed.Button)
                   buttonStyle={
                     Object {
-                      "backgroundColor": "transparent",
+                      "backgroundColor": "white",
                       "borderColor": "white",
                       "borderRadius": 20,
                       "borderStyle": "solid",
                       "borderWidth": 3,
+                      "elevation": 1,
+                      "shadowColor": "#888",
+                      "shadowOffset": Object {
+                        "height": 1,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.8,
+                      "shadowRadius": 1,
                       "width": 100,
                     }
                   }
                   onPress={[Function]}
                   title="Log Out"
+                  titleStyle={
+                    Object {
+                      "color": "black",
+                    }
+                  }
                 />
               </Component>
             </Component>
@@ -2953,7 +3801,22 @@ ShallowWrapper {
             style={
               Object {
                 "backgroundColor": "white",
+                "borderBottomLeftRadius": 6,
+                "borderColor": "white",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": 6,
+                "borderWidth": 3,
+                "elevation": 1,
                 "flex": 0.2,
+                "justifyContent": "space-around",
+                "marginLeft": 10,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
               }
             }
           >
@@ -2979,7 +3842,23 @@ ShallowWrapper {
             style={
               Object {
                 "alignItems": "stretch",
+                "backgroundColor": "white",
+                "borderColor": "white",
+                "borderRadius": 6,
+                "borderStyle": "solid",
+                "borderWidth": 3,
+                "elevation": 1,
                 "flex": 0.45,
+                "justifyContent": "space-around",
+                "marginHorizontal": 10,
+                "marginVertical": 10,
+                "shadowColor": "#888",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.8,
+                "shadowRadius": 1,
               }
             }
           >
@@ -3002,7 +3881,7 @@ ShallowWrapper {
         ],
         "style": Object {
           "alignItems": "stretch",
-          "backgroundColor": "grey",
+          "backgroundColor": "#eee",
           "flex": 1,
         },
       },
@@ -3039,8 +3918,8 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
-                        "fontSize": 25,
+                        "color": "black",
+                        "fontSize": 30,
                         "fontWeight": "bold",
                         "margin": 5,
                       }
@@ -3054,7 +3933,7 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "color": "white",
+                        "color": "black",
                         "fontSize": 15,
                         "margin": 5,
                       }
@@ -3103,16 +3982,29 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       }
                     }
                     onPress={[Function]}
                     title="My Summary"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>
                 <Component
@@ -3128,22 +4020,51 @@ ShallowWrapper {
                   <ForwardRef(Themed.Button)
                     buttonStyle={
                       Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       }
                     }
                     onPress={[Function]}
                     title="Log Out"
+                    titleStyle={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                   />
                 </Component>
               </Component>,
             ],
             "style": Object {
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.35,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             },
           },
           "ref": null,
@@ -3171,8 +4092,8 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
-                          "fontSize": 25,
+                          "color": "black",
+                          "fontSize": 30,
                           "fontWeight": "bold",
                           "margin": 5,
                         }
@@ -3186,7 +4107,7 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "color": "white",
+                          "color": "black",
                           "fontSize": 15,
                           "margin": 5,
                         }
@@ -3232,8 +4153,8 @@ ShallowWrapper {
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "white",
-                            "fontSize": 25,
+                            "color": "black",
+                            "fontSize": 30,
                             "fontWeight": "bold",
                             "margin": 5,
                           }
@@ -3247,7 +4168,7 @@ ShallowWrapper {
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "white",
+                            "color": "black",
                             "fontSize": 15,
                             "margin": 5,
                           }
@@ -3274,8 +4195,8 @@ ShallowWrapper {
                         "children": "mock",
                         "ellipsizeMode": "tail",
                         "style": Object {
-                          "color": "white",
-                          "fontSize": 25,
+                          "color": "black",
+                          "fontSize": 30,
                           "fontWeight": "bold",
                           "margin": 5,
                         },
@@ -3294,7 +4215,7 @@ ShallowWrapper {
                         "children": undefined,
                         "ellipsizeMode": "tail",
                         "style": Object {
-                          "color": "white",
+                          "color": "black",
                           "fontSize": 15,
                           "margin": 5,
                         },
@@ -3365,16 +4286,29 @@ ShallowWrapper {
                     <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 160,
                         }
                       }
                       onPress={[Function]}
                       title="My Summary"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />
                   </Component>,
                   <Component
@@ -3390,16 +4324,29 @@ ShallowWrapper {
                     <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 100,
                         }
                       }
                       onPress={[Function]}
                       title="Log Out"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />
                   </Component>,
                 ],
@@ -3420,16 +4367,29 @@ ShallowWrapper {
                     "children": <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 160,
                         }
                       }
                       onPress={[Function]}
                       title="My Summary"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />,
                     "style": Object {
                       "alignItems": "center",
@@ -3444,15 +4404,26 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "buttonStyle": Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 160,
                       },
                       "onPress": [Function],
                       "title": "My Summary",
+                      "titleStyle": Object {
+                        "color": "black",
+                      },
                     },
                     "ref": null,
                     "rendered": null,
@@ -3471,16 +4442,29 @@ ShallowWrapper {
                     "children": <ForwardRef(Themed.Button)
                       buttonStyle={
                         Object {
-                          "backgroundColor": "transparent",
+                          "backgroundColor": "white",
                           "borderColor": "white",
                           "borderRadius": 20,
                           "borderStyle": "solid",
                           "borderWidth": 3,
+                          "elevation": 1,
+                          "shadowColor": "#888",
+                          "shadowOffset": Object {
+                            "height": 1,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.8,
+                          "shadowRadius": 1,
                           "width": 100,
                         }
                       }
                       onPress={[Function]}
                       title="Log Out"
+                      titleStyle={
+                        Object {
+                          "color": "black",
+                        }
+                      }
                     />,
                     "style": Object {
                       "alignItems": "center",
@@ -3496,15 +4480,26 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "buttonStyle": Object {
-                        "backgroundColor": "transparent",
+                        "backgroundColor": "white",
                         "borderColor": "white",
                         "borderRadius": 20,
                         "borderStyle": "solid",
                         "borderWidth": 3,
+                        "elevation": 1,
+                        "shadowColor": "#888",
+                        "shadowOffset": Object {
+                          "height": 1,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.8,
+                        "shadowRadius": 1,
                         "width": 100,
                       },
                       "onPress": [Function],
                       "title": "Log Out",
+                      "titleStyle": Object {
+                        "color": "black",
+                      },
                     },
                     "ref": null,
                     "rendered": null,
@@ -3545,7 +4540,22 @@ ShallowWrapper {
             />,
             "style": Object {
               "backgroundColor": "white",
+              "borderBottomLeftRadius": 6,
+              "borderColor": "white",
+              "borderStyle": "solid",
+              "borderTopLeftRadius": 6,
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.2,
+              "justifyContent": "space-around",
+              "marginLeft": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             },
           },
           "ref": null,
@@ -3597,7 +4607,23 @@ ShallowWrapper {
             />,
             "style": Object {
               "alignItems": "stretch",
+              "backgroundColor": "white",
+              "borderColor": "white",
+              "borderRadius": 6,
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "elevation": 1,
               "flex": 0.45,
+              "justifyContent": "space-around",
+              "marginHorizontal": 10,
+              "marginVertical": 10,
+              "shadowColor": "#888",
+              "shadowOffset": Object {
+                "height": 1,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 1,
             },
           },
           "ref": null,

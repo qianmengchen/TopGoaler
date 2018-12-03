@@ -7,6 +7,8 @@ import sinon from 'sinon';
 require('isomorphic-fetch');
 
 import ChannelMemberView from '../components/ChannelMemberView/ChannelMemberView';
+import { eventToComment } from '../components/ChannelMemberView/utils';
+import { Event } from '../constants';
 
 const middlewares = [thunkMiddleware]; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
@@ -91,5 +93,11 @@ describe('Testing Channel Memberview Page', () => {
   it('should be able to load ranking score', () => {
     // ChannelMemberView.prototype.UNSAFE_componentWillMount();
     // console.log(ChannelMemberView.prototype._loadRankingScore())
+  });
+
+  it('should correctly map events to comments', () => {
+    expect(eventToComment(Event.JOIN)).toEqual('Joined task');
+    expect(eventToComment(Event.FINISH)).toEqual('Finished task');
+    expect(eventToComment(Event.DROP)).toEqual('Dropped task');
   });
 });

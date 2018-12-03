@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { board, text, button } from './styles';
 import RNPickerSelect from 'react-native-picker-select';
@@ -94,12 +94,15 @@ class NewTaskPage extends Component {
     };
   }
 
+  static navigationOptions = {
+    title: 'New Task',
+    headerTitleStyle: { fontWeight: 'bold' }
+  };
+
   render() {
     return (
       <View style={board.container}>
-        <View style={board.title}>
-          <Text style={text.title}>New Task</Text>
-        </View>
+        <View style={board.title} />
         <Input
           label="Name"
           labelStyle={text.label}

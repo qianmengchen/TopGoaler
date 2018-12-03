@@ -30,10 +30,15 @@ const vote = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
     borderRadius: 5,
     marginTop: 10,
     marginHorizontal: 80
+  },
+  unvoted: {
+    backgroundColor: 'red'
+  },
+  voted: {
+    backgroundColor: 'grey'
   },
   buttonText: {
     color: '#fff',

@@ -74,9 +74,9 @@ export const timestampToDescription = timestamp => {
 export const eventToComment = event => {
   switch (event.toString()) {
     case Event.JOIN:
-      return 'Finished task';
-    case Event.FINISH:
       return 'Joined task';
+    case Event.FINISH:
+      return 'Finished task';
     case Event.DROP:
       return 'Dropped task';
     default:

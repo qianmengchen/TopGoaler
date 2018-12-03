@@ -34,10 +34,6 @@ describe('Testing New Channel Page', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should have 1 Text field to indicate creating a new channel', () => {
-    expect(render.find('Text')).toHaveLength(1);
-  });
-
   it('should have 1 Button to create channel', () => {
     expect(render.find(Button)).toHaveLength(1);
   });

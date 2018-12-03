@@ -121,6 +121,10 @@ class PerformancePage extends Component {
    * @property {Object} channels - An object containing all the channels.
    * @property {number} userId - A unique number identifying the user.
    */
+  static navigationOptions = {
+    title: 'Performance',
+    headerTitleStyle: { fontWeight: 'bold' }
+  };
 
   constructor(props) {
     super(props);
@@ -132,9 +136,7 @@ class PerformancePage extends Component {
   render() {
     return (
       <View style={board.container}>
-        <View style={board.title}>
-          <Text style={title.main}>Performance</Text>
-        </View>
+        <View style={board.title} />
         <View style={board.infoCard}>
           <View style={infoCard.leftPart}>
             <View style={leftPart.subtitle}>

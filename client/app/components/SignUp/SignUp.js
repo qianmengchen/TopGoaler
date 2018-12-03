@@ -6,6 +6,7 @@ import { card, alt } from './styles';
 class SignUp extends Component {
   _submit() {
     this.props.submit(this.state.username, this.state.password);
+    this.props.navigation.navigate('signIn');
   }
   _signIn() {
     this.props.navigation.navigate('signIn');

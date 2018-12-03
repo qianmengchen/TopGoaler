@@ -10,7 +10,7 @@ const passport = require('passport');
 require('./routes/passport');
 
 const defaultConfig = {
-    enable_auth: true
+    enable_auth: false
 }
 
 const createApp = (config = defaultConfig) => {
@@ -21,6 +21,12 @@ const createApp = (config = defaultConfig) => {
     app.use(bodyParser.urlencoded({
         extended: true,
     }));
+    const logger = function(req, _, next) {
+        console.info(`${req.method} ${req.originalUrl}`)
+        next(); // Passing the request to the next handler in the stack.
+    }
+    //app.use(logger);
+
     app.use('/', auth)
 
     const jwt = passport.authenticate('jwt', { session: false })

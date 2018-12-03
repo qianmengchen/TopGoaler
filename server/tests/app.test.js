@@ -4,10 +4,8 @@ const app = createApp()
 const pool = require('../data/config');
 const jwt = require('jsonwebtoken');
 const SECRET_KEY = require('../data/jwt')
+const { doQuery } = require('../routes/helper.js')
 
-afterAll(() => {
-    pool.end()
-});
 
 const _query = params => {
     var esc = encodeURIComponent;
@@ -66,20 +64,6 @@ describe('User Login / Signup', () => {
     });
 })
 
-describe('Load All', () => {
-    it('should load all databases into a JSON', (done) => {
-        request(app)
-            .get('/loaddata')
-            .expect(200)
-            .then(res => {
-                const f = prop => expect(res.body).toHaveProperty(prop)
-                const fields = ["channel", "task", "user", "user_channel",
-                    "user_task", "activity_log", "vote", "proposal"]
-                fields.forEach(f)
-                done()
-            })
-    })
-})
 
 describe('Access Control', async () => {
     let token = ''
@@ -118,3 +102,13 @@ describe('Access Control', async () => {
             .end(_wrap(goodRequest))
     })
 })
+
+afterAll(async () => {
+    await _cleanUp()
+    pool.end()
+});
+
+const _cleanUp = async () => {
+    // delete user
+    await doQuery('DELETE FROM user WHERE name = ? AND password = ?', [username, password])
+}

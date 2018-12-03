@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const helper = require('./helper');
-const { routeFactory, doQuery } = helper;
+const { routeFactory, doQuery, check } = helper;
 
 // query to get all channels
 let routes =
@@ -10,13 +10,17 @@ let routes =
         ['task'],
         ['user_channel'],
         ['user_task'],
-        ['user'], //, 'SELECT id, name, email, avatar_url, description FROM user'],
+        ['user', 'SELECT id, name, email, avatar_url FROM user'],
         ['activity_log'],
         ['vote'],
         ['proposal']
     ]
 
 routes = routes.map( ([route, query]) => [route, query || `SELECT * FROM ${route}`] );
+
+// instead of creating a placeholder function we can also add these
+// * @name loaddata
+// * @memberof read
 
 /**
  * load data to frontend
@@ -36,17 +40,21 @@ let exclude = (list) => (entry) => {
     list.forEach(key => delete entry[key])
     return entry
 }
+/*
 let include = (list) => (entry) => {
     const e = {}
     list.forEach(key => e[key] = entry[key])
     return e
 }
+*/
 let extract = (field) => (entry) => {
     return entry[field]
 }
+/*
 let compose = (flist) => (entry) => {
     return flist.reduce( (e, f) => f(e) , entry)
 }
+*/
 // query for specific fields
 let fieldRoutes =
     [
@@ -56,7 +64,10 @@ let fieldRoutes =
         ['user_channel', 'channel_id', extract('user_id')],
         ['user_task', 'user_id', extract('task_id')],
         ['task', 'id'],
-        ['task', 'channel_id']
+        ['task', 'channel_id'],
+        ['activity_log', 'user_id'],
+        ['proposal', 'id'],
+        ['vote', 'id']
     ]
 
 fieldRoutes.forEach( ([route, field, func]) => {
@@ -80,6 +91,11 @@ router.get('/score/:user_id&:channel_id', async (req, res) => {
     let { user_id, channel_id } = req.params
     console.log(user_id, channel_id);
     try {
+        const exists = await check(
+            'SELECT * from user_channel WHERE user_id = ? AND channel_id = ?', [user_id, channel_id])
+        if (!exists) {
+            throw "User or Channel not found"
+        }
         const result = await doQuery(
         ` SELECT IF(SUM(point) IS NULL, 0, SUM(point)) as score
           FROM activity_log INNER JOIN task ON task.id=activity_log.task_id
@@ -88,7 +104,7 @@ router.get('/score/:user_id&:channel_id', async (req, res) => {
         [user_id, channel_id]
         )
         console.log(result);
-        res.json(result[0])
+        res.status(200).json(result[0])
     } catch (e) {
         console.log(e);
         res.status(401).json({error: e});
@@ -108,6 +124,10 @@ function get_score_board(channel_id){}
 router.get('/scoreboard/:channel_id', async (req, res) => {
     let { channel_id } = req.params
     try {
+        const exist_channel = await check('SELECT * from channel WHERE id = ?', [channel_id])
+        if (!exist_channel) {
+            throw "Channel not found"
+        }
         const result = await doQuery(
         ` SELECT
           user_id, score, @curRank := @curRank + 1 AS rank
@@ -122,7 +142,7 @@ router.get('/scoreboard/:channel_id', async (req, res) => {
           `
           , [channel_id]
         )
-        res.json(result)
+        res.status(200).json(result)
     } catch (e) {
         res.status(401).json({error: e});
     }
@@ -142,6 +162,11 @@ function get_user_rank(channel_id){}
 router.get('/ranking/:user_id&:channel_id', async (req, res) => {
     let { user_id, channel_id } = req.params
     try {
+        const exists = await check(
+            'SELECT * from user_channel WHERE user_id = ? AND channel_id = ?', [user_id, channel_id])
+        if (!exists) {
+            throw "User or Channel not found"
+        }
         const result = await doQuery(
         `
           SELECT rank FROM
@@ -161,7 +186,7 @@ router.get('/ranking/:user_id&:channel_id', async (req, res) => {
         `
           , [channel_id, user_id]
         )
-        res.json(result[0])
+        res.status(200).json(result[0])
     } catch (e) {
         res.status(401).json({error: e});
     }

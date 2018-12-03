@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Profile/Profile.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Profile/Profile.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import { Avatar, Button } from 'react-native-elements';
+import { ChannelIconList } from '../ChannelIconList/index';
+import { TaskChecklist } from '../TaskChecklist/index';
+import {
+  board,
+  personalInfo,
+  descriptions,
+  actions,
+  buttons,
+  introText
+} from './styles';
+import { periodDecoder } from '../../constants';
+
+/**
+ * @class Profile
+ * @property {Object} userInfo - An object containing the user's information.
+ * @property {array} userChannels - An array of ibjects related to user.
+ * @property {array} userTasks - An array of all tasks related to the user.
+ * @property {array} userActivities - An array containing all of the user's finished task activities.
+ * @property {Object} tasks - An object containing all tasks.
+ */
+class Profile extends Component {
+  _handleLogout() {
+    this.props.logout();
+  }
+
+  _goToPerformancePage() {
+    const { navigate } = this.props.navigation;
+    navigate('PerformancePage');
+  }
+
+  _activityAggregateReducer(acc, obj) {
+    const { tasks } = this.props;
+
+    const now = new Date(Date.now());
+    const task = tasks[obj.task_id];
+    if (!task) return acc;
+    const diff = now - obj.create_time;
+    if (diff &lt;= periodDecoder[task.period] &amp;&amp; diff > 0) {
+      if (acc[obj.task_id]) {
+        acc[obj.task_id]++;
+      } else {
+        acc[obj.task_id] = 1;
+      }
+    }
+    return acc;
+  }
+
+  static navigationOptions = {
+    headerStyle: { height: 0 }
+  };
+
+  render() {
+    const { userInfo, userChannels, userTasks, userActivities } = this.props;
+
+    //numActivities maps task_id to the number of FINISH activities within its period
+    const numActivities = userActivities.reduce(
+      this._activityAggregateReducer.bind(this),
+      {}
+    );
+
+    const onGoingTasks = [],
+      finishedTasks = [];
+    for (const task of userTasks) {
+      if (
+        !task.pattern ||
+        !numActivities[task.id] ||
+        numActivities[task.id] &lt; task.pattern
+      ) {
+        onGoingTasks.push(task);
+      } else {
+        finishedTasks.push(task);
+      }
+    }
+
+    return (
+      &lt;View style={board.container}>
+        &lt;View style={board.personalInfo}>
+          &lt;View style={personalInfo.descriptions}>
+            &lt;View style={descriptions.intro}>
+              &lt;Text style={introText.name}>{userInfo.name}&lt;/Text>
+              &lt;Text style={introText.bio}>{userInfo.description}&lt;/Text>
+            &lt;/View>
+            &lt;View style={descriptions.avatar}>
+              &lt;Avatar
+                height={128}
+                width={128}
+                source={{ uri: userInfo.avatar_url }}
+              />
+            &lt;/View>
+          &lt;/View>
+          &lt;View style={personalInfo.actions}>
+            &lt;View style={actions.summary}>
+              &lt;Button
+                title="My Summary"
+                titleStyle={{ color: 'black' }}
+                buttonStyle={buttons.summary}
+                onPress={this._goToPerformancePage.bind(this)}
+              />
+            &lt;/View>
+            &lt;View style={actions.buttons}>
+              &lt;Button
+                title="Log Out"
+                titleStyle={{ color: 'black' }}
+                buttonStyle={buttons.logout}
+                onPress={this._handleLogout.bind(this)}
+              />
+            &lt;/View>
+          &lt;/View>
+        &lt;/View>
+        &lt;View style={board.channels}>
+          &lt;ChannelIconList
+            channels={userChannels}
+            navigate={this.props.navigation.navigate}
+          />
+        &lt;/View>
+        &lt;View style={board.tasks}>
+          &lt;TaskChecklist
+            onGoingTasks={onGoingTasks}
+            finishedTasks={finishedTasks}
+          />
+        &lt;/View>
+      &lt;/View>
+    );
+  }
+}
+
+export default Profile;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="AuthNav.html">AuthNav</a></li><li><a href="ChannelIcon.html">ChannelIcon</a></li><li><a href="ChannelIconList.html">ChannelIconList</a></li><li><a href="ChannelListPage.html">ChannelListPage</a></li><li><a href="ChannelMemberView.html">ChannelMemberView</a></li><li><a href="ChannelOverview.html">ChannelOverview</a></li><li><a href="ChannelPublicView.html">ChannelPublicView</a></li><li><a href="Feed.html">Feed</a></li><li><a href="MemberList.html">MemberList</a></li><li><a href="NewChannelPage.html">NewChannelPage</a></li><li><a href="NewTaskPage.html">NewTaskPage</a></li><li><a href="PerformancePage.html">PerformancePage</a></li><li><a href="Profile.html">Profile</a></li><li><a href="Proposal.html">Proposal</a></li><li><a href="ProposalsPage.html">ProposalsPage</a></li><li><a href="SignIn.html">SignIn</a></li><li><a href="SignUp.html">SignUp</a></li><li><a href="TaskChecklist.html">TaskChecklist</a></li><li><a href="TaskDetail.html">TaskDetail</a></li><li><a href="TaskEntry.html">TaskEntry</a></li><li><a href="TaskListPage.html">TaskListPage</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 03 2018 00:36:27 GMT-0800 (Pacific Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

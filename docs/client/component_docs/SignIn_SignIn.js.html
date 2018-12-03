@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: SignIn/SignIn.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: SignIn/SignIn.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from 'react';
+import { Text, View, TouchableHighlight } from 'react-native';
+import { Card, Input, Icon } from 'react-native-elements';
+import { styles } from './styles';
+
+class SignIn extends Component {
+  _submit() {
+    // arrow notation () => {...} creates a function that binds this to the context (i.e the enclosing object)
+    // regular notation function () {} doesn't bind this but rather defers binding to its caller's discretion
+    // (e.g. if we set a button's onpress to {regularfunc}, then regularfunc's 'this' will be the button object.
+    // But here we want 'this' to point to the enclosing object, so we will HAVE to define our function in arrow notation. )
+    this.props.submit(this.state.username, this.state.password);
+  }
+  _signUp() {
+    this.props.navigation.navigate('signUp');
+  }
+
+  /**
+   * @class SignIn
+   * @property {function} submit - A function allowing for submitting the username and password to create a new user in our database.
+   * @property {Object} navigation - An object that contains a navigate function allowing the user to navigate between components.
+   */
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    };
+  }
+  render() {
+    return (
+      &lt;View style={styles.container}>
+        &lt;Text style={styles.title}>Top Goaler&lt;/Text>
+
+        &lt;Card title="Sign-in Using">
+          &lt;View style={styles.icons}>
+            &lt;Icon
+              raised
+              name="google-plus"
+              type="font-awesome"
+              color="#dd4b39"
+            />
+            &lt;Icon
+              raised
+              name="facebook-square"
+              type="font-awesome"
+              color="#3b5998"
+            />
+            &lt;Icon raised name="twitter" type="font-awesome" color="#00aced" />
+          &lt;/View>
+
+          &lt;View style={{ flexDirection: 'row' }}>
+            &lt;View style={styles.divider} />
+            &lt;Text style={styles.dividerText}>OR&lt;/Text>
+            &lt;View style={styles.divider} />
+          &lt;/View>
+
+          &lt;Input
+            containerStyle={{ marginBottom: 10 }}
+            placeholder="Username"
+            autoCapitalize="none"
+            defaultValue={this.state.username}
+            value={this.state.username}
+            onChangeText={text => this.setState({ username: text })}
+            leftIcon={&lt;Icon name="person" size={24} color="grey" />}
+          />
+          &lt;Input
+            containerStyle={{ marginVertical: 10 }}
+            placeholder="Password"
+            textContentType="password"
+            autoCapitalize="none"
+            defaultValue={this.state.password}
+            value={this.state.password}
+            secureTextEntry={true}
+            onChangeText={text => this.setState({ password: text })}
+            leftIcon={&lt;Icon name="lock" size={24} color="grey" />}
+          />
+
+          &lt;TouchableHighlight
+            style={styles.button}
+            underlayColor="#aaa"
+            onPress={this._submit.bind(this)}
+          >
+            &lt;Text style={styles.buttonText}> Sign In &lt;/Text>
+          &lt;/TouchableHighlight>
+        &lt;/Card>
+        &lt;TouchableHighlight
+          style={styles.signUpButton}
+          underlayColor="#aaa"
+          onPress={this._signUp.bind(this)}
+        >
+          &lt;Text style={styles.signUpText}> Sign Up for Top Goaler &lt;/Text>
+        &lt;/TouchableHighlight>
+      &lt;/View>
+    );
+  }
+}
+
+export default SignIn;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="AuthNav.html">AuthNav</a></li><li><a href="ChannelIcon.html">ChannelIcon</a></li><li><a href="ChannelIconList.html">ChannelIconList</a></li><li><a href="ChannelListPage.html">ChannelListPage</a></li><li><a href="ChannelMemberView.html">ChannelMemberView</a></li><li><a href="ChannelOverview.html">ChannelOverview</a></li><li><a href="ChannelPublicView.html">ChannelPublicView</a></li><li><a href="Feed.html">Feed</a></li><li><a href="MemberList.html">MemberList</a></li><li><a href="NewChannelPage.html">NewChannelPage</a></li><li><a href="NewTaskPage.html">NewTaskPage</a></li><li><a href="PerformancePage.html">PerformancePage</a></li><li><a href="Profile.html">Profile</a></li><li><a href="Proposal.html">Proposal</a></li><li><a href="ProposalsPage.html">ProposalsPage</a></li><li><a href="SignIn.html">SignIn</a></li><li><a href="SignUp.html">SignUp</a></li><li><a href="TaskChecklist.html">TaskChecklist</a></li><li><a href="TaskDetail.html">TaskDetail</a></li><li><a href="TaskEntry.html">TaskEntry</a></li><li><a href="TaskListPage.html">TaskListPage</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 03 2018 00:36:27 GMT-0800 (Pacific Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

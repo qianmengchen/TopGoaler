@@ -8,6 +8,15 @@ class Proposal extends Component {
     this.props.handleVote(this.state.points);
   }
 
+  /**
+   * @class Proposal
+   * @property {number} key - A unique number identifying this proposal.
+   * @property {string} title - The title of the new task.
+   * @property {string} subtitle - A short description of the new task.
+   * @property {number} period - A type encoding indicating the day, week, or month period of a task.
+   * @property {number} pattern - A value indicating the numbere of times a user can complete a task within a given period.
+   * @property {function} handleVote - A function allowing the user to vote on a specific this task and update the vote count.
+   */
   constructor(props) {
     super(props);
     this.state = {

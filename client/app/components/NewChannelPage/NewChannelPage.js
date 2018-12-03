@@ -27,6 +27,12 @@ class NewChannelPage extends Component {
     this.props.navigation.navigate('ChannelListPage');
   }
 
+  /**
+   * @class NewChannelPage
+   * @property {number} userId - A unique number identifying the user.
+   * @property {function} addChannel - A function allowing the user to create a new channel as the creator.
+   * @property {Object} navigation - An object that contains the navigate function allowing the user to navigate to other components.
+   */
   static navigationOptions = {
     title: 'New Channel',
     headerTitleStyle: { fontWeight: 'bold' }

@@ -3,6 +3,13 @@ import { ScrollView } from 'react-native';
 import { list } from './styles';
 import Proposal from './Proposal';
 
+/**
+ * @class ProposalsPage
+ * @property {number} channel_id - A unique value identifying the channel.
+ * @property {number} user_id - A unique value identifying the user.
+ * @property {Component} proposals - The Proposals component  embedded within this ProposalsPage component.
+ */
+
 class ProposalsPage extends Component {
   _handleVoteFactory = proposal_id => points => {
     this.props.handleVote(this.props.user_id, proposal_id, points);

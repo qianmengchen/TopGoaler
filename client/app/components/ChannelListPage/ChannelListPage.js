@@ -28,6 +28,15 @@ class ChannelListPage extends Component {
     headerStyle: { height: 0 }
   };
 
+  /**
+   * @class ChannelListPage
+   * @property {number} userId - A unique number identifying the user.
+   * @property {Object} channels - An object with the key as the id of the channel and the value as the channel.
+   * @property {set} subscribed_channels- A set that describes those channels that the user is subscribed to.
+   * @property {function} addChannel - A function that allows the user to create a new channel.
+   * @property {function} subscribe - A function that allows the user to susbcribe to a particular channel
+     
+   */
   constructor(props) {
     super(props);
     this.state = {

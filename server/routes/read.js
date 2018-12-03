@@ -186,6 +186,9 @@ router.get('/ranking/:user_id&:channel_id', async (req, res) => {
         `
           , [channel_id, user_id]
         )
+        if (result.length == 0) {
+            throw 'user has no activity yet'
+        }
         res.status(200).json(result[0])
     } catch (e) {
         res.status(401).json({error: e});

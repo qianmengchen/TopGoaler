@@ -29,6 +29,9 @@ class ChannelListPage extends Component {
   };
 
   /**
+   * This contains searchBar, add icon and a list of channelOverview components.
+   * It is the first page that user will be redirected to after signing in.
+   * 
    * @class ChannelListPage
    * @property {number} userId - A unique number identifying the user.
    * @property {Object} channels - An object with the key as the id of the channel and the value as the channel.

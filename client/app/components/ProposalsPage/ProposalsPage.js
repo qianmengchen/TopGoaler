@@ -4,6 +4,8 @@ import { list } from './styles';
 import Proposal from './Proposal';
 
 /**
+ * This is the component that will show a list of proposal component currently in that channel.
+ *
  * @class ProposalsPage
  * @property {number} channel_id - A unique value identifying the channel.
  * @property {number} user_id - A unique value identifying the user.

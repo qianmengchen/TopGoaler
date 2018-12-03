@@ -17,6 +17,8 @@ const SignNav = createSwitchNavigator(
 );
 
 /**
+ * This is the component that will check if an user is logged in and redirect accordingly.
+ *
  * @class AuthNav
  * @property {boolean} - A boolean value indicating whether the current user is logged in or not.
  */

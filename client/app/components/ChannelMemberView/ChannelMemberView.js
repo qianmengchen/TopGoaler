@@ -67,17 +67,37 @@ class ChannelMemberView extends Component {
     this.props.navigation.setParams({
       channel: this.props.channel
     });
-    if (this.props.shouldRefresh) {
+    this.props.refresh(this.props.userId, this.props.channel.id);
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log(this.props.incoming_channel_id, prevProps.incoming_channel_id);
+    if (this.props.isClearing) {
+      return;
+    }
+    if (
+      this.props.userId !== prevProps.userId ||
+      this.props.incoming_channel_id !== prevProps.channel_id
+    ) {
       this.props.refresh(this.props.userId, this.props.channel.id);
+      this.props.clear();
+    } else {
+      if (prevProps.channel != this.props.channel) {
+        this.props.navigation.setParams({
+          channel: this.props.channel
+        });
+      }
     }
   }
-  componentDidUpdate() {
-    if (this.props.shouldRefresh) {
-      this.props.refresh(this.props.userId, this.props.channel.id);
-    }
-  }
+
   render() {
     const { activities, users, tasks, ranking, score } = this.props;
+    const rankingStr =
+      typeof ranking === 'string'
+        ? ranking
+        : ranking > 0
+        ? '#' + ranking
+        : 'N/A';
     return (
       <View style={{ backgroundColor: 'white' }}>
         <View style={{ flexDirection: 'row', alignItems: 'stretch' }}>
@@ -85,7 +105,7 @@ class ChannelMemberView extends Component {
             <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rank</Text>
               <Text style={[cardLeft.stats, cardLeft.number]}>
-                {ranking > 0 ? '#' + ranking : 'N/A'}
+                {rankingStr}
               </Text>
             </View>
             <View style={cardLeft.statsContainer}>

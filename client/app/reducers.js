@@ -7,6 +7,7 @@ import {
   SERVER_ERR,
   LOAD_DATA,
   LOAD_CURRENT_CHANNEL_DONE,
+  CLEAR_CURRENT_CHANNEL,
   ADD_CHANNEL,
   ADD_ACTIVITY,
   ADD_FAILURE,
@@ -204,6 +205,22 @@ function current_channel(state = default_current_channel, action) {
       const obj = { ...action };
       delete obj.type;
       return obj;
+    }
+    case CLEAR_CURRENT_CHANNEL: {
+      return {
+        score: '...',
+        ranking: '...',
+        tasks: [
+          {
+            title: 'loading...',
+            subtitle: 'loading...',
+            point: NaN,
+            period: 0,
+            pattern: 0
+          }
+        ],
+        channelId: NaN
+      };
     }
     default:
       return state;

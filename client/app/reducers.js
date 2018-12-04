@@ -199,9 +199,12 @@ const default_current_channel = {
 
 function current_channel(state = default_current_channel, action) {
   switch (action.type) {
-    case LOAD_CURRENT_CHANNEL_DONE:
+    case LOAD_CURRENT_CHANNEL_DONE: {
       console.log('current_channel DONE', action);
-      return { ...action };
+      const obj = { ...action };
+      delete obj.type;
+      return obj;
+    }
     default:
       return state;
   }

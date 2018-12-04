@@ -71,6 +71,11 @@ class ChannelMemberView extends Component {
       this.props.refresh(this.props.userId, this.props.channel.id);
     }
   }
+  componentDidUpdate() {
+    if (this.props.shouldRefresh) {
+      this.props.refresh(this.props.userId, this.props.channel.id);
+    }
+  }
   render() {
     const { activities, users, tasks, ranking, score } = this.props;
     return (

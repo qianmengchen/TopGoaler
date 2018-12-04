@@ -19,14 +19,15 @@ const mapStateToProps = (state, ownProps) => {
     list_of_tasks: state.current_channel.tasks,
     ranking: state.current_channel.ranking,
     score: state.current_channel.score,
+    incoming_channel_id: state.current_channel.channelId,
     shouldRefresh: state.current_channel.channelId != channel_id
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  refresh: (userId, channel) => (
+  refresh: (userId, channelId) => (
     console.log('loadCurrentChannel: out of date'),
-    dispatch(loadCurrentChannel(userId, channel))
+    dispatch(loadCurrentChannel(userId, channelId))
   )
 });
 

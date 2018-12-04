@@ -12,8 +12,9 @@ import * as styles from './styles';
  * @property {Component} TaskEntry - A component representing a specific task within the channel.
  */
 class TaskChecklist extends Component {
-  _handleCompleteTaskWrap(task_id) {
-    return () => this.props.completeTask(task_id, this.props.user_id);
+  _handleCompleteTaskWrap(task_id, channel_id) {
+    return () =>
+      this.props.completeTask(task_id, this.props.user_id, channel_id);
   }
 
   render() {
@@ -30,7 +31,10 @@ class TaskChecklist extends Component {
             <TaskEntry
               item={props.item.task}
               finished={props.item.finished}
-              completeTask={this._handleCompleteTaskWrap(props.item.task.id)}
+              completeTask={this._handleCompleteTaskWrap(
+                props.item.task.id,
+                props.item.task.channel_id
+              )}
             />
           )}
           keyExtractor={item => item.task.id.toString()}

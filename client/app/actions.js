@@ -1,4 +1,5 @@
 import { serverAddr } from '../config';
+import { Event } from './constants';
 
 /*
  * Auth actions
@@ -215,15 +216,18 @@ export function signUp(username, password) {
  * @param {number} user_id - The id of current user.
  * @param {number} proposal_id - The id of the proposal being voted.
  * @param {number} score - The score of the proposal being voted.
+ * @param {number} channel_id - The id of the channel.
  * @returns {Object} - The action generator for handling vote.
  */
-export function handleVote(user_id, proposal_id, score) {
+export function handleVote(user_id, proposal_id, score, channel_id) {
   return async dispatch => {
     const body = { user_id, proposal_id, score };
     try {
       const res = await _post('/vote', body);
       if (!res.ok) return;
       dispatch(loadData());
+      console.log('currentChannel', 'by /vote');
+      dispatch(loadCurrentChannel(user_id, channel_id));
     } catch (e) {
       dispatch(serverError(e));
     }
@@ -435,15 +439,21 @@ export function activityUploaded(task_id, user_id, event) {
  * @param {number} task_id - The id of the task in the activity.
  * @param {number} user_id - The id of current user.
  * @param {event} event - The event status of this activity.
+ * @param {number} channel_id - The id of current channel.
  * @returns {Object} - The action generator for for new activity log.
  */
-export function newActivityLog(task_id, user_id, event) {
+export function newActivityLog(task_id, user_id, event, channel_id = null) {
   return async dispatch => {
     const body = { task_id, user_id, event };
     try {
       const res = await _post('/activity_log', body);
       if (!res.ok) return dispatch(activityUploadFailure());
       dispatch(activityUploaded(task_id, user_id, event));
+      // If we have done a task, refresh
+      if (event == Event.FINISH && channel_id != null) {
+        console.log('currentChannel', 'by /activity_log FINISH');
+        dispatch(loadCurrentChannel(user_id, channel_id));
+      }
     } catch (e) {
       dispatch(serverError(e));
     }
@@ -538,6 +548,38 @@ export function dropTaskAsUser(task_id, user_id) {
       if (!res.ok) return dispatch(userTaskOperationFailure());
       dispatch(userTaskDrop(task_id, user_id));
     } catch (e) {
+      dispatch(serverError(e));
+    }
+  };
+}
+
+/** @constant
+    @type {string}
+    @default
+*/
+export const LOAD_CURRENT_CHANNEL_DONE = 'LOAD_CURRENT_CHANNEL_DONE';
+
+export function loadCurrentChannelDone(data) {
+  return {
+    type: LOAD_CURRENT_CHANNEL_DONE,
+    tasks: data.tasks,
+    score: data.score.score || 0,
+    ranking: data.ranking.rank || NaN,
+    channelId: data.channelId
+  };
+}
+
+export function loadCurrentChannel(userId, channelId) {
+  return async dispatch => {
+    try {
+      const score = await (await _get(`/score/${userId}&${channelId}`)).json();
+      const ranking = await (await _get(
+        `/ranking/${userId}&${channelId}`
+      )).json();
+      const tasks = await (await _get(`/task/channel_id/${channelId}`)).json();
+      dispatch(loadCurrentChannelDone({ score, ranking, tasks, channelId }));
+    } catch (e) {
+      //dispatch(loadCurrentChannelDone({ score: 0, ranking: NaN, tasks: [] }))
       dispatch(serverError(e));
     }
   };

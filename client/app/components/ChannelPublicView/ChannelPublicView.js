@@ -29,7 +29,10 @@ class ChannelPublicView extends Component {
         NavigationActions.navigate({ routeName: 'ChannelListPage' }),
         NavigationActions.navigate({
           routeName: 'ChannelMemberView',
-          params: { id: this.props.channel.id }
+          params: {
+            id: this.props.channel.id,
+            channel_id: this.props.channel.id
+          }
         })
       ]
     });

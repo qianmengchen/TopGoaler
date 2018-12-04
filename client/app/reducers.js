@@ -6,6 +6,7 @@ import {
   SIGNUP_FAILURE,
   SERVER_ERR,
   LOAD_DATA,
+  LOAD_CURRENT_CHANNEL_DONE,
   ADD_CHANNEL,
   ADD_ACTIVITY,
   ADD_FAILURE,
@@ -189,6 +190,23 @@ export function activity_log(state = [], action) {
   }
 }
 
+const default_current_channel = {
+  score: 0,
+  ranking: NaN,
+  tasks: [],
+  channelId: NaN
+};
+
+function current_channel(state = default_current_channel, action) {
+  switch (action.type) {
+    case LOAD_CURRENT_CHANNEL_DONE:
+      console.log('current_channel DONE', action);
+      return { ...action };
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   auth,
   channels,
@@ -198,5 +216,6 @@ export default combineReducers({
   tasks,
   activity_log,
   proposals,
-  votes
+  votes,
+  current_channel
 });

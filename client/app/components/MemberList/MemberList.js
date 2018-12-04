@@ -42,6 +42,7 @@ class MemberList extends Component {
                   const avatar = (
                     <Avatar
                       size="medium"
+                      key={uid}
                       rounded
                       title={name}
                       activeOpacity={0.7}

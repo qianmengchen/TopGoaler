@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  completeTask: (task_id, user_id) =>
-    dispatch(newActivityLog(task_id, user_id, Event.FINISH))
+  completeTask: (task_id, user_id, channel_id) =>
+    dispatch(newActivityLog(task_id, user_id, Event.FINISH, channel_id))
 });
 
 export default connect(

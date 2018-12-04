@@ -70,7 +70,7 @@ ShallowWrapper {
               ]
             }
           >
-            #N/A
+            N/A
           </Text>
         </Component>
         <Component
@@ -112,9 +112,7 @@ ShallowWrapper {
                 },
               ]
             }
-          >
-            0
-          </Text>
+          />
         </Component>
       </Themed.Card>
       <Themed.Card
@@ -134,76 +132,7 @@ ShallowWrapper {
               "height": 140,
             }
           }
-        >
-          <Component
-            style={
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-                "marginBottom": 10,
-              }
-            }
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "white",
-                  "fontSize": 15,
-                  "fontWeight": "bold",
-                }
-              }
-            />
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "white",
-                  "fontSize": 15,
-                  "fontWeight": "bold",
-                }
-              }
-            />
-          </Component>
-          <Component
-            style={
-              Object {
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-                "marginBottom": 10,
-              }
-            }
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "white",
-                  "fontSize": 15,
-                  "fontWeight": "bold",
-                }
-              }
-            />
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "white",
-                  "fontSize": 15,
-                  "fontWeight": "bold",
-                }
-              }
-            />
-          </Component>
-        </ScrollViewMock>
+        />
         <Themed.Divider
           style={
             Object {
@@ -388,7 +317,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                #N/A
+                N/A
               </Text>
             </Component>
             <Component
@@ -430,9 +359,7 @@ ShallowWrapper {
                     },
                   ]
                 }
-              >
-                0
-              </Text>
+              />
             </Component>
           </Themed.Card>
           <Themed.Card
@@ -452,76 +379,7 @@ ShallowWrapper {
                   "height": 140,
                 }
               }
-            >
-              <Component
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "white",
-                      "fontSize": 15,
-                      "fontWeight": "bold",
-                    }
-                  }
-                />
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "white",
-                      "fontSize": 15,
-                      "fontWeight": "bold",
-                    }
-                  }
-                />
-              </Component>
-              <Component
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "white",
-                      "fontSize": 15,
-                      "fontWeight": "bold",
-                    }
-                  }
-                />
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "white",
-                      "fontSize": 15,
-                      "fontWeight": "bold",
-                    }
-                  }
-                />
-              </Component>
-            </ScrollViewMock>
+            />
             <Themed.Divider
               style={
                 Object {
@@ -696,7 +554,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  #N/A
+                  N/A
                 </Text>
               </Component>
               <Component
@@ -738,9 +596,7 @@ ShallowWrapper {
                       },
                     ]
                   }
-                >
-                  0
-                </Text>
+                />
               </Component>
             </Themed.Card>,
             <Themed.Card
@@ -760,76 +616,7 @@ ShallowWrapper {
                     "height": 140,
                   }
                 }
-              >
-                <Component
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                </Component>
-                <Component
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                </Component>
-              </ScrollViewMock>
+              />
               <Themed.Divider
                 style={
                   Object {
@@ -982,7 +769,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    #N/A
+                    N/A
                   </Text>
                 </Component>,
                 <Component
@@ -1024,9 +811,7 @@ ShallowWrapper {
                         },
                       ]
                     }
-                  >
-                    0
-                  </Text>
+                  />
                 </Component>,
               ],
               "containerStyle": Object {
@@ -1079,7 +864,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      #N/A
+                      N/A
                     </Text>,
                   ],
                   "style": Object {
@@ -1114,7 +899,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": "#N/A",
+                      "children": "N/A",
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1130,7 +915,7 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": "#N/A",
+                    "rendered": "N/A",
                     "type": [Function],
                   },
                 ],
@@ -1174,9 +959,7 @@ ShallowWrapper {
                           },
                         ]
                       }
-                    >
-                      0
-                    </Text>,
+                    />,
                   ],
                   "style": Object {
                     "paddingBottom": 20,
@@ -1210,7 +993,7 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": 0,
+                      "children": undefined,
                       "ellipsizeMode": "tail",
                       "style": Array [
                         Object {
@@ -1226,7 +1009,7 @@ ShallowWrapper {
                       ],
                     },
                     "ref": null,
-                    "rendered": 0,
+                    "rendered": null,
                     "type": [Function],
                   },
                 ],
@@ -1247,76 +1030,7 @@ ShallowWrapper {
                       "height": 140,
                     }
                   }
-                >
-                  <Component
-                    style={
-                      Object {
-                        "flexDirection": "row",
-                        "justifyContent": "space-between",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                  </Component>
-                  <Component
-                    style={
-                      Object {
-                        "flexDirection": "row",
-                        "justifyContent": "space-between",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                  </Component>
-                </ScrollViewMock>,
+                />,
                 <Themed.Divider
                   style={
                     Object {
@@ -1430,243 +1144,13 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": Array [
-                    <Component
-                      style={
-                        Object {
-                          "flexDirection": "row",
-                          "justifyContent": "space-between",
-                          "marginBottom": 10,
-                        }
-                      }
-                    >
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                    </Component>,
-                    <Component
-                      style={
-                        Object {
-                          "flexDirection": "row",
-                          "justifyContent": "space-between",
-                          "marginBottom": 10,
-                        }
-                      }
-                    >
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                    </Component>,
-                  ],
+                  "children": Array [],
                   "style": Object {
                     "height": 140,
                   },
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": "0",
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": Array [
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />,
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />,
-                      ],
-                      "style": Object {
-                        "flexDirection": "row",
-                        "justifyContent": "space-between",
-                        "marginBottom": 10,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "accessible": true,
-                          "allowFontScaling": true,
-                          "children": undefined,
-                          "ellipsizeMode": "tail",
-                          "style": Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "accessible": true,
-                          "allowFontScaling": true,
-                          "children": undefined,
-                          "ellipsizeMode": "tail",
-                          "style": Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                    ],
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": "1",
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": Array [
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />,
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />,
-                      ],
-                      "style": Object {
-                        "flexDirection": "row",
-                        "justifyContent": "space-between",
-                        "marginBottom": 10,
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "accessible": true,
-                          "allowFontScaling": true,
-                          "children": undefined,
-                          "ellipsizeMode": "tail",
-                          "style": Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "accessible": true,
-                          "allowFontScaling": true,
-                          "children": undefined,
-                          "ellipsizeMode": "tail",
-                          "style": Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                    ],
-                    "type": [Function],
-                  },
-                ],
+                "rendered": Array [],
                 "type": [MockFunction],
               },
               Object {
@@ -2047,7 +1531,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  #N/A
+                  N/A
                 </Text>
               </Component>
               <Component
@@ -2089,9 +1573,7 @@ ShallowWrapper {
                       },
                     ]
                   }
-                >
-                  0
-                </Text>
+                />
               </Component>
             </Themed.Card>
             <Themed.Card
@@ -2111,76 +1593,7 @@ ShallowWrapper {
                     "height": 140,
                   }
                 }
-              >
-                <Component
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                </Component>
-                <Component
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                      "marginBottom": 10,
-                    }
-                  }
-                >
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "white",
-                        "fontSize": 15,
-                        "fontWeight": "bold",
-                      }
-                    }
-                  />
-                </Component>
-              </ScrollViewMock>
+              />
               <Themed.Divider
                 style={
                   Object {
@@ -2355,7 +1768,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    #N/A
+                    N/A
                   </Text>
                 </Component>
                 <Component
@@ -2397,9 +1810,7 @@ ShallowWrapper {
                         },
                       ]
                     }
-                  >
-                    0
-                  </Text>
+                  />
                 </Component>
               </Themed.Card>,
               <Themed.Card
@@ -2419,76 +1830,7 @@ ShallowWrapper {
                       "height": 140,
                     }
                   }
-                >
-                  <Component
-                    style={
-                      Object {
-                        "flexDirection": "row",
-                        "justifyContent": "space-between",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                  </Component>
-                  <Component
-                    style={
-                      Object {
-                        "flexDirection": "row",
-                        "justifyContent": "space-between",
-                        "marginBottom": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "white",
-                          "fontSize": 15,
-                          "fontWeight": "bold",
-                        }
-                      }
-                    />
-                  </Component>
-                </ScrollViewMock>
+                />
                 <Themed.Divider
                   style={
                     Object {
@@ -2641,7 +1983,7 @@ ShallowWrapper {
                         ]
                       }
                     >
-                      #N/A
+                      N/A
                     </Text>
                   </Component>,
                   <Component
@@ -2683,9 +2025,7 @@ ShallowWrapper {
                           },
                         ]
                       }
-                    >
-                      0
-                    </Text>
+                    />
                   </Component>,
                 ],
                 "containerStyle": Object {
@@ -2738,7 +2078,7 @@ ShallowWrapper {
                           ]
                         }
                       >
-                        #N/A
+                        N/A
                       </Text>,
                     ],
                     "style": Object {
@@ -2773,7 +2113,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": "#N/A",
+                        "children": "N/A",
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -2789,7 +2129,7 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": "#N/A",
+                      "rendered": "N/A",
                       "type": [Function],
                     },
                   ],
@@ -2833,9 +2173,7 @@ ShallowWrapper {
                             },
                           ]
                         }
-                      >
-                        0
-                      </Text>,
+                      />,
                     ],
                     "style": Object {
                       "paddingBottom": 20,
@@ -2869,7 +2207,7 @@ ShallowWrapper {
                       "props": Object {
                         "accessible": true,
                         "allowFontScaling": true,
-                        "children": 0,
+                        "children": undefined,
                         "ellipsizeMode": "tail",
                         "style": Array [
                           Object {
@@ -2885,7 +2223,7 @@ ShallowWrapper {
                         ],
                       },
                       "ref": null,
-                      "rendered": 0,
+                      "rendered": null,
                       "type": [Function],
                     },
                   ],
@@ -2906,76 +2244,7 @@ ShallowWrapper {
                         "height": 140,
                       }
                     }
-                  >
-                    <Component
-                      style={
-                        Object {
-                          "flexDirection": "row",
-                          "justifyContent": "space-between",
-                          "marginBottom": 10,
-                        }
-                      }
-                    >
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                    </Component>
-                    <Component
-                      style={
-                        Object {
-                          "flexDirection": "row",
-                          "justifyContent": "space-between",
-                          "marginBottom": 10,
-                        }
-                      }
-                    >
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                      <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": 15,
-                            "fontWeight": "bold",
-                          }
-                        }
-                      />
-                    </Component>
-                  </ScrollViewMock>,
+                  />,
                   <Themed.Divider
                     style={
                       Object {
@@ -3089,243 +2358,13 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": Array [
-                      <Component
-                        style={
-                          Object {
-                            "flexDirection": "row",
-                            "justifyContent": "space-between",
-                            "marginBottom": 10,
-                          }
-                        }
-                      >
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />
-                      </Component>,
-                      <Component
-                        style={
-                          Object {
-                            "flexDirection": "row",
-                            "justifyContent": "space-between",
-                            "marginBottom": 10,
-                          }
-                        }
-                      >
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            }
-                          }
-                        />
-                      </Component>,
-                    ],
+                    "children": Array [],
                     "style": Object {
                       "height": 140,
                     },
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": "0",
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
-                            style={
-                              Object {
-                                "color": "white",
-                                "fontSize": 15,
-                                "fontWeight": "bold",
-                              }
-                            }
-                          />,
-                          <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
-                            style={
-                              Object {
-                                "color": "white",
-                                "fontSize": 15,
-                                "fontWeight": "bold",
-                              }
-                            }
-                          />,
-                        ],
-                        "style": Object {
-                          "flexDirection": "row",
-                          "justifyContent": "space-between",
-                          "marginBottom": 10,
-                        },
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "accessible": true,
-                            "allowFontScaling": true,
-                            "children": undefined,
-                            "ellipsizeMode": "tail",
-                            "style": Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            },
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "accessible": true,
-                            "allowFontScaling": true,
-                            "children": undefined,
-                            "ellipsizeMode": "tail",
-                            "style": Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            },
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                      ],
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": "1",
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
-                            style={
-                              Object {
-                                "color": "white",
-                                "fontSize": 15,
-                                "fontWeight": "bold",
-                              }
-                            }
-                          />,
-                          <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
-                            style={
-                              Object {
-                                "color": "white",
-                                "fontSize": 15,
-                                "fontWeight": "bold",
-                              }
-                            }
-                          />,
-                        ],
-                        "style": Object {
-                          "flexDirection": "row",
-                          "justifyContent": "space-between",
-                          "marginBottom": 10,
-                        },
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "accessible": true,
-                            "allowFontScaling": true,
-                            "children": undefined,
-                            "ellipsizeMode": "tail",
-                            "style": Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            },
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "accessible": true,
-                            "allowFontScaling": true,
-                            "children": undefined,
-                            "ellipsizeMode": "tail",
-                            "style": Object {
-                              "color": "white",
-                              "fontSize": 15,
-                              "fontWeight": "bold",
-                            },
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                      ],
-                      "type": [Function],
-                    },
-                  ],
+                  "rendered": Array [],
                   "type": [MockFunction],
                 },
                 Object {

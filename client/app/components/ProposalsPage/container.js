@@ -21,8 +21,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  handleVote: (user_id, proposal_id, score) =>
-    dispatch(handleVote(user_id, proposal_id, score))
+  handleVote: (user_id, proposal_id, score, channel_id) =>
+    dispatch(handleVote(user_id, proposal_id, score, channel_id))
 });
 
 export default connect(

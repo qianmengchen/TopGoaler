@@ -3,13 +3,11 @@ import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import { Card, Avatar, Divider, Icon } from 'react-native-elements';
 import { headerBar, header, cardLeft, cardRight } from './styles';
 import { Feed } from '../Feed/index';
-import { _get } from '../../actions';
 import {
   nameToInitialMap,
   timestampToDescription,
   eventToComment,
-  eventPointToResult,
-  _alert
+  eventPointToResult
 } from './utils';
 
 /**
@@ -29,7 +27,7 @@ import {
 class ChannelMemberView extends Component {
   _goToTaskListPage() {
     const { navigate } = this.props.navigation;
-    navigate('TaskListPage', { channel_id: this.props.channel.id });
+    navigate('TaskListPage', { channel_id: this.props.channel_id });
   }
 
   _goToNewTaskPage() {
@@ -39,44 +37,11 @@ class ChannelMemberView extends Component {
 
   _goToProposalsPage() {
     const { navigate } = this.props.navigation;
-    navigate('ProposalsPage', { channel_id: this.props.channel.id });
-  }
-
-  async _loadRankingScore() {
-    const { userId, channel } = this.props;
-    try {
-      const score = await (await _get(`/score/${userId}&${channel.id}`)).json();
-      const ranking = await (await _get(
-        `/ranking/${userId}&${channel.id}`
-      )).json();
-      return { ...score, ...ranking };
-    } catch (_) {
-      return { score: 0, ranking: -1 };
-    }
-  }
-
-  async _loadTasks() {
-    const { channel } = this.props;
-    try {
-      const tasks = await (await _get(`/task/channel_id/${channel.id}`)).json();
-      return { ...tasks };
-    } catch (_) {
-      _alert('Retrieve tasks info error');
-      return null;
-    }
-  }
-
-  UNSAFE_componentWillMount() {
-    this._loadRankingScore().then(res => {
-      this.setState({ ...res });
-    });
-    this._loadTasks().then(res => {
-      this.setState({ tasks: res });
-    });
+    navigate('ProposalsPage', { channel_id: this.props.channel_id });
   }
 
   tasklist() {
-    const tasklist = this.state.tasks || {};
+    const tasklist = this.props.list_of_tasks || {};
     return Object.keys(tasklist).map(idx => {
       return (
         <View key={idx} style={cardRight.taskContainer}>
@@ -85,15 +50,6 @@ class ChannelMemberView extends Component {
         </View>
       );
     });
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      score: 0,
-      rank: 0,
-      tasks: [{ time: '1', id: '1' }, { time: '3', id: '2' }]
-    };
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -111,9 +67,12 @@ class ChannelMemberView extends Component {
     this.props.navigation.setParams({
       channel: this.props.channel
     });
+    if (this.props.shouldRefresh) {
+      this.props.refresh(this.props.userId, this.props.channel.id);
+    }
   }
   render() {
-    const { activities, users, tasks } = this.props;
+    const { activities, users, tasks, ranking, score } = this.props;
     return (
       <View style={{ backgroundColor: 'white' }}>
         <View style={{ flexDirection: 'row', alignItems: 'stretch' }}>
@@ -121,14 +80,12 @@ class ChannelMemberView extends Component {
             <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Rank</Text>
               <Text style={[cardLeft.stats, cardLeft.number]}>
-                {'#' + (this.state.rank > 0 ? this.state.rank : 'N/A')}
+                {ranking > 0 ? '#' + ranking : 'N/A'}
               </Text>
             </View>
             <View style={cardLeft.statsContainer}>
               <Text style={cardLeft.stats}>Score</Text>
-              <Text style={[cardLeft.stats, cardLeft.number]}>
-                {this.state.score}
-              </Text>
+              <Text style={[cardLeft.stats, cardLeft.number]}>{score}</Text>
             </View>
           </Card>
 

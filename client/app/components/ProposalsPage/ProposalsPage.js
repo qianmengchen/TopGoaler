@@ -14,7 +14,12 @@ import Proposal from './Proposal';
 
 class ProposalsPage extends Component {
   _handleVoteFactory = proposal_id => points => {
-    this.props.handleVote(this.props.user_id, proposal_id, points);
+    this.props.handleVote(
+      this.props.user_id,
+      proposal_id,
+      points,
+      this.props.channel_id
+    );
   };
   static navigationOptions = {
     title: 'Task Proposals'

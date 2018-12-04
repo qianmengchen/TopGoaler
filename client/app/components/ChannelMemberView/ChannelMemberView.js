@@ -3,13 +3,11 @@ import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import { Card, Avatar, Divider, Icon } from 'react-native-elements';
 import { headerBar, header, cardLeft, cardRight } from './styles';
 import { Feed } from '../Feed/index';
-import { _get } from '../../actions';
 import {
   nameToInitialMap,
   timestampToDescription,
   eventToComment,
-  eventPointToResult,
-  _alert
+  eventPointToResult
 } from './utils';
 
 /**
@@ -42,43 +40,6 @@ class ChannelMemberView extends Component {
     navigate('ProposalsPage', { channel_id: this.props.channel_id });
   }
 
-  /*
-  async _loadRankingScore() {
-    const { userId, channel } = this.props;
-    try {
-      const score = await (await _get(`/score/${userId}&${channel.id}`)).json();
-      const ranking = await (await _get(
-        `/ranking/${userId}&${channel.id}`
-      )).json();
-      return { ...score, ...ranking };
-    } catch (_) {
-      return { score: 0, ranking: -1 };
-    }
-  }
-
-  async _loadTasks() {
-    const { channel } = this.props;
-    try {
-      const tasks = await (await _get(`/task/channel_id/${channel.id}`)).json();
-      return { ...tasks };
-    } catch (_) {
-      _alert('Retrieve tasks info error');
-      return null;
-    }
-  }
-  */
-
-  UNSAFE_componentWillMount() {
-    /*
-    this._loadRankingScore().then(res => {
-      this.setState({ ...res });
-    });
-    this._loadTasks().then(res => {
-      this.setState({ tasks: res });
-    });
-    */
-  }
-
   tasklist() {
     const tasklist = this.props.list_of_tasks || {};
     return Object.keys(tasklist).map(idx => {
@@ -89,17 +50,6 @@ class ChannelMemberView extends Component {
         </View>
       );
     });
-  }
-
-  constructor(props) {
-    super(props);
-    /*
-    this.state = {
-      score: 0,
-      rank: 0,
-      tasks: [{ time: '1', id: '1' }, { time: '3', id: '2' }]
-    };
-    */
   }
 
   static navigationOptions = ({ navigation }) => {

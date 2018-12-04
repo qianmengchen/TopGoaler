@@ -78,9 +78,9 @@ describe('Basic Score and Ranking', async () => {
                         expect(res[0]).toHaveProperty('rank')
                         const scoreList = res.sort( (x, y) => x.score > y.score )
                         const highScore = scoreList[0].score
-                        const numberOfDraw = res.filter( x => x.score == highScore ).length
-                        expect(res[0].rank).toBeLessThanOrEqual(numberOfDraw);
-                        user_id = res[0].user_id
+                        const numberOfDraw = scoreList.filter( x => x.score == highScore ).length
+                        expect(scoreList[0].rank).toBeLessThanOrEqual(numberOfDraw);
+                        user_id = scoreList[0].user_id
                     } else if (res.length >= 2) {
                         expect(res[0].score).toBeGreaterThanOrEqual(res[1].score)
                     }

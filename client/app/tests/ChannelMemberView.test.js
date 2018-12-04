@@ -50,12 +50,14 @@ describe('Testing Channel Memberview Page', () => {
     }
   };
 
+  const refresh = jest.fn();
   const wrapper = shallow(
     <ChannelMemberView
       navigation={navigation}
       channel={channel}
       userID={1}
       activities={[]}
+      refresh={refresh}
     />,
     {
       context: { store: mockStore(initialTaskState) }

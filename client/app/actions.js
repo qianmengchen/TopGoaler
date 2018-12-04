@@ -325,7 +325,8 @@ export function createChannelAsUser(channel, user_id) {
     const { id } = await res.json();
     res = await _post('/user_channel', { channel_id: id, user_id });
     if (!res.ok) return dispatch(_createFailure());
-    dispatch(_createChannelLocal(channel, id, user_id));
+    //dispatch(_createChannelLocal(channel, id, user_id));
+    dispatch(loadData());
   };
 }
 
@@ -558,6 +559,7 @@ export function dropTaskAsUser(task_id, user_id) {
     @default
 */
 export const LOAD_CURRENT_CHANNEL_DONE = 'LOAD_CURRENT_CHANNEL_DONE';
+export const CLEAR_CURRENT_CHANNEL = 'CLEAR_CURRENT_CHANNEL';
 
 export function loadCurrentChannelDone(data) {
   return {
@@ -567,6 +569,10 @@ export function loadCurrentChannelDone(data) {
     ranking: data.ranking.rank || NaN,
     channelId: data.channelId
   };
+}
+
+export function clearCurrentChannel() {
+  return { type: CLEAR_CURRENT_CHANNEL };
 }
 
 export function loadCurrentChannel(userId, channelId) {

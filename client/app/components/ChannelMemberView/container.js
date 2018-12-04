@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ChannelMemberView from './ChannelMemberView';
 import { channelActivityFilterWrap } from './utils';
-import { loadCurrentChannel } from '../../actions';
+import { loadCurrentChannel, clearCurrentChannel } from '../../actions';
 
 const mapStateToProps = (state, ownProps) => {
   const channel_id = ownProps.navigation.state.params.channel_id;
@@ -19,15 +19,19 @@ const mapStateToProps = (state, ownProps) => {
     list_of_tasks: state.current_channel.tasks,
     ranking: state.current_channel.ranking,
     score: state.current_channel.score,
-    shouldRefresh: state.current_channel.channelId != channel_id
+    incoming_channel_id: state.current_channel.channelId,
+    isClearing: typeof state.current_channel.score === 'string'
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  refresh: (userId, channel) => (
+  refresh: (userId, channelId) => (
     console.log('loadCurrentChannel: out of date'),
-    dispatch(loadCurrentChannel(userId, channel))
-  )
+    dispatch(loadCurrentChannel(userId, channelId))
+  ),
+  clear: () => {
+    dispatch(clearCurrentChannel());
+  }
 });
 
 export default connect(

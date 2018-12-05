@@ -2,6 +2,12 @@
 
 TopGoaler is an awesome 'competitive' task app that helps you achieve goals together with your friends. 
 
+## Try it out
+
+Install Expo on your phone (iOS/Android) and open our project on the browser: https://expo.io/@sunz/TopGoaler2, or scan the QR code here:
+
+<img src="https://gist.githubusercontent.com/onionhoney/054ee915770e1075592d727f31038447/raw/dd929a8ada9df32de04ab6dc3aec97f9a5b9ce9b/expo.png" width="150" height="150" />
+
 
 
 ## Repo Directory
